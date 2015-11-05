@@ -71,41 +71,41 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | the query builder class.
 */
 
-$active_group = 'default';
-$query_builder = TRUE;
-
-$db['default'] = array(
-	'dsn'	=> '',
-	'dbprefix' => '',
-	'pconnect' => FALSE,
-	'db_debug' => (ENVIRONMENT !== 'production'),
-	'cache_on' => FALSE,
-	'cachedir' => getenv('OPENSHIFT_DATA_DIR') . 'storage/framework/dbcache',
-	'char_set' => 'utf8',
-	'dbcollat' => 'utf8_general_ci',
-	'swap_pre' => '',
-	'encrypt' => FALSE,
-	'compress' => FALSE,
-	'stricton' => FALSE,
-	'failover' => array(),
-	'save_queries' => TRUE
-);
-
-if(getenv('OPENSHIFT_MYSQL_DB_HOST'))
-{
-	$db['default']['dbdriver'] = 'mysqli';
-	$db['default']['hostname'] = getenv('OPENSHIFT_MYSQL_DB_HOST');
-	$db['default']['port'] = getenv('OPENSHIFT_MYSQL_DB_PORT');
-	$db['default']['username'] = getenv('OPENSHIFT_MYSQL_DB_USERNAME');
-	$db['default']['password'] = getenv('OPENSHIFT_MYSQL_DB_PASSWORD');
-	$db['default']['database'] = getenv('OPENSHIFT_APP_NAME');		
-}
-else // default to MySQL
-{
-	$db['default']['dbdriver'] = 'postgre';
-	$db['default']['hostname'] = getenv('OPENSHIFT_POSTGRESQL_DB_HOST');
-	$db['default']['port'] = getenv('OPENSHIFT_POSTGRESQL_DB_PORT');
-	$db['default']['username'] = getenv('OPENSHIFT_POSTGRESQL_DB_USERNAME');
-	$db['default']['password'] = getenv('OPENSHIFT_POSTGRESQL_DB_PASSWORD');
-	$db['default']['database'] = getenv('OPENSHIFT_APP_NAME');
-}
+//$active_group = 'default';
+//$query_builder = TRUE;
+//
+//$db['default'] = array(
+//	'dsn'	=> '',
+//	'dbprefix' => '',
+//	'pconnect' => FALSE,
+//	'db_debug' => (ENVIRONMENT !== 'production'),
+//	'cache_on' => FALSE,
+//	'cachedir' => getenv('OPENSHIFT_DATA_DIR') . 'storage/framework/dbcache',
+//	'char_set' => 'utf8',
+//	'dbcollat' => 'utf8_general_ci',
+//	'swap_pre' => '',
+//	'encrypt' => FALSE,
+//	'compress' => FALSE,
+//	'stricton' => FALSE,
+//	'failover' => array(),
+//	'save_queries' => TRUE
+//);
+//
+//if(getenv('OPENSHIFT_MYSQL_DB_HOST'))
+//{
+//	$db['default']['dbdriver'] = 'mysqli';
+//	$db['default']['hostname'] = getenv('OPENSHIFT_MYSQL_DB_HOST');
+//	$db['default']['port'] = getenv('OPENSHIFT_MYSQL_DB_PORT');
+//	$db['default']['username'] = getenv('OPENSHIFT_MYSQL_DB_USERNAME');
+//	$db['default']['password'] = getenv('OPENSHIFT_MYSQL_DB_PASSWORD');
+//	$db['default']['database'] = getenv('OPENSHIFT_APP_NAME');
+//}
+//else // default to MySQL
+//{
+//	$db['default']['dbdriver'] = 'postgre';
+//	$db['default']['hostname'] = getenv('OPENSHIFT_POSTGRESQL_DB_HOST');
+//	$db['default']['port'] = getenv('OPENSHIFT_POSTGRESQL_DB_PORT');
+//	$db['default']['username'] = getenv('OPENSHIFT_POSTGRESQL_DB_USERNAME');
+//	$db['default']['password'] = getenv('OPENSHIFT_POSTGRESQL_DB_PASSWORD');
+//	$db['default']['database'] = getenv('OPENSHIFT_APP_NAME');
+//}
