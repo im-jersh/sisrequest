@@ -1,46 +1,61 @@
 <?php
-
+if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 /**
  * Created by PhpStorm.
  * User: Josh
- * Date: 11/2/15
- * Time: 11:14 PM
+ * Date: 11/9/15
+ * Time: 10:29 PM
  */
-
-    // We need to start a session
-    session_start();
-
-class Login extends CI_Controller {
-
-    /**
-     * Index Page for this controller.
-     *
-     * Maps to the following URL
-     * 		http://example.com/login
-     *	- or -
-     * 		http://example.com/login/index
-     *	- or -
-     * Since this controller is set as the default controller in
-     * config/routes.php, it's displayed at http://example.com/
-     *
-     * So any other public methods not prefixed with an underscore will
-     * map to /welcome/<method_name>
-     * @see http://codeigniter.com/user_guide/general/urls.html
-     */
+class login extends CI_Controller {
 
     public function __construct() {
-
-        // construct the base object
         parent::__construct();
 
-        // Load helpers and libraries (we have already loaded these using 'autoload.php')
-        // $this->load->helper('form');
-        // $this->load->library('form_validation');
-        // $this->load->library('session');
+        $this->load->helper('html');
 
-        // Load the database
-
-
+        $this->load->model('login_model');
     }
 
+    public function index()
+    {
+
+        // Get the posted values
+        $pawprint = $this->input->post("txt_pawprint");
+        $password = $this->input->post("txt_password");
+
+        // Set validations
+        $this->form_validation->set_rules("txt_pawprint", "Pawprint", "trim|required");
+        $this->form_validation->set_rules("txt_password", "Password", "trim|required");
+
+        if ($this->form_validation->run() == FALSE) {
+            // Validation failed
+            $this->load->view('login_view');
+        } else {
+            // Successful validation
+            if ($this->input->post('btn_login') == "Login") {
+                // Check if pawprint and password is correct
+                $usr_result = $this->login_model->get_user($pawprint, $password);
+
+                // Active user record is present
+                if ($usr_result > 0) {
+                    $sessiondata = array(
+                        'pawprint' => $pawprint,
+                        'loginuser' => TRUE
+                    );
+
+                    $this->session->set_userdata($sessiondata);
+
+                    redirect("landing_page");
+
+                } else {
+                    $this->session->set_flashdata('msg', '<div class="alert alert-danger text-center">Invalid username and password.</div>');
+                    redirect('login/index');
+                }
+            } else {
+                redirect('login/index');
+            }
+        }
+    }
 }
+
+?>
