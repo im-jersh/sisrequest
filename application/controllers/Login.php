@@ -6,7 +6,7 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
  * Date: 11/9/15
  * Time: 10:29 PM
  */
-class login extends CI_Controller {
+class Login extends CI_Controller {
 
     public function __construct() {
         parent::__construct();
@@ -24,9 +24,14 @@ class login extends CI_Controller {
         $password = $this->input->post("txt_password");
 
         // Set validations
-        $this->form_validation->set_rules("txt_pawprint", "Pawprint", "trim|required");
-        $this->form_validation->set_rules("txt_password", "Password", "trim|required");
-
+        $this->form_validation->set_rules("txt_pawprint", "Pawprint", "trim|required|strip_tags");
+        $this->form_validation->set_rules("txt_password", "Password", "trim|required|strip_tags");
+        
+        if ($this->session->userdata('pawprint') != null){
+                redirect('landing_page');
+        }
+        
+        
         if ($this->form_validation->run() == FALSE) {
             // Validation failed
             $this->load->view('login_view');
@@ -37,13 +42,13 @@ class login extends CI_Controller {
                 $usr_result = $this->login_model->get_user($pawprint, $password);
 
                 // Active user record is present
-                if ($usr_result > 0) {
-                    $sessiondata = array(
+                if ($usr_result) {
+                   /* $sessiondata = array(
                         'pawprint' => $pawprint,
                         'loginuser' => TRUE
-                    );
+                    ); */
 
-                    $this->session->set_userdata($sessiondata);
+                   // $this->session->set_userdata($sessiondata);
 
                     redirect("landing_page");
 
