@@ -19,7 +19,7 @@ class landing_page extends CI_Controller {
         $empID = $this->session->userdata('empID');
         $listData = $this->landing_model->view_admin($empID);
         $data['listData'] = $listData;
-        $this->load->view('landing_page_view', $data);
+        $this->load->view('home_view', $data);
 
     }
 
