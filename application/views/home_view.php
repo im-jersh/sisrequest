@@ -3,18 +3,22 @@
 <head>
 	<title>Home Page</title>
 	<meta charset="utf-8"/>
-	<link rel="stylesheet" href="styleIt.css" type="text/css">
+	<link rel="stylesheet" href="<?php echo base_url();?>/assets/stylesheets/style.css" type="text/css">
+	<link rel="stylesheet" href="<?php echo base_url();?>/assets/stylesheets/liStyle.css" type="text/css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-	<link rel="stylesheet" href="styleSearch.css" type="text/css">
-	<style type="text/css">
+	<link rel="stylesheet" href="<?php echo base_url();?>/assets/stylesheets/styleSearch.css" type="text/css">
+	<script type="text/css">
 		document.addEventListener("touchstart", function(){}, true);
 		.bs-example{
 			margin: 10px;
 		}
-	</style>
+		
+		function ChangeBackgroundColor(row) { row.style.backgroundColor = blue; }
+		function RestoreBackgroundColor(row) { row.style.backgroundColor = red; }
+	</script>
 </head>
 <body>
 	<div id="site-container">
@@ -35,7 +39,7 @@
 					<p style="color: white;">About</p>
 				</li>
 				<li>
-					<p style="color: white;">Logout</p>
+					<a href="<?php echo base_url();?>/Logout" ><p style="color: white;">Logout</p> </a> 
 				</li>
 			</ul>
 		</div>
@@ -44,7 +48,7 @@
 				
 					<div id="employeeHeader">
 						<div style="margin-top: -10px; margin-left: -10px;" class="tigerHead">
-							<img height="117px" width="auto"  src="images\tigerFinal.png">
+							<img height="117px" width="auto"  src="<?php echo base_url();?>/assets/images/tigerFinal.png">
 						</div>
 						<div class="employeeHeader">
 							<h1  style="color:white; padding-left: 10px;"> Employees</h1>
@@ -52,49 +56,55 @@
 					</div>
 					<table style="background-color: white; color: black; padding-top: -10px;">
 						<tr>
-							<th style="text-align: left; width: 350px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px; "> Employee
-							<div style="float: right;">
-								<img class="searchBut" src="images\Search-button.png">
-							</div>
-							<div style="float: right;">
-								<form id="absForm" action="">
+							<th style="text-align: left; width: 415px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px; "> 
+							<!--<div style="float: right;">
+								<img class="searchBut" src="C:\Users\derek\Documents\GitHub\sisrequest\assets\images\Search-button.png">
+							</div>-->
+								<div style="float: left; margin-right: 10px;">
+									<form class="search-container" >
+										<input style="padding-left: 10px;" id="search-box" type="text" class="search-box" name="q" />
+										<img class="searchBut" for="search-box" src="<?php echo base_url();?>/assets/images/Search-button.png">
+										<label for="search-box"><span>Employee</span></label>
+									</form>
+								<!--<form id="absForm" action="">
 									<input id="search-box" class="search-box" name="q" style="color: black; font-size: 15px; margin-left: 5px; margin-top: 5px; width: 189px; height:24px;" type="text" value="search">
 								</form>
-								<!--<img class="box" src="images\box.jpg">-->
-							</div>
+								<img class="box" src="C:\Users\derek\Documents\GitHub\sisrequest\assets\images\box.jpg">-->
+							   </div>
 							
 							</th>
-							<th style="text-align: left; padding-left: 100px;"> Status </th>
+							<th style="text-align: left; padding-left: 50px;"> Status </th>
 						</tr>
-						<tr onmouseover="bigImg(this)">
-							
-								<td style="color: black; background-color: #f5f5f5; padding-left: 10px; font-size: 20px;">Derek Kedigh</td>
-								<td style="color:black; background-color: #f5f5f5; padding-left: 103px;">Status</td>
-							
+						<tr onmouseover="ChangeBackgroundColor(this)" onmouseout="RestoreBackgroundColor(this)">
+								<td style="color: black; background-color: #f5f5f5; padding-left: 90px; font-size: 20px;">Derek Kedigh</td>
+								<td style="color:black; background-color: #f5f5f5; padding-left: 53px;">Status</td>
 						</tr>
 						<tr>
-							<td style="color: black; background-color: #f5f5f5; padding-left: 10px;">Roger Federer</td>
-							<td style="color:black; background-color: #f5f5f5; padding-left: 103px;">Status</td>
+							<td style="color: black; background-color: #f5f5f5; padding-left: 90px;">Roger Federer</td>
+							<td style="color:black; background-color: #f5f5f5; padding-left: 53px;">Status</td>
 						</tr>
 						<tr>
-							<td style="color: black; background-color: #f5f5f5; padding-left: 10px;">Raf Nadal</td>
-							<td style="color:black; background-color: #f5f5f5; padding-left: 103px;">Status</td>
+							<td style="color: black; background-color: #f5f5f5; padding-left: 90px;">Raf Nadal</td>
+							<td style="color:black; background-color: #f5f5f5; padding-left: 53px;">Status</td>
 						</tr>
 					</table>
 				
 			</div>
 			<div id="marquee-employee-info">
 				<div class="headerBar"></div>
-				<h1 style="margin-top: 50px; text-align:center;"> Derek Kedigh </h1>
+				<h1 style="margin-top: 40px; text-align:center;"> Derek Kedigh </h1>
 				<div style="background-color:black; border-radius: 15px;">
-				<ol>
-					<li> Username </li>
-					<li> Employee Start Date</li>
-					<li> Employee Permission Level</li>
-					<li> Employee Status</li>
-					<li> Employee Status</li>
-					<li> Employee Permission Level</li>
+				<ol style="padding-top: 12px;">
+					<li style="padding-top: 8px; box-shadow: inset 0px 0px 0px #3e9cbf, 0px 1px 0px 0px #205c73, 0px 2px 0px #999; font-size: 20px; font-weight: bold;"> General Information</li>
+					<li style="padding-top: 8px;"> Employee ID: </li>
+					<li style="padding-top: 8px;"> PawPrint:</li>
+					<li style="padding-top: 8px;"> Job Title:</li>
+					<li style="padding-top: 8px;"> Phone Number:</li>
+					<li style="padding-top: 8px;"> Campus Address:</li>
 				</ol>
+				<div style="width: 555px; margin-left: 15px;">
+					<p style="color: white; padding-top: 8px; box-shadow: inset 0px 0px 0px #3e9cbf, 0px 1px 0px 0px #205c73, 0px 2px 0px #999; font-size: 20px; font-weight: bold;"> Access Requests</p>
+				</div>
 				<div style="border: 15px solid black;" class="bs-example">
 					<div  class="panel-group" id="accordion">
 						<div class="panel panel-default">
@@ -103,7 +113,7 @@
 									<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Student Record Access</a>
 								</h4>
 							</div>
-							<div id="collapseOne" class="panel-collapse collapse in">
+							<div id="collapseOne" class="panel-collapse collapse">
 								<div  class="panel-body">
 									<form style="display: inline;" action="">
 										<input  type="checkbox" name="basicInquiry" value="BasicInquiry"> Basic Inquiry
