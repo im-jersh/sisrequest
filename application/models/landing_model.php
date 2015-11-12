@@ -17,7 +17,7 @@ class Landing_model extends CI_model
 
     public function view_admin($empID)
     {
-        $this->db->select('fName','lName','title','status');
+        $this->db->select('fName,lName,title');
         $query = $this->db->get_where('person', array('admin_empID' => "$empID"));
         $employees = array();
         foreach ($query->result() as $row)
@@ -25,8 +25,7 @@ class Landing_model extends CI_model
             array_push($employees, array(
                 "fName" => $row->fName,
                 "lName" => $row->lName,
-                "title" => $row->title,
-                "status"=> $row->status
+                "title" => $row->title
             ));
         }
         return $employees;
