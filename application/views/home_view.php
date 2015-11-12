@@ -116,24 +116,29 @@
 							<div id="collapseOne" class="panel-collapse collapse">
 								<div  class="panel-body">
 									<form style="display: inline;" action="">
-										<input  type="checkbox" name="basicInquiry" value="BasicInquiry"> Basic Inquiry
-										<input style="margin-left: 5px;" type="checkbox" name="advancedInquiry" value="AdvancedInquiry">Advanced Inquiry
-										<input style="margin-left: 5px;" type="checkbox" name="3cs" value="eCs"> 3Cs
-										<input style="margin-left: 5px;" type="checkbox" name="advisorUpdate" value="AdvisorUpdate">Advisor Update<br>
-										<input style="margin-left: 5px;" type="checkbox" name="dptSocUpdate" value="BasicInquiry"> Dpt SOC Update
-										<input type="checkbox" name="serviceIndicators" value="ServiceIndicators">Service Indicators
-										<input style="margin-left: 5px;" type="checkbox" name="studGrpView" value="StudGrpView"> Stud Grp View
+										<input  type="checkbox" name="basicInquiry" value="BasicInquiry"> Basic Inquiry View
+										<input style="margin-left: 5px;" type="checkbox" name="advancedInquiryv" value="AdvancedInquiryV">Advanced Inquiry View
+										<input style="margin-left: 5px;" type="checkbox" name="advancedInquiryu" value="AdvancedInquiryU">Advanced Inquiry Update<br>
+										<input style="margin-left: 5px;" type="checkbox" name="3csv" value="eCsV"> 3Cs View
+										<input style="margin-left: 5px;" type="checkbox" name="3csu" value="eCsU"> 3Cs Update
+										<input style="margin-left: 5px;" type="checkbox" name="advisorUpdate" value="AdvisorUpdate">Advisor Update
+										<input style="margin-left: 5px;" type="checkbox" name="dptSocUpdate" value="BasicInquiry"> Dpt SOC Update<br>
+										<input type="checkbox" name="serviceIndicatorsv" value="ServiceIndicatorsV">Service Indicators View
+										<input type="checkbox" name="serviceIndicatorsu" value="ServiceIndicatorsU">Service Indicators Update
+										<input style="margin-left: 5px;" type="checkbox" name="studGrpView" value="StudGrpView"> Stud Grp View<br>
 										<input style="margin-left: 5px;" type="checkbox" name="viewStudyList" value="ViewStudyList">View Study List
-										<input style="margin-left: 5px;" type="checkbox" name="rgstEnrollment" value="RgstEnrollment">Rgstr Enrollment
-										<input type="checkbox" name="advsrStudCenter" value="AdvsrStudCenter">Advsr Stud Center
-										<input style="margin-left: 5px;" type="checkbox" name="classPermission" value="ClassPermission">Class Permission
-										<input style="margin-left: 5px;" type="checkbox" name="classPermissionView" value="ClassPermissionView">Class Permission View
-										<input style="margin-left: 5px;" type="checkbox" name="classRoster" value="ClassRoster">Class Roster
-										<input type="checkbox" name="blockEnrollments" value="BlockEnrollments"> Block Enrollments
-										<input style="margin-left: 5px;" type="checkbox" name="reportMgr" value="ReportMgr">Report Mgr
-										<input style="margin-left: 5px;" type="checkbox" name="selfSrvcAdvisor" value="SelfSrvcAdvisor">Self Srvc Advisor
-										<input style="margin-left: 5px;" type="checkbox" name="fiscalOffice" value="FiscalOffice">Fiscal Office
-										<input type="checkbox" name="academicAdvisingProfile" value="AcademicAdvisingProfile">Academic Advising Profile
+										<input style="margin-left: 5px;" type="checkbox" name="rgstEnrollmentV" value="RgstEnrollmentV">Rgstr Enrollment View
+										<input style="margin-left: 5px;" type="checkbox" name="rgstEnrollmentu" value="RgstEnrollmentU">Rgstr Enrollment Update<br>
+										<input type="checkbox" name="advsrStudCenter" value="AdvsrStudCenter">Advsr Stud Center View
+										<input style="margin-left: 5px;" type="checkbox" name="classPermissionu" value="ClassPermissionU">Class Permission Update
+										<input style="margin-left: 5px;" type="checkbox" name="classPermissionv" value="ClassPermissionView">Class Permission View
+										<input style="margin-left: 5px;" type="checkbox" name="classRoster" value="ClassRoster">Class Roster View
+										<input type="checkbox" name="blockEnrollmentsv" value="BlockEnrollmentsV"> Block Enrollments View
+										<input type="checkbox" name="blockEnrollmentsu" value="BlockEnrollmentsU"> Block Enrollments Update<br>
+										<input style="margin-left: 5px;" type="checkbox" name="reportMgr" value="ReportMgr">Report Mgr View
+										<input style="margin-left: 5px;" type="checkbox" name="selfSrvcAdvisor" value="SelfSrvcAdvisor">Self Srvc Advisor Update
+										<input style="margin-left: 5px;" type="checkbox" name="fiscalOffice" value="FiscalOffice">Fiscal Office View<br>
+										<input type="checkbox" name="academicAdvisingProfile" value="AcademicAdvisingProfile">Academic Advising Profile Update
 									</form>
 								</div>
 							</div>
