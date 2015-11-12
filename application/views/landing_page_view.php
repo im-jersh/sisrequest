@@ -69,13 +69,13 @@
 
                 <!-- print out the generic list of data  -->
                 <?php
-                    foreach ($listData as $item)
-                    {
-                        echo '<tr onmouseover="ChangeBackgroundColor(this)" onmouseout="RestoreBackgroundColor(this)">';
-                        echo '<td style="color: black; background-color: #f5f5f5; padding-left: 90px; font-size: 20px;">' . $item['fName'] . ' ' . $item['lName'] . '</td>';
-                        //echo '<td style="color: black; background-color: #f5f5f5; padding-left: 53px;">' . $item->status . '</td></tr>';
-                        echo '</tr>';
-                    }
+                foreach ($listData as $item)
+                {
+                    echo '<tr onmouseover="ChangeBackgroundColor(this)" onmouseout="RestoreBackgroundColor(this)">';
+                    echo '<td style="color: black; background-color: #f5f5f5; padding-left: 90px; font-size: 20px;">' . $item['fName'] . ' ' . $item['lName'] . '</td>';
+                    //echo '<td style="color: black; background-color: #f5f5f5; padding-left: 53px;">' . $item->status . '</td></tr>';
+                    echo '</tr>';
+                }
                 ?>
             </table>
 

@@ -75,18 +75,16 @@
 							</th>
 							<th style="text-align: left; padding-left: 50px;"> Status </th>
 						</tr>
-						<tr onmouseover="ChangeBackgroundColor(this)" onmouseout="RestoreBackgroundColor(this)">
-								<td style="color: black; background-color: #f5f5f5; padding-left: 90px; font-size: 20px;">Derek Kedigh</td>
-								<td style="color:black; background-color: #f5f5f5; padding-left: 53px;">Status</td>
-						</tr>
-						<tr>
-							<td style="color: black; background-color: #f5f5f5; padding-left: 90px;">Roger Federer</td>
-							<td style="color:black; background-color: #f5f5f5; padding-left: 53px;">Status</td>
-						</tr>
-						<tr>
-							<td style="color: black; background-color: #f5f5f5; padding-left: 90px;">Raf Nadal</td>
-							<td style="color:black; background-color: #f5f5f5; padding-left: 53px;">Status</td>
-						</tr>
+                        <!-- print out the generic list of data  -->
+                        <?php
+                        foreach ($listData as $item)
+                        {
+                            echo '<tr onmouseover="ChangeBackgroundColor(this)" onmouseout="RestoreBackgroundColor(this)">';
+                            echo '<td style="color: black; background-color: #f5f5f5; padding-left: 90px; font-size: 20px;">' . $item['fName'] . ' ' . $item['lName'] . '</td>';
+                            //echo '<td style="color: black; background-color: #f5f5f5; padding-left: 53px;">' . $item->status . '</td></tr>';
+                            echo '</tr>';
+                        }
+                        ?>
 					</table>
 				
 			</div>
