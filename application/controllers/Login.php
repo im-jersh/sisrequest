@@ -24,8 +24,8 @@ class Login extends CI_Controller {
         $password = $this->input->post("txt_password");
 
         // Set validations
-        $this->form_validation->set_rules("txt_pawprint", "Pawprint", "trim|required|xss_clean|strip_tags");
-        $this->form_validation->set_rules("txt_password", "Password", "trim|required|xss_clean|strip_tags");
+        $this->form_validation->set_rules("txt_pawprint", "Pawprint", "trim|required|strip_tags");
+        $this->form_validation->set_rules("txt_password", "Password", "trim|required|strip_tags");
         
         if ($this->session->userdata('pawprint') != null){
                 redirect('landing_page');
