@@ -3,13 +3,13 @@
 <head>
 	<title>Home Page</title>
 	<meta charset="utf-8"/>
-	<link rel="stylesheet" href="C:\Users\derek\Documents\GitHub\sisrequest\assets\stylesheets\style.css" type="text/css">
-	<link rel="stylesheet" href="C:\Users\derek\Documents\GitHub\sisrequest\assets\stylesheets\liStyle.css" type="text/css">
+	<link rel="stylesheet" href="<?php echo base_url();?>/assets/stylesheets/style.css" type="text/css">
+	<link rel="stylesheet" href="<?php echo base_url();?>/assets/stylesheets/liStyle.css" type="text/css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-	<link rel="stylesheet" href="C:\Users\derek\Documents\GitHub\sisrequest\assets\stylesheets\styleSearch.css" type="text/css">
+	<link rel="stylesheet" href="<?php echo base_url();?>/assets/stylesheets/styleSearch.css" type="text/css">
 	<script type="text/css">
 		document.addEventListener("touchstart", function(){}, true);
 		.bs-example{
@@ -39,7 +39,7 @@
 					<p style="color: white;">About</p>
 				</li>
 				<li>
-					<p style="color: white;">Logout</p>
+					<a href="<?php echo base_url();?>/Logout" ><p style="color: white;">Logout</p> </a> 
 				</li>
 			</ul>
 		</div>
@@ -48,7 +48,7 @@
 				
 					<div id="employeeHeader">
 						<div style="margin-top: -10px; margin-left: -10px;" class="tigerHead">
-							<img height="117px" width="auto"  src="C:\Users\derek\Documents\GitHub\sisrequest\assets\images\tigerFinal.png">
+							<img height="117px" width="auto"  src="<?php echo base_url();?>/assets/images/tigerFinal.png">
 						</div>
 						<div class="employeeHeader">
 							<h1  style="color:white; padding-left: 10px;"> Employees</h1>
@@ -63,7 +63,7 @@
 								<div style="float: left; margin-right: 10px;">
 									<form class="search-container" >
 										<input style="padding-left: 10px;" id="search-box" type="text" class="search-box" name="q" />
-										<img class="searchBut" for="search-box" src="C:\Users\derek\Documents\GitHub\sisrequest\assets\images\Search-button.png">
+										<img class="searchBut" for="search-box" src="<?php echo base_url();?>/assets/images/Search-button.png">
 										<label for="search-box"><span>Employee</span></label>
 									</form>
 								<!--<form id="absForm" action="">
