@@ -18,11 +18,17 @@ class login_model extends CI_Model {
     // Get the pawprint & password from 'login' table
     function get_user($pawprint, $password) {
 
-        // Construct the sql query
+        /*commented out in order to attempt to add security to the login query -- dec5x8
+         * // Construct the sql query
         $sql = "select * from login where pawprint = '" . $pawprint . "' and password = '" . $password . "'";
 
         // Run the query
         $query = $this->db->query($sql);
+        */
+        //Construct query using query binding
+        $sql = "SELECT * FROM login WHERE pawprint = ? AND password = ?";
+        //run using query binding
+        $query = $this->db->query($sql, array($pawprint, $password));
 
         return $query->num_rows();
 
