@@ -1,5 +1,5 @@
 <?php
-
+if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 /**
  * Created by PhpStorm.
  * User: Emeka
@@ -15,10 +15,13 @@ class Landing_model extends CI_model
 
     }
 
-    public function view_admin($empID)
+    public function getEmployees($empID)
     {
+        // Contstruct the query and execute
         $this->db->select('fName,lName,title');
         $query = $this->db->get_where('person', array('admin_empID' => "$empID"));
+
+        // Extract the data
         $employees = array();
         foreach ($query->result() as $row)
         {
@@ -28,14 +31,17 @@ class Landing_model extends CI_model
                 "title" => $row->title
             ));
         }
+
+        // Return the list of employees
         return $employees;
 
     }
 
-    /*public function view_sis()
+    public function getDepartments()
     {
 
-    }*/
+    }
 
 
 }
+?>
