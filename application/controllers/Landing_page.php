@@ -44,8 +44,10 @@ class Landing_page extends CI_Controller {
             array_push($this->printListData,
                 '<tr onmouseover="ChangeBackgroundColor(this)" onmouseout="RestoreBackgroundColor(this)">' .
                 '<td style="color: black; background-color: #f5f5f5; padding-left: 90px; font-size: 20px;">' .
-                $item['fName'] . ' ' . $item['lName'] . '</td></tr>>'
-                //'<td style="color: black; background-color: #f5f5f5; padding-left: 53px;">' . $item->status . '</td></tr>'
+                $item['fName'] . ' ' . $item['lName'] . '</td>' .
+                '<td style="color: black; background-color: #f5f5f5; padding-left: 53px;">' .
+                $item['status'] .
+                '</td></tr>'
                 );
         };
 
