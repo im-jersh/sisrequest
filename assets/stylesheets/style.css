@@ -125,7 +125,7 @@ table {
 
 #menu{
 	width: 170px;
-	background: black;
+	background: #4D4D4D;
 	color: #bab2c7;
 	text-transform: uppercase;
 	text-align: center;
@@ -350,9 +350,9 @@ ol li .genInfo {
 }
 
 #menu .menu-list li {
-	padding: 15px 0;
+	padding: 0px 0;
 	position: relative;
 	left: 0px;
 	curson: pointer;
-	margin-top: 15px; 
+	margin-top: 0px;
 }

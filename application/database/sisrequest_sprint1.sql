@@ -146,11 +146,7 @@ INSERT INTO `sisrequest`.`request` (`request_ID`, `empID`, `request_date`, `upda
 INSERT INTO `sisrequest`.`request` (`request_ID`, `empID`, `request_date`, `update_date`, `admin_empID`, `request_description`, `is_student`, `status`) VALUES ('0000000001', 'e24444852', '2015-11-08', '2015-11-12', 'e00000000', NULL, '1', '2');
 	
 	
-	
-	
-	
-	
-	
+SELECT * FROM (SELECT * FROM person where person.admin_empID = 'e00000000') AS person LEFT JOIN request ON person.empID = request.empID;
 	
 	
 	

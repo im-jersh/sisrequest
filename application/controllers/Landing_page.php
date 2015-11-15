@@ -11,6 +11,7 @@ class Landing_page extends CI_Controller {
     // This is an array that contains all the data that that will populate the list of employees/departments
     public $listData = array();
     public $printListData = array();
+    public $navigationItem;
 
     public function __construct() {
         parent::__construct();
@@ -39,6 +40,9 @@ class Landing_page extends CI_Controller {
         $empID = $this->session->userdata('empID');
         $this->listData = $this->landing_model->getEmployees($empID);
 
+        // Set up the navigation menu
+        $this->navigationItem = 'Employees';
+
         // Prepare the list data for display
         foreach ($this->listData as $item) {
             array_push($this->printListData,
@@ -57,6 +61,9 @@ class Landing_page extends CI_Controller {
 
     public function sisLoggedIn() {
 
+        // Set up the navigation menu
+        $this->navigationItem = 'Departments';
+
         // Get all the department
 
 
@@ -67,11 +74,13 @@ class Landing_page extends CI_Controller {
 
     public function loadView() {
 
+        $data['navigationItem'] = $this->navigationItem;
         $data['printListData'] = $this->printListData;
         $this->load->view('home_view', $data);
 
 
     }
+
 }
 
 ?>

@@ -32,15 +32,17 @@
 			</div>
 			<p style="color: white; text-size: 12px; margin-top: -25px; margin-bottom: 50px; margin-top: -50px;"> Security Request</p>
 			<ul class="menu-list">
+
 				<li>
-					<p style="color: white;">Employees</p>
+					<a href="<?php echo base_url('Landing_page'); ?>"><p class="nav-text active"><?php echo $navigationItem; ?></p></a>
 				</li>
 				<li>
-					<p style="color: white;">About</p>
+					<a href="<?php echo base_url('Documentation'); ?>" ><p class="nav-text"">Documentation</p></a>
 				</li>
 				<li>
-					<a href="<?php echo base_url();?>/Logout" ><p style="color: white;">Logout</p> </a> 
+					<a href="<?php echo base_url('Logout'); ?>" ><p class="nav-text"">Logout</p></a>
 				</li>
+
 			</ul>
 		</div>
 		<div id="marquee-container">
