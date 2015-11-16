@@ -1,5 +1,5 @@
 <?php
-
+if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 /**
  * Created by PhpStorm.
  * User: Emeka
@@ -15,27 +15,56 @@ class Landing_model extends CI_model
 
     }
 
-    public function view_admin($empID)
+    public function getEmployees($empID)
     {
-        $this->db->select('fName,lName,title');
-        $query = $this->db->get_where('person', array('admin_empID' => "$empID"));
+        // Contstruct the query and execute
+        $this->db->from('person');
+        $this->db->where(array('person.admin_empID' => "$empID"));
+        $this->db->join('request', 'person.empID = request.empID', 'left');
+        $query = $this->db->get();
+
+        // Extract the data
         $employees = array();
         foreach ($query->result() as $row)
         {
+
+            // Determine the status of this person's request
+            $status;
+            if (!is_null($row->status)) {
+                switch ($row->status) {
+                    case 0:
+                        $status = "Pending";
+                        break;
+                    case 1:
+                        $status = "Approved";
+                        break;
+                    case 2:
+                        $status = "Denied";
+                        break;
+                }
+            } else {$status = "Not Created";}
+
+
+
+
             array_push($employees, array(
                 "fName" => $row->fName,
                 "lName" => $row->lName,
-                "title" => $row->title
+                "title" => $row->title,
+                "status" => $status
             ));
         }
+
+        // Return the list of employees
         return $employees;
 
     }
 
-    /*public function view_sis()
+    public function getDepartments()
     {
 
-    }*/
+    }
 
 
 }
+?>
