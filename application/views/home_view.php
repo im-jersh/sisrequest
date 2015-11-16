@@ -32,29 +32,31 @@
 			</div>
 			<p style="color: white; text-size: 12px; margin-top: -25px; margin-bottom: 50px; margin-top: -50px;"> Security Request</p>
 			<ul class="menu-list">
+
 				<li>
-					<p style="color: white;">Employees</p>
+					<a href="<?php echo base_url('Landing_page'); ?>"><p class="nav-text active"><?php echo $navigationItem; ?></p></a>
 				</li>
 				<li>
-					<p style="color: white;">About</p>
+					<a href="<?php echo base_url('Documentation'); ?>" ><p class="nav-text"">Documentation</p></a>
 				</li>
 				<li>
-					<a href="<?php echo base_url();?>/Logout" ><p style="color: white;">Logout</p> </a> 
+					<a href="<?php echo base_url('Logout'); ?>" ><p class="nav-text"">Logout</p></a>
 				</li>
+
 			</ul>
 		</div>
 		<div id="marquee-container">
-			<div id="marquee-employees">
+			<div id="marquee-employees" class="column-left">
 				
-					<div id="employeeHeader">
-						<div style="margin-top: -10px; margin-left: -10px;" class="tigerHead">
-							<img height="117px" width="auto"  src="<?php echo base_url();?>/assets/images/tigerFinal.png">
-						</div>
-						<div class="employeeHeader">
-							<h1  style="color:white; padding-left: 10px;"> Employees</h1>
-						</div>
-					</div>
-					<table style="background-color: white; color: black; padding-top: -10px;">
+<!--					<div id="employeeHeader">-->
+<!--						<div style="margin-top: -10px; margin-left: -10px;" class="tigerHead">-->
+<!--							<img height="117px" width="auto"  src="--><?php //echo base_url();?><!--/assets/images/tigerFinal.png">-->
+<!--						</div>-->
+<!--						<div class="employeeHeader">-->
+<!--							<h1  style="color:white; padding-left: 10px;"> Employees</h1>-->
+<!--						</div>-->
+<!--					</div>-->
+					<table style="background-color: white; color: black; padding-top: -10px;" id="data-list">
 						<tr>
 							<th style="text-align: left; width: 415px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px; "> 
 							<!--<div style="float: right;">
@@ -77,19 +79,14 @@
 						</tr>
                         <!-- print out the generic list of data  -->
                         <?php
-                        foreach ($listData as $item)
-                        {
-                            echo '<tr onmouseover="ChangeBackgroundColor(this)" onmouseout="RestoreBackgroundColor(this)">';
-                            echo '<td style="color: black; background-color: #f5f5f5; padding-left: 90px; font-size: 20px;">' . $item['fName'] . ' ' . $item['lName'] . '</td>';
-                            //echo '<td style="color: black; background-color: #f5f5f5; padding-left: 53px;">' . $item->status . '</td></tr>';
-                            echo '</tr>';
-                        }
+							foreach ($printListData as $row) {
+								echo $row;
+							};
                         ?>
 					</table>
 				
 			</div>
-			<div id="marquee-employee-info">
-				<div class="headerBar"></div>
+			<div id="marquee-employee-info" class="column-right">
 				<h1 style="margin-top: 40px; text-align:center;"> Derek Kedigh </h1>
 				<div style="background-color:black; border-radius: 15px;">
 				<ol style="padding-top: 12px;">
