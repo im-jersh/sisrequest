@@ -111,29 +111,79 @@
 							<div id="collapseOne" class="panel-collapse collapse">
 								<div  class="panel-body">
 									<form style="display: inline;" action="">
-										<input  type="checkbox" name="basicInquiry" value="BasicInquiry"> Basic Inquiry View
-										<input style="margin-left: 5px;" type="checkbox" name="advancedInquiryv" value="AdvancedInquiryV">Advanced Inquiry View
-										<input style="margin-left: 5px;" type="checkbox" name="advancedInquiryu" value="AdvancedInquiryU">Advanced Inquiry Update<br>
-										<input style="margin-left: 5px;" type="checkbox" name="3csv" value="eCsV"> 3Cs View
-										<input style="margin-left: 5px;" type="checkbox" name="3csu" value="eCsU"> 3Cs Update
-										<input style="margin-left: 5px;" type="checkbox" name="advisorUpdate" value="AdvisorUpdate">Advisor Update
-										<input style="margin-left: 5px;" type="checkbox" name="dptSocUpdate" value="BasicInquiry"> Dpt SOC Update<br>
-										<input type="checkbox" name="serviceIndicatorsv" value="ServiceIndicatorsV">Service Indicators View
-										<input type="checkbox" name="serviceIndicatorsu" value="ServiceIndicatorsU">Service Indicators Update
-										<input style="margin-left: 5px;" type="checkbox" name="studGrpView" value="StudGrpView"> Stud Grp View<br>
-										<input style="margin-left: 5px;" type="checkbox" name="viewStudyList" value="ViewStudyList">View Study List
-										<input style="margin-left: 5px;" type="checkbox" name="rgstEnrollmentV" value="RgstEnrollmentV">Rgstr Enrollment View
-										<input style="margin-left: 5px;" type="checkbox" name="rgstEnrollmentu" value="RgstEnrollmentU">Rgstr Enrollment Update<br>
-										<input type="checkbox" name="advsrStudCenter" value="AdvsrStudCenter">Advsr Stud Center View
-										<input style="margin-left: 5px;" type="checkbox" name="classPermissionu" value="ClassPermissionU">Class Permission Update
-										<input style="margin-left: 5px;" type="checkbox" name="classPermissionv" value="ClassPermissionView">Class Permission View
-										<input style="margin-left: 5px;" type="checkbox" name="classRoster" value="ClassRoster">Class Roster View
-										<input type="checkbox" name="blockEnrollmentsv" value="BlockEnrollmentsV"> Block Enrollments View
-										<input type="checkbox" name="blockEnrollmentsu" value="BlockEnrollmentsU"> Block Enrollments Update<br>
-										<input style="margin-left: 5px;" type="checkbox" name="reportMgr" value="ReportMgr">Report Mgr View
-										<input style="margin-left: 5px;" type="checkbox" name="selfSrvcAdvisor" value="SelfSrvcAdvisor">Self Srvc Advisor Update
-										<input style="margin-left: 5px;" type="checkbox" name="fiscalOffice" value="FiscalOffice">Fiscal Office View<br>
-										<input type="checkbox" name="academicAdvisingProfile" value="AcademicAdvisingProfile">Academic Advising Profile Update
+										<table style="width:500px; font-size: 15px;">
+										<tr>
+											<td>
+												<div><input  type="checkbox" name="basicInquiry" value="BasicInquiry"> Basic Inquiry View</div>
+												<div><input type="checkbox" name="advancedInquiryv" value="AdvancedInquiryV">Advanced Inquiry View</div>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<div><input type="checkbox" name="advancedInquiryu" value="AdvancedInquiryU">Advanced Inquiry Update</div>
+												<div><input type="checkbox" name="3csv" value="eCsV"> 3Cs View</div>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<div><input type="checkbox" name="3csu" value="eCsU"> 3Cs Update</div>
+												<div><input type="checkbox" name="advisorUpdate" value="AdvisorUpdate">Advisor Update</div>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<div><input  type="checkbox" name="dptSocUpdate" value="BasicInquiry"> Dpt SOC Update</div>
+												<div><input  type="checkbox" name="serviceIndicatorsv" value="ServiceIndicatorsV">Service Indicators View</div>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<div><input type="checkbox" name="serviceIndicatorsu" value="ServiceIndicatorsU">Service Indicators Update</div>
+												<div><input type="checkbox" name="studGrpView" value="StudGrpView"> Stud Grp View</div>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<div><input  type="checkbox" name="viewStudyList" value="ViewStudyList">View Study List</div>
+												<div><input type="checkbox" name="rgstEnrollmentV" value="RgstEnrollmentV">Rgstr Enrollment View</div>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<div><input type="checkbox" name="rgstEnrollmentu" value="RgstEnrollmentU">Rgstr Enrollment Update</div>
+												<div><input type="checkbox" name="advsrStudCenter" value="AdvsrStudCenter">Advsr Stud Center View</div>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<div><input  type="checkbox" name="classPermissionu" value="ClassPermissionU">Class Permission Update</div>
+												<div><input  type="checkbox" name="classPermissionv" value="ClassPermissionView">Class Permission View</div>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<div><input type="checkbox" name="classRoster" value="ClassRoster">Class Roster View</div>
+												<div><input type="checkbox" name="blockEnrollmentsv" value="BlockEnrollmentsV"> Block Enrollments View</div>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<div><input type="checkbox" name="blockEnrollmentsu" value="BlockEnrollmentsU"> Block Enrollments Update</div>
+												<div><input  type="checkbox" name="reportMgr" value="ReportMgr">Report Mgr View</div>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<div><input  type="checkbox" name="selfSrvcAdvisor" value="SelfSrvcAdvisor">Self Srvc Advisor Update</div>
+												<div><input  type="checkbox" name="fiscalOffice" value="FiscalOffice">Fiscal Office View</div>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<div><input type="checkbox" name="academicAdvisingProfile" value="AcademicAdvisingProfile">Academic Advising Profile Update</div>
+											</td>
+										</tr>
+									</table>
 									</form>
 								</div>
 							</div>
@@ -147,21 +197,54 @@
 							<div id="collapseTwo" class="panel-collapse collapse">
 								<div class="panel-body">
 									<form style="display: inline;" action="">
-										<input  type="checkbox" name="act" value="ACT"> ACT
-										<input style="margin-left: 5px;" type="checkbox" name="ielts" value="IELTS">IELTS
-										<input style="margin-left: 5px;" type="checkbox" name="ged" value="GED">GED
-										<input style="margin-left: 5px;" type="checkbox" name="sat" value="SAT">SAT
-										<input style="margin-left: 5px;" type="checkbox" name="lsat" value="LSAT">LSAT
-										<input style="margin-left: 5px;" type="checkbox" name="millers" value="MILLERS">MILLERS
-										<input style="margin-left: 5px;" type="checkbox" name="gre" value="GRE">GRE
-										<input style="margin-left: 5px;" type="checkbox" name="mcat" value="MCAT">MCAT
-										<input style="margin-left: 5px;" type="checkbox" name="prax" value="PRAX">PRAX
-										<input type="checkbox" name="gmat" value="GMAT">GMAT
-										<input style="margin-left: 5px;" type="checkbox" name="ap" value="AP">AP
-										<input style="margin-left: 5px;" type="checkbox" name="pla-mu" value="PLA-MU">PLA-MU
-										<input style="margin-left: 5px;" type="checkbox" name="tofel" value="TOFEL">TOFEL
-										<input style="margin-left: 5px;" type="checkbox" name="clep" value="CLEP">CLEP
-										<input style="margin-left: 5px;" type="checkbox" name="base" value="BASE">BASE
+										<table style="width:500px; font-size: 15px;">
+											<tr>
+												<td>
+													<div> <input  type="checkbox" name="act" value="ACT"> ACT</div>
+													<div> <input style="margin-left: 5px;" type="checkbox" name="ielts" value="IELTS">IELTS</div>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div><input style="margin-left: 5px;" type="checkbox" name="ged" value="GED">GED</div>
+													<div><input style="margin-left: 5px;" type="checkbox" name="sat" value="SAT">SAT</div>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div><input style="margin-left: 5px;" type="checkbox" name="lsat" value="LSAT">LSAT</div>
+													<div><input style="margin-left: 5px;" type="checkbox" name="millers" value="MILLERS">MILLERS</div>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div><input style="margin-left: 5px;" type="checkbox" name="gre" value="GRE">GRE</div>
+													<div><input style="margin-left: 5px;" type="checkbox" name="mcat" value="MCAT">MCAT</div>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div><input style="margin-left: 5px;" type="checkbox" name="prax" value="PRAX">PRAX</div>
+													<div><input type="checkbox" name="gmat" value="GMAT">GMAT</div>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div><input style="margin-left: 5px;" type="checkbox" name="ap" value="AP">AP</div>
+													<div><input style="margin-left: 5px;" type="checkbox" name="pla-mu" value="PLA-MU">PLA-MU</div>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div><input style="margin-left: 5px;" type="checkbox" name="tofel" value="TOFEL">TOFEL</div>
+													<div><input style="margin-left: 5px;" type="checkbox" name="clep" value="CLEP">CLEP</div>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div><input style="margin-left: 5px;" type="checkbox" name="base" value="BASE">BASE</div>
+										
+									</table>
 									</form>
 								</div>
 							</div>
@@ -175,8 +258,14 @@
 							<div id="collapseThree" class="panel-collapse collapse">
 								<div class="panel-body">
 									<form style="display: inline;" action="">
-										<input  type="checkbox" name="sfgeneralinquiry" value="SfGeneralInquiry"> SF General Inquiry
-										<input style="margin-left: 5px;" type="checkbox" name="sfcashgrouppost" value="SfCashGroupPost">SF Cash Group Post
+										<table style="width:500px; font-size: 15px;">
+											<tr>
+												<td>
+													<div><input  type="checkbox" name="sfgeneralinquiry" value="SfGeneralInquiry"> SF General Inquiry</div>
+													<div><input style="margin-left: 5px;" type="checkbox" name="sfcashgrouppost" value="SfCashGroupPost">SF Cash Group Post</div>
+												</td>
+											</tr>
+										</table>
 										
 									</form>
 								</div>
@@ -191,8 +280,14 @@
 							<div id="collapseFour" class="panel-collapse collapse">
 								<div class="panel-body">
 									<form style="display: inline;" action="">
-										<input  type="checkbox" name="facash" value="FaCash"> FA Cash
-										<input style="margin-left: 5px;" type="checkbox" name="fanon-fincancialaidstaff" value="FaNon-financialAidStaff">FA Non-Financial Aid Staff
+										<table style="width:500px; font-size: 15px;">
+											<tr>
+												<td>
+													<div><input  type="checkbox" name="facash" value="FaCash"> FA Cash</div>
+													<div><input style="margin-left: 5px;" type="checkbox" name="fanon-fincancialaidstaff" value="FaNon-financialAidStaff">FA Non-Financial Aid Staff</div>
+												</td>
+											</tr>
+										</table>
 										
 									</form>
 								</div>
@@ -207,13 +302,31 @@
 							<div id="collapseFive" class="panel-collapse collapse">
 								<div class="panel-body">
 									<form style="display: inline;" action="">
-										<input  type="checkbox" name="immunizationview" value="ImmunizationView"> Immunization View
-										<input style="margin-left: 5px;" type="checkbox" name="transfercreditadmission" value="TransferCreditAdmission">Transfer Credit Admission
-										<input  type="checkbox" name="relationships" value="Relationships"> Relationships
-										<input style="margin-left: 5px;" type="checkbox" name="studentgroups" value="StudenGroups">Student Groups
-										<input  type="checkbox" name="accomadate" value="Accomdate"> Accomadate(Student Health)
-										<input style="margin-left: 5px;" type="checkbox" name="supportstaff" value="SupportStaff">Support Staff(Registar's Office)
-										<input style="margin-left: 5px;" type="checkbox" name="advancestandingreport" value="AdvanceStandingReport">Advance Standing Report
+										<table style="width:500px; font-size: 15px;">
+											<tr>
+												<td>
+													<div><input  type="checkbox" name="immunizationview" value="ImmunizationView"> Immunization View</div>
+													<div><input style="margin-left: 5px;" type="checkbox" name="transfercreditadmission" value="TransferCreditAdmission">Transfer Credit Admission</div>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div><input  type="checkbox" name="relationships" value="Relationships"> Relationships</div>
+													<div><input style="margin-left: 5px;" type="checkbox" name="studentgroups" value="StudenGroups">Student Groups</div>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div><input  type="checkbox" name="accomadate" value="Accomdate"> Accomadate(Student Health)</div>
+													<div><input style="margin-left: 5px;" type="checkbox" name="supportstaff" value="SupportStaff">Support Staff(Registar's Office)</div>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div><input style="margin-left: 5px;" type="checkbox" name="advancestandingreport" value="AdvanceStandingReport">Advance Standing Report </div>
+												</td>
+											</tr>
+										</table>
 									</form>
 								</div>
 							</div>
@@ -226,4 +339,3 @@
 	</div>
 </body>
 </html>
-	
