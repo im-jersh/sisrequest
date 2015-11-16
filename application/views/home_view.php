@@ -46,17 +46,17 @@
 			</ul>
 		</div>
 		<div id="marquee-container">
-			<div id="marquee-employees">
+			<div id="marquee-employees" class="column-left">
 				
-					<div id="employeeHeader">
-						<div style="margin-top: -10px; margin-left: -10px;" class="tigerHead">
-							<img height="117px" width="auto"  src="<?php echo base_url();?>/assets/images/tigerFinal.png">
-						</div>
-						<div class="employeeHeader">
-							<h1  style="color:white; padding-left: 10px;"> Employees</h1>
-						</div>
-					</div>
-					<table style="background-color: white; color: black; padding-top: -10px;">
+<!--					<div id="employeeHeader">-->
+<!--						<div style="margin-top: -10px; margin-left: -10px;" class="tigerHead">-->
+<!--							<img height="117px" width="auto"  src="--><?php //echo base_url();?><!--/assets/images/tigerFinal.png">-->
+<!--						</div>-->
+<!--						<div class="employeeHeader">-->
+<!--							<h1  style="color:white; padding-left: 10px;"> Employees</h1>-->
+<!--						</div>-->
+<!--					</div>-->
+					<table style="background-color: white; color: black; padding-top: -10px;" id="data-list">
 						<tr>
 							<th style="text-align: left; width: 415px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px; "> 
 							<!--<div style="float: right;">
@@ -86,8 +86,7 @@
 					</table>
 				
 			</div>
-			<div id="marquee-employee-info">
-				<div class="headerBar"></div>
+			<div id="marquee-employee-info" class="column-right">
 				<h1 style="margin-top: 40px; text-align:center;"> Derek Kedigh </h1>
 				<div style="background-color:black; border-radius: 15px;">
 				<ol style="padding-top: 12px;">
