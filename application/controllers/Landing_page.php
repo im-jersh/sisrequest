@@ -41,7 +41,7 @@ class Landing_page extends CI_Controller {
         $this->listData = $this->landing_model->getEmployees($empID);
 
         // Set up the navigation menu
-        $this->navigationItem = 'Employees';
+        $this->navigationItem = '<span class="glyphicon glyphicon-user">  Employees</span>';
 
         // Prepare the list data for display
         foreach ($this->listData as $item) {
