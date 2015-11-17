@@ -65,8 +65,15 @@ class Landing_page extends CI_Controller {
         $this->navigationItem = 'Departments';
 
         // Get all the department
+        $this->listData = $this->landing_model->getDepartments();
 
-
+        foreach ($this->listData as $item) {
+            array_push($this->printListData,
+                '<tr onmouseover="ChangeBackgroundColor(this)" onmouseout="RestoreBackgroundColor(this)">' .
+                '<td style="color: black; background-color: #f5f5f5; padding-left: 90px; font-size: 20px;">' .
+                $item . '</td>' . '</tr>'
+            );
+        };
         // Load the page
         $this->loadView();
 

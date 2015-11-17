@@ -63,6 +63,18 @@ class Landing_model extends CI_model
     public function getDepartments()
     {
 
+        //selects only 1 of each type of department from person table
+        $this->db->distinct();
+        $this->db->select('department');
+        $query = $this->db->get('person');
+
+        $departments = array();
+        foreach ($query->result() as $row)
+        {
+            array_push($departments, $row->department);
+        }
+        //return the list of departments
+        return $departments;
     }
 
 
