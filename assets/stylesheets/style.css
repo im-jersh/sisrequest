@@ -33,8 +33,8 @@ tr, td{
 	padding-top: 15px;
 	padding-left: 100px;
 	font-size: 20px;
-	box-shadow: inset 0px 1px 0px #3e9cbf, 0px 1px 0px 0px #205c73, 0px 2px 0px #999;
-	background-color: #f5f5f5;
+	box-shadow: inset 0px 1px 0px #333333, 0px 1px 0px 0px #333333, 0px 2px 0px #333333;
+	background-color: transparent;
 }
 
 	
@@ -118,13 +118,11 @@ tr, td{
 
 table {
 	diplay: table;
-	width: 595px;
+	width: 100%;
 	color: black;
-	margin-top: -10px;
 }
 
 #menu{
-	width: 170px;
 	background: #4D4D4D;
 	color: #bab2c7;
 	text-transform: uppercase;
@@ -136,12 +134,11 @@ table {
 	position: absolute;
 	display: block;
 	min-height: 900px;
-}
+	float: left;
+	height: 100%;
+	width: 12%;
+	position: fixed;
 
-.headerBar {
-	background: url(C:/Users/derek/Documents/GitHub/sisrequest/assets/images/tigerBackF.JPG) repeat;
-	width: 585px;
-	height: 37px;
 }
 
 #menu .nav-logo	{
@@ -254,18 +251,28 @@ ol li .genInfo {
 
 #marquee-container {
 	height: 100%;
-	top: 0;
-	left: 170px;
-	width: 1190px;
-	position: absolute;
+	width: 88%;
+	float: right;
+	position: relative;
+}
 
+#marquee-container .column-left {
+	float: left;
+	height: 100%;
+	width: 40%;
+	min-width: 150px;
+	position: relative;
+}
+
+#marquee-container .column-right {
+	floath: right;
+	height: 100%;
+	width: 60%;
+	position: relative;
+	min-width: 300px;
 }
 
 #marquee-employees {
-	height: 100%;
-	top 0;
-	left: 0px;
-	width: 595px;
 	overflow: auto;
 	color: #bab2c7;
 	text-align: left;
@@ -275,6 +282,20 @@ ol li .genInfo {
 	overflow-y: scroll;
 	min-height: 900px;
 }
+
+#data-list {
+	width: 100%;
+}
+
+#data-list tr {
+	height: 4em;
+	background-color: #F1BF4E;
+}
+
+#data-list tr td {
+	padding-left: 1em;
+}
+
 .employeeHeader {
 	text-align: left; 
 	position: relative;
@@ -332,8 +353,6 @@ ol li .genInfo {
 #marquee-employee-info {
 	height: 100%;
 	top: 0;
-	left: 595px;
-	width: 585px;
 	overflow: auto;
 	color: black;
 	text-align: left;

@@ -41,15 +41,15 @@ class Landing_page extends CI_Controller {
         $this->listData = $this->landing_model->getEmployees($empID);
 
         // Set up the navigation menu
-        $this->navigationItem = 'Employees';
+        $this->navigationItem = '<span class="glyphicon glyphicon-user">  Employees</span>';
 
         // Prepare the list data for display
         foreach ($this->listData as $item) {
             array_push($this->printListData,
                 '<tr onmouseover="ChangeBackgroundColor(this)" onmouseout="RestoreBackgroundColor(this)">' .
-                '<td style="color: black; background-color: #f5f5f5; padding-left: 90px; font-size: 20px;">' .
+                '<td>' .
                 $item['fName'] . ' ' . $item['lName'] . '</td>' .
-                '<td style="color: black; background-color: #f5f5f5; padding-left: 53px;">' .
+                '<td>' .
                 $item['status'] .
                 '</td></tr>'
                 );
