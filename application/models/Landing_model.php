@@ -94,6 +94,12 @@ class Landing_model extends CI_model
         return $employees;
     }
 
+    public function fetchRequestForID($requestID) {
+
+
+
+    }
+
     public function getDepartments()
     {
 

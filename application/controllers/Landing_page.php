@@ -101,17 +101,28 @@ class Landing_page extends CI_Controller {
         // Extract the pawprint key
         $pawprint = $this->input->post('pawprint');
 
-        // Reload the list of employees
-        // (Calling this method at this point should use the cached database
-        // results from the page load in order to optimize load times)
+        // Get the collection of employees again
         $empID = $this->session->userdata('empID');
         $employees = $this->landing_model->getEmployees($empID);
 
         // Extract the employee we are looking for
         $employee = $employees[$pawprint];
 
+        // Get the request and the associated request types for the employee
+        if (!is_null($employee['request'])) {
 
-        $returnData['main'] = array($employee);
+            $request = $employee['request'];
+            $requestID = $request['request_ID'];
+
+            // Retrieve from the database
+            $requestRecord = $this->landing_model->fetchRequestForID($requestID);
+
+        } else { // the selected person does not have an existing request yet
+
+        }
+
+
+        $returnData['main'] = array($requestID);
         echo json_encode($returnData);
     }
 

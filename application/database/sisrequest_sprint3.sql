@@ -25,23 +25,22 @@ USE sisrequest;
 
 CREATE TABLE `admissions` (
   `request_ID` bigint(20) unsigned NOT NULL,
-  `all_test_score_access` tinyint(1) DEFAULT NULL,
-  `act` tinyint(1) DEFAULT NULL,
-  `ielts` tinyint(1) DEFAULT NULL,
-  `ged` tinyint(1) DEFAULT NULL,
-  `sat` tinyint(1) DEFAULT NULL,
-  `lsat` tinyint(1) DEFAULT NULL,
-  `millers` tinyint(1) DEFAULT NULL,
-  `gre` tinyint(1) DEFAULT NULL,
-  `mcat` tinyint(1) DEFAULT NULL,
-  `prax` tinyint(1) DEFAULT NULL,
-  `gmat` tinyint(1) DEFAULT NULL,
-  `ap` tinyint(1) DEFAULT NULL,
-  `pla_mu` tinyint(1) DEFAULT NULL,
-  `tofel` tinyint(1) DEFAULT NULL,
-  `clep` tinyint(1) DEFAULT NULL,
-  `base` tinyint(1) DEFAULT NULL,
-  `access_description` varchar(50) DEFAULT NULL
+  `all_test_score_access` tinyint(7) DEFAULT NULL,
+  `act` tinyint(7) DEFAULT NULL,
+  `ielts` tinyint(7) DEFAULT NULL,
+  `ged` tinyint(7) DEFAULT NULL,
+  `sat` tinyint(7) DEFAULT NULL,
+  `lsat` tinyint(7) DEFAULT NULL,
+  `millers` tinyint(7) DEFAULT NULL,
+  `gre` tinyint(7) DEFAULT NULL,
+  `mcat` tinyint(7) DEFAULT NULL,
+  `prax` tinyint(7) DEFAULT NULL,
+  `gmat` tinyint(7) DEFAULT NULL,
+  `ap` tinyint(7) DEFAULT NULL,
+  `pla_mu` tinyint(7) DEFAULT NULL,
+  `tofel` tinyint(7) DEFAULT NULL,
+  `clep` tinyint(7) DEFAULT NULL,
+  `base` tinyint(7) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -52,10 +51,9 @@ CREATE TABLE `admissions` (
 
 CREATE TABLE `auth` (
   `request_ID` bigint(20) unsigned NOT NULL,
-  `employee_sig` tinyint(1) DEFAULT NULL,
-  `dept_head_sig` tinyint(1) DEFAULT NULL,
-  `dean_sig` tinyint(1) DEFAULT NULL,
-  `access_description` varchar(50) DEFAULT NULL
+  `employee_sig` tinyint(7) DEFAULT NULL,
+  `dept_head_sig` tinyint(7) DEFAULT NULL,
+  `dean_sig` tinyint(7) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -66,9 +64,8 @@ CREATE TABLE `auth` (
 
 CREATE TABLE `cashiers` (
   `request_ID` bigint(20) unsigned NOT NULL,
-  `sf_general_inquiry` tinyint(1) DEFAULT NULL,
-  `sf_cash_group_post` tinyint(1) DEFAULT NULL,
-  `access_description` varchar(50) DEFAULT NULL
+  `sf_general_inquiry` tinyint(7) DEFAULT NULL,
+  `sf_cash_group_post` tinyint(7) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -79,9 +76,8 @@ CREATE TABLE `cashiers` (
 
 CREATE TABLE `financialAid` (
   `request_ID` bigint(20) unsigned NOT NULL,
-  `fa_cash` tinyint(1) DEFAULT NULL,
-  `fa_non_financial_aid_staff` tinyint(1) DEFAULT NULL,
-  `access_description` varchar(50) DEFAULT NULL
+  `fa_cash` tinyint(7) DEFAULT NULL,
+  `fa_non_financial_aid_staff` tinyint(7) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -245,25 +241,24 @@ INSERT INTO `person` (`empID`, `pawprint`, `fName`, `lName`, `phone_number`, `ca
 
 CREATE TABLE `records` (
   `request_ID` bigint(20) unsigned NOT NULL,
-  `basic_inquiry` tinyint(1) DEFAULT NULL,
-  `advanced_inquiry` tinyint(1) DEFAULT NULL,
-  `3cs` tinyint(1) DEFAULT NULL,
-  `advisor_update` tinyint(1) DEFAULT NULL,
-  `dept_soc_update` tinyint(1) DEFAULT NULL,
-  `student_group_review` tinyint(1) DEFAULT NULL,
-  `service_indicators_holds` tinyint(1) DEFAULT NULL,
-  `view_study_list` tinyint(1) DEFAULT NULL,
-  `registrar_enrollment` tinyint(1) DEFAULT NULL,
-  `advisor_student_center` tinyint(1) DEFAULT NULL,
-  `class_permission` tinyint(1) DEFAULT NULL,
-  `class_permission_view` tinyint(1) DEFAULT NULL,
-  `class_roster` tinyint(1) DEFAULT NULL,
-  `block_enrollments` tinyint(1) DEFAULT NULL,
-  `report_manager` tinyint(1) DEFAULT NULL,
-  `self_service_advisor` tinyint(1) DEFAULT NULL,
-  `fiscal_advisor` tinyint(1) DEFAULT NULL,
-  `academic_advising_profile` tinyint(1) DEFAULT NULL,
-  `access_description` varchar(50) DEFAULT NULL
+  `basic_inquiry` tinyint(7) DEFAULT NULL,
+  `advanced_inquiry` tinyint(7) DEFAULT NULL,
+  `3cs` tinyint(7) DEFAULT NULL,
+  `advisor_update` tinyint(7) DEFAULT NULL,
+  `dept_soc_update` tinyint(7) DEFAULT NULL,
+  `student_group_review` tinyint(7) DEFAULT NULL,
+  `service_indicators_holds` tinyint(7) DEFAULT NULL,
+  `view_study_list` tinyint(7) DEFAULT NULL,
+  `registrar_enrollment` tinyint(7) DEFAULT NULL,
+  `advisor_student_center` tinyint(7) DEFAULT NULL,
+  `class_permission` tinyint(7) DEFAULT NULL,
+  `class_permission_view` tinyint(7) DEFAULT NULL,
+  `class_roster` tinyint(7) DEFAULT NULL,
+  `block_enrollments` tinyint(7) DEFAULT NULL,
+  `report_manager` tinyint(7) DEFAULT NULL,
+  `self_service_advisor` tinyint(7) DEFAULT NULL,
+  `fiscal_advisor` tinyint(7) DEFAULT NULL,
+  `academic_advising_profile` tinyint(7) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -397,14 +392,13 @@ INSERT INTO `request` (`request_ID`, `empID`, `request_date`, `update_date`, `ad
 
 CREATE TABLE `reserved` (
   `request_ID` bigint(20) unsigned NOT NULL,
-  `immunization_view` tinyint(1) DEFAULT NULL,
-  `transfer_credit_admission` tinyint(1) DEFAULT NULL,
-  `relationships` tinyint(1) DEFAULT NULL,
-  `student_groups` tinyint(1) DEFAULT NULL,
-  `accomodate_student_health` tinyint(1) DEFAULT NULL,
-  `support_staff_registrar` tinyint(1) DEFAULT NULL,
-  `advance_standing_report` tinyint(1) DEFAULT NULL,
-  `access_description` varchar(50) DEFAULT NULL
+  `immunization_view` tinyint(7) DEFAULT NULL,
+  `transfer_credit_admission` tinyint(7) DEFAULT NULL,
+  `relationships` tinyint(7) DEFAULT NULL,
+  `student_groups` tinyint(7) DEFAULT NULL,
+  `accomodate_student_health` tinyint(7) DEFAULT NULL,
+  `support_staff_registrar` tinyint(7) DEFAULT NULL,
+  `advance_standing_report` tinyint(7) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
