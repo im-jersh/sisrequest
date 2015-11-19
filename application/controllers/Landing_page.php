@@ -9,8 +9,8 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 class Landing_page extends CI_Controller {
 
     // This is an array that contains all the data that that will populate the list of employees/departments
-    public $listData = array();
-    public $printListData = array();
+    protected static $listData = [];
+    public $printListData = [];
     public $navigationItem;
 
     public function __construct() {
@@ -38,21 +38,30 @@ class Landing_page extends CI_Controller {
 
         // Get the employees associated with this user
         $empID = $this->session->userdata('empID');
-        $this->listData = $this->landing_model->getEmployees($empID);
+        self::$listData['employees'] = $this->landing_model->getEmployees($empID);
 
         // Set up the navigation menu
         $this->navigationItem = '<span class="glyphicon glyphicon-user">  Employees</span>';
 
         // Prepare the list data for display
-        foreach ($this->listData as $item) {
+        foreach (self::$listData['employees'] as $item) {
             array_push($this->printListData,
-                '<tr onmouseover="ChangeBackgroundColor(this)" onmouseout="RestoreBackgroundColor(this)">' .
-                '<td>' .
-                $item['fName'] . ' ' . $item['lName'] . '</td>' .
-                '<td>' .
-                $item['status'] .
-                '</td></tr>'
-                );
+                '<tr id="'. $item['pawprint'] .'">' .
+                    '<td>' .
+                        '<table class="inner-table name-title">' .
+                            '<tr class="mainName"><td>' .
+                                $item['fName'] . ' ' . $item['lName'] .
+                            '</td></tr>' .
+                            '<tr class="subTitle"><td>' .
+                                $item['title'] .
+                            '</td></tr>' .
+                        '</table>' .
+                    '</td>' .
+                    '<td>' .
+                        $item['status'] .
+                    '</td>'.
+                '</tr>'
+            );
         };
 
         // Load the page
@@ -78,7 +87,25 @@ class Landing_page extends CI_Controller {
         $data['printListData'] = $this->printListData;
         $this->load->view('home_view', $data);
 
+    }
 
+    public function getRowDataForKey() {
+
+        // Extract the pawprint key
+        $pawprint = $this->input->post('pawprint');
+
+        // Reload the list of employees
+        // (Calling this method at this point should use the cached database
+        // results from the page load in order to optimize load times)
+        $empID = $this->session->userdata('empID');
+        $employees = $this->landing_model->getEmployees($empID);
+
+        // Extract the employee we are looking for
+        $employee = $employees[$pawprint];
+
+
+        $returnData['main'] = array($employee);
+        echo json_encode($returnData);
     }
 
 }

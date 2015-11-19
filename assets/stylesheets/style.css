@@ -30,8 +30,6 @@ th {
 	border-collapse: collapse;
 }
 tr, td{
-	padding-top: 15px;
-	padding-left: 100px;
 	font-size: 20px;
 	box-shadow: inset 0px 1px 0px #333333, 0px 1px 0px 0px #333333, 0px 2px 0px #333333;
 	background-color: transparent;
@@ -374,4 +372,27 @@ ol li .genInfo {
 	left: 0px;
 	curson: pointer;
 	margin-top: 0px;
+}
+
+#data-list .inner-table tr td {
+	padding: 0;
+ }
+
+#data-list .inner-table tr {
+	height: 2em;
+	border-bottom: none;
+}
+
+.inner-table tr.mainName td {
+	padding-top: 3% !important;
+	font-family: "Helvetica Neue";
+	font-size: 1.2em;
+	font-weight: 300;
+}
+
+.inner-table .subTitle td {
+	box-shadow: none;
+	font-family: "Helvetica Neue";
+	font-size: .9em;
+	font-weight: lighter;
 }
