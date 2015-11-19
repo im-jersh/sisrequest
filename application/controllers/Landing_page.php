@@ -49,7 +49,7 @@ class Landing_page extends CI_Controller {
                 '<tr id="'. $item['pawprint'] .'">' .
                     '<td>' .
                         '<table class="inner-table name-title">' .
-                            '<tr class="mainName"><td>' .
+                            '<tr class="mainName"><td class="employeeTD">' .
                                 $item['fName'] . ' ' . $item['lName'] .
                             '</td></tr>' .
                             '<tr class="subTitle"><td>' .
