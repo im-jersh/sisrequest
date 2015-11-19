@@ -5,15 +5,15 @@ $(document).ready(function(){
         var search = $(this).val();
  
         // Loop through the comment list
-        $(".employeeTR").each(function(){
+        $(".inner-table .mainName").each(function(){
  
             // If the list item does not contain the text phrase fade it out
-            if ($(this).children(".employeeTD").text().search(new RegExp(search, "i")) < 0) {
-                $(this).fadeOut();
+            if ($(this).text().search(new RegExp(search, "i")) < 0) {
+                $(this).parent().parent().parent().parent().fadeOut();
  
-            // Show the list item if the phrase matches and increase the count by 1
+            // Show the list item if the phrase matches
             } else {
-                $(this).show();
+                $(this).parent().parent().parent().parent().show();
             }
         });
     });
