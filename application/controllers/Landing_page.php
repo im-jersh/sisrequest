@@ -46,8 +46,8 @@ class Landing_page extends CI_Controller {
         // Prepare the list data for display
         foreach ($this->listData as $item) {
             array_push($this->printListData,
-                '<tr onmouseover="ChangeBackgroundColor(this)" onmouseout="RestoreBackgroundColor(this)">' .
-                '<td>' .
+                '<tr class="employeeTR" onmouseover="ChangeBackgroundColor(this)" onmouseout="RestoreBackgroundColor(this)">' .
+                '<td class="employeeTD">' .
                 $item['fName'] . ' ' . $item['lName'] . '</td>' .
                 '<td>' .
                 $item['status'] .
