@@ -201,48 +201,48 @@
 											<tr>
 												<td>
 													<div> <input  type="checkbox" name="act" value="ACT">ACT</div>
-													<div> <input style="margin-left: 5px;" type="checkbox" name="ielts" value="IELTS">IELTS</div>
+													<div> <input style="margin-left;" type="checkbox" name="ielts" value="IELTS">IELTS</div>
 												</td>
 											</tr>
 											<tr>
 												<td>
-													<div><input style="margin-left: 5px;" type="checkbox" name="ged" value="GED">GED</div>
-													<div><input style="margin-left: 5px;" type="checkbox" name="sat" value="SAT">SAT</div>
+													<div><input style="margin-left;" type="checkbox" name="ged" value="GED">GED</div>
+													<div><input style="margin-left;" type="checkbox" name="sat" value="SAT">SAT</div>
 												</td>
 											</tr>
 											<tr>
 												<td>
-													<div><input style="margin-left: 5px;" type="checkbox" name="lsat" value="LSAT">LSAT</div>
-													<div><input style="margin-left: 5px;" type="checkbox" name="millers" value="MILLERS">MILLERS</div>
+													<div><input style="margin-left;" type="checkbox" name="lsat" value="LSAT">LSAT</div>
+													<div><input style="margin-left;" type="checkbox" name="millers" value="MILLERS">MILLERS</div>
 												</td>
 											</tr>
 											<tr>
 												<td>
-													<div><input style="margin-left: 5px;" type="checkbox" name="gre" value="GRE">GRE</div>
-													<div><input style="margin-left: 5px;" type="checkbox" name="mcat" value="MCAT">MCAT</div>
+													<div><input style="margin-left;" type="checkbox" name="gre" value="GRE">GRE</div>
+													<div><input style="margin-left;" type="checkbox" name="mcat" value="MCAT">MCAT</div>
 												</td>
 											</tr>
 											<tr>
 												<td>
-													<div><input style="margin-left: 5px;" type="checkbox" name="prax" value="PRAX">PRAX</div>
-													<div><input type="checkbox" name="gmat" value="GMAT">GMAT</div>
+													<div><input style="margin-left;" type="checkbox" name="prax" value="PRAX">PRAX</div>
+													<div><input style="margin-left;" type="checkbox" name="gmat" value="GMAT">GMAT</div>
 												</td>
 											</tr>
 											<tr>
 												<td>
-													<div><input style="margin-left: 5px;" type="checkbox" name="ap" value="AP">AP</div>
-													<div><input style="margin-left: 5px;" type="checkbox" name="pla-mu" value="PLA-MU">PLA-MU</div>
+													<div><input style="margin-left;" type="checkbox" name="ap" value="AP">AP</div>
+													<div><input style="margin-left;" type="checkbox" name="pla-mu" value="PLA-MU">PLA-MU</div>
 												</td>
 											</tr>
 											<tr>
 												<td>
-													<div><input style="margin-left: 5px;" type="checkbox" name="tofel" value="TOFEL">TOFEL</div>
-													<div><input style="margin-left: 5px;" type="checkbox" name="clep" value="CLEP">CLEP</div>
+													<div><input style="margin-left;" type="checkbox" name="tofel" value="TOFEL">TOFEL</div>
+													<div><input style="margin-left;" type="checkbox" name="clep" value="CLEP">CLEP</div>
 												</td>
 											</tr>
 											<tr>
 												<td>
-													<div><input style="margin-left: 5px;" type="checkbox" name="base" value="BASE">BASE</div>
+													<div><input style="margin-left;" type="checkbox" name="base" value="BASE">BASE</div>
 										
 									</table>
 									</form>
@@ -261,8 +261,8 @@
 										<table style="width:500px; font-size: 15px;">
 											<tr>
 												<td>
-													<div><input  type="checkbox" name="sfgeneralinquiry" value="SfGeneralInquiry">SF General Inquiry</div>
-													<div><input style="margin-left: 5px;" type="checkbox" name="sfcashgrouppost" value="SfCashGroupPost">SF Cash Group Post</div>
+													<div><input style="margin-left auto" type="checkbox" name="sfgeneralinquiry" value="SfGeneralInquiry">SF General Inquiry</div>
+													<div><input style="margin-left auto" type="checkbox" name="sfcashgrouppost" value="SfCashGroupPost">SF Cash Group Post</div>
 												</td>
 											</tr>
 										</table>
@@ -283,8 +283,8 @@
 										<table style="width:500px; font-size: 15px;">
 											<tr>
 												<td>
-													<div><input  type="checkbox" name="facash" value="FaCash">FA Cash</div>
-													<div><input style="margin-left: 5px;" type="checkbox" name="fanon-fincancialaidstaff" value="FaNon-financialAidStaff">FA Non-Financial Aid Staff</div>
+													<div><input style="margin-left: auto" type="checkbox" name="facash" value="FaCash">FA Cash</div>
+													<div><input style="margin-left: auto" type="checkbox" name="fanon-fincancialaidstaff" value="FaNon-financialAidStaff">FA Non-Financial Aid Staff</div>
 												</td>
 											</tr>
 										</table>
@@ -305,25 +305,25 @@
 										<table style="width:500px; font-size: 15px;">
 											<tr>
 												<td>
-													<div><input  type="checkbox" name="immunizationview" value="ImmunizationView">Immunization View</div>
-													<div><input style="margin-left: 5px;" type="checkbox" name="transfercreditadmission" value="TransferCreditAdmission">Transfer Credit Admission</div>
+													<div><input style="margin-left: auto" type="checkbox" name="immunizationview" value="ImmunizationView">Immunization View</div>
+													<div><input style="margin-left: auto" type="checkbox" name="transfercreditadmission" value="TransferCreditAdmission">Transfer Credit Admission</div>
 												</td>
 											</tr>
 											<tr>
 												<td>
-													<div><input  type="checkbox" name="relationships" value="Relationships">Relationships</div>
-													<div><input style="margin-left: 5px;" type="checkbox" name="studentgroups" value="StudenGroups">Student Groups</div>
+													<div><input style="margin-left: auto" type="checkbox" name="relationships" value="Relationships">Relationships</div>
+													<div><input style="margin-left: auto" type="checkbox" name="studentgroups" value="StudenGroups">Student Groups</div>
 												</td>
 											</tr>
 											<tr>
 												<td>
-													<div><input  type="checkbox" name="accomadate" value="Accomdate">Accomadate(Student Health)</div>
-													<div><input style="margin-left: 5px;" type="checkbox" name="supportstaff" value="SupportStaff">Support Staff(Registar's Office)</div>
+													<div><input style="margin-left: auto" type="checkbox" name="accomadate" value="Accomdate">Accomadate(Student Health)</div>
+													<div><input style="margin-left: auto" type="checkbox" name="supportstaff" value="SupportStaff">Support Staff(Registar's Office)</div>
 												</td>
 											</tr>
 											<tr>
 												<td>
-													<div><input style="margin-left: 5px;" type="checkbox" name="advancestandingreport" value="AdvanceStandingReport">Advance Standing Report </div>
+													<div><input style="margin-left: auto" type="checkbox" name="advancestandingreport" value="AdvanceStandingReport">Advance Standing Report </div>
 												</td>
 											</tr>
 										</table>
