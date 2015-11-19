@@ -36,7 +36,7 @@ located in this project in application/database/
 5. in local/database.php, make sure to include username "root" and password is blank
 
 */
-$config['base_url'] = 'http://localhost:80/sisrequest/';
+$config['base_url'] = 'http://localhost/sisrequest/';
 
 /*
 |--------------------------------------------------------------------------
@@ -48,7 +48,7 @@ $config['base_url'] = 'http://localhost:80/sisrequest/';
 | variable so that it is blank.
 |
 */
-$config['index_page'] = 'index.php';
+$config['index_page'] = '';
 
 /*
 |--------------------------------------------------------------------------

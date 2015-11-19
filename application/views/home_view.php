@@ -15,7 +15,7 @@
 		.bs-example{
 			margin: 10px;
 		}
-		
+
 		function ChangeBackgroundColor(row) { row.style.backgroundColor = blue; }
 		function RestoreBackgroundColor(row) { row.style.backgroundColor = red; }
 	</script>
@@ -114,32 +114,32 @@
 										<table style="width:500px; font-size: 15px;">
 										<tr>
 											<td>
-												<div><input  type="checkbox" name="basicInquiry" value="BasicInquiry"> Basic Inquiry View</div>
+												<div><input  type="checkbox" name="basicInquiry" value="BasicInquiry">Basic Inquiry View</div>
 												<div><input type="checkbox" name="advancedInquiryv" value="AdvancedInquiryV">Advanced Inquiry View</div>
 											</td>
 										</tr>
 										<tr>
 											<td>
 												<div><input type="checkbox" name="advancedInquiryu" value="AdvancedInquiryU">Advanced Inquiry Update</div>
-												<div><input type="checkbox" name="3csv" value="eCsV"> 3Cs View</div>
+												<div><input type="checkbox" name="3csv" value="eCsV">3Cs View</div>
 											</td>
 										</tr>
 										<tr>
 											<td>
-												<div><input type="checkbox" name="3csu" value="eCsU"> 3Cs Update</div>
+												<div><input type="checkbox" name="3csu" value="eCsU">3Cs Update</div>
 												<div><input type="checkbox" name="advisorUpdate" value="AdvisorUpdate">Advisor Update</div>
 											</td>
 										</tr>
 										<tr>
 											<td>
-												<div><input  type="checkbox" name="dptSocUpdate" value="BasicInquiry"> Dpt SOC Update</div>
+												<div><input  type="checkbox" name="dptSocUpdate" value="BasicInquiry">Dpt SOC Update</div>
 												<div><input  type="checkbox" name="serviceIndicatorsv" value="ServiceIndicatorsV">Service Indicators View</div>
 											</td>
 										</tr>
 										<tr>
 											<td>
 												<div><input type="checkbox" name="serviceIndicatorsu" value="ServiceIndicatorsU">Service Indicators Update</div>
-												<div><input type="checkbox" name="studGrpView" value="StudGrpView"> Stud Grp View</div>
+												<div><input type="checkbox" name="studGrpView" value="StudGrpView">Stud Grp View</div>
 											</td>
 										</tr>
 										<tr>
@@ -163,12 +163,12 @@
 										<tr>
 											<td>
 												<div><input type="checkbox" name="classRoster" value="ClassRoster">Class Roster View</div>
-												<div><input type="checkbox" name="blockEnrollmentsv" value="BlockEnrollmentsV"> Block Enrollments View</div>
+												<div><input type="checkbox" name="blockEnrollmentsv" value="BlockEnrollmentsV">Block Enrollments View</div>
 											</td>
 										</tr>
 										<tr>
 											<td>
-												<div><input type="checkbox" name="blockEnrollmentsu" value="BlockEnrollmentsU"> Block Enrollments Update</div>
+												<div><input type="checkbox" name="blockEnrollmentsu" value="BlockEnrollmentsU">Block Enrollments Update</div>
 												<div><input  type="checkbox" name="reportMgr" value="ReportMgr">Report Mgr View</div>
 											</td>
 										</tr>
@@ -200,7 +200,7 @@
 										<table style="width:500px; font-size: 15px;">
 											<tr>
 												<td>
-													<div> <input  type="checkbox" name="act" value="ACT"> ACT</div>
+													<div> <input  type="checkbox" name="act" value="ACT">ACT</div>
 													<div> <input style="margin-left: 5px;" type="checkbox" name="ielts" value="IELTS">IELTS</div>
 												</td>
 											</tr>
@@ -261,7 +261,7 @@
 										<table style="width:500px; font-size: 15px;">
 											<tr>
 												<td>
-													<div><input  type="checkbox" name="sfgeneralinquiry" value="SfGeneralInquiry"> SF General Inquiry</div>
+													<div><input  type="checkbox" name="sfgeneralinquiry" value="SfGeneralInquiry">SF General Inquiry</div>
 													<div><input style="margin-left: 5px;" type="checkbox" name="sfcashgrouppost" value="SfCashGroupPost">SF Cash Group Post</div>
 												</td>
 											</tr>
@@ -283,7 +283,7 @@
 										<table style="width:500px; font-size: 15px;">
 											<tr>
 												<td>
-													<div><input  type="checkbox" name="facash" value="FaCash"> FA Cash</div>
+													<div><input  type="checkbox" name="facash" value="FaCash">FA Cash</div>
 													<div><input style="margin-left: 5px;" type="checkbox" name="fanon-fincancialaidstaff" value="FaNon-financialAidStaff">FA Non-Financial Aid Staff</div>
 												</td>
 											</tr>
@@ -305,19 +305,19 @@
 										<table style="width:500px; font-size: 15px;">
 											<tr>
 												<td>
-													<div><input  type="checkbox" name="immunizationview" value="ImmunizationView"> Immunization View</div>
+													<div><input  type="checkbox" name="immunizationview" value="ImmunizationView">Immunization View</div>
 													<div><input style="margin-left: 5px;" type="checkbox" name="transfercreditadmission" value="TransferCreditAdmission">Transfer Credit Admission</div>
 												</td>
 											</tr>
 											<tr>
 												<td>
-													<div><input  type="checkbox" name="relationships" value="Relationships"> Relationships</div>
+													<div><input  type="checkbox" name="relationships" value="Relationships">Relationships</div>
 													<div><input style="margin-left: 5px;" type="checkbox" name="studentgroups" value="StudenGroups">Student Groups</div>
 												</td>
 											</tr>
 											<tr>
 												<td>
-													<div><input  type="checkbox" name="accomadate" value="Accomdate"> Accomadate(Student Health)</div>
+													<div><input  type="checkbox" name="accomadate" value="Accomdate">Accomadate(Student Health)</div>
 													<div><input style="margin-left: 5px;" type="checkbox" name="supportstaff" value="SupportStaff">Support Staff(Registar's Office)</div>
 												</td>
 											</tr>
