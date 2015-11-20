@@ -95,12 +95,14 @@
 				<h1 style="margin-top: 40px; text-align:center;"> Derek Kedigh </h1>
 				<div style="background-color:black; border-radius: 15px;">
 				<form action="" style="padding-top: 12px;">
-					<li style="color: white; padding-top: 8px; box-shadow: inset 0px 0px 0px #3e9cbf, 0px 1px 0px 0px #205c73, 0px 2px 0px #999; font-size: 20px; font-weight: bold;"> General Information</li>
-					<li style="color: white; padding-top: 8px;"> Employee ID:<input type="text" name="Employee ID"> </li>
-					<li style="color: white; padding-top: 8px;"> PawPrint:<input type="text" name="PawPrint"></li>
-					<li style="color: white; padding-top: 8px;"> Job Title:<input type="text" name="Job Title"></li>
-					<li style="color: white; padding-top: 8px;"> Phone Number:<input type="text" name="Phone Number"></li>
-					<li style="color: white; padding-top: 8px;"> Campus Address:<input type="text" name="Campus Address"></li>
+					<h3>
+					<p style="color:white; padding-top: 8px; box-shadow: inset 0px 0px 0px #3e9cbf, 0px 1px 0px 0px #205c73, 0px 2px 0px #999; font-size: 20px; font-weight: bold;"> General Information</p>
+					<p style="color:white; padding-top: 8px;"> Employee ID:<input style="color: black" type="text" name="Employee ID"> </p>
+					<p style="color:white; padding-top: 8px;"> PawPrint:<input style="color: black" type="text" name="PawPrint"></p>
+					<p style="color:white; padding-top: 8px;"> Job Title:<input style="color: black" type="text" name="Job Title"></p>
+					<p style="color:white; padding-top: 8px;"> Phone Number:<input style="color: black" type="text" name="Phone Number"></p>
+					<p style="color:white; padding-top: 8px;"> Campus Address:<input style="color: black" type="text" name="Campus Address"></p>
+					</h3>
 				</form>
 				<div style="width: 555px; margin-left: 15px;">
 					<p style="color: white; padding-top: 8px; box-shadow: inset 0px 0px 0px #3e9cbf, 0px 1px 0px 0px #205c73, 0px 2px 0px #999; font-size: 20px; font-weight: bold;"> Access Requests</p>
