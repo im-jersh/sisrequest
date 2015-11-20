@@ -2,7 +2,7 @@
  * Created by Josh on 11/17/15.
  */
 $(document).ready(function() {
-    $("#data-list tr").click(function() {
+    $("#data-list .outerRow").click(function() {
 
         var tableRowID = $(this).attr('id');
 

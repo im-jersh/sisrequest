@@ -46,7 +46,7 @@ class Landing_page extends CI_Controller {
         // Prepare the list data for display
         foreach (self::$listData['employees'] as $item) {
             array_push($this->printListData,
-                '<tr id="'. $item['pawprint'] .'">' .
+                '<tr id="'. $item['pawprint'] .'" class="outerRow">' .
                     '<td>' .
                         '<table class="inner-table name-title">' .
                             '<tr class="mainName"><td class="employeeTD">' .
@@ -109,6 +109,7 @@ class Landing_page extends CI_Controller {
         $employee = $employees[$pawprint];
 
         // Get the request and the associated request types for the employee
+        $returnData = [];
         if (!is_null($employee['request'])) {
 
             $request = $employee['request'];
@@ -117,15 +118,14 @@ class Landing_page extends CI_Controller {
             // Retrieve from the database
             $requestRecord = $this->landing_model->fetchRequestForID($requestID);
 
+            $returnData['record'] = $requestRecord;
+
         } else { // the selected person does not have an existing request yet
 
         }
 
-
-        $returnData['main'] = array($employee);
         echo json_encode($returnData);
     }
 
 }
 
-?>

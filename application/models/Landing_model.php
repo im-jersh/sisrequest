@@ -96,7 +96,14 @@ class Landing_model extends CI_model
 
     public function fetchRequestForID($requestID) {
 
+        // Construct the query on the view and execute
+        $this->db->from('requesttypes');
+        $this->db->where(array('request_ID' => "$requestID"));
+        $query = $this->db->get();
 
+        if ($query->num_rows() == 1) {
+            return $query->result();
+        }
 
     }
 
