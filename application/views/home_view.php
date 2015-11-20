@@ -9,17 +9,9 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<script src="<?php echo base_url();?>/assets/javascripts/landing_page.js"></script>
 	<link rel="stylesheet" href="<?php echo base_url();?>/assets/stylesheets/styleSearch.css" type="text/css">
 	<script src="<?php echo base_url();?>/assets/javascripts/search.js"></script>
-	<script type="text/css">
-		document.addEventListener("touchstart", function(){}, true);
-		.bs-example{
-			margin: 10px;
-		}
-		
-		function ChangeBackgroundColor(row) { row.style.backgroundColor = blue; }
-		function RestoreBackgroundColor(row) { row.style.backgroundColor = red; }
-	</script>
 </head>
 <body>
 	<div id="site-container">
