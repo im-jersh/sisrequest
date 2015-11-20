@@ -19,7 +19,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `sisrequest`
 --
-
+CREATE DATABASE IF NOT EXISTS sisrequest;
+USE sisrequest;
 -- --------------------------------------------------------
 
 --
