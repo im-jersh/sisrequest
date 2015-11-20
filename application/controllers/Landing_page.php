@@ -122,7 +122,7 @@ class Landing_page extends CI_Controller {
         }
 
 
-        $returnData['main'] = array($requestID);
+        $returnData['main'] = array($employee);
         echo json_encode($returnData);
     }
 
