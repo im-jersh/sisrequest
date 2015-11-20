@@ -77,7 +77,11 @@ $db['default'] = array(
 	'dsn'	=> '',
 	'hostname' => 'localhost',
 	'username' => 'root',
+<<<<<<< HEAD
 	'password' => '',
+=======
+	'password' => 'root',
+>>>>>>> 4779bf92bb40e61db83a3256bf5a45c754e24368
 	'database' => 'sisrequest',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',

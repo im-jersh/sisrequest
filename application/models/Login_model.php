@@ -19,6 +19,10 @@ class Login_model extends CI_Model {
     function get_user($pawprint, $password) {
 
         // Construct the sql query and execute
+<<<<<<< HEAD
+=======
+        // Data from the password field will be hashed, used in conjunction with sisrequest_sprint3_v2.sql
+>>>>>>> 4779bf92bb40e61db83a3256bf5a45c754e24368
         $query = $this->db->get_where('login', array('pawprint' => $pawprint, 'password' => $password));
 
         // Extract the data and store it in a session

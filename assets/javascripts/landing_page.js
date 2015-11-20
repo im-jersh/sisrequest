@@ -4,11 +4,20 @@
 $(document).ready(function() {
     $("#data-list .outerRow").click(function() {
 
-        var tableRowID = $(this).attr('id');
+        // Change the row's background color to show it was selected
+        var row =  $(this)
+
+        $("#data-list .outerRow").removeClass('rowHighlighted');
+        var previousSelection = row.hasClass('rowHighlighted');
+        if (!previousSelection) {
+            row.toggleClass('rowHighlighted');
+        }
+
+        var tableRowID = row.attr('id');
 
         $.ajax({
             type: "POST",
-            url:'landing_page/getRowDataForKey',
+            url: window.location.href + '/getRowDataForKey',
             dataType: "json",
             data: { 'pawprint' : tableRowID },
             success: function(returnData) {
@@ -21,12 +30,16 @@ $(document).ready(function() {
                 console.log(employee['fName'] + " " + employee['lName']);
 
                 // Start loading the info into the form
+
+                // These fields can not be edited
                 document.getElementById("employeeName").innerHTML = employee['fName'] + " " + employee['lName'];
                 document.getElementById("empID").innerHTML = employee['empID'];
                 document.getElementById("pawprint").innerHTML = employee['pawprint'];
-                document.getElementById("title").innerHTML = employee['title'];
-                document.getElementById("phone_number").innerHTML = employee['phone_number'];
-                document.getElementById("campus_address").innerHTML = employee['campus_address'];
+
+                // These fields can be edited
+                document.querySelector('#title').value = employee['title'];
+                document.querySelector('#phone_number').value = employee['phone_number'];
+                document.querySelector('#campus_address').value = employee['campus_address'];
 
             }
 
