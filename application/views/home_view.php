@@ -80,19 +80,38 @@
 				
 			</div>
 			<div id="marquee-employee-info" class="column-right">
-				<h1 style="margin-top: 40px; text-align:center;"> Derek Kedigh </h1>
-				<div style="background-color:black; border-radius: 15px;">
-				<ol style="padding-top: 12px;">
-					<li style="padding-top: 8px; box-shadow: inset 0px 0px 0px #3e9cbf, 0px 1px 0px 0px #205c73, 0px 2px 0px #999; font-size: 20px; font-weight: bold;"> General Information</li>
-					<li style="padding-top: 8px;"> Employee ID: </li>
-					<li style="padding-top: 8px;"> PawPrint:</li>
-					<li style="padding-top: 8px;"> Job Title:</li>
-					<li style="padding-top: 8px;"> Phone Number:</li>
-					<li style="padding-top: 8px;"> Campus Address:</li>
-				</ol>
-				<div style="width: 555px; margin-left: 15px;">
-					<p style="color: white; padding-top: 8px; box-shadow: inset 0px 0px 0px #3e9cbf, 0px 1px 0px 0px #205c73, 0px 2px 0px #999; font-size: 20px; font-weight: bold;"> Access Requests</p>
-				</div>
+				<!-- The form for the employee -->
+				<form name="requestForEmployee" id="SISrequestForm" action="#"></form>
+					<h1 id="employeeName">Josh O'Steen</h1>
+					<div id="generalInfoHeader" class="formHeader">
+						<h4>General Information</h4>
+					</div>
+					<div>
+						<div class="singleRowTwoColumn topSection">
+							<div class="inner-col-left"><h5>Employee ID</h5><p id="empID"></p></div>
+							<div class="inner-col-right"><h5>PawPrint/SSO</h5><p id="pawprint"></p></div>
+						</div>
+						<div class="singleRowTwoColumn middleSection">
+							<div class="inner-col-left">
+								<h5>Job Title</h5>
+									<input type="text" id="title" name="title" />
+							</div>
+							<div class="inner-col-right">
+								<h5>Phone Number</h5>
+								<input type="text" id="phone_number" name="phone_number" />
+							</div>
+						</div>
+						<div class="singleRowSingleColumn bottomSection multiLineInput">
+							<div class="inner-col-left">
+								<h5>Campus Address</h5>
+									<input type="text" id="campus_address" name="campus_address" />
+							</div>
+						</div>
+					</div>
+
+						<div style="width: 555px; margin-left: 15px;">
+							<p style="color: white; padding-top: 8px; box-shadow: inset 0px 0px 0px #3e9cbf, 0px 1px 0px 0px #205c73, 0px 2px 0px #999; font-size: 20px; font-weight: bold;"> Access Requests</p>
+						</div>
 				<div style="border: 15px solid black;" class="bs-example">
 					<div  class="panel-group" id="accordion">
 						<div class="panel panel-default">
