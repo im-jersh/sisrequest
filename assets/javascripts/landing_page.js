@@ -17,7 +17,7 @@ $(document).ready(function() {
 
         $.ajax({
             type: "POST",
-            url:'landing_page/getRowDataForKey',
+            url: window.location.href + '/getRowDataForKey',
             dataType: "json",
             data: { 'pawprint' : tableRowID },
             success: function(returnData) {
