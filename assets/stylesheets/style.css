@@ -19,7 +19,7 @@ div {
 	margin-bottom: 0px;
 	
 }*/
-	
+
 
 th {
 	color: white;
@@ -31,14 +31,12 @@ th {
 }
 
 tr, td{
-	padding-top: 15px;
-	padding-left: 100px;
 	font-size: 20px;
 	box-shadow: inset 0px 1px 0px #333333, 0px 1px 0px 0px #333333, 0px 0px 0px #333333;
 	background-color: transparent;
 }
 
-	
+
 #site-container {
 	position: absolute;
 	height: 100%;
@@ -66,7 +64,7 @@ tr, td{
 	width: 33%;
 	float: right;
 	border-left: 2px solid black;
-	
+
 }
 #leftDiv {
 	height: 65%;
@@ -84,12 +82,12 @@ tr, td{
 	width: 100%;
 	height: 20%;
 	border-bottom: 2px solid black;
-	
+
 }
-	
+
 #rightDiv  p {
 	margin-left: 5px;
-	
+
 }
 
 #rightBottom {
@@ -113,8 +111,8 @@ tr, td{
 	position: absolute;
 	top: 0;
 	z-index: 2;
-	
-	
+
+
 }
 
 table {
@@ -165,17 +163,17 @@ table {
 .searchBut {
 	width: 35px;
 	height: 35px;
-	//-webkit-transition: all .4s ease;
-	//margin-top: 25px;
-	
-	
+//-webkit-transition: all .4s ease;
+//margin-top: 25px;
+
+
 }
 
 .box {
 	width: 200px;
 	height: 34px;
-	//margin-top: 25px;
-	//margin-left: 70px;
+//margin-top: 25px;
+//margin-left: 70px;
 }
 
 .menu-list	{
@@ -196,19 +194,19 @@ ul, menu, dir {
 	list-style-type: disc;
 	-webkit-margin-before: 1em;
 	-webkit-margin-after: 1em;
-    -webkit-margin-start: 0px;
-    -webkit-margin-end: 0px;
-    -webkit-padding-start: 40px;
+	-webkit-margin-start: 0px;
+	-webkit-margin-end: 0px;
+	-webkit-padding-start: 40px;
 	position absolute;
 }
 
 form {
 	margin-bottom: 5px;
-	
+
 }
 
 ol {
-	max-width: 560px; 
+	max-width: 560px;
 	width: 565px;
 	background-color: black;
 	color: white;
@@ -221,13 +219,13 @@ ol {
 
 ul li, ol li {
 	list-style: none;
-	
-	//border: 1px solid black;
+
+//border: 1px solid black;
 }
 
 ol li{
 	box-shadow: inset 0px 1px 0px #3e9cbf, 0px 1px 0px 0px #205c73, 0px 2px 0px #999;
-	//padding-left: 10px;
+//padding-left: 10px;
 }
 
 ol li .genInfo {
@@ -298,7 +296,7 @@ ol li .genInfo {
 }
 
 .employeeHeader {
-	text-align: left; 
+	text-align: left;
 	position: relative;
 	width: 414px;
 	height: 35px;
@@ -309,11 +307,11 @@ ol li .genInfo {
 	font-family: ;
 	background: url(C:/Users/derek/Documents/GitHub/sisrequest/assets/images/tigerBackF.JPG) repeat;
 	box-shadow: inset 0px 1px 0px black, 0px 1px 0px 0px black, 0px 2px 0px black;
-	
+
 }
 
 .employeeHeaderReview {
-	text-align: left; 
+	text-align: left;
 	position: relative;
 	width: 1200px;
 	height: 36px;
@@ -347,8 +345,8 @@ ol li .genInfo {
 	padding-right: 30px;
 	padding-left: 30px;
 	margin: auto;
-	
-	
+
+
 }
 
 #marquee-employee-info {
@@ -373,10 +371,8 @@ ol li .genInfo {
 	padding: 0px 0;
 	position: relative;
 	left: 0px;
-	curson: pointer;
+	cursor: pointer;
 	margin-top: 0px;
-<<<<<<< HEAD
-=======
 }
 
 #data-list tr:hover {
@@ -385,7 +381,7 @@ ol li .genInfo {
 
 #data-list .inner-table tr td {
 	padding: 0;
- }
+}
 
 #data-list .inner-table tr {
 	height: 2em;
@@ -527,5 +523,4 @@ div#addressContainer div {
 
 #data-list .rowHighlighted {
 	background-color: #EBD6A1;
->>>>>>> 4779bf92bb40e61db83a3256bf5a45c754e24368
 }
