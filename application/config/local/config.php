@@ -16,9 +16,27 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | explicitly and never rely on auto-guessing, especially in production
 | environments.
 |
-*/
-$config['base_url'] = 'http://localhost:8888/sisrequest/';
+for WAMP users, do the following to ensure proper configuration:
+1. edit the .htaccess file to include only the following:
+   RewriteEngine on
+RewriteCond $1 !^(index\.php|images|css|robots\.txt)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-l
+RewriteRule ^(.*)$ index.php/$1 [L]
 
+2. in the \wamp\bin\apache\apacheX.X.X\conf\ folder, edit the httpd file as such:
+remove the '#" on the line containing "LoadModule rewrite_module modules/mod_rewrite.so"
+
+3. change the below url to port "80"
+
+4. ensure you set up the database for sisrequest in phpMyAdmin by using the sql file
+located in this project in application/database/
+
+5. in local/database.php, make sure to include username "root" and password is blank
+
+*/
+$config['base_url'] = 'http://localhost:80';
 /*
 |--------------------------------------------------------------------------
 | Index File
