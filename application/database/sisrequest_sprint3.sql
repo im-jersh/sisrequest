@@ -48,7 +48,7 @@ CREATE TABLE `admissions` (
 --
 
 INSERT INTO `admissions` (`request_ID`, `all_test_score_access`, `act`, `ielts`, `ged`, `sat`, `lsat`, `millers`, `gre`, `mcat`, `prax`, `gmat`, `ap`, `pla_mu`, `tofel`, `clep`, `base`) VALUES
-(110, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+(100, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -68,7 +68,7 @@ CREATE TABLE `auth` (
 --
 
 INSERT INTO `auth` (`request_ID`, `employee_sig`, `dept_head_sig`, `dean_sig`) VALUES
-(110, 0, 0, 0);
+(100, 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -87,7 +87,7 @@ CREATE TABLE `cashiers` (
 --
 
 INSERT INTO `cashiers` (`request_ID`, `sf_general_inquiry`, `sf_cash_group_post`) VALUES
-(110, 0, 0);
+(100, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -106,7 +106,7 @@ CREATE TABLE `financialAid` (
 --
 
 INSERT INTO `financialAid` (`request_ID`, `fa_cash`, `fa_non_financial_aid_staff`) VALUES
-(110, 0, 0);
+(100, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -294,7 +294,7 @@ CREATE TABLE `records` (
 --
 
 INSERT INTO `records` (`request_ID`, `basic_inquiry`, `advanced_inquiry`, `3cs`, `advisor_update`, `dept_soc_update`, `student_group_review`, `service_indicators_holds`, `view_study_list`, `registrar_enrollment`, `advisor_student_center`, `class_permission`, `class_permission_view`, `class_roster`, `block_enrollments`, `report_manager`, `self_service_advisor`, `fiscal_advisor`, `academic_advising_profile`) VALUES
-(110, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+(100, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -422,6 +422,60 @@ INSERT INTO `request` (`request_ID`, `empID`, `request_date`, `update_date`, `ad
 -- --------------------------------------------------------
 
 --
+-- Stand-in structure for view `requesttypes`
+--
+CREATE TABLE `requesttypes` (
+`request_ID` bigint(20) unsigned
+,`all_test_score_access` tinyint(7)
+,`act` tinyint(7)
+,`ielts` tinyint(7)
+,`ged` tinyint(7)
+,`sat` tinyint(7)
+,`lsat` tinyint(7)
+,`millers` tinyint(7)
+,`gre` tinyint(7)
+,`mcat` tinyint(7)
+,`prax` tinyint(7)
+,`gmat` tinyint(7)
+,`ap` tinyint(7)
+,`pla_mu` tinyint(7)
+,`tofel` tinyint(7)
+,`clep` tinyint(7)
+,`base` tinyint(7)
+,`sf_general_inquiry` tinyint(7)
+,`sf_cash_group_post` tinyint(7)
+,`fa_cash` tinyint(7)
+,`fa_non_financial_aid_staff` tinyint(7)
+,`basic_inquiry` tinyint(7)
+,`advanced_inquiry` tinyint(7)
+,`3cs` tinyint(7)
+,`advisor_update` tinyint(7)
+,`dept_soc_update` tinyint(7)
+,`student_group_review` tinyint(7)
+,`service_indicators_holds` tinyint(7)
+,`view_study_list` tinyint(7)
+,`registrar_enrollment` tinyint(7)
+,`advisor_student_center` tinyint(7)
+,`class_permission` tinyint(7)
+,`class_permission_view` tinyint(7)
+,`class_roster` tinyint(7)
+,`block_enrollments` tinyint(7)
+,`report_manager` tinyint(7)
+,`self_service_advisor` tinyint(7)
+,`fiscal_advisor` tinyint(7)
+,`academic_advising_profile` tinyint(7)
+,`immunization_view` tinyint(7)
+,`transfer_credit_admission` tinyint(7)
+,`relationships` tinyint(7)
+,`student_groups` tinyint(7)
+,`accomodate_student_health` tinyint(7)
+,`support_staff_registrar` tinyint(7)
+,`advance_standing_report` tinyint(7)
+);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `reserved`
 --
 
@@ -441,7 +495,16 @@ CREATE TABLE `reserved` (
 --
 
 INSERT INTO `reserved` (`request_ID`, `immunization_view`, `transfer_credit_admission`, `relationships`, `student_groups`, `accomodate_student_health`, `support_staff_registrar`, `advance_standing_report`) VALUES
-(110, 0, 0, 0, 0, 0, 0, 0);
+(100, 0, 0, 0, 0, 0, 0, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Structure for view `requesttypes`
+--
+DROP TABLE IF EXISTS `requesttypes`;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `requesttypes` AS (select `admissions`.`request_ID` AS `request_ID`,`admissions`.`all_test_score_access` AS `all_test_score_access`,`admissions`.`act` AS `act`,`admissions`.`ielts` AS `ielts`,`admissions`.`ged` AS `ged`,`admissions`.`sat` AS `sat`,`admissions`.`lsat` AS `lsat`,`admissions`.`millers` AS `millers`,`admissions`.`gre` AS `gre`,`admissions`.`mcat` AS `mcat`,`admissions`.`prax` AS `prax`,`admissions`.`gmat` AS `gmat`,`admissions`.`ap` AS `ap`,`admissions`.`pla_mu` AS `pla_mu`,`admissions`.`tofel` AS `tofel`,`admissions`.`clep` AS `clep`,`admissions`.`base` AS `base`,`cashiers`.`sf_general_inquiry` AS `sf_general_inquiry`,`cashiers`.`sf_cash_group_post` AS `sf_cash_group_post`,`financialaid`.`fa_cash` AS `fa_cash`,`financialaid`.`fa_non_financial_aid_staff` AS `fa_non_financial_aid_staff`,`records`.`basic_inquiry` AS `basic_inquiry`,`records`.`advanced_inquiry` AS `advanced_inquiry`,`records`.`3cs` AS `3cs`,`records`.`advisor_update` AS `advisor_update`,`records`.`dept_soc_update` AS `dept_soc_update`,`records`.`student_group_review` AS `student_group_review`,`records`.`service_indicators_holds` AS `service_indicators_holds`,`records`.`view_study_list` AS `view_study_list`,`records`.`registrar_enrollment` AS `registrar_enrollment`,`records`.`advisor_student_center` AS `advisor_student_center`,`records`.`class_permission` AS `class_permission`,`records`.`class_permission_view` AS `class_permission_view`,`records`.`class_roster` AS `class_roster`,`records`.`block_enrollments` AS `block_enrollments`,`records`.`report_manager` AS `report_manager`,`records`.`self_service_advisor` AS `self_service_advisor`,`records`.`fiscal_advisor` AS `fiscal_advisor`,`records`.`academic_advising_profile` AS `academic_advising_profile`,`reserved`.`immunization_view` AS `immunization_view`,`reserved`.`transfer_credit_admission` AS `transfer_credit_admission`,`reserved`.`relationships` AS `relationships`,`reserved`.`student_groups` AS `student_groups`,`reserved`.`accomodate_student_health` AS `accomodate_student_health`,`reserved`.`support_staff_registrar` AS `support_staff_registrar`,`reserved`.`advance_standing_report` AS `advance_standing_report` from (((((`admissions` join `auth` on((`admissions`.`request_ID` = `auth`.`request_ID`))) join `cashiers` on((`admissions`.`request_ID` = `cashiers`.`request_ID`))) join `financialaid` on((`admissions`.`request_ID` = `financialaid`.`request_ID`))) join `records` on((`admissions`.`request_ID` = `records`.`request_ID`))) join `reserved` on((`admissions`.`request_ID` = `reserved`.`request_ID`))));
 
 --
 -- Indexes for dumped tables
