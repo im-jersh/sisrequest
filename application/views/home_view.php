@@ -94,14 +94,14 @@
 			<div id="marquee-employee-info" class="column-right">
 				<h1 style="margin-top: 40px; text-align:center;"> Derek Kedigh </h1>
 				<div style="background-color:black; border-radius: 15px;">
-				<ol style="padding-top: 12px;">
-					<li style="padding-top: 8px; box-shadow: inset 0px 0px 0px #3e9cbf, 0px 1px 0px 0px #205c73, 0px 2px 0px #999; font-size: 20px; font-weight: bold;"> General Information</li>
-					<li style="padding-top: 8px;"> Employee ID: </li>
-					<li style="padding-top: 8px;"> PawPrint:</li>
-					<li style="padding-top: 8px;"> Job Title:</li>
-					<li style="padding-top: 8px;"> Phone Number:</li>
-					<li style="padding-top: 8px;"> Campus Address:</li>
-				</ol>
+				<form action="" style="padding-top: 12px;">
+					<li style="color: white; padding-top: 8px; box-shadow: inset 0px 0px 0px #3e9cbf, 0px 1px 0px 0px #205c73, 0px 2px 0px #999; font-size: 20px; font-weight: bold;"> General Information</li>
+					<li style="color: white; padding-top: 8px;"> Employee ID:<input type="text" name="Employee ID"> </li>
+					<li style="color: white; padding-top: 8px;"> PawPrint:<input type="text" name="PawPrint"></li>
+					<li style="color: white; padding-top: 8px;"> Job Title:<input type="text" name="Job Title"></li>
+					<li style="color: white; padding-top: 8px;"> Phone Number:<input type="text" name="Phone Number"></li>
+					<li style="color: white; padding-top: 8px;"> Campus Address:<input type="text" name="Campus Address"></li>
+				</form>
 				<div style="width: 555px; margin-left: 15px;">
 					<p style="color: white; padding-top: 8px; box-shadow: inset 0px 0px 0px #3e9cbf, 0px 1px 0px 0px #205c73, 0px 2px 0px #999; font-size: 20px; font-weight: bold;"> Access Requests</p>
 				</div>
