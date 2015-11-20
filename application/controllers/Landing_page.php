@@ -118,7 +118,9 @@ class Landing_page extends CI_Controller {
             // Retrieve from the database
             $requestRecord = $this->landing_model->fetchRequestForID($requestID);
 
-            $returnData['record'] = $requestRecord;
+            // Attach the request types to the employee's request
+            $employee['request']['types'] = $requestRecord;
+            $returnData['employee'] = $employee;
 
         } else { // the selected person does not have an existing request yet
 

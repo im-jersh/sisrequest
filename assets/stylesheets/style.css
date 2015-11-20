@@ -374,6 +374,10 @@ ol li .genInfo {
 	margin-top: 0px;
 }
 
+#data-list tr:hover {
+	cursor: pointer;
+}
+
 #data-list .inner-table tr td {
 	padding: 0;
  }
@@ -396,3 +400,61 @@ ol li .genInfo {
 	font-size: .9em;
 	font-weight: lighter;
 }
+
+h1#employeeName {
+	margin: 0 auto;
+	text-align: left;
+	padding: 4px 0 4px 0.5em;
+	font-family: "Helvetica Neue";
+	font-weight: 300;
+}
+
+.formHeader {
+	width: 100%;
+	height: 2em;
+	background-color: #4D4D4D;
+}
+
+.formHeader h4 {
+	margin: 0 auto;
+	text-align: left;
+	padding: 4px 0 4px 1em;
+	color: #fff;
+}
+
+.inner-col-left {
+	padding: 0 0 0 1em;
+}
+
+.singleRowTwoColumn {
+	height: 4em;
+	width: 100%;
+	border-bottom: 1px solid grey;
+	margin: 0 2em;
+}
+
+.singleRowTwoColumn .inner-col-left {
+	display: inline-block;
+	float: left;
+	height: inherit;
+	width: 30%;
+}
+
+.singleRowTwoColumn .inner-col-right {
+	display: inline-block;
+	float: left;
+	height: inherit;
+	width: 30%;
+}
+
+div.singleRowTwoColumn.middleSection {
+	border-bottom: none;
+	height: 5em;
+}
+
+.singleRowSingleColumn {
+	width: 100%;
+	height: 5em;
+	margin: 0 2em;
+}
+
