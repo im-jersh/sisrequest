@@ -9,9 +9,13 @@ class Logout extends CI_Controller {
 
     public function index()
     {
-                
-            $this->session->sess_destroy();
-            redirect('login');                
+        // Delete the DB cache files
+        $this->db->cache_delete('landing_page','getRowDataForKey');
+        $this->db->cache_delete('landing_page', 'index');
+
+        // Destroy the session data
+        $this->session->sess_destroy();
+        redirect('login');
                 
     }
 }

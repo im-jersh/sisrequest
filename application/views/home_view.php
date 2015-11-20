@@ -9,7 +9,9 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<script src="<?php echo base_url();?>/assets/javascripts/landing_page.js"></script>
 	<link rel="stylesheet" href="<?php echo base_url();?>/assets/stylesheets/styleSearch.css" type="text/css">
+<<<<<<< HEAD
 	<script type="text/css">
 		document.addEventListener("touchstart", function(){}, true);
 		.bs-example{
@@ -19,13 +21,16 @@
 		function ChangeBackgroundColor(row) { row.style.backgroundColor = blue; }
 		function RestoreBackgroundColor(row) { row.style.backgroundColor = red; }
 	</script>
+=======
+	<script src="<?php echo base_url();?>/assets/javascripts/search.js"></script>
+>>>>>>> 75f675478789832f192f7cc56b8bfb3250dcaab2
 </head>
 <body>
 	<div id="site-container">
 		<div id="menu">
 			<div>
 				<div class="nav-logo">
-			
+
 
 
 				</div>
@@ -47,7 +52,7 @@
 		</div>
 		<div id="marquee-container">
 			<div id="marquee-employees" class="column-left">
-				
+
 <!--					<div id="employeeHeader">-->
 <!--						<div style="margin-top: -10px; margin-left: -10px;" class="tigerHead">-->
 <!--							<img height="117px" width="auto"  src="--><?php //echo base_url();?><!--/assets/images/tigerFinal.png">-->
@@ -58,7 +63,7 @@
 <!--					</div>-->
 					<table style="background-color: white; color: black; padding-top: -10px;" id="data-list">
 						<tr>
-							<th style="text-align: left; width: 415px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px; "> 
+							<th style="text-align: left; width: 415px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px; ">
 							<!--<div style="float: right;">
 								<img class="searchBut" src="C:\Users\derek\Documents\GitHub\sisrequest\assets\images\Search-button.png">
 							</div>-->
@@ -73,7 +78,7 @@
 								</form>
 								<img class="box" src="C:\Users\derek\Documents\GitHub\sisrequest\assets\images\box.jpg">-->
 							   </div>
-							
+
 							</th>
 							<th style="text-align: left; padding-left: 50px;"> Status </th>
 						</tr>
@@ -84,7 +89,7 @@
 							};
                         ?>
 					</table>
-				
+
 			</div>
 			<div id="marquee-employee-info" class="column-right">
 				<h1 style="margin-top: 40px; text-align:center;"> Derek Kedigh </h1>
@@ -243,7 +248,7 @@
 											<tr>
 												<td>
 													<div><input style="margin-left;" type="checkbox" name="base" value="BASE">BASE</div>
-										
+
 									</table>
 									</form>
 								</div>
@@ -266,7 +271,7 @@
 												</td>
 											</tr>
 										</table>
-										
+
 									</form>
 								</div>
 							</div>
@@ -288,7 +293,7 @@
 												</td>
 											</tr>
 										</table>
-										
+
 									</form>
 								</div>
 							</div>
