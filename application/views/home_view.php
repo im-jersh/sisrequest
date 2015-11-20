@@ -82,11 +82,11 @@
 			<div id="marquee-employee-info" class="column-right">
 				<!-- The form for the employee -->
 				<form name="requestForEmployee" id="SISrequestForm" action="#"></form>
-					<h1 id="employeeName">Josh O'Steen</h1>
+					<h1 id="employeeName">Employee</h1>
 					<div id="generalInfoHeader" class="formHeader">
 						<h4>General Information</h4>
 					</div>
-					<div>
+					<div id="generalIntoSection">
 						<div class="singleRowTwoColumn topSection">
 							<div class="inner-col-left"><h5>Employee ID</h5><p id="empID"></p></div>
 							<div class="inner-col-right"><h5>PawPrint/SSO</h5><p id="pawprint"></p></div>
@@ -101,12 +101,27 @@
 								<input type="text" id="phone_number" name="phone_number" />
 							</div>
 						</div>
-						<div class="singleRowSingleColumn bottomSection multiLineInput">
-							<div class="inner-col-left">
+						<div id="campusAddress" class="singleRowTwoColumn bottomSection">
+							<div id="addressContainer">
 								<h5>Campus Address</h5>
-									<input type="text" id="campus_address" name="campus_address" />
+								<div class="inner-col-left">
+									<input type="text" id="campus_address" name="campus_address" placeholder="Street"/>
+									<br>
+									<input type="text" id="campus_address_apt" name="campus_address_apt" placeholder="Apartment" />
+								</div>
+								<div class="inner-col-right">
+									<input type="text" id="campus_address_city" name="campus_address_city" placeholder="City" />
+									<br>
+									<?php include('states_and_provinces.php') ?>
+									<br>
+									<input type="text" id="campus_address_zipcode" name="campus_address_zipcode" placeholder="Zipcode" />
+								</div>
 							</div>
 						</div>
+
+
+
+
 					</div>
 
 						<div style="width: 555px; margin-left: 15px;">

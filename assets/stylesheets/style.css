@@ -29,9 +29,10 @@ th {
 	background-color: black;
 	border-collapse: collapse;
 }
+
 tr, td{
 	font-size: 20px;
-	box-shadow: inset 0px 1px 0px #333333, 0px 1px 0px 0px #333333, 0px 2px 0px #333333;
+	box-shadow: inset 0px 1px 0px #333333, 0px 1px 0px 0px #333333, 0px 0px 0px #333333;
 	background-color: transparent;
 }
 
@@ -392,6 +393,7 @@ ol li .genInfo {
 	font-family: "Helvetica Neue";
 	font-size: 1.2em;
 	font-weight: 300;
+	border-bottom: ;
 }
 
 .inner-table .subTitle td {
@@ -424,6 +426,13 @@ h1#employeeName {
 
 .inner-col-left {
 	padding: 0 0 0 1em;
+	display: inline-block;
+	float: left;
+}
+
+.inner-col-right {
+	display: inline-block;
+	float: right;
 }
 
 .singleRowTwoColumn {
@@ -452,9 +461,66 @@ div.singleRowTwoColumn.middleSection {
 	height: 5em;
 }
 
+div.singleRowTwoColumn.middleSection div {
+	width: 45%;
+}
+
 .singleRowSingleColumn {
 	width: 100%;
 	height: 5em;
 	margin: 0 2em;
 }
 
+div#generalInfoSection {
+	display: inline-block !important;
+	width: 100%;
+}
+
+div#campusAddress {
+	width: 100%;
+	height: 10em;
+}
+
+
+div#campusAddress div input[type="text"] {
+	margin: 0 0 1em 0;
+}
+
+div#campusAddress div select {
+	margin: 0 0 1em 0;
+}
+
+div#campusAddress.inner-col-right {
+	padding-top 2.5em;
+}
+
+div#campusAddress div#addressContainer {
+	padding-left: 1em;
+}
+
+div#addressContainer div.inner-col-left {
+	padding: 0 0;
+}
+
+div#addressContainer div.inner-col-right {
+	padding: 0 0;
+	margin-left: -1em;
+}
+
+div#addressContainer div {
+	width: 45%;
+}
+
+.inner-table tr {
+	background-color: transparent !important;
+	border: none;
+	box-shadow: none;
+}
+
+.inner-table tr td {
+	box-shadow: none !important;
+}
+
+#data-list .rowHighlighted {
+	background-color: #EBD6A1;
+}
