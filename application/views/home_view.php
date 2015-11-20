@@ -82,14 +82,14 @@
 			<div id="marquee-employee-info" class="column-right">
 				<h1 style="margin-top: 40px; text-align:center;"> Derek Kedigh </h1>
 				<div style="background-color:black; border-radius: 15px;">
-				<ol style="padding-top: 12px;">
-					<li style="padding-top: 8px; box-shadow: inset 0px 0px 0px #3e9cbf, 0px 1px 0px 0px #205c73, 0px 2px 0px #999; font-size: 20px; font-weight: bold;"> General Information</li>
-					<li style="padding-top: 8px;"> Employee ID: </li>
-					<li style="padding-top: 8px;"> PawPrint:</li>
-					<li style="padding-top: 8px;"> Job Title:</li>
-					<li style="padding-top: 8px;"> Phone Number:</li>
-					<li style="padding-top: 8px;"> Campus Address:</li>
-				</ol>
+				<h3 style="border-bottom:1px solid black; box-shadow: inset 0px 0px 0px #3e9cbf, 0px 1px 0px 0px #205c73, 0px 2px 0px #999; font-size: 20px; font-weight: bold;"> General Information</h3>
+				<form action="">
+					<label style="padding-right: 15px;">Employee Id:</label><textarea style="height:15px;"></textarea><br>
+					<label style="padding-right: 15px;">PawPrint:</label><textarea style="height:15px;"></textarea><br>
+					<label style="padding-right: 15px;">Job Title:</label><textarea style="height:15px;"></textarea><br>
+					<label style="padding-right: 15px;">Phone Number:</label><textarea style="height:15px;"></textarea><br>
+					<label style="padding-right: 15px;">Campus Address:</label><textarea style="height:15px;"></textarea><br>
+				</form>
 				<div style="width: 555px; margin-left: 15px;">
 					<p style="color: white; padding-top: 8px; box-shadow: inset 0px 0px 0px #3e9cbf, 0px 1px 0px 0px #205c73, 0px 2px 0px #999; font-size: 20px; font-weight: bold;"> Access Requests</p>
 				</div>
