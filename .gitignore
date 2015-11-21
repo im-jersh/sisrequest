@@ -1,5 +1,7 @@
 .DS_Store
 
+application/config/local/*
+
 application/cache/*
 !application/cache/index.html
 !application/cache/.htaccess
@@ -25,8 +27,6 @@ user_guide_src/cilexer/pycilexer.egg-info/*
 *.stTheme.cache
 *.sublime-workspace
 *.sublime-project
-
-application/config/local/*
 
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio
 
@@ -77,3 +77,4 @@ crashlytics.properties
 crashlytics-build.properties
 fabric.properties
 
+.htaccess

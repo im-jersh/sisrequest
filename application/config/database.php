@@ -78,8 +78,8 @@ $db['default'] = array(
 	'dbprefix' => '',
 	'pconnect' => FALSE,
 	'db_debug' => (ENVIRONMENT !== 'production'),
-	'cache_on' => FALSE,
-	'cachedir' => getenv('OPENSHIFT_DATA_DIR') . 'storage/framework/dbcache',
+	'cache_on' => TRUE,
+	'cachedir' => 'application/cache/dbcache',
 	'char_set' => 'utf8',
 	'dbcollat' => 'utf8_general_ci',
 	'swap_pre' => '',
@@ -97,7 +97,7 @@ if(getenv('OPENSHIFT_MYSQL_DB_HOST'))
 	$db['default']['port'] = getenv('OPENSHIFT_MYSQL_DB_PORT');
 	$db['default']['username'] = getenv('OPENSHIFT_MYSQL_DB_USERNAME');
 	$db['default']['password'] = getenv('OPENSHIFT_MYSQL_DB_PASSWORD');
-	$db['default']['database'] = getenv('OPENSHIFT_APP_NAME');		
+	$db['default']['database'] = getenv('OPENSHIFT_APP_NAME');
 }
 else // default to MySQL
 {
@@ -108,3 +108,5 @@ else // default to MySQL
 	$db['default']['password'] = getenv('OPENSHIFT_POSTGRESQL_DB_PASSWORD');
 	$db['default']['database'] = getenv('OPENSHIFT_APP_NAME');
 }
+
+?>

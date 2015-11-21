@@ -31,7 +31,6 @@ class Login extends CI_Controller {
             redirect('landing_page');
         }
 
-
         if ($this->form_validation->run() == FALSE) {
             // Validation failed
             $this->load->view('login_view');
@@ -49,6 +48,7 @@ class Login extends CI_Controller {
                      ); */
 
                     // $this->session->set_userdata($sessiondata);
+
 
                     redirect("landing_page");
 

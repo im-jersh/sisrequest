@@ -47,19 +47,19 @@ class Landing_page extends CI_Controller {
         foreach (self::$listData['employees'] as $item) {
             array_push($this->printListData,
                 '<tr id="'. $item['pawprint'] .'" class="outerRow">' .
-                '<td>' .
-                '<table class="inner-table name-title">' .
-                '<tr class="mainName"><td class="employeeTD">' .
-                $item['fName'] . ' ' . $item['lName'] .
-                '</td></tr>' .
-                '<tr class="subTitle"><td>' .
-                $item['title'] .
-                '</td></tr>' .
-                '</table>' .
-                '</td>' .
-                '<td>' .
-                $item['status'] .
-                '</td>'.
+                    '<td>' .
+                        '<table class="inner-table name-title">' .
+                            '<tr class="mainName"><td class="employeeTD">' .
+                                $item['fName'] . ' ' . $item['lName'] .
+                            '</td></tr>' .
+                            '<tr class="subTitle"><td>' .
+                                $item['title'] .
+                            '</td></tr>' .
+                        '</table>' .
+                    '</td>' .
+                    '<td>' .
+                        $item['status'] .
+                    '</td>'.
                 '</tr>'
             );
         };

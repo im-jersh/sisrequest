@@ -1,0 +1,262 @@
+body{
+	background-color: #000;
+	height: 100%;
+	font-family: Helvetica, Arial, sans-serif;
+	color: #222;
+	margin: 0;
+	font-size; 13px;
+	line-height: 1.231;
+	display: block;
+}
+
+div {
+	display: block;
+}
+
+th {
+	color: white;
+	font-style: bold;
+	font-size: 20px;
+	margin-bottom: 20px;
+	background-color: black;
+	border-collapse: collapse;
+}
+tr, td{
+	padding-top: 15px;
+	padding-left: 100px;
+	font-size: 20px;
+	box-shadow: inset 0px 1px 0px #3e9cbf, 0px 1px 0px 0px #205c73, 0px 2px 0px #999;
+}
+
+#site-container {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	overflow: auto;
+}
+
+.tigerHead {
+	position: absolute;
+	top: 0;
+	z-index: 2;
+	
+	
+}
+
+table {
+	diplay: table;
+	width: 595px;
+	color: black;
+	margin-top: -10px;
+}
+
+#menu{
+	width: 170px;
+	background: black;
+	color: #bab2c7;
+	text-transform: uppercase;
+	text-align: center;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1000;
+	position: absolute;
+	display: block;
+	min-height: 900px;
+}
+
+.headerBar {
+	background: url(images/tigerBackF.JPG) repeat;
+	width: 585px;
+	height: 37px;
+}
+
+#menu .nav-logo	{
+	margin: 45px auto;
+	text-indent: -9999px;
+	pointer-events: none;
+	background-position: 0 0;
+	height: 125px;
+	width: 125px;
+	background: url(images/muClipped.png) no-repeat;
+}
+
+#marquee-employee-data  .nav-logo {
+	margin: 45px 110px;
+	text-indent: -9999px;
+	pointer-events: none;
+	background-position: 0 0;
+	height: 72px;
+	width: 419px;
+	background: url(images/box.jpg) no-repeat;
+}
+
+.searchBut {
+	width: 34px;
+	height: 34px;
+	-webkit-transition: all .4s ease;
+	//margin-top: 25px;
+	
+	
+}
+
+.box {
+	width: 200px;
+	height: 34px;
+	//margin-top: 25px;
+	//margin-left: 70px;
+}
+
+.menu-list	{
+	top: 50%;
+	height: 492px;
+	width: 100%;
+	padding-left: 0;
+}
+
+
+ul, ol{
+	margin: 1em 0;
+	padding: 0;
+}
+
+ul, menu, dir {
+	display: block;
+	list-style-type: disc;
+	-webkit-margin-before: 1em;
+	-webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 40px;
+	position absolute;
+}
+
+form {
+	margin-bottom: 5px;
+	
+}
+
+ol {
+	max-width: 560px; 
+	width: 565px;
+	background-color: black;
+	color: white;
+	min-height: 200px;
+	margin-left: 10px;
+	padding-top: 10px;
+	padding-left: 5px;
+	box-shadow: inset 0px 1px 0px #3e9cbf, 0px 1px 0px 0px #205c73, 0px 2px 0px #999;
+}
+
+ul li, ol li {
+	list-style: none;
+	
+	//border: 1px solid black;
+}
+
+ol li{
+	box-shadow: inset 0px 1px 0px #3e9cbf, 0px 1px 0px 0px #205c73, 0px 2px 0px #999;
+	//padding-left: 10px;
+}
+
+.menu-list li {
+	display: list-item;
+	text-align: -webkit-match-parent;
+	-webkit-box-shadow: inset 0px 1px 0px #3e9cbf, 0px 5px 0px 0px #205c73, 0px 10px 5px #999;
+	-moz-box-shadow: inset 0px 1px 0px #3e9cbf, 0px 5px 0px 0px #205c73, 0px 10px 5px #999;
+	box-shadow: inset 0px 1px 0px #3e9cbf, 0px 1px 0px 0px #205c73, 0px 2px 0px #999;
+	/*give the corners a small curve*/
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	
+}
+#marquee-container {
+	height: 100%;
+	top: 0;
+	left: 170px;
+	width: 1190px;
+	position: absolute;
+
+}
+
+#marquee-employees {
+	height: 100%;
+	top 0;
+	left: 0px;
+	width: 595px;
+	overflow: auto;
+	color: #bab2c7;
+	text-align: left;
+	background: #C8C8C8;
+	position: absolute;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	min-height: 900px;
+}
+.employeeHeader {
+	text-align: left; 
+	position: relative;
+	width: 414px;
+	height: 35px;
+	margin-top: -20px;
+	margin-left: 167px;
+	z-index: 1;
+	margin-bottom: 100px;
+	font-family: ;
+	background: url(images/tigerBackF.JPG) repeat;
+	box-shadow: inset 0px 1px 0px black, 0px 1px 0px 0px black, 0px 2px 0px black;
+}
+
+#employeeHeader {
+	width: 100%;
+	z-index: 2;
+}
+
+.zEmpl {
+	z-index: 1000;
+}
+
+#marquee-employee-data {
+	text-align: left;
+	background-color:#C8C8C8;
+	width: 595px;
+	height: 900px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	padding-right: 30px;
+	padding-left: 30px;
+	margin: auto;
+	
+	
+}
+
+#marquee-employee-info {
+	height: 100%;
+	top: 0;
+	left: 595px;
+	width: 585px;
+	overflow: auto;
+	color: black;
+	text-align: left;
+	background: #f5f5f5;
+	position: absolute;
+	overflow-x: hidden;
+	overflow-y: auto;
+	min-height: 900px;
+	margin-right: 10px;
+}
+
+#marquee-employee-info h1, h3{
+	text-align: center;
+}
+
+#menu .menu-list li {
+	padding: 15px 0;
+	position: relative;
+	left: 0px;
+	curson: pointer;
+	margin-top: 15px; 
+}
