@@ -1,21 +1,24 @@
 -- phpMyAdmin SQL Dump
--- version 4.4.10
+-- version 4.1.14
 -- http://www.phpmyadmin.net
 --
--- Host: localhost:8889
--- Generation Time: Nov 18, 2015 at 12:22 AM
--- Server version: 5.5.42
--- PHP Version: 5.6.10
+-- Host: 127.0.0.1
+-- Generation Time: Nov 21, 2015 at 03:20 AM
+-- Server version: 5.6.17
+-- PHP Version: 5.5.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
 --
 -- Database: `sisrequest`
 --
-
-CREATE DATABASE IF NOT EXISTS sisrequest;
-USE sisrequest;
 
 -- --------------------------------------------------------
 
@@ -23,8 +26,8 @@ USE sisrequest;
 -- Table structure for table `admissions`
 --
 
-CREATE TABLE `admissions` (
-  `request_ID` bigint(20) unsigned NOT NULL,
+CREATE TABLE IF NOT EXISTS `admissions` (
+  `request_ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `all_test_score_access` tinyint(1) DEFAULT NULL,
   `act` tinyint(1) DEFAULT NULL,
   `ielts` tinyint(1) DEFAULT NULL,
@@ -41,8 +44,35 @@ CREATE TABLE `admissions` (
   `tofel` tinyint(1) DEFAULT NULL,
   `clep` tinyint(1) DEFAULT NULL,
   `base` tinyint(1) DEFAULT NULL,
-  `access_description` varchar(50) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `access_description` varchar(50) DEFAULT NULL,
+  UNIQUE KEY `request_ID` (`request_ID`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=180 ;
+
+--
+-- Dumping data for table `admissions`
+--
+
+INSERT INTO `admissions` (`request_ID`, `all_test_score_access`, `act`, `ielts`, `ged`, `sat`, `lsat`, `millers`, `gre`, `mcat`, `prax`, `gmat`, `ap`, `pla_mu`, `tofel`, `clep`, `base`, `access_description`) VALUES
+(160, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, NULL),
+(161, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, NULL),
+(162, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL),
+(163, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL),
+(164, 0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0, NULL),
+(165, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL),
+(166, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, NULL),
+(167, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 1, NULL),
+(168, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL),
+(169, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, NULL),
+(170, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, NULL),
+(171, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, NULL),
+(172, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, NULL),
+(173, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, NULL),
+(174, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL),
+(175, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, NULL),
+(176, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, NULL),
+(177, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, NULL),
+(178, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL),
+(179, 0, 1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, NULL);
 
 -- --------------------------------------------------------
 
@@ -50,13 +80,70 @@ CREATE TABLE `admissions` (
 -- Table structure for table `auth`
 --
 
-CREATE TABLE `auth` (
-  `request_ID` bigint(20) unsigned NOT NULL,
+CREATE TABLE IF NOT EXISTS `auth` (
+  `request_ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `employee_sig` tinyint(1) DEFAULT NULL,
   `dept_head_sig` tinyint(1) DEFAULT NULL,
   `dean_sig` tinyint(1) DEFAULT NULL,
-  `access_description` varchar(50) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `access_description` varchar(50) DEFAULT NULL,
+  UNIQUE KEY `request_ID` (`request_ID`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=200 ;
+
+--
+-- Dumping data for table `auth`
+--
+
+INSERT INTO `auth` (`request_ID`, `employee_sig`, `dept_head_sig`, `dean_sig`, `access_description`) VALUES
+(150, 0, 0, 0, NULL),
+(151, 0, 0, 0, NULL),
+(152, 0, 0, 0, NULL),
+(153, 0, 0, 0, NULL),
+(154, 0, 0, 0, NULL),
+(155, 0, 0, 0, NULL),
+(156, 0, 0, 0, NULL),
+(157, 0, 0, 0, NULL),
+(158, 0, 0, 0, NULL),
+(159, 0, 0, 0, NULL),
+(160, 0, 0, 0, NULL),
+(161, 0, 0, 0, NULL),
+(162, 0, 0, 0, NULL),
+(163, 0, 0, 0, NULL),
+(164, 0, 0, 0, NULL),
+(165, 0, 0, 0, NULL),
+(166, 0, 0, 0, NULL),
+(167, 0, 0, 0, NULL),
+(168, 0, 0, 0, NULL),
+(169, 0, 0, 0, NULL),
+(170, 0, 0, 0, NULL),
+(171, 0, 0, 0, NULL),
+(172, 0, 0, 0, NULL),
+(173, 0, 0, 0, NULL),
+(174, 0, 0, 0, NULL),
+(175, 0, 0, 0, NULL),
+(176, 0, 0, 0, NULL),
+(177, 0, 0, 0, NULL),
+(178, 0, 0, 0, NULL),
+(179, 0, 0, 0, NULL),
+(180, 0, 0, 0, NULL),
+(181, 0, 0, 0, NULL),
+(182, 0, 0, 0, NULL),
+(183, 0, 0, 0, NULL),
+(184, 0, 0, 0, NULL),
+(185, 0, 0, 0, NULL),
+(186, 0, 0, 0, NULL),
+(187, 0, 0, 0, NULL),
+(188, 0, 0, 0, NULL),
+(189, 0, 0, 0, NULL),
+(190, 0, 0, 0, NULL),
+(191, 0, 0, 0, NULL),
+(192, 0, 0, 0, NULL),
+(193, 0, 0, 0, NULL),
+(194, 0, 0, 0, NULL),
+(195, 0, 0, 0, NULL),
+(196, 0, 0, 0, NULL),
+(197, 0, 0, 0, NULL),
+(198, 0, 0, 0, NULL),
+(199, 0, 0, 0, NULL);
 
 -- --------------------------------------------------------
 
@@ -64,25 +151,69 @@ CREATE TABLE `auth` (
 -- Table structure for table `cashiers`
 --
 
-CREATE TABLE `cashiers` (
-  `request_ID` bigint(20) unsigned NOT NULL,
+CREATE TABLE IF NOT EXISTS `cashiers` (
+  `request_ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `sf_general_inquiry` tinyint(1) DEFAULT NULL,
   `sf_cash_group_post` tinyint(1) DEFAULT NULL,
-  `access_description` varchar(50) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `access_description` varchar(50) DEFAULT NULL,
+  UNIQUE KEY `request_ID` (`request_ID`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=160 ;
+
+--
+-- Dumping data for table `cashiers`
+--
+
+INSERT INTO `cashiers` (`request_ID`, `sf_general_inquiry`, `sf_cash_group_post`, `access_description`) VALUES
+(150, 0, 0, ''),
+(151, 0, 1, NULL),
+(152, 1, 0, NULL),
+(153, 1, 1, NULL),
+(154, 0, 0, NULL),
+(155, 0, 1, NULL),
+(156, 1, 0, NULL),
+(157, 1, 1, NULL),
+(158, 0, 0, NULL),
+(159, 0, 1, NULL);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `financialAid`
+-- Table structure for table `financialaid`
 --
 
-CREATE TABLE `financialAid` (
-  `request_ID` bigint(20) unsigned NOT NULL,
+CREATE TABLE IF NOT EXISTS `financialaid` (
+  `request_ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `fa_cash` tinyint(1) DEFAULT NULL,
   `fa_non_financial_aid_staff` tinyint(1) DEFAULT NULL,
-  `access_description` varchar(50) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `access_description` varchar(50) DEFAULT NULL,
+  UNIQUE KEY `request_ID` (`request_ID`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=200 ;
+
+--
+-- Dumping data for table `financialaid`
+--
+
+INSERT INTO `financialaid` (`request_ID`, `fa_cash`, `fa_non_financial_aid_staff`, `access_description`) VALUES
+(180, 0, 0, NULL),
+(181, 0, 1, NULL),
+(182, 1, 0, NULL),
+(183, 1, 1, NULL),
+(184, 0, 0, NULL),
+(185, 0, 1, NULL),
+(186, 1, 0, NULL),
+(187, 1, 1, NULL),
+(188, 0, 0, NULL),
+(189, 0, 1, NULL),
+(190, 1, 0, NULL),
+(191, 1, 1, NULL),
+(192, 0, 0, NULL),
+(193, 0, 1, NULL),
+(194, 1, 0, NULL),
+(195, 1, 1, NULL),
+(196, 0, 0, NULL),
+(197, 0, 1, NULL),
+(198, 1, 0, NULL),
+(199, 1, 1, NULL);
 
 -- --------------------------------------------------------
 
@@ -90,11 +221,12 @@ CREATE TABLE `financialAid` (
 -- Table structure for table `login`
 --
 
-CREATE TABLE `login` (
+CREATE TABLE IF NOT EXISTS `login` (
   `pawprint` varchar(6) NOT NULL DEFAULT '',
   `password` varchar(20) DEFAULT NULL,
   `admin_empID` varchar(9) DEFAULT NULL,
-  `sis_authority` tinyint(1) DEFAULT NULL
+  `sis_authority` tinyint(1) DEFAULT NULL,
+  PRIMARY KEY (`pawprint`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -117,7 +249,7 @@ INSERT INTO `login` (`pawprint`, `password`, `admin_empID`, `sis_authority`) VAL
 -- Table structure for table `person`
 --
 
-CREATE TABLE `person` (
+CREATE TABLE IF NOT EXISTS `person` (
   `empID` varchar(9) NOT NULL DEFAULT '',
   `pawprint` varchar(6) DEFAULT NULL,
   `fName` varchar(25) DEFAULT NULL,
@@ -128,7 +260,8 @@ CREATE TABLE `person` (
   `title` varchar(35) DEFAULT NULL,
   `admin_empID` varchar(9) DEFAULT NULL,
   `ferpa_score` varchar(3) DEFAULT NULL,
-  `sis_authority` tinyint(1) DEFAULT NULL
+  `sis_authority` tinyint(1) DEFAULT NULL,
+  PRIMARY KEY (`empID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -243,8 +376,8 @@ INSERT INTO `person` (`empID`, `pawprint`, `fName`, `lName`, `phone_number`, `ca
 -- Table structure for table `records`
 --
 
-CREATE TABLE `records` (
-  `request_ID` bigint(20) unsigned NOT NULL,
+CREATE TABLE IF NOT EXISTS `records` (
+  `request_ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `basic_inquiry` tinyint(1) DEFAULT NULL,
   `advanced_inquiry` tinyint(1) DEFAULT NULL,
   `3cs` tinyint(1) DEFAULT NULL,
@@ -263,8 +396,65 @@ CREATE TABLE `records` (
   `self_service_advisor` tinyint(1) DEFAULT NULL,
   `fiscal_advisor` tinyint(1) DEFAULT NULL,
   `academic_advising_profile` tinyint(1) DEFAULT NULL,
-  `access_description` varchar(50) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `access_description` varchar(50) DEFAULT NULL,
+  UNIQUE KEY `request_ID` (`request_ID`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=200 ;
+
+--
+-- Dumping data for table `records`
+--
+
+INSERT INTO `records` (`request_ID`, `basic_inquiry`, `advanced_inquiry`, `3cs`, `advisor_update`, `dept_soc_update`, `student_group_review`, `service_indicators_holds`, `view_study_list`, `registrar_enrollment`, `advisor_student_center`, `class_permission`, `class_permission_view`, `class_roster`, `block_enrollments`, `report_manager`, `self_service_advisor`, `fiscal_advisor`, `academic_advising_profile`, `access_description`) VALUES
+(150, 0, 4, 5, 2, 3, 4, 0, 1, 6, 1, 3, 0, 1, 7, 0, 3, 1, 2, NULL),
+(151, 0, 4, 5, 3, 3, 6, 0, 1, 7, 1, 2, 0, 1, 6, 0, 2, 0, 2, NULL),
+(152, 0, 4, 5, 2, 3, 6, 1, 0, 7, 1, 3, 0, 1, 5, 0, 3, 1, 3, NULL),
+(153, 0, 4, 5, 2, 3, 6, 1, 0, 7, 1, 3, 0, 1, 5, 0, 3, 1, 3, NULL),
+(154, 0, 4, 5, 2, 3, 6, 1, 0, 7, 1, 3, 0, 1, 5, 0, 3, 1, 3, NULL),
+(155, 0, 4, 5, 2, 3, 6, 1, 0, 7, 1, 3, 0, 1, 5, 0, 3, 1, 3, NULL),
+(156, 0, 4, 5, 2, 3, 6, 1, 0, 7, 1, 3, 0, 1, 5, 0, 3, 1, 3, NULL),
+(157, 0, 4, 5, 2, 3, 6, 1, 0, 7, 1, 3, 0, 1, 5, 0, 3, 1, 3, NULL),
+(158, 0, 4, 5, 2, 3, 6, 1, 0, 7, 1, 3, 0, 1, 5, 0, 3, 1, 3, NULL),
+(159, 0, 4, 5, 2, 3, 6, 1, 0, 7, 1, 3, 0, 1, 5, 0, 3, 1, 3, NULL),
+(160, 1, 5, 7, 3, 2, 6, 1, 0, 5, 0, 2, 0, 0, 4, 1, 2, 0, 3, NULL),
+(161, 1, 5, 7, 3, 2, 6, 1, 0, 5, 0, 2, 0, 0, 4, 1, 2, 0, 3, NULL),
+(162, 1, 5, 7, 3, 2, 6, 1, 0, 5, 0, 2, 0, 0, 4, 1, 2, 0, 3, NULL),
+(163, 1, 5, 7, 3, 2, 6, 1, 0, 5, 0, 2, 0, 0, 4, 1, 2, 0, 3, NULL),
+(164, 1, 5, 7, 2, 2, 6, 1, 0, 5, 0, 2, 0, 0, 4, 1, 2, 0, 3, NULL),
+(165, 1, 5, 7, 3, 2, 6, 1, 0, 5, 0, 2, 0, 0, 4, 1, 2, 0, 3, NULL),
+(166, 1, 5, 7, 3, 2, 6, 1, 0, 5, 0, 2, 0, 0, 4, 1, 2, 0, 3, NULL),
+(167, 1, 5, 7, 3, 2, 6, 1, 0, 5, 0, 2, 0, 0, 4, 1, 2, 0, 3, NULL),
+(168, 1, 5, 7, 3, 2, 6, 1, 0, 5, 0, 2, 0, 0, 4, 1, 2, 0, 3, NULL),
+(169, 1, 5, 7, 3, 2, 6, 1, 0, 5, 0, 2, 0, 0, 4, 1, 2, 0, 3, NULL),
+(170, 1, 6, 6, 3, 3, 5, 0, 0, 6, 1, 3, 0, 1, 6, 1, 2, 0, 2, NULL),
+(171, 1, 6, 6, 3, 3, 5, 0, 0, 6, 1, 3, 0, 1, 6, 1, 2, 0, 2, NULL),
+(172, 1, 6, 6, 3, 3, 5, 0, 0, 6, 1, 3, 0, 1, 6, 1, 2, 0, 2, NULL),
+(173, 1, 6, 6, 3, 3, 5, 0, 0, 6, 1, 3, 0, 1, 6, 1, 2, 0, 2, NULL),
+(174, 1, 6, 6, 3, 3, 5, 0, 0, 6, 1, 3, 0, 1, 6, 1, 2, 0, 2, NULL),
+(175, 1, 6, 6, 3, 3, 5, 0, 0, 6, 1, 3, 0, 1, 6, 1, 2, 0, 2, NULL),
+(176, 1, 6, 6, 3, 3, 5, 0, 0, 6, 1, 3, 0, 1, 6, 1, 2, 0, 2, NULL),
+(177, 1, 6, 6, 3, 3, 5, 0, 0, 6, 1, 3, 0, 1, 6, 1, 2, 0, 2, NULL),
+(178, 1, 6, 6, 3, 3, 5, 0, 0, 6, 1, 3, 0, 1, 6, 1, 2, 0, 2, NULL),
+(179, 1, 6, 6, 3, 3, 5, 0, 0, 6, 1, 3, 0, 1, 6, 1, 2, 0, 2, NULL),
+(180, 0, 7, 6, 2, 3, 4, 1, 1, 4, 0, 2, 1, 1, 4, 1, 3, 1, 2, NULL),
+(181, 0, 7, 6, 2, 3, 4, 1, 1, 4, 0, 2, 1, 1, 4, 1, 3, 1, 2, NULL),
+(182, 0, 7, 6, 2, 3, 4, 1, 1, 4, 0, 2, 1, 1, 4, 1, 3, 1, 2, NULL),
+(183, 0, 7, 6, 2, 3, 4, 1, 1, 4, 0, 2, 1, 1, 4, 1, 3, 1, 2, NULL),
+(184, 0, 7, 6, 2, 3, 4, 1, 1, 4, 0, 2, 1, 1, 4, 1, 3, 1, 2, NULL),
+(185, 0, 7, 6, 2, 3, 4, 1, 1, 4, 0, 2, 1, 1, 4, 1, 3, 1, 2, NULL),
+(186, 0, 7, 6, 2, 3, 4, 1, 1, 4, 0, 2, 1, 1, 4, 1, 3, 1, 2, NULL),
+(187, 0, 7, 6, 3, 2, 4, 1, 1, 4, 0, 2, 1, 1, 4, 1, 3, 1, 2, NULL),
+(188, 0, 7, 6, 2, 3, 4, 1, 1, 4, 0, 2, 1, 1, 4, 1, 3, 1, 2, NULL),
+(189, 0, 7, 6, 3, 2, 4, 1, 1, 4, 9, 2, 1, 1, 4, 1, 3, 1, 2, NULL),
+(190, 1, 6, 4, 2, 2, 5, 0, 1, 6, 1, 3, 1, 0, 7, 0, 2, 0, 3, NULL),
+(191, 1, 6, 4, 2, 2, 5, 0, 1, 6, 1, 3, 1, 0, 7, 0, 2, 0, 3, NULL),
+(192, 1, 6, 4, 2, 2, 5, 0, 1, 6, 1, 3, 1, 0, 7, 0, 2, 0, 3, NULL),
+(193, 1, 6, 4, 2, 2, 5, 0, 1, 6, 1, 3, 1, 0, 7, 0, 2, 0, 3, NULL),
+(194, 1, 6, 4, 2, 2, 5, 0, 1, 6, 1, 3, 1, 0, 7, 1, 2, 0, 3, NULL),
+(195, 1, 6, 4, 2, 2, 5, 0, 1, 6, 1, 3, 1, 0, 7, 0, 2, 0, 3, NULL),
+(196, 1, 6, 4, 2, 2, 5, 0, 1, 6, 1, 3, 1, 9, 7, 0, 2, 0, 3, NULL),
+(197, 1, 6, 4, 2, 2, 5, 0, 1, 6, 1, 3, 1, 0, 7, 0, 2, 0, 3, NULL),
+(198, 1, 6, 4, 2, 2, 5, 0, 1, 6, 1, 3, 1, 0, 7, 0, 2, 0, 3, NULL),
+(199, 1, 6, 4, 2, 2, 5, 0, 1, 6, 1, 3, 1, 0, 7, 0, 2, 0, 3, NULL);
 
 -- --------------------------------------------------------
 
@@ -272,16 +462,19 @@ CREATE TABLE `records` (
 -- Table structure for table `request`
 --
 
-CREATE TABLE `request` (
-  `request_ID` bigint(20) unsigned NOT NULL,
+CREATE TABLE IF NOT EXISTS `request` (
+  `request_ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `empID` varchar(20) DEFAULT NULL,
   `request_date` date DEFAULT NULL,
   `update_date` date DEFAULT NULL,
   `admin_empID` varchar(20) DEFAULT NULL,
   `request_description` varchar(500) DEFAULT NULL,
   `is_student` tinyint(1) DEFAULT NULL,
-  `status` tinyint(2) DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=200 DEFAULT CHARSET=latin1;
+  `status` tinyint(2) DEFAULT NULL,
+  PRIMARY KEY (`request_ID`),
+  UNIQUE KEY `request_ID` (`request_ID`),
+  KEY `empID` (`empID`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=200 ;
 
 --
 -- Dumping data for table `request`
@@ -395,8 +588,8 @@ INSERT INTO `request` (`request_ID`, `empID`, `request_date`, `update_date`, `ad
 -- Table structure for table `reserved`
 --
 
-CREATE TABLE `reserved` (
-  `request_ID` bigint(20) unsigned NOT NULL,
+CREATE TABLE IF NOT EXISTS `reserved` (
+  `request_ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `immunization_view` tinyint(1) DEFAULT NULL,
   `transfer_credit_admission` tinyint(1) DEFAULT NULL,
   `relationships` tinyint(1) DEFAULT NULL,
@@ -404,108 +597,10 @@ CREATE TABLE `reserved` (
   `accomodate_student_health` tinyint(1) DEFAULT NULL,
   `support_staff_registrar` tinyint(1) DEFAULT NULL,
   `advance_standing_report` tinyint(1) DEFAULT NULL,
-  `access_description` varchar(50) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `access_description` varchar(50) DEFAULT NULL,
+  UNIQUE KEY `request_ID` (`request_ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `admissions`
---
-ALTER TABLE `admissions`
-  ADD UNIQUE KEY `request_ID` (`request_ID`);
-
---
--- Indexes for table `auth`
---
-ALTER TABLE `auth`
-  ADD UNIQUE KEY `request_ID` (`request_ID`);
-
---
--- Indexes for table `cashiers`
---
-ALTER TABLE `cashiers`
-  ADD UNIQUE KEY `request_ID` (`request_ID`);
-
---
--- Indexes for table `financialAid`
---
-ALTER TABLE `financialAid`
-  ADD UNIQUE KEY `request_ID` (`request_ID`);
-
---
--- Indexes for table `login`
---
-ALTER TABLE `login`
-  ADD PRIMARY KEY (`pawprint`);
-
---
--- Indexes for table `person`
---
-ALTER TABLE `person`
-  ADD PRIMARY KEY (`empID`);
-
---
--- Indexes for table `records`
---
-ALTER TABLE `records`
-  ADD UNIQUE KEY `request_ID` (`request_ID`);
-
---
--- Indexes for table `request`
---
-ALTER TABLE `request`
-  ADD PRIMARY KEY (`request_ID`),
-  ADD UNIQUE KEY `request_ID` (`request_ID`),
-  ADD KEY `empID` (`empID`);
-
---
--- Indexes for table `reserved`
---
-ALTER TABLE `reserved`
-  ADD UNIQUE KEY `request_ID` (`request_ID`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `admissions`
---
-ALTER TABLE `admissions`
-  MODIFY `request_ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `auth`
---
-ALTER TABLE `auth`
-  MODIFY `request_ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `cashiers`
---
-ALTER TABLE `cashiers`
-  MODIFY `request_ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `financialAid`
---
-ALTER TABLE `financialAid`
-  MODIFY `request_ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `records`
---
-ALTER TABLE `records`
-  MODIFY `request_ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `request`
---
-ALTER TABLE `request`
-  MODIFY `request_ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=200;
---
--- AUTO_INCREMENT for table `reserved`
---
-ALTER TABLE `reserved`
-  MODIFY `request_ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT;
 --
 -- Constraints for dumped tables
 --
@@ -529,9 +624,9 @@ ALTER TABLE `cashiers`
   ADD CONSTRAINT `cashiers_ibfk_1` FOREIGN KEY (`request_ID`) REFERENCES `request` (`request_ID`);
 
 --
--- Constraints for table `financialAid`
+-- Constraints for table `financialaid`
 --
-ALTER TABLE `financialAid`
+ALTER TABLE `financialaid`
   ADD CONSTRAINT `financialaid_ibfk_1` FOREIGN KEY (`request_ID`) REFERENCES `request` (`request_ID`);
 
 --
@@ -551,3 +646,7 @@ ALTER TABLE `request`
 --
 ALTER TABLE `reserved`
   ADD CONSTRAINT `reserved_ibfk_1` FOREIGN KEY (`request_ID`) REFERENCES `request` (`request_ID`);
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
