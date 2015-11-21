@@ -16,7 +16,7 @@ class Logout extends CI_Controller {
         // Destroy the session data
         $this->session->sess_destroy();
         redirect('login');
-                
+
     }
 }
-?>
+

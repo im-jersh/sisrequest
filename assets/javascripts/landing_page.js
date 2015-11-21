@@ -1,5 +1,9 @@
 /**
+<<<<<<< HEAD
+ * Created by Josh on 11/20/15.
+=======
  * Created by Josh on 11/17/15.
+>>>>>>> 4779bf92bb40e61db83a3256bf5a45c754e24368
  */
 $(document).ready(function() {
     $("#data-list .outerRow").click(function() {
