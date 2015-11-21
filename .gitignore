@@ -1,5 +1,7 @@
 .DS_Store
 
+application/config/local/*
+
 application/cache/*
 !application/cache/index.html
 !application/cache/.htaccess
@@ -75,3 +77,4 @@ crashlytics.properties
 crashlytics-build.properties
 fabric.properties
 
+.htaccess

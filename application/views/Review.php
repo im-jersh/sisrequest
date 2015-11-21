@@ -3,15 +3,15 @@
 <head>
 	<title>Review Page</title>
 	<meta charset="utf-8"/>
-	<link rel="stylesheet" href="C:\Users\derek\Documents\GitHub\sisrequest\assets\stylesheets\homestyle.css" type="text/css">
-	<link rel="stylesheet" href="C:\Users\derek\Documents\GitHub\sisrequest\assets\stylesheets\reviewStyle.css" type="text/css">
-	<link rel="stylesheet" href="C:\Users\derek\Documents\GitHub\sisrequest\assets\stylesheets\liStyle.css" type="text/css">
+	<link rel="stylesheet" href="<?php echo base_url();?>/assets/stylesheets/homestyle.css" type="text/css">
+	<link rel="stylesheet" href="<?php echo base_url();?>/assets/stylesheets/reviewStyle.css" type="text/css">
+	<link rel="stylesheet" href="<?php echo base_url();?>/assets/stylesheets/liStyle.css" type="text/css">
 </head>
 <body>
 	<div style="background-color: #f5f5f5;" id="site-container">
 		<div id="reviewHeader">
 			<div style="margin-top: -10px; margin-left: -10px;" class="tigerHead">
-				<img height="117px" width="auto"  src="C:\Users\derek\Documents\GitHub\sisrequest\assets\images\tigerFinal.png">
+				<img height="117px" width="auto"  src="<?php echo base_url();?>/assets/images/tigerFinal.png">
 			</div>
 			<div class="employeeHeaderReview">
 				<h1  style="color:white; padding-left: 10px;"> Employees</h1>
@@ -66,6 +66,8 @@
 					<p> Signature <strong>______________________________________</strong></p>
 					</div>
 				</div>
+				<button type="button">edit</button>
+				<a href="<?php echo base_url();?>/Landing_page"> <button type="button" >submit</button></a>
 			</div>
 		</div>
 	</div>

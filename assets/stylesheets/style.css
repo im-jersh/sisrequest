@@ -17,9 +17,9 @@ div {
 	text-align: center;
 	font-size: 35px;
 	margin-bottom: 0px;
-	
+
 }*/
-	
+
 
 th {
 	color: white;
@@ -29,15 +29,14 @@ th {
 	background-color: black;
 	border-collapse: collapse;
 }
+
 tr, td{
-	padding-top: 15px;
-	padding-left: 100px;
 	font-size: 20px;
-	box-shadow: inset 0px 1px 0px #3e9cbf, 0px 1px 0px 0px #205c73, 0px 2px 0px #999;
-	background-color: #f5f5f5;
+	box-shadow: inset 0px 1px 0px #333333, 0px 1px 0px 0px #333333, 0px 0px 0px #333333;
+	background-color: transparent;
 }
 
-	
+
 #site-container {
 	position: absolute;
 	height: 100%;
@@ -50,7 +49,7 @@ tr, td{
 /*#reviewHeader {
 	width: 100%;
 	height: 180px;
-	
+
 }
 
 #reviewBody {
@@ -65,7 +64,7 @@ tr, td{
 	width: 33%;
 	float: right;
 	border-left: 2px solid black;
-	
+
 }
 #leftDiv {
 	height: 65%;
@@ -83,12 +82,12 @@ tr, td{
 	width: 100%;
 	height: 20%;
 	border-bottom: 2px solid black;
-	
+
 }
-	
+
 #rightDiv  p {
 	margin-left: 5px;
-	
+
 }
 
 #rightBottom {
@@ -112,20 +111,18 @@ tr, td{
 	position: absolute;
 	top: 0;
 	z-index: 2;
-	
-	
+
+
 }
 
 table {
 	diplay: table;
-	width: 595px;
+	width: 100%;
 	color: black;
-	margin-top: -10px;
 }
 
 #menu{
-	width: 170px;
-	background: black;
+	background: #4D4D4D;
 	color: #bab2c7;
 	text-transform: uppercase;
 	text-align: center;
@@ -136,12 +133,11 @@ table {
 	position: absolute;
 	display: block;
 	min-height: 900px;
-}
+	float: left;
+	height: 100%;
+	width: 12%;
+	position: fixed;
 
-.headerBar {
-	background: url(C:/Users/derek/Documents/GitHub/sisrequest/assets/images/tigerBackF.JPG) repeat;
-	width: 585px;
-	height: 37px;
 }
 
 #menu .nav-logo	{
@@ -167,17 +163,17 @@ table {
 .searchBut {
 	width: 35px;
 	height: 35px;
-	//-webkit-transition: all .4s ease;
-	//margin-top: 25px;
-	
-	
+//-webkit-transition: all .4s ease;
+//margin-top: 25px;
+
+
 }
 
 .box {
 	width: 200px;
 	height: 34px;
-	//margin-top: 25px;
-	//margin-left: 70px;
+//margin-top: 25px;
+//margin-left: 70px;
 }
 
 .menu-list	{
@@ -198,19 +194,19 @@ ul, menu, dir {
 	list-style-type: disc;
 	-webkit-margin-before: 1em;
 	-webkit-margin-after: 1em;
-    -webkit-margin-start: 0px;
-    -webkit-margin-end: 0px;
-    -webkit-padding-start: 40px;
+	-webkit-margin-start: 0px;
+	-webkit-margin-end: 0px;
+	-webkit-padding-start: 40px;
 	position absolute;
 }
 
 form {
 	margin-bottom: 5px;
-	
+
 }
 
 ol {
-	max-width: 560px; 
+	max-width: 560px;
 	width: 565px;
 	background-color: black;
 	color: white;
@@ -223,13 +219,13 @@ ol {
 
 ul li, ol li {
 	list-style: none;
-	
-	//border: 1px solid black;
+
+//border: 1px solid black;
 }
 
 ol li{
 	box-shadow: inset 0px 1px 0px #3e9cbf, 0px 1px 0px 0px #205c73, 0px 2px 0px #999;
-	//padding-left: 10px;
+//padding-left: 10px;
 }
 
 ol li .genInfo {
@@ -246,7 +242,7 @@ ol li .genInfo {
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
 	border-radius: 10px;
-	
+
 }
 .menu-list li:hover{
 	background-color: #205c73;
@@ -254,18 +250,28 @@ ol li .genInfo {
 
 #marquee-container {
 	height: 100%;
-	top: 0;
-	left: 170px;
-	width: 1190px;
-	position: absolute;
+	width: 88%;
+	float: right;
+	position: relative;
+}
 
+#marquee-container .column-left {
+	float: left;
+	height: 100%;
+	width: 40%;
+	min-width: 150px;
+	position: relative;
+}
+
+#marquee-container .column-right {
+	floath: right;
+	height: 100%;
+	width: 60%;
+	position: relative;
+	min-width: 300px;
 }
 
 #marquee-employees {
-	height: 100%;
-	top 0;
-	left: 0px;
-	width: 595px;
 	overflow: auto;
 	color: #bab2c7;
 	text-align: left;
@@ -275,8 +281,22 @@ ol li .genInfo {
 	overflow-y: scroll;
 	min-height: 900px;
 }
+
+#data-list {
+	width: 100%;
+}
+
+#data-list tr {
+	height: 4em;
+	background-color: #F1BF4E;
+}
+
+#data-list tr td {
+	padding-left: 1em;
+}
+
 .employeeHeader {
-	text-align: left; 
+	text-align: left;
 	position: relative;
 	width: 414px;
 	height: 35px;
@@ -287,11 +307,11 @@ ol li .genInfo {
 	font-family: ;
 	background: url(C:/Users/derek/Documents/GitHub/sisrequest/assets/images/tigerBackF.JPG) repeat;
 	box-shadow: inset 0px 1px 0px black, 0px 1px 0px 0px black, 0px 2px 0px black;
-	
+
 }
 
 .employeeHeaderReview {
-	text-align: left; 
+	text-align: left;
 	position: relative;
 	width: 1200px;
 	height: 36px;
@@ -325,15 +345,13 @@ ol li .genInfo {
 	padding-right: 30px;
 	padding-left: 30px;
 	margin: auto;
-	
-	
+
+
 }
 
 #marquee-employee-info {
 	height: 100%;
 	top: 0;
-	left: 595px;
-	width: 585px;
 	overflow: auto;
 	color: black;
 	text-align: left;
@@ -350,9 +368,159 @@ ol li .genInfo {
 }
 
 #menu .menu-list li {
-	padding: 15px 0;
+	padding: 0px 0;
 	position: relative;
 	left: 0px;
-	curson: pointer;
-	margin-top: 15px; 
+	cursor: pointer;
+	margin-top: 0px;
+}
+
+#data-list tr:hover {
+	cursor: pointer;
+}
+
+#data-list .inner-table tr td {
+	padding: 0;
+}
+
+#data-list .inner-table tr {
+	height: 2em;
+	border-bottom: none;
+}
+
+.inner-table tr.mainName td {
+	padding-top: 3% !important;
+	font-family: "Helvetica Neue";
+	font-size: 1.2em;
+	font-weight: 300;
+	border-bottom: ;
+}
+
+.inner-table .subTitle td {
+	box-shadow: none;
+	font-family: "Helvetica Neue";
+	font-size: .9em;
+	font-weight: lighter;
+}
+
+h1#employeeName {
+	margin: 0 auto;
+	text-align: left;
+	padding: 4px 0 4px 0.5em;
+	font-family: "Helvetica Neue";
+	font-weight: 300;
+}
+
+.formHeader {
+	width: 100%;
+	height: 2em;
+	background-color: #4D4D4D;
+}
+
+.formHeader h4 {
+	margin: 0 auto;
+	text-align: left;
+	padding: 4px 0 4px 1em;
+	color: #fff;
+}
+
+.inner-col-left {
+	padding: 0 0 0 1em;
+	display: inline-block;
+	float: left;
+}
+
+.inner-col-right {
+	display: inline-block;
+	float: right;
+}
+
+.singleRowTwoColumn {
+	height: 4em;
+	width: 100%;
+	border-bottom: 1px solid grey;
+	margin: 0 2em;
+}
+
+.singleRowTwoColumn .inner-col-left {
+	display: inline-block;
+	float: left;
+	height: inherit;
+	width: 30%;
+}
+
+.singleRowTwoColumn .inner-col-right {
+	display: inline-block;
+	float: left;
+	height: inherit;
+	width: 30%;
+}
+
+div.singleRowTwoColumn.middleSection {
+	border-bottom: none;
+	height: 5em;
+}
+
+div.singleRowTwoColumn.middleSection div {
+	width: 45%;
+}
+
+.singleRowSingleColumn {
+	width: 100%;
+	height: 5em;
+	margin: 0 2em;
+}
+
+div#generalInfoSection {
+	display: inline-block !important;
+	width: 100%;
+}
+
+div#campusAddress {
+	width: 100%;
+	height: 10em;
+}
+
+
+div#campusAddress div input[type="text"] {
+	margin: 0 0 1em 0;
+}
+
+div#campusAddress div select {
+	margin: 0 0 1em 0;
+}
+
+div#campusAddress.inner-col-right {
+	padding-top 2.5em;
+}
+
+div#campusAddress div#addressContainer {
+	padding-left: 1em;
+}
+
+div#addressContainer div.inner-col-left {
+	padding: 0 0;
+}
+
+div#addressContainer div.inner-col-right {
+	padding: 0 0;
+	margin-left: -1em;
+}
+
+div#addressContainer div {
+	width: 45%;
+}
+
+.inner-table tr {
+	background-color: transparent !important;
+	border: none;
+	box-shadow: none;
+}
+
+.inner-table tr td {
+	box-shadow: none !important;
+}
+
+#data-list .rowHighlighted {
+	background-color: #EBD6A1;
 }
