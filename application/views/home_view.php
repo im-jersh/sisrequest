@@ -19,8 +19,6 @@
         <div>
             <div class="nav-logo">
 
-
-
             </div>
         </div>
         <p"> Security Request</p>
@@ -67,7 +65,7 @@
         <div id="marquee-employee-info" class="column-right">
 
 			<!-- The form for the employee -->
-            <form name="requestForEmployee" id="SISrequestForm" role="form" action="#"></form>
+            <form name="requestForEmployee" id="SISrequestForm" role="form" action="#">
             <h1 id="employeeName">Employee</h1>
 
 
@@ -116,7 +114,7 @@
 				<div class="panel panel-default">
 					<div class="panel-heading">
 						<h4 class="panel-title">
-							<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+							<a class="accordion-toggle collapsed" data-toggle="collapse" href="#collapseOne">
 								Student Records Access
 							</a>
 						</h4>
@@ -247,7 +245,7 @@
 				<div class="panel panel-default">
 					<div class="panel-heading">
 						<h4 class="panel-title">
-							<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+							<a class="accordion-toggle collapsed" data-toggle="collapse" href="#collapseTwo">
 								Admissions Access
 							</a>
 						</h4>
@@ -256,25 +254,25 @@
 						<div class="panel-body">
 							<div class="panelBodyContainer">
 								<div class="column-left">
-									<div class="checkbox"><label></label><input type="checkbox" name="act" value="1" />ACT</label></div>
-									<div class="checkbox"><label></label><input  type="checkbox" name="ielts" value="1" />IELTS</label></div>
-									<div class="checkbox"><label></label><input  type="checkbox" name="ged" value="1" />GED</label></div>
-									<div class="checkbox"><label></label><input  type="checkbox" name="sat" value="1" />SAT</label></div>
-									<div class="checkbox"><label></label><input  type="checkbox" name="lsat" value="1" />LSAT</label></div>
+									<div class="checkbox"><label></label><input type="checkbox" name="act_view" value="1" />ACT</label></div>
+									<div class="checkbox"><label></label><input  type="checkbox" name="ielts_view" value="1" />IELTS</label></div>
+									<div class="checkbox"><label></label><input  type="checkbox" name="ged_view" value="1" />GED</label></div>
+									<div class="checkbox"><label></label><input  type="checkbox" name="sat_view" value="1" />SAT</label></div>
+									<div class="checkbox"><label></label><input  type="checkbox" name="lsat_view" value="1" />LSAT</label></div>
 								</div>
 								<div class="column-middle">
-									<div class="checkbox"><label></label><input  type="checkbox" name="millers" value="1" />MILLERS</label></div>
-									<div class="checkbox"><label></label><input  type="checkbox" name="gre" value="1" />GRE</label></div>
-									<div class="checkbox"><label></label><input  type="checkbox" name="mcat" value="1" />MCAT</label></div>
-									<div class="checkbox"><label></label><input  type="checkbox" name="prax" value="1" />PRAX</label></div>
-									<div class="checkbox"><label></label><input  type="checkbox" name="gmat" value="1" />GMAT</label></div>
+									<div class="checkbox"><label></label><input  type="checkbox" name="millers_view" value="1" />MILLERS</label></div>
+									<div class="checkbox"><label></label><input  type="checkbox" name="gre_view" value="1" />GRE</label></div>
+									<div class="checkbox"><label></label><input  type="checkbox" name="mcat_view" value="1" />MCAT</label></div>
+									<div class="checkbox"><label></label><input  type="checkbox" name="prax_view" value="1" />PRAX</label></div>
+									<div class="checkbox"><label></label><input  type="checkbox" name="gmat_view" value="1" />GMAT</label></div>
 								</div>
 								<div class="column-right">
-									<div class="checkbox"><label></label><input  type="checkbox" name="ap" value="1" />AP</label></div>
-									<div class="checkbox"><label></label><input  type="checkbox" name="pla_mu" value="1" />PLA-MU</label></div>
-									<div class="checkbox"><label></label><input  type="checkbox" name="tofel" value="1" />TOFEL</label></div>
-									<div class="checkbox"><label></label><input  type="checkbox" name="clep" value="1" />CLEP</label></div>
-									<div class="checkbox"><label></label><input  type="checkbox" name="base" value="1" />BASE</label></div>
+									<div class="checkbox"><label></label><input  type="checkbox" name="ap_view" value="1" />AP</label></div>
+									<div class="checkbox"><label></label><input  type="checkbox" name="pla_mu_view" value="1" />PLA-MU</label></div>
+									<div class="checkbox"><label></label><input  type="checkbox" name="tofel_view" value="1" />TOFEL</label></div>
+									<div class="checkbox"><label></label><input  type="checkbox" name="clep_view" value="1" />CLEP</label></div>
+									<div class="checkbox"><label></label><input  type="checkbox" name="base_view" value="1" />BASE</label></div>
 								</div>
 							</div>
 						</div>
@@ -283,7 +281,7 @@
 				<div class="panel panel-default">
 					<div class="panel-heading">
 						<h4 class="panel-title">
-							<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+							<a class="accordion-toggle collapsed" data-toggle="collapse" href="#collapseThree">
 								Student Financials (Cashiers) Access
 							</a>
 						</h4>
@@ -318,7 +316,7 @@
 				<div class="panel panel-default">
 					<div class="panel-heading">
 						<h4 class="panel-title">
-							<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
+							<a class="accordion-toggle collapsed" data-toggle="collapse" href="#collapseFour">
 								Student Financial Aid Access
 							</a>
 						</h4>
@@ -353,7 +351,7 @@
 				<div class="panel panel-default">
 					<div class="panel-heading">
 						<h4 class="panel-title">
-							<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseFive">
+							<a class="accordion-toggle collapsed" data-toggle="collapse" href="#collapseFive">
 								Reserved Access
 							</a>
 						</h4>
@@ -408,8 +406,7 @@
 					</div>
 				</div>
 			</div>
-
-
+			</form>
         </div>
     </div>
 </div>

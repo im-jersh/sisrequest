@@ -13,6 +13,7 @@ class Landing_page extends CI_Controller {
     public $printListData = [];
     public $navigationItem;
 
+
     public function __construct() {
         parent::__construct();
         $this->load->model('landing_model');
@@ -110,7 +111,7 @@ class Landing_page extends CI_Controller {
 
         // Get the request and the associated request types for the employee
         $returnData = [];
-        if (!is_null($employee['request'])) {
+        if (!is_null($employee['request'])) { // the employee has a previous request
 
             $request = $employee['request'];
             $requestID = $request['request_ID'];
@@ -120,11 +121,22 @@ class Landing_page extends CI_Controller {
 
             // Attach the request types to the employee's request
             $employee['request']['types'] = $requestRecord;
-            $returnData['employee'] = $employee;
 
-        } else { // the selected person does not have an existing request yet
 
+        } else { // the employee does not have a request yet
+            $accessTypeKeys = Landing_model::$accessTypeKeys;
+
+            $types = array(
+                'data' => array(),
+                'keys' => $accessTypeKeys
+            );
+
+            $employee['request'] = array(
+                'types' => $types
+            );
         }
+
+        $returnData['employee'] = $employee;
 
         echo json_encode($returnData);
     }

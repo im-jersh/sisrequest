@@ -147,7 +147,7 @@ table {
 	background-position: 0 0;
 	height: 125px;
 	width: 125px;
-	background: url(C:/Users/derek/Documents/GitHub/sisrequest/assets/images/muClipped.png) no-repeat;
+	/*background: url(C:/Users/derek/Documents/GitHub/sisrequest/assets/images/muClipped.png) no-repeat;*/
 }
 
 #marquee-employee-data  .nav-logo {
@@ -304,7 +304,7 @@ ol li .genInfo {
 	z-index: 1;
 	margin-bottom: 100px;
 	font-family: ;
-	background: url(C:/Users/derek/Documents/GitHub/sisrequest/assets/images/tigerBackF.JPG) repeat;
+	/*background: url(C:/Users/derek/Documents/GitHub/sisrequest/assets/images/tigerBackF.JPG) repeat;*/
 	box-shadow: inset 0px 1px 0px black, 0px 1px 0px 0px black, 0px 2px 0px black;
 
 }
@@ -319,7 +319,7 @@ ol li .genInfo {
 	z-index: 1;
 	margin-bottom: 100px;
 	font-family: ;
-	background: url(C:/Users/derek/Documents/GitHub/sisrequest/assets/images/tigerBackF.JPG) repeat;
+	/*background: url(C:/Users/derek/Documents/GitHub/sisrequest/assets/images/tigerBackF.JPG) repeat;*/
 	box-shadow: inset 0px 1px 0px black, 0px 1px 0px 0px black, 0px 2px 0px black;
 }
 
