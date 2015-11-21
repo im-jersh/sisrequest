@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 20, 2015 at 10:44 PM
+-- Generation Time: Nov 21, 2015 at 01:03 AM
 -- Server version: 5.6.17
 -- PHP Version: 5.5.12
 
@@ -19,8 +19,7 @@ SET time_zone = "+00:00";
 --
 -- Database: `sisrequest`
 --
-CREATE DATABASE IF NOT EXISTS sisrequest;
-USE sisrequest;
+
 -- --------------------------------------------------------
 
 --
@@ -29,23 +28,22 @@ USE sisrequest;
 
 CREATE TABLE IF NOT EXISTS `admissions` (
   `request_ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `all_test_score_access` tinyint(1) DEFAULT NULL,
-  `act` tinyint(1) DEFAULT NULL,
-  `ielts` tinyint(1) DEFAULT NULL,
-  `ged` tinyint(1) DEFAULT NULL,
-  `sat` tinyint(1) DEFAULT NULL,
-  `lsat` tinyint(1) DEFAULT NULL,
-  `millers` tinyint(1) DEFAULT NULL,
-  `gre` tinyint(1) DEFAULT NULL,
-  `mcat` tinyint(1) DEFAULT NULL,
-  `prax` tinyint(1) DEFAULT NULL,
-  `gmat` tinyint(1) DEFAULT NULL,
-  `ap` tinyint(1) DEFAULT NULL,
-  `pla_mu` tinyint(1) DEFAULT NULL,
-  `tofel` tinyint(1) DEFAULT NULL,
-  `clep` tinyint(1) DEFAULT NULL,
-  `base` tinyint(1) DEFAULT NULL,
-  `access_description` varchar(50) DEFAULT NULL,
+  `all_test_score_access` tinyint(7) DEFAULT NULL,
+  `act` tinyint(7) DEFAULT NULL,
+  `ielts` tinyint(7) DEFAULT NULL,
+  `ged` tinyint(7) DEFAULT NULL,
+  `sat` tinyint(7) DEFAULT NULL,
+  `lsat` tinyint(7) DEFAULT NULL,
+  `millers` tinyint(7) DEFAULT NULL,
+  `gre` tinyint(7) DEFAULT NULL,
+  `mcat` tinyint(7) DEFAULT NULL,
+  `prax` tinyint(7) DEFAULT NULL,
+  `gmat` tinyint(7) DEFAULT NULL,
+  `ap` tinyint(7) DEFAULT NULL,
+  `pla_mu` tinyint(7) DEFAULT NULL,
+  `tofel` tinyint(7) DEFAULT NULL,
+  `clep` tinyint(7) DEFAULT NULL,
+  `base` tinyint(7) DEFAULT NULL,
   UNIQUE KEY `request_ID` (`request_ID`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=150 ;
 
@@ -53,57 +51,57 @@ CREATE TABLE IF NOT EXISTS `admissions` (
 -- Dumping data for table `admissions`
 --
 
-INSERT INTO `admissions` (`request_ID`, `all_test_score_access`, `act`, `ielts`, `ged`, `sat`, `lsat`, `millers`, `gre`, `mcat`, `prax`, `gmat`, `ap`, `pla_mu`, `tofel`, `clep`, `base`, `access_description`) VALUES
-(100, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, NULL),
-(101, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, NULL),
-(102, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, NULL),
-(103, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, NULL),
-(104, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, NULL),
-(105, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, NULL),
-(106, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, NULL),
-(107, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, NULL),
-(108, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL),
-(109, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, NULL),
-(110, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, NULL),
-(111, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL),
-(112, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, NULL),
-(113, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, NULL),
-(114, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, NULL),
-(115, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, NULL),
-(116, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, NULL),
-(117, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, NULL),
-(118, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL),
-(119, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, NULL),
-(120, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL),
-(121, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL),
-(122, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL),
-(123, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL),
-(124, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL),
-(125, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL),
-(126, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL),
-(127, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL),
-(128, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL),
-(129, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL),
-(130, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL),
-(131, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL),
-(132, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL),
-(133, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL),
-(134, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL),
-(135, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL),
-(136, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL),
-(137, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL),
-(138, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL),
-(139, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL),
-(140, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL),
-(141, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL),
-(142, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL),
-(143, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL),
-(144, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL),
-(145, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL),
-(146, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL),
-(147, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL),
-(148, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL),
-(149, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL);
+INSERT INTO `admissions` (`request_ID`, `all_test_score_access`, `act`, `ielts`, `ged`, `sat`, `lsat`, `millers`, `gre`, `mcat`, `prax`, `gmat`, `ap`, `pla_mu`, `tofel`, `clep`, `base`) VALUES
+(100, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(101, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+(102, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0),
+(103, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0),
+(104, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0),
+(105, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0, 1, 1, 0, 1, 1, 1),
+(106, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(107, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(108, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(109, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(110, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0),
+(111, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0),
+(112, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0),
+(113, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0),
+(114, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0),
+(115, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0),
+(116, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0),
+(117, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0),
+(118, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1),
+(119, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1),
+(120, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(121, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(122, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(123, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(124, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(125, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(126, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(127, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(128, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(129, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(130, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(131, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(132, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(133, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(134, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(135, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(136, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(137, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(138, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(139, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(140, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(141, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(142, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(143, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(144, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(145, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(146, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(147, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(148, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(149, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -113,10 +111,9 @@ INSERT INTO `admissions` (`request_ID`, `all_test_score_access`, `act`, `ielts`,
 
 CREATE TABLE IF NOT EXISTS `auth` (
   `request_ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `employee_sig` tinyint(1) DEFAULT NULL,
-  `dept_head_sig` tinyint(1) DEFAULT NULL,
-  `dean_sig` tinyint(1) DEFAULT NULL,
-  `access_description` varchar(50) DEFAULT NULL,
+  `employee_sig` tinyint(7) DEFAULT NULL,
+  `dept_head_sig` tinyint(7) DEFAULT NULL,
+  `dean_sig` tinyint(7) DEFAULT NULL,
   UNIQUE KEY `request_ID` (`request_ID`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=150 ;
 
@@ -124,57 +121,57 @@ CREATE TABLE IF NOT EXISTS `auth` (
 -- Dumping data for table `auth`
 --
 
-INSERT INTO `auth` (`request_ID`, `employee_sig`, `dept_head_sig`, `dean_sig`, `access_description`) VALUES
-(100, 1, 1, 1, NULL),
-(101, 1, 0, 0, NULL),
-(102, 1, 1, 0, NULL),
-(103, 1, 0, 1, NULL),
-(104, 1, 0, 0, NULL),
-(105, 1, 1, 1, NULL),
-(106, 1, 1, 1, NULL),
-(107, 1, 0, 0, NULL),
-(108, 0, 0, 0, NULL),
-(109, 0, 1, 0, NULL),
-(110, 1, 0, 1, NULL),
-(111, 0, 1, 1, NULL),
-(112, 1, 1, 1, NULL),
-(113, 1, 0, 1, NULL),
-(114, 1, 1, 0, NULL),
-(115, 0, 0, 0, NULL),
-(116, 1, 1, 1, NULL),
-(117, 0, 1, 1, NULL),
-(118, 1, 1, 1, NULL),
-(119, 1, 1, 1, NULL),
-(120, 1, 1, 1, NULL),
-(121, 1, 1, 0, NULL),
-(122, 1, 0, 1, NULL),
-(123, 1, 0, 0, NULL),
-(124, 1, 1, 1, NULL),
-(125, 1, 0, 1, NULL),
-(126, 1, 1, 0, NULL),
-(127, 1, 1, 1, NULL),
-(128, 1, 1, 0, NULL),
-(129, 1, 0, 1, NULL),
-(130, 1, 0, 0, NULL),
-(131, 1, 1, 1, NULL),
-(132, 0, 1, 1, NULL),
-(133, 1, 1, 1, NULL),
-(134, 1, 1, 1, NULL),
-(135, 1, 1, 1, NULL),
-(136, 1, 1, 1, NULL),
-(137, 1, 1, 1, NULL),
-(138, 1, 1, 1, NULL),
-(139, 1, 0, 1, NULL),
-(140, 1, 1, 1, NULL),
-(141, 1, 1, 0, NULL),
-(142, 1, 1, 1, NULL),
-(143, 1, 1, 1, NULL),
-(144, 1, 1, 1, NULL),
-(145, 1, 1, 1, NULL),
-(146, 1, 1, 1, NULL),
-(147, 1, 1, 1, NULL),
-(148, 1, 1, 1, NULL),
-(149, 1, 1, 1, NULL);
+INSERT INTO `auth` (`request_ID`, `employee_sig`, `dept_head_sig`, `dean_sig`) VALUES
+(100, 1, 1, 1),
+(101, 1, 1, 1),
+(102, 1, 1, 1),
+(103, 1, 1, 1),
+(104, 1, 1, 1),
+(105, 1, 1, 1),
+(106, 1, 1, 1),
+(107, 1, 1, 1),
+(108, 1, 1, 1),
+(109, 1, 1, 1),
+(110, 1, 1, 1),
+(111, 1, 1, 1),
+(112, 1, 1, 1),
+(113, 1, 1, 1),
+(114, 1, 1, 1),
+(115, 1, 1, 1),
+(116, 1, 1, 1),
+(117, 1, 1, 1),
+(118, 1, 1, 1),
+(119, 1, 1, 1),
+(120, 1, 1, 1),
+(121, 1, 1, 0),
+(122, 1, 0, 1),
+(123, 1, 0, 0),
+(124, 1, 1, 1),
+(125, 1, 0, 1),
+(126, 1, 1, 0),
+(127, 1, 1, 1),
+(128, 1, 1, 0),
+(129, 1, 0, 1),
+(130, 1, 0, 0),
+(131, 1, 1, 1),
+(132, 0, 1, 1),
+(133, 1, 1, 1),
+(134, 1, 1, 1),
+(135, 1, 1, 1),
+(136, 1, 1, 1),
+(137, 1, 1, 1),
+(138, 1, 1, 1),
+(139, 1, 0, 1),
+(140, 1, 1, 1),
+(141, 1, 1, 0),
+(142, 1, 1, 1),
+(143, 1, 1, 1),
+(144, 1, 1, 1),
+(145, 1, 1, 1),
+(146, 1, 1, 1),
+(147, 1, 1, 1),
+(148, 1, 1, 1),
+(149, 1, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -184,9 +181,8 @@ INSERT INTO `auth` (`request_ID`, `employee_sig`, `dept_head_sig`, `dean_sig`, `
 
 CREATE TABLE IF NOT EXISTS `cashiers` (
   `request_ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `sf_general_inquiry` tinyint(1) DEFAULT NULL,
-  `sf_cash_group_post` tinyint(1) DEFAULT NULL,
-  `access_description` varchar(50) DEFAULT NULL,
+  `sf_general_inquiry` tinyint(7) DEFAULT NULL,
+  `sf_cash_group_post` tinyint(7) DEFAULT NULL,
   UNIQUE KEY `request_ID` (`request_ID`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=150 ;
 
@@ -194,57 +190,57 @@ CREATE TABLE IF NOT EXISTS `cashiers` (
 -- Dumping data for table `cashiers`
 --
 
-INSERT INTO `cashiers` (`request_ID`, `sf_general_inquiry`, `sf_cash_group_post`, `access_description`) VALUES
-(100, 0, 2, NULL),
-(101, 0, 2, NULL),
-(102, 0, 2, NULL),
-(103, 0, 2, NULL),
-(104, 0, 2, NULL),
-(105, 0, 2, NULL),
-(106, 0, 2, NULL),
-(107, 0, 2, NULL),
-(108, 0, 2, NULL),
-(109, 0, 2, NULL),
-(110, 0, 2, NULL),
-(111, 0, 2, NULL),
-(112, 0, 2, NULL),
-(113, 0, 2, NULL),
-(114, 0, 2, NULL),
-(115, 0, 2, NULL),
-(116, 0, 2, NULL),
-(117, 0, 2, NULL),
-(118, 0, 2, NULL),
-(119, 0, 2, NULL),
-(120, 0, 2, NULL),
-(121, 0, 2, NULL),
-(122, 0, 2, NULL),
-(123, 0, 2, NULL),
-(124, 0, 2, NULL),
-(125, 0, 2, NULL),
-(126, 0, 2, NULL),
-(127, 0, 2, NULL),
-(128, 0, 2, NULL),
-(129, 0, 2, NULL),
-(130, 0, 2, NULL),
-(131, 0, 2, NULL),
-(132, 0, 2, NULL),
-(133, 0, 2, NULL),
-(134, 0, 2, NULL),
-(135, 0, 2, NULL),
-(136, 0, 2, NULL),
-(137, 0, 2, NULL),
-(138, 0, 2, NULL),
-(139, 0, 2, NULL),
-(140, 1, 2, NULL),
-(141, 1, 5, NULL),
-(142, 1, 3, NULL),
-(143, 1, 4, NULL),
-(144, 1, 5, NULL),
-(145, 1, 5, NULL),
-(146, 1, 5, NULL),
-(147, 1, 5, NULL),
-(148, 0, 2, NULL),
-(149, 0, 2, NULL);
+INSERT INTO `cashiers` (`request_ID`, `sf_general_inquiry`, `sf_cash_group_post`) VALUES
+(100, 0, 2),
+(101, 0, 2),
+(102, 0, 2),
+(103, 0, 2),
+(104, 0, 2),
+(105, 0, 2),
+(106, 0, 2),
+(107, 0, 2),
+(108, 0, 2),
+(109, 0, 2),
+(110, 0, 2),
+(111, 0, 2),
+(112, 0, 2),
+(113, 0, 2),
+(114, 0, 2),
+(115, 0, 2),
+(116, 0, 2),
+(117, 0, 2),
+(118, 0, 2),
+(119, 0, 2),
+(120, 0, 2),
+(121, 0, 2),
+(122, 0, 2),
+(123, 0, 2),
+(124, 0, 2),
+(125, 0, 2),
+(126, 0, 2),
+(127, 0, 2),
+(128, 0, 2),
+(129, 0, 2),
+(130, 0, 2),
+(131, 0, 2),
+(132, 0, 2),
+(133, 0, 2),
+(134, 0, 2),
+(135, 0, 2),
+(136, 0, 2),
+(137, 0, 2),
+(138, 0, 2),
+(139, 0, 2),
+(140, 1, 2),
+(141, 1, 5),
+(142, 1, 3),
+(143, 1, 4),
+(144, 1, 5),
+(145, 1, 5),
+(146, 1, 5),
+(147, 1, 5),
+(148, 0, 2),
+(149, 0, 2);
 
 -- --------------------------------------------------------
 
@@ -254,9 +250,8 @@ INSERT INTO `cashiers` (`request_ID`, `sf_general_inquiry`, `sf_cash_group_post`
 
 CREATE TABLE IF NOT EXISTS `financialaid` (
   `request_ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `fa_cash` tinyint(1) DEFAULT NULL,
-  `fa_non_financial_aid_staff` tinyint(1) DEFAULT NULL,
-  `access_description` varchar(50) DEFAULT NULL,
+  `fa_cash` tinyint(7) DEFAULT NULL,
+  `fa_non_financial_aid_staff` tinyint(7) DEFAULT NULL,
   UNIQUE KEY `request_ID` (`request_ID`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=150 ;
 
@@ -264,57 +259,57 @@ CREATE TABLE IF NOT EXISTS `financialaid` (
 -- Dumping data for table `financialaid`
 --
 
-INSERT INTO `financialaid` (`request_ID`, `fa_cash`, `fa_non_financial_aid_staff`, `access_description`) VALUES
-(100, 0, 0, NULL),
-(101, 0, 0, NULL),
-(102, 0, 0, NULL),
-(103, 0, 0, NULL),
-(104, 0, 0, NULL),
-(105, 0, 0, NULL),
-(106, 0, 0, NULL),
-(107, 0, 0, NULL),
-(108, 0, 0, NULL),
-(109, 0, 0, NULL),
-(110, 0, 0, NULL),
-(111, 0, 0, NULL),
-(112, 0, 0, NULL),
-(113, 0, 0, NULL),
-(114, 0, 0, NULL),
-(115, 0, 0, NULL),
-(116, 0, 0, NULL),
-(117, 0, 0, NULL),
-(118, 0, 0, NULL),
-(119, 0, 0, NULL),
-(120, 1, 0, NULL),
-(121, 1, 0, NULL),
-(122, 1, 0, NULL),
-(123, 1, 0, NULL),
-(124, 1, 0, NULL),
-(125, 1, 0, NULL),
-(126, 0, 1, NULL),
-(127, 0, 1, NULL),
-(128, 0, 1, NULL),
-(129, 0, 1, NULL),
-(130, 1, 1, NULL),
-(131, 1, 1, NULL),
-(132, 1, 1, NULL),
-(133, 1, 1, NULL),
-(134, 1, 0, NULL),
-(135, 1, 0, NULL),
-(136, 0, 1, NULL),
-(137, 0, 1, NULL),
-(138, 1, 1, NULL),
-(139, 1, 1, NULL),
-(140, 0, 0, NULL),
-(141, 0, 0, NULL),
-(142, 0, 0, NULL),
-(143, 0, 0, NULL),
-(144, 0, 0, NULL),
-(145, 0, 0, NULL),
-(146, 0, 0, NULL),
-(147, 0, 0, NULL),
-(148, 0, 0, NULL),
-(149, 0, 0, NULL);
+INSERT INTO `financialaid` (`request_ID`, `fa_cash`, `fa_non_financial_aid_staff`) VALUES
+(100, 0, 0),
+(101, 0, 0),
+(102, 0, 0),
+(103, 0, 0),
+(104, 0, 0),
+(105, 0, 0),
+(106, 0, 0),
+(107, 0, 0),
+(108, 0, 0),
+(109, 0, 0),
+(110, 0, 0),
+(111, 0, 0),
+(112, 0, 0),
+(113, 0, 0),
+(114, 0, 0),
+(115, 0, 0),
+(116, 0, 0),
+(117, 0, 0),
+(118, 0, 0),
+(119, 0, 0),
+(120, 1, 0),
+(121, 1, 0),
+(122, 1, 0),
+(123, 1, 0),
+(124, 1, 0),
+(125, 1, 0),
+(126, 0, 1),
+(127, 0, 1),
+(128, 0, 1),
+(129, 0, 1),
+(130, 1, 1),
+(131, 1, 1),
+(132, 1, 1),
+(133, 1, 1),
+(134, 1, 0),
+(135, 1, 0),
+(136, 0, 1),
+(137, 0, 1),
+(138, 1, 1),
+(139, 1, 1),
+(140, 0, 0),
+(141, 0, 0),
+(142, 0, 0),
+(143, 0, 0),
+(144, 0, 0),
+(145, 0, 0),
+(146, 0, 0),
+(147, 0, 0),
+(148, 0, 0),
+(149, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -324,7 +319,7 @@ INSERT INTO `financialaid` (`request_ID`, `fa_cash`, `fa_non_financial_aid_staff
 
 CREATE TABLE IF NOT EXISTS `login` (
   `pawprint` varchar(6) NOT NULL DEFAULT '',
-  `password` char(40) DEFAULT NULL,
+  `password` varchar(20) DEFAULT NULL,
   `admin_empID` varchar(9) DEFAULT NULL,
   `sis_authority` tinyint(1) DEFAULT NULL,
   PRIMARY KEY (`pawprint`)
@@ -335,14 +330,14 @@ CREATE TABLE IF NOT EXISTS `login` (
 --
 
 INSERT INTO `login` (`pawprint`, `password`, `admin_empID`, `sis_authority`) VALUES
-('admin', 'd033e22ae348aeb5660fc2140aec35850c4da997', 'e00000000', 0),
-('bdfd63', '8cb2237d0679ca88db6464eac60da96345513964', 'e33816985', NULL),
-('cde9d5', '8cb2237d0679ca88db6464eac60da96345513964', 'e36386656', NULL),
-('dec5x8', '8cb2237d0679ca88db6464eac60da96345513964', 'e64533764', NULL),
-('drkgf8', '8cb2237d0679ca88db6464eac60da96345513964', 'e55461992', NULL),
-('jrocnc', '8cb2237d0679ca88db6464eac60da96345513964', 'e63872988', NULL),
-('jtr4bd', '8cb2237d0679ca88db6464eac60da96345513964', 'e35233484', NULL),
-('sisadm', '2e63ac25b05a429031c5afe7f55a1367bd8215e3', 'e11111111', 1);
+('admin', 'admin', 'e00000000', 0),
+('bdfd63', '12345', 'e33816985', NULL),
+('cde9d5', '12345', 'e36386656', NULL),
+('dec5x8', '12345', 'e64533764', NULL),
+('drkgf8', '12345', 'e55461992', NULL),
+('jrocnc', '12345', 'e63872988', NULL),
+('jtr4bd', '12345', 'e35233484', NULL),
+('sisadm', 'sisadmin', 'e11111111', 1);
 
 -- --------------------------------------------------------
 
@@ -479,25 +474,24 @@ INSERT INTO `person` (`empID`, `pawprint`, `fName`, `lName`, `phone_number`, `ca
 
 CREATE TABLE IF NOT EXISTS `records` (
   `request_ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `basic_inquiry` tinyint(1) DEFAULT NULL,
-  `advanced_inquiry` tinyint(1) DEFAULT NULL,
-  `3cs` tinyint(1) DEFAULT NULL,
-  `advisor_update` tinyint(1) DEFAULT NULL,
-  `dept_soc_update` tinyint(1) DEFAULT NULL,
-  `student_group_review` tinyint(1) DEFAULT NULL,
-  `service_indicators_holds` tinyint(1) DEFAULT NULL,
-  `view_study_list` tinyint(1) DEFAULT NULL,
-  `registrar_enrollment` tinyint(1) DEFAULT NULL,
-  `advisor_student_center` tinyint(1) DEFAULT NULL,
-  `class_permission` tinyint(1) DEFAULT NULL,
-  `class_permission_view` tinyint(1) DEFAULT NULL,
-  `class_roster` tinyint(1) DEFAULT NULL,
-  `block_enrollments` tinyint(1) DEFAULT NULL,
-  `report_manager` tinyint(1) DEFAULT NULL,
-  `self_service_advisor` tinyint(1) DEFAULT NULL,
-  `fiscal_advisor` tinyint(1) DEFAULT NULL,
-  `academic_advising_profile` tinyint(1) DEFAULT NULL,
-  `access_description` varchar(50) DEFAULT NULL,
+  `basic_inquiry` tinyint(7) DEFAULT NULL,
+  `advanced_inquiry` tinyint(7) DEFAULT NULL,
+  `3cs` tinyint(7) DEFAULT NULL,
+  `advisor_update` tinyint(7) DEFAULT NULL,
+  `dept_soc_update` tinyint(7) DEFAULT NULL,
+  `student_group_review` tinyint(7) DEFAULT NULL,
+  `service_indicators_holds` tinyint(7) DEFAULT NULL,
+  `view_study_list` tinyint(7) DEFAULT NULL,
+  `registrar_enrollment` tinyint(7) DEFAULT NULL,
+  `advisor_student_center` tinyint(7) DEFAULT NULL,
+  `class_permission` tinyint(7) DEFAULT NULL,
+  `class_permission_view` tinyint(7) DEFAULT NULL,
+  `class_roster` tinyint(7) DEFAULT NULL,
+  `block_enrollments` tinyint(7) DEFAULT NULL,
+  `report_manager` tinyint(7) DEFAULT NULL,
+  `self_service_advisor` tinyint(7) DEFAULT NULL,
+  `fiscal_advisor` tinyint(7) DEFAULT NULL,
+  `academic_advising_profile` tinyint(7) DEFAULT NULL,
   UNIQUE KEY `request_ID` (`request_ID`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=150 ;
 
@@ -505,57 +499,57 @@ CREATE TABLE IF NOT EXISTS `records` (
 -- Dumping data for table `records`
 --
 
-INSERT INTO `records` (`request_ID`, `basic_inquiry`, `advanced_inquiry`, `3cs`, `advisor_update`, `dept_soc_update`, `student_group_review`, `service_indicators_holds`, `view_study_list`, `registrar_enrollment`, `advisor_student_center`, `class_permission`, `class_permission_view`, `class_roster`, `block_enrollments`, `report_manager`, `self_service_advisor`, `fiscal_advisor`, `academic_advising_profile`, `access_description`) VALUES
-(100, 1, 7, 4, 3, 2, 7, 0, 1, 5, 0, 2, 0, 1, 7, 1, 3, 1, 3, NULL),
-(101, 0, 6, 5, 2, 3, 4, 1, 0, 6, 1, 3, 1, 0, 6, 0, 2, 0, 2, NULL),
-(102, 1, 7, 4, 3, 2, 7, 0, 1, 5, 0, 2, 0, 1, 7, 1, 3, 1, 3, NULL),
-(103, 0, 6, 5, 2, 3, 4, 1, 0, 6, 1, 3, 1, 0, 6, 0, 2, 0, 2, NULL),
-(104, 1, 7, 4, 3, 2, 7, 0, 1, 5, 0, 2, 0, 1, 7, 1, 3, 1, 3, NULL),
-(105, 0, 6, 5, 2, 3, 4, 1, 0, 6, 1, 3, 1, 0, 6, 0, 2, 0, 2, NULL),
-(106, 1, 7, 4, 3, 2, 7, 0, 1, 5, 0, 2, 0, 1, 7, 1, 3, 1, 3, NULL),
-(107, 0, 6, 5, 2, 3, 4, 1, 0, 6, 1, 3, 1, 0, 6, 0, 2, 0, 2, NULL),
-(108, 1, 7, 4, 3, 2, 7, 0, 1, 5, 0, 2, 0, 1, 7, 1, 3, 1, 3, NULL),
-(109, 1, 7, 4, 3, 2, 7, 0, 1, 5, 0, 2, 0, 1, 7, 1, 3, 1, 3, NULL),
-(110, 0, 6, 5, 2, 3, 4, 1, 0, 6, 1, 3, 1, 0, 6, 0, 2, 0, 2, NULL),
-(111, 1, 7, 4, 3, 2, 7, 0, 1, 5, 0, 2, 0, 1, 7, 1, 3, 1, 3, NULL),
-(112, 0, 6, 5, 2, 3, 4, 1, 0, 6, 1, 3, 1, 0, 6, 0, 2, 0, 2, NULL),
-(113, 1, 7, 4, 3, 2, 7, 0, 1, 5, 0, 2, 0, 1, 7, 1, 3, 1, 3, NULL),
-(114, 0, 6, 5, 2, 3, 4, 1, 0, 6, 1, 3, 1, 0, 6, 0, 2, 0, 2, NULL),
-(115, 1, 7, 4, 3, 2, 7, 0, 1, 5, 0, 2, 0, 1, 7, 1, 3, 1, 3, NULL),
-(116, 0, 6, 5, 2, 3, 4, 1, 0, 6, 1, 3, 1, 0, 6, 0, 2, 0, 2, NULL),
-(117, 1, 7, 4, 3, 2, 7, 0, 1, 5, 0, 2, 0, 1, 7, 1, 3, 1, 3, NULL),
-(118, 0, 6, 5, 2, 3, 4, 1, 0, 6, 1, 3, 1, 0, 6, 0, 2, 0, 2, NULL),
-(119, 1, 7, 4, 3, 2, 7, 0, 1, 5, 0, 2, 0, 1, 7, 1, 3, 1, 3, NULL),
-(120, 1, 7, 4, 3, 2, 7, 0, 1, 5, 0, 2, 0, 1, 7, 1, 3, 1, 3, NULL),
-(121, 0, 6, 5, 2, 3, 4, 1, 0, 6, 1, 3, 1, 0, 6, 0, 2, 0, 2, NULL),
-(122, 1, 5, 6, 3, 2, 5, 0, 1, 4, 0, 2, 0, 1, 5, 1, 3, 1, 3, NULL),
-(123, 1, 4, 7, 3, 2, 6, 0, 1, 7, 0, 2, 0, 1, 4, 1, 3, 1, 3, NULL),
-(124, 1, 7, 4, 3, 2, 7, 0, 1, 5, 0, 2, 0, 1, 7, 1, 3, 1, 3, NULL),
-(125, 0, 6, 5, 2, 3, 4, 1, 0, 6, 1, 3, 1, 0, 6, 0, 2, 0, 2, NULL),
-(126, 1, 5, 6, 3, 2, 5, 0, 1, 4, 0, 2, 0, 1, 5, 1, 3, 1, 3, NULL),
-(127, 1, 4, 7, 3, 2, 6, 0, 1, 7, 0, 2, 0, 1, 4, 1, 3, 1, 3, NULL),
-(128, 1, 7, 4, 3, 2, 7, 0, 1, 5, 0, 2, 0, 1, 7, 1, 3, 1, 3, NULL),
-(129, 0, 6, 5, 2, 3, 4, 1, 0, 6, 1, 3, 1, 0, 6, 0, 2, 0, 2, NULL),
-(130, 1, 5, 6, 3, 2, 5, 0, 1, 4, 0, 2, 0, 1, 5, 1, 3, 1, 3, NULL),
-(131, 1, 4, 7, 3, 2, 6, 0, 1, 7, 0, 2, 0, 1, 4, 1, 3, 1, 3, NULL),
-(132, 1, 7, 4, 3, 2, 7, 0, 1, 5, 0, 2, 0, 1, 7, 1, 3, 1, 3, NULL),
-(133, 0, 6, 5, 2, 3, 4, 1, 0, 6, 1, 3, 1, 0, 6, 0, 2, 0, 2, NULL),
-(134, 1, 5, 6, 3, 2, 5, 0, 1, 4, 0, 2, 0, 1, 5, 1, 3, 1, 3, NULL),
-(135, 1, 4, 7, 3, 2, 6, 0, 1, 7, 0, 2, 0, 1, 4, 1, 3, 1, 3, NULL),
-(136, 1, 7, 4, 3, 2, 7, 0, 1, 5, 0, 2, 0, 1, 7, 1, 3, 1, 3, NULL),
-(137, 0, 6, 5, 2, 3, 4, 1, 0, 6, 1, 3, 1, 0, 6, 0, 2, 0, 2, NULL),
-(138, 1, 5, 6, 3, 2, 5, 0, 1, 4, 0, 2, 0, 1, 5, 1, 3, 1, 3, NULL),
-(139, 1, 4, 7, 3, 2, 6, 0, 1, 7, 0, 2, 0, 1, 4, 1, 3, 1, 3, NULL),
-(140, 1, 7, 4, 3, 2, 7, 0, 1, 5, 0, 2, 0, 1, 7, 1, 3, 1, 3, NULL),
-(141, 0, 6, 5, 2, 3, 4, 1, 0, 6, 1, 3, 1, 0, 6, 0, 2, 0, 2, NULL),
-(142, 1, 5, 6, 3, 2, 5, 0, 1, 4, 0, 2, 0, 1, 5, 1, 3, 1, 3, NULL),
-(143, 1, 4, 7, 3, 2, 6, 0, 1, 7, 0, 2, 0, 1, 4, 1, 3, 1, 3, NULL),
-(144, 1, 7, 4, 3, 2, 7, 0, 1, 5, 0, 2, 0, 1, 7, 1, 3, 1, 3, NULL),
-(145, 0, 6, 5, 2, 3, 4, 1, 0, 6, 1, 3, 1, 0, 6, 0, 2, 0, 2, NULL),
-(146, 1, 5, 6, 3, 2, 5, 0, 1, 4, 0, 2, 0, 1, 5, 1, 3, 1, 3, NULL),
-(147, 1, 4, 7, 3, 2, 6, 0, 1, 7, 0, 2, 0, 1, 4, 1, 3, 1, 3, NULL),
-(148, 1, 7, 4, 3, 2, 7, 0, 1, 5, 0, 2, 0, 1, 7, 1, 3, 1, 3, NULL),
-(149, 0, 6, 5, 2, 3, 4, 1, 0, 6, 1, 3, 1, 0, 6, 0, 2, 0, 2, NULL);
+INSERT INTO `records` (`request_ID`, `basic_inquiry`, `advanced_inquiry`, `3cs`, `advisor_update`, `dept_soc_update`, `student_group_review`, `service_indicators_holds`, `view_study_list`, `registrar_enrollment`, `advisor_student_center`, `class_permission`, `class_permission_view`, `class_roster`, `block_enrollments`, `report_manager`, `self_service_advisor`, `fiscal_advisor`, `academic_advising_profile`) VALUES
+(100, 1, 7, 4, 3, 2, 7, 0, 1, 5, 0, 2, 0, 1, 7, 1, 3, 1, 3),
+(101, 0, 6, 5, 2, 3, 4, 1, 0, 6, 1, 3, 1, 0, 6, 0, 2, 0, 2),
+(102, 1, 5, 6, 3, 2, 5, 0, 1, 4, 0, 2, 0, 1, 5, 1, 3, 1, 3),
+(103, 1, 4, 7, 3, 2, 6, 0, 1, 7, 0, 2, 0, 1, 4, 1, 3, 1, 3),
+(104, 1, 7, 4, 3, 2, 7, 0, 1, 5, 0, 2, 0, 1, 7, 1, 3, 1, 3),
+(105, 0, 6, 5, 2, 3, 4, 1, 0, 6, 1, 3, 1, 0, 6, 0, 2, 0, 2),
+(106, 1, 5, 6, 3, 2, 5, 0, 1, 4, 0, 2, 0, 1, 5, 1, 3, 1, 3),
+(107, 1, 4, 7, 3, 2, 6, 0, 1, 7, 0, 2, 0, 1, 4, 1, 3, 1, 3),
+(108, 1, 7, 4, 3, 2, 7, 0, 1, 5, 0, 2, 0, 1, 7, 1, 3, 1, 3),
+(109, 0, 6, 5, 2, 3, 4, 1, 0, 6, 1, 3, 1, 0, 6, 0, 2, 0, 2),
+(110, 1, 5, 6, 3, 2, 5, 0, 1, 4, 0, 2, 0, 1, 5, 1, 3, 1, 3),
+(111, 1, 4, 7, 3, 2, 6, 0, 1, 7, 0, 2, 0, 1, 4, 1, 3, 1, 3),
+(112, 1, 7, 4, 3, 2, 7, 0, 1, 5, 0, 2, 0, 1, 7, 1, 3, 1, 3),
+(113, 0, 6, 5, 2, 3, 4, 1, 0, 6, 1, 3, 1, 0, 6, 0, 2, 0, 2),
+(114, 1, 5, 6, 3, 2, 5, 0, 1, 4, 0, 2, 0, 1, 5, 1, 3, 1, 3),
+(115, 1, 4, 7, 3, 2, 6, 0, 1, 7, 0, 2, 0, 1, 4, 1, 3, 1, 3),
+(116, 1, 7, 4, 3, 2, 7, 0, 1, 5, 0, 2, 0, 1, 7, 1, 3, 1, 3),
+(117, 0, 6, 5, 2, 3, 4, 1, 0, 6, 1, 3, 1, 0, 6, 0, 2, 0, 2),
+(118, 1, 5, 6, 3, 2, 5, 0, 1, 4, 0, 2, 0, 1, 5, 1, 3, 1, 3),
+(119, 1, 4, 7, 3, 2, 6, 0, 1, 7, 0, 2, 0, 1, 4, 1, 3, 1, 3),
+(120, 1, 7, 4, 3, 2, 7, 0, 1, 5, 0, 2, 0, 1, 7, 1, 3, 1, 3),
+(121, 0, 6, 5, 2, 3, 4, 1, 0, 6, 1, 3, 1, 0, 6, 0, 2, 0, 2),
+(122, 1, 5, 6, 3, 2, 5, 0, 1, 4, 0, 2, 0, 1, 5, 1, 3, 1, 3),
+(123, 1, 4, 7, 3, 2, 6, 0, 1, 7, 0, 2, 0, 1, 4, 1, 3, 1, 3),
+(124, 1, 7, 4, 3, 2, 7, 0, 1, 5, 0, 2, 0, 1, 7, 1, 3, 1, 3),
+(125, 0, 6, 5, 2, 3, 4, 1, 0, 6, 1, 3, 1, 0, 6, 0, 2, 0, 2),
+(126, 1, 5, 6, 3, 2, 5, 0, 1, 4, 0, 2, 0, 1, 5, 1, 3, 1, 3),
+(127, 1, 4, 7, 3, 2, 6, 0, 1, 7, 0, 2, 0, 1, 4, 1, 3, 1, 3),
+(128, 1, 7, 4, 3, 2, 7, 0, 1, 5, 0, 2, 0, 1, 7, 1, 3, 1, 3),
+(129, 0, 6, 5, 2, 3, 4, 1, 0, 6, 1, 3, 1, 0, 6, 0, 2, 0, 2),
+(130, 1, 5, 6, 3, 2, 5, 0, 1, 4, 0, 2, 0, 1, 5, 1, 3, 1, 3),
+(131, 1, 4, 7, 3, 2, 6, 0, 1, 7, 0, 2, 0, 1, 4, 1, 3, 1, 3),
+(132, 1, 7, 4, 3, 2, 7, 0, 1, 5, 0, 2, 0, 1, 7, 1, 3, 1, 3),
+(133, 0, 6, 5, 2, 3, 4, 1, 0, 6, 1, 3, 1, 0, 6, 0, 2, 0, 2),
+(134, 1, 5, 6, 3, 2, 5, 0, 1, 4, 0, 2, 0, 1, 5, 1, 3, 1, 3),
+(135, 1, 4, 7, 3, 2, 6, 0, 1, 7, 0, 2, 0, 1, 4, 1, 3, 1, 3),
+(136, 1, 7, 4, 3, 2, 7, 0, 1, 5, 0, 2, 0, 1, 7, 1, 3, 1, 3),
+(137, 0, 6, 5, 2, 3, 4, 1, 0, 6, 1, 3, 1, 0, 6, 0, 2, 0, 2),
+(138, 1, 5, 6, 3, 2, 5, 0, 1, 4, 0, 2, 0, 1, 5, 1, 3, 1, 3),
+(139, 1, 4, 7, 3, 2, 6, 0, 1, 7, 0, 2, 0, 1, 4, 1, 3, 1, 3),
+(140, 1, 7, 4, 3, 2, 7, 0, 1, 5, 0, 2, 0, 1, 7, 1, 3, 1, 3),
+(141, 0, 6, 5, 2, 3, 4, 1, 0, 6, 1, 3, 1, 0, 6, 0, 2, 0, 2),
+(142, 1, 5, 6, 3, 2, 5, 0, 1, 4, 0, 2, 0, 1, 5, 1, 3, 1, 3),
+(143, 1, 4, 7, 3, 2, 6, 0, 1, 7, 0, 2, 0, 1, 4, 1, 3, 1, 3),
+(144, 1, 7, 4, 3, 2, 7, 0, 1, 5, 0, 2, 0, 1, 7, 1, 3, 1, 3),
+(145, 0, 6, 5, 2, 3, 4, 1, 0, 6, 1, 3, 1, 0, 6, 0, 2, 0, 2),
+(146, 1, 5, 6, 3, 2, 5, 0, 1, 4, 0, 2, 0, 1, 5, 1, 3, 1, 3),
+(147, 1, 4, 7, 3, 2, 6, 0, 1, 7, 0, 2, 0, 1, 4, 1, 3, 1, 3),
+(148, 1, 7, 4, 3, 2, 7, 0, 1, 5, 0, 2, 0, 1, 7, 1, 3, 1, 3),
+(149, 0, 6, 5, 2, 3, 4, 1, 0, 6, 1, 3, 1, 0, 6, 0, 2, 0, 2);
 
 -- --------------------------------------------------------
 
@@ -686,19 +680,71 @@ INSERT INTO `request` (`request_ID`, `empID`, `request_date`, `update_date`, `ad
 -- --------------------------------------------------------
 
 --
+-- Stand-in structure for view `requesttypes`
+--
+CREATE TABLE IF NOT EXISTS `requesttypes` (
+`request_ID` bigint(20) unsigned
+,`all_test_score_access` tinyint(7)
+,`act` tinyint(7)
+,`ielts` tinyint(7)
+,`ged` tinyint(7)
+,`sat` tinyint(7)
+,`lsat` tinyint(7)
+,`millers` tinyint(7)
+,`gre` tinyint(7)
+,`mcat` tinyint(7)
+,`prax` tinyint(7)
+,`gmat` tinyint(7)
+,`ap` tinyint(7)
+,`pla_mu` tinyint(7)
+,`tofel` tinyint(7)
+,`clep` tinyint(7)
+,`base` tinyint(7)
+,`sf_general_inquiry` tinyint(7)
+,`sf_cash_group_post` tinyint(7)
+,`fa_cash` tinyint(7)
+,`fa_non_financial_aid_staff` tinyint(7)
+,`basic_inquiry` tinyint(7)
+,`advanced_inquiry` tinyint(7)
+,`3cs` tinyint(7)
+,`advisor_update` tinyint(7)
+,`dept_soc_update` tinyint(7)
+,`student_group_review` tinyint(7)
+,`service_indicators_holds` tinyint(7)
+,`view_study_list` tinyint(7)
+,`registrar_enrollment` tinyint(7)
+,`advisor_student_center` tinyint(7)
+,`class_permission` tinyint(7)
+,`class_permission_view` tinyint(7)
+,`class_roster` tinyint(7)
+,`block_enrollments` tinyint(7)
+,`report_manager` tinyint(7)
+,`self_service_advisor` tinyint(7)
+,`fiscal_advisor` tinyint(7)
+,`academic_advising_profile` tinyint(7)
+,`immunization_view` tinyint(7)
+,`transfer_credit_admission` tinyint(7)
+,`relationships` tinyint(7)
+,`student_groups` tinyint(7)
+,`accomodate_student_health` tinyint(7)
+,`support_staff_registrar` tinyint(7)
+,`advance_standing_report` tinyint(7)
+);
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `reserved`
 --
 
 CREATE TABLE IF NOT EXISTS `reserved` (
   `request_ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `immunization_view` tinyint(1) DEFAULT NULL,
-  `transfer_credit_admission` tinyint(1) DEFAULT NULL,
-  `relationships` tinyint(1) DEFAULT NULL,
-  `student_groups` tinyint(1) DEFAULT NULL,
-  `accomodate_student_health` tinyint(1) DEFAULT NULL,
-  `support_staff_registrar` tinyint(1) DEFAULT NULL,
-  `advance_standing_report` tinyint(1) DEFAULT NULL,
-  `access_description` varchar(50) DEFAULT NULL,
+  `immunization_view` tinyint(7) DEFAULT NULL,
+  `transfer_credit_admission` tinyint(7) DEFAULT NULL,
+  `relationships` tinyint(7) DEFAULT NULL,
+  `student_groups` tinyint(7) DEFAULT NULL,
+  `accomodate_student_health` tinyint(7) DEFAULT NULL,
+  `support_staff_registrar` tinyint(7) DEFAULT NULL,
+  `advance_standing_report` tinyint(7) DEFAULT NULL,
   UNIQUE KEY `request_ID` (`request_ID`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=150 ;
 
@@ -706,57 +752,66 @@ CREATE TABLE IF NOT EXISTS `reserved` (
 -- Dumping data for table `reserved`
 --
 
-INSERT INTO `reserved` (`request_ID`, `immunization_view`, `transfer_credit_admission`, `relationships`, `student_groups`, `accomodate_student_health`, `support_staff_registrar`, `advance_standing_report`, `access_description`) VALUES
-(100, 2, 2, 2, 0, 0, 2, 2, NULL),
-(101, 2, 2, 2, 0, 0, 2, 2, NULL),
-(102, 2, 2, 2, 0, 0, 2, 2, NULL),
-(103, 2, 2, 2, 0, 0, 2, 2, NULL),
-(104, 2, 2, 2, 0, 0, 2, 2, NULL),
-(105, 2, 2, 2, 0, 0, 2, 2, NULL),
-(106, 2, 2, 2, 0, 0, 2, 2, NULL),
-(107, 2, 2, 2, 0, 0, 2, 2, NULL),
-(108, 2, 2, 2, 0, 0, 2, 2, NULL),
-(109, 2, 2, 2, 0, 0, 2, 2, NULL),
-(110, 2, 2, 2, 0, 0, 2, 2, NULL),
-(111, 2, 2, 2, 0, 0, 2, 2, NULL),
-(112, 2, 2, 2, 0, 0, 2, 2, NULL),
-(113, 2, 2, 2, 0, 0, 2, 2, NULL),
-(114, 2, 2, 2, 0, 0, 2, 2, NULL),
-(115, 2, 2, 2, 0, 0, 2, 2, NULL),
-(116, 2, 2, 2, 0, 0, 2, 2, NULL),
-(117, 2, 2, 2, 0, 0, 2, 2, NULL),
-(118, 2, 2, 2, 0, 0, 2, 2, NULL),
-(119, 2, 2, 2, 0, 0, 2, 2, NULL),
-(120, 2, 2, 2, 0, 0, 2, 2, NULL),
-(121, 2, 2, 2, 0, 0, 2, 2, NULL),
-(122, 2, 2, 2, 0, 0, 2, 2, NULL),
-(123, 2, 2, 2, 0, 0, 2, 2, NULL),
-(124, 2, 2, 2, 0, 0, 2, 2, NULL),
-(125, 2, 2, 2, 0, 0, 2, 2, NULL),
-(126, 2, 2, 2, 0, 0, 2, 2, NULL),
-(127, 2, 2, 2, 0, 0, 2, 2, NULL),
-(128, 2, 2, 2, 0, 0, 2, 2, NULL),
-(129, 2, 2, 2, 0, 0, 2, 2, NULL),
-(130, 2, 2, 2, 0, 0, 2, 2, NULL),
-(131, 2, 2, 2, 0, 0, 2, 2, NULL),
-(132, 2, 2, 2, 0, 0, 2, 2, NULL),
-(133, 2, 2, 2, 0, 0, 2, 2, NULL),
-(134, 2, 2, 2, 0, 0, 2, 2, NULL),
-(135, 2, 2, 2, 0, 0, 2, 2, NULL),
-(136, 2, 2, 2, 0, 0, 2, 2, NULL),
-(137, 2, 2, 2, 0, 0, 2, 2, NULL),
-(138, 2, 2, 2, 0, 0, 2, 2, NULL),
-(139, 2, 2, 2, 0, 0, 2, 2, NULL),
-(140, 2, 2, 2, 0, 0, 2, 2, NULL),
-(141, 2, 2, 2, 0, 0, 2, 2, NULL),
-(142, 2, 2, 2, 0, 0, 2, 2, NULL),
-(143, 2, 2, 2, 0, 0, 2, 2, NULL),
-(144, 2, 2, 2, 0, 0, 2, 2, NULL),
-(145, 2, 2, 2, 0, 0, 2, 2, NULL),
-(146, 2, 2, 2, 0, 0, 2, 2, NULL),
-(147, 2, 2, 2, 0, 0, 2, 2, NULL),
-(148, 2, 2, 2, 0, 0, 2, 2, NULL),
-(149, 2, 2, 2, 0, 0, 2, 2, NULL);
+INSERT INTO `reserved` (`request_ID`, `immunization_view`, `transfer_credit_admission`, `relationships`, `student_groups`, `accomodate_student_health`, `support_staff_registrar`, `advance_standing_report`) VALUES
+(100, 2, 2, 2, 0, 0, 2, 2),
+(101, 2, 2, 2, 0, 0, 2, 2),
+(102, 2, 2, 2, 0, 0, 2, 2),
+(103, 2, 2, 2, 0, 0, 2, 2),
+(104, 2, 2, 2, 0, 0, 2, 2),
+(105, 2, 2, 2, 0, 0, 2, 2),
+(106, 2, 2, 2, 0, 0, 2, 2),
+(107, 2, 2, 2, 0, 0, 2, 2),
+(108, 2, 2, 2, 0, 0, 2, 2),
+(109, 2, 2, 2, 0, 0, 2, 2),
+(110, 2, 2, 2, 0, 0, 2, 2),
+(111, 2, 2, 2, 0, 0, 2, 2),
+(112, 2, 2, 2, 0, 0, 2, 2),
+(113, 2, 2, 2, 0, 0, 2, 2),
+(114, 2, 2, 2, 0, 0, 2, 2),
+(115, 2, 2, 2, 0, 0, 2, 2),
+(116, 2, 2, 2, 0, 0, 2, 2),
+(117, 2, 2, 2, 0, 0, 2, 2),
+(118, 2, 2, 2, 0, 0, 2, 2),
+(119, 2, 2, 2, 0, 0, 2, 2),
+(120, 2, 2, 2, 0, 0, 2, 2),
+(121, 2, 2, 2, 0, 0, 2, 2),
+(122, 2, 2, 2, 0, 0, 2, 2),
+(123, 2, 2, 2, 0, 0, 2, 2),
+(124, 2, 2, 2, 0, 0, 2, 2),
+(125, 2, 2, 2, 0, 0, 2, 2),
+(126, 2, 2, 2, 0, 0, 2, 2),
+(127, 2, 2, 2, 0, 0, 2, 2),
+(128, 2, 2, 2, 0, 0, 2, 2),
+(129, 2, 2, 2, 0, 0, 2, 2),
+(130, 2, 2, 2, 0, 0, 2, 2),
+(131, 2, 2, 2, 0, 0, 2, 2),
+(132, 2, 2, 2, 0, 0, 2, 2),
+(133, 2, 2, 2, 0, 0, 2, 2),
+(134, 2, 2, 2, 0, 0, 2, 2),
+(135, 2, 2, 2, 0, 0, 2, 2),
+(136, 2, 2, 2, 0, 0, 2, 2),
+(137, 2, 2, 2, 0, 0, 2, 2),
+(138, 2, 2, 2, 0, 0, 2, 2),
+(139, 2, 2, 2, 0, 0, 2, 2),
+(140, 2, 2, 2, 0, 0, 2, 2),
+(141, 2, 2, 2, 0, 0, 2, 2),
+(142, 2, 2, 2, 0, 0, 2, 2),
+(143, 2, 2, 2, 0, 0, 2, 2),
+(144, 2, 2, 2, 0, 0, 2, 2),
+(145, 2, 2, 2, 0, 0, 2, 2),
+(146, 2, 2, 2, 0, 0, 2, 2),
+(147, 2, 2, 2, 0, 0, 2, 2),
+(148, 2, 2, 2, 0, 0, 2, 2),
+(149, 2, 2, 2, 0, 0, 2, 2);
+
+-- --------------------------------------------------------
+
+--
+-- Structure for view `requesttypes`
+--
+DROP TABLE IF EXISTS `requesttypes`;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `requesttypes` AS (select `admissions`.`request_ID` AS `request_ID`,`admissions`.`all_test_score_access` AS `all_test_score_access`,`admissions`.`act` AS `act`,`admissions`.`ielts` AS `ielts`,`admissions`.`ged` AS `ged`,`admissions`.`sat` AS `sat`,`admissions`.`lsat` AS `lsat`,`admissions`.`millers` AS `millers`,`admissions`.`gre` AS `gre`,`admissions`.`mcat` AS `mcat`,`admissions`.`prax` AS `prax`,`admissions`.`gmat` AS `gmat`,`admissions`.`ap` AS `ap`,`admissions`.`pla_mu` AS `pla_mu`,`admissions`.`tofel` AS `tofel`,`admissions`.`clep` AS `clep`,`admissions`.`base` AS `base`,`cashiers`.`sf_general_inquiry` AS `sf_general_inquiry`,`cashiers`.`sf_cash_group_post` AS `sf_cash_group_post`,`financialaid`.`fa_cash` AS `fa_cash`,`financialaid`.`fa_non_financial_aid_staff` AS `fa_non_financial_aid_staff`,`records`.`basic_inquiry` AS `basic_inquiry`,`records`.`advanced_inquiry` AS `advanced_inquiry`,`records`.`3cs` AS `3cs`,`records`.`advisor_update` AS `advisor_update`,`records`.`dept_soc_update` AS `dept_soc_update`,`records`.`student_group_review` AS `student_group_review`,`records`.`service_indicators_holds` AS `service_indicators_holds`,`records`.`view_study_list` AS `view_study_list`,`records`.`registrar_enrollment` AS `registrar_enrollment`,`records`.`advisor_student_center` AS `advisor_student_center`,`records`.`class_permission` AS `class_permission`,`records`.`class_permission_view` AS `class_permission_view`,`records`.`class_roster` AS `class_roster`,`records`.`block_enrollments` AS `block_enrollments`,`records`.`report_manager` AS `report_manager`,`records`.`self_service_advisor` AS `self_service_advisor`,`records`.`fiscal_advisor` AS `fiscal_advisor`,`records`.`academic_advising_profile` AS `academic_advising_profile`,`reserved`.`immunization_view` AS `immunization_view`,`reserved`.`transfer_credit_admission` AS `transfer_credit_admission`,`reserved`.`relationships` AS `relationships`,`reserved`.`student_groups` AS `student_groups`,`reserved`.`accomodate_student_health` AS `accomodate_student_health`,`reserved`.`support_staff_registrar` AS `support_staff_registrar`,`reserved`.`advance_standing_report` AS `advance_standing_report` from (((((`admissions` join `auth` on((`admissions`.`request_ID` = `auth`.`request_ID`))) join `cashiers` on((`admissions`.`request_ID` = `cashiers`.`request_ID`))) join `financialaid` on((`admissions`.`request_ID` = `financialaid`.`request_ID`))) join `records` on((`admissions`.`request_ID` = `records`.`request_ID`))) join `reserved` on((`admissions`.`request_ID` = `reserved`.`request_ID`))));
 
 --
 -- Constraints for dumped tables
