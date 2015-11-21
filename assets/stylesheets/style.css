@@ -1,0 +1,526 @@
+body{
+    background-color: #000;
+    height: 100%;
+    font-family: Helvetica, Arial, sans-serif;
+    color: #222;
+    margin: 0;
+    font-size; 13px;
+    line-height: 1.231;
+    display: block;
+}
+
+div {
+    display: block;
+}
+
+/*#reviewP {
+	text-align: center;
+	font-size: 35px;
+	margin-bottom: 0px;
+
+}*/
+
+
+th {
+    color: white;
+    font-style: bold;
+    font-size: 20px;
+    margin-bottom: 20px;
+    background-color: black;
+    border-collapse: collapse;
+}
+
+tr, td{
+    font-size: 20px;
+    box-shadow: inset 0px 1px 0px #333333, 0px 1px 0px 0px #333333, 0px 0px 0px #333333;
+    background-color: transparent;
+}
+
+
+#site-container {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    overflow: auto;
+}
+
+/*#reviewHeader {
+	width: 100%;
+	height: 180px;
+
+}
+
+#reviewBody {
+	width: 95%;
+	height: 600px;
+	border: 2px solid black;
+	margin-left: 40px;
+}*/
+
+#rightDiv {
+    height: 65%;
+    width: 33%;
+    float: right;
+    border-left: 2px solid black;
+
+}
+#leftDiv {
+    height: 65%;
+    width: 67%;
+}
+
+#absForm {
+    position: absolute;
+    z-index: 1000;
+    width: 150px;
+    height: 24px;
+}
+
+#topRightDiv {
+    width: 100%;
+    height: 20%;
+    border-bottom: 2px solid black;
+
+}
+
+#rightDiv  p {
+    margin-left: 5px;
+
+}
+
+#rightBottom {
+    width: 50%;
+    height: 100%;
+    float: right;
+    border-left: 2px solid black;
+}
+#top {
+    height: 65%;
+    width: 67%
+}
+
+#bottom {
+    width: 100%;
+    height: 35%;
+    border-top: 2px solid black;
+}
+
+.tigerHead {
+    position: absolute;
+    top: 0;
+    z-index: 2;
+
+
+}
+
+table {
+    diplay: table;
+    width: 100%;
+    color: black;
+}
+
+#menu{
+    background: #4D4D4D;
+    color: #bab2c7;
+    text-transform: uppercase;
+    text-align: center;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    position: absolute;
+    display: block;
+    min-height: 900px;
+    float: left;
+    height: 100%;
+    width: 12%;
+    position: fixed;
+
+}
+
+#menu .nav-logo	{
+    margin: 45px auto;
+    text-indent: -9999px;
+    pointer-events: none;
+    background-position: 0 0;
+    height: 125px;
+    width: 125px;
+    background: url(C:/Users/derek/Documents/GitHub/sisrequest/assets/images/muClipped.png) no-repeat;
+}
+
+#marquee-employee-data  .nav-logo {
+    margin: 45px 110px;
+    text-indent: -9999px;
+    pointer-events: none;
+    background-position: 0 0;
+    height: 72px;
+    width: 419px;
+    background: url(C:/Users/derek/Documents/GitHub/sisrequest/assets/images/box.jpg) no-repeat;
+}
+
+.searchBut {
+    width: 35px;
+    height: 35px;
+//-webkit-transition: all .4s ease;
+//margin-top: 25px;
+
+
+}
+
+.box {
+    width: 200px;
+    height: 34px;
+//margin-top: 25px;
+//margin-left: 70px;
+}
+
+.menu-list	{
+    top: 50%;
+    height: 492px;
+    width: 100%;
+    padding-left: 0;
+}
+
+
+ul, ol{
+    margin: 1em 0;
+    padding: 0;
+}
+
+ul, menu, dir {
+    display: block;
+    list-style-type: disc;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 40px;
+    position absolute;
+}
+
+form {
+    margin-bottom: 5px;
+
+}
+
+ol {
+    max-width: 560px;
+    width: 565px;
+    background-color: black;
+    color: white;
+    min-height: 230px;
+    margin-left: 10px;
+    padding-top: 10px;
+    padding-left: 5px;
+    box-shadow: inset 0px 1px 0px #3e9cbf, 0px 0px 0px 0px #205c73, 0px 0px 0px #999;
+}
+
+ul li, ol li {
+    list-style: none;
+
+//border: 1px solid black;
+}
+
+ol li{
+    box-shadow: inset 0px 1px 0px #3e9cbf, 0px 1px 0px 0px #205c73, 0px 2px 0px #999;
+//padding-left: 10px;
+}
+
+ol li .genInfo {
+    box-shadow: inset 0px 0px 0px #3e9cbf, 0px 1px 0px 0px #205c73, 0px 2px 0px #999;
+    font-size: 20px;
+}
+
+/*.menu-list li {
+	display: list-item;
+	text-align: -webkit-match-parent;
+	-webkit-box-shadow: inset 0px 1px 0px #3e9cbf, 0px 5px 0px 0px #205c73, 0px 10px 5px #999;
+	-moz-box-shadow: inset 0px 1px 0px #3e9cbf, 0px 5px 0px 0px #205c73, 0px 10px 5px #999;
+	box-shadow: inset 0px 1px 0px #3e9cbf, 0px 1px 0px 0px #205c73, 0px 2px 0px #999;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+
+}
+.menu-list li:hover{
+	background-color: #205c73;
+}*/
+
+#marquee-container {
+    height: 100%;
+    width: 88%;
+    float: right;
+    position: relative;
+}
+
+#marquee-container .column-left {
+    float: left;
+    height: 100%;
+    width: 40%;
+    min-width: 150px;
+    position: relative;
+}
+
+#marquee-container .column-right {
+    floath: right;
+    height: 100%;
+    width: 60%;
+    position: relative;
+    min-width: 300px;
+}
+
+#marquee-employees {
+    overflow: auto;
+    color: #bab2c7;
+    text-align: left;
+    background: #C8C8C8;
+    position: absolute;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    min-height: 900px;
+}
+
+#data-list {
+    width: 100%;
+}
+
+#data-list tr {
+    height: 4em;
+    background-color: #F1BF4E;
+}
+
+#data-list tr td {
+    padding-left: 1em;
+}
+
+.employeeHeader {
+    text-align: left;
+    position: relative;
+    width: 414px;
+    height: 35px;
+    margin-top: -20px;
+    margin-left: 167px;
+    z-index: 1;
+    margin-bottom: 100px;
+    font-family: ;
+    background: url(C:/Users/derek/Documents/GitHub/sisrequest/assets/images/tigerBackF.JPG) repeat;
+    box-shadow: inset 0px 1px 0px black, 0px 1px 0px 0px black, 0px 2px 0px black;
+
+}
+
+.employeeHeaderReview {
+    text-align: left;
+    position: relative;
+    width: 1200px;
+    height: 36px;
+    margin-top: -21px;
+    margin-left: 167px;
+    z-index: 1;
+    margin-bottom: 100px;
+    font-family: ;
+    background: url(C:/Users/derek/Documents/GitHub/sisrequest/assets/images/tigerBackF.JPG) repeat;
+    box-shadow: inset 0px 1px 0px black, 0px 1px 0px 0px black, 0px 2px 0px black;
+}
+
+#employeeHeader {
+    width: 100%;
+    z-index: 2;
+    margin-top: 0px;
+    padding-top: 0px;
+}
+
+.zEmpl {
+    z-index: 1000;
+}
+
+#marquee-employee-data {
+    text-align: left;
+    background-color:#C8C8C8;
+    width: 595px;
+    height: 900px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-right: 30px;
+    padding-left: 30px;
+    margin: auto;
+
+
+}
+
+#marquee-employee-info {
+    height: 100%;
+    top: 0;
+    overflow: auto;
+    color: black;
+    text-align: left;
+    background: #f5f5f5;
+    position: absolute;
+    overflow-x: hidden;
+    overflow-y: auto;
+    min-height: 900px;
+    margin-right: 10px;
+}
+
+#marquee-employee-info h1, h3{
+    text-align: center;
+}
+
+#menu .menu-list li {
+    padding: 0px 0;
+    position: relative;
+    left: 0px;
+    cursor: pointer;
+    margin-top: 0px;
+}
+
+#data-list tr:hover {
+    cursor: pointer;
+}
+
+#data-list .inner-table tr td {
+    padding: 0;
+}
+
+#data-list .inner-table tr {
+    height: 2em;
+    border-bottom: none;
+}
+
+.inner-table tr.mainName td {
+    padding-top: 3% !important;
+    font-family: "Helvetica Neue";
+    font-size: 1.2em;
+    font-weight: 300;
+    border-bottom: ;
+}
+
+.inner-table .subTitle td {
+    box-shadow: none;
+    font-family: "Helvetica Neue";
+    font-size: .9em;
+    font-weight: lighter;
+}
+
+h1#employeeName {
+    margin: 0 auto;
+    text-align: left;
+    padding: 4px 0 4px 0.5em;
+    font-family: "Helvetica Neue";
+    font-weight: 300;
+}
+
+.formHeader {
+    width: 100%;
+    height: 2em;
+    background-color: #4D4D4D;
+}
+
+.formHeader h4 {
+    margin: 0 auto;
+    text-align: left;
+    padding: 4px 0 4px 1em;
+    color: #fff;
+}
+
+.inner-col-left {
+    padding: 0 0 0 1em;
+    display: inline-block;
+    float: left;
+}
+
+.inner-col-right {
+    display: inline-block;
+    float: right;
+}
+
+.singleRowTwoColumn {
+    height: 4em;
+    width: 100%;
+    border-bottom: 1px solid grey;
+    margin: 0 2em;
+}
+
+.singleRowTwoColumn .inner-col-left {
+    display: inline-block;
+    float: left;
+    height: inherit;
+    width: 30%;
+}
+
+.singleRowTwoColumn .inner-col-right {
+    display: inline-block;
+    float: left;
+    height: inherit;
+    width: 30%;
+}
+
+div.singleRowTwoColumn.middleSection {
+    border-bottom: none;
+    height: 5em;
+}
+
+div.singleRowTwoColumn.middleSection div {
+    width: 45%;
+}
+
+.singleRowSingleColumn {
+    width: 100%;
+    height: 5em;
+    margin: 0 2em;
+}
+
+div#generalInfoSection {
+    display: inline-block !important;
+    width: 100%;
+}
+
+div#campusAddress {
+    width: 100%;
+    height: 10em;
+}
+
+
+div#campusAddress div input[type="text"] {
+    margin: 0 0 1em 0;
+}
+
+div#campusAddress div select {
+    margin: 0 0 1em 0;
+}
+
+div#campusAddress.inner-col-right {
+    padding-top 2.5em;
+}
+
+div#campusAddress div#addressContainer {
+    padding-left: 1em;
+}
+
+div#addressContainer div.inner-col-left {
+    padding: 0 0;
+}
+
+div#addressContainer div.inner-col-right {
+    padding: 0 0;
+    margin-left: -1em;
+}
+
+div#addressContainer div {
+    width: 45%;
+}
+
+.inner-table tr {
+    background-color: transparent !important;
+    border: none;
+    box-shadow: none;
+}
+
+.inner-table tr td {
+    box-shadow: none !important;
+}
+
+#data-list .rowHighlighted {
+    background-color: #EBD6A1;
+}
