@@ -258,15 +258,14 @@ ol li .genInfo {
 #marquee-container .column-left {
 	float: left;
 	height: 100%;
-	width: 40%;
+	width: 35%;
 	min-width: 150px;
 	position: relative;
 }
 
 #marquee-container .column-right {
-	floath: right;
 	height: 100%;
-	width: 60%;
+	width: 65%;
 	position: relative;
 	min-width: 300px;
 }
@@ -483,11 +482,19 @@ div#campusAddress {
 
 
 div#campusAddress div input[type="text"] {
-	margin: 0 0 1em 0;
+	width: 90%;
 }
 
 div#campusAddress div select {
-	margin: 0 0 1em 0;
+	width: 90%;
+}
+
+div.singleRowTwoColumn div input[type="text"] {
+	width: 90%
+}
+
+div#campusAddress.singleRowTwoColumn.bottomSection {
+	height: 13em;
 }
 
 div#campusAddress.inner-col-right {
@@ -523,4 +530,96 @@ div#addressContainer div {
 
 #data-list .rowHighlighted {
 	background-color: #EBD6A1;
+}
+
+#accordion a {
+	display: block;
+	height: 4em;
+}
+
+#accordion .panelRow {
+	height: 4em;
+	border-bottom: 1px solid grey;
+	margin: 0 0 0 2em;
+}
+
+.panel-body {
+	max-height: 400px;
+	overflow: scroll;
+}
+
+.panel-heading .accordion-toggle:after {
+	/* symbol for "opening" panels */
+	font-family: 'Glyphicons Halflings';  /* essential for enabling glyphicon */
+	content: "\e114";    /* adjust as needed, taken from bootstrap.css */
+	float: right;        /* adjust as needed */
+	color: grey;         /* adjust as needed */
+}
+.panel-heading .accordion-toggle.collapsed:after {
+	/* symbol for "collapsed" panels */
+	content: "\e080";    /* adjust as needed, taken from bootstrap.css */
+}
+
+div.panelBodyContainer .column-left {
+	width: 30% !important;
+	display: inline-block;
+}
+
+div.panelBodyContainer .column-right {
+	width: 30% !important;
+	min-width: 30% !important;
+	display: inline-block;
+}
+
+div.panelBodyContainer .column-middle {
+	width: 30% !important;
+	display: inline-block;
+}
+
+div.panelBodyContainer table {
+	font-family: "Helvetica Neue";
+	font-size: 8px;
+}
+
+div.panelBodyContainer table th {
+	background-color: grey;
+	font-family: "Helvetica Neue", Helvetica, "Liberation Sans", Arial, sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+}
+
+div.panelBodyContainer table tr, td {
+	font-family: "Helvetica Neue", Helvetica, "Liberation Sans", Arial, sans-serif;
+	font-size: 18px;
+	font-weight: 200;
+}
+
+div.panelBodyContainer table tr .col1 {
+	width: 20%;
+}
+
+div.panelBodyContainer table tr .col2 {
+	width: 60%;
+}
+
+div.panelBodyContainer table tr .col3, tr .col4 {
+	width: 5%;
+}
+
+div.panelBodyContainer table .col1, .col2 {
+	padding-right: 10px;
+}
+
+div.panelBodyContainer table .col3, input[type="checkbox"] {
+	text-align: center;
+	vertical-align: middle;
+}
+
+div.panelBodyContainer table .col4, input[type="checkbox"] {
+	text-align: center;
+	vertical-align: middle;
+}
+
+div.panelBodyContainer table tr {
+	line-height: 1.7em;
 }
