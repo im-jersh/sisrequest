@@ -544,8 +544,8 @@ div#addressContainer div {
 }
 
 .panel-body {
-	max-height: 400px;
-	overflow: scroll;
+	/*max-height: 400px;*/
+	/*overflow: scroll;*/
 }
 
 .panel-heading .accordion-toggle:after {
@@ -622,4 +622,23 @@ div.panelBodyContainer table .col4, input[type="checkbox"] {
 
 div.panelBodyContainer table tr {
 	line-height: 1.7em;
+}
+
+#formContainer {
+	position: relative;
+	width: inherit;
+	height: 100%;
+	z-index: 100;
+}
+
+.absoluteContainer {
+	/*background-color: grey;*/
+	/*position: fixed;*/
+	/*float: none;*/
+	/*width: 60%;*/
+	/*height: 10%;*/
+	/*z-index: 1000;*/
+	/*display: block;*/
+	/*right: 0;*/
+	/*bottom: 0;*/
 }

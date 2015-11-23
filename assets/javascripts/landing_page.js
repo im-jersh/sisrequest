@@ -40,6 +40,7 @@ $(document).ready(function() {
                 document.getElementById("pawprint").innerHTML = employee['pawprint'];
 
                 // These fields can be edited
+                document.querySelector('#formRequestID').value = employee['request']['request_ID'];
                 document.querySelector('#title').value = employee['title'];
                 document.querySelector('#phone_number').value = employee['phone_number'];
                 document.querySelector('#campus_address').value = employee['campus_address'];
@@ -61,6 +62,7 @@ $(document).ready(function() {
 
                 // Populate the form with the selected person's request data
                 if (accessTypes['data'].length > 0) {
+
                     var data = accessTypes['data'][0]; // extract the data key/value array
 
                     // Loop through the keys and set the appropriate form values
