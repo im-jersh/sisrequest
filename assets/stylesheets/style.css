@@ -642,3 +642,7 @@ div.panelBodyContainer table tr {
 	/*right: 0;*/
 	/*bottom: 0;*/
 }
+
+#reviewBoxes input[type="checkbox"] {
+
+}

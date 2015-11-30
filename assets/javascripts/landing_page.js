@@ -8,6 +8,7 @@
 $(document).ready(function() {
     $("#data-list .outerRow").click(function() {
 
+        // Hide any error from a previous form review validation
         var formError = $("#formError");
         formError.addClass('hide');
         formError.empty();

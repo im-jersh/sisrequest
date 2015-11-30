@@ -123,7 +123,7 @@
 							</div>
 							<div id="collapseOne" class="panel-collapse collapse">
 								<div class="panel-body">
-									<div class="panelBodyContainer">
+									<div id="studentRecordsAccess" class="panelBodyContainer">
 										<table class="panelBodyTable">
 											<tr>
 												<th class="col1">Role</th>
@@ -254,27 +254,27 @@
 							</div>
 							<div id="collapseTwo" class="panel-collapse collapse">
 								<div class="panel-body">
-									<div class="panelBodyContainer">
+									<div id="admissionAccess" class="panelBodyContainer">
 										<div class="column-left">
-											<div class="checkbox"><label></label><input type="checkbox" name="act_view" value="1" />ACT</label></div>
-											<div class="checkbox"><label></label><input  type="checkbox" name="ielts_view" value="1" />IELTS</label></div>
-											<div class="checkbox"><label></label><input  type="checkbox" name="ged_view" value="1" />GED</label></div>
-											<div class="checkbox"><label></label><input  type="checkbox" name="sat_view" value="1" />SAT</label></div>
-											<div class="checkbox"><label></label><input  type="checkbox" name="lsat_view" value="1" />LSAT</label></div>
+											<div class="checkbox"><label><input type="checkbox" name="act_view" value="1" />ACT</label></div>
+											<div class="checkbox"><label><input  type="checkbox" name="ielts_view" value="1" />IELTS</label></div>
+											<div class="checkbox"><label><input  type="checkbox" name="ged_view" value="1" />GED</label></div>
+											<div class="checkbox"><label><input  type="checkbox" name="sat_view" value="1" />SAT</label></div>
+											<div class="checkbox"><label><input  type="checkbox" name="lsat_view" value="1" />LSAT</label></div>
 										</div>
 										<div class="column-middle">
-											<div class="checkbox"><label></label><input  type="checkbox" name="millers_view" value="1" />MILLERS</label></div>
-											<div class="checkbox"><label></label><input  type="checkbox" name="gre_view" value="1" />GRE</label></div>
-											<div class="checkbox"><label></label><input  type="checkbox" name="mcat_view" value="1" />MCAT</label></div>
-											<div class="checkbox"><label></label><input  type="checkbox" name="prax_view" value="1" />PRAX</label></div>
-											<div class="checkbox"><label></label><input  type="checkbox" name="gmat_view" value="1" />GMAT</label></div>
+											<div class="checkbox"><label><input  type="checkbox" name="millers_view" value="1" />MILLERS</label></div>
+											<div class="checkbox"><label><input  type="checkbox" name="gre_view" value="1" />GRE</label></div>
+											<div class="checkbox"><label><input  type="checkbox" name="mcat_view" value="1" />MCAT</label></div>
+											<div class="checkbox"><label><input  type="checkbox" name="prax_view" value="1" />PRAX</label></div>
+											<div class="checkbox"><label><input  type="checkbox" name="gmat_view" value="1" />GMAT</label></div>
 										</div>
 										<div class="column-right">
-											<div class="checkbox"><label></label><input  type="checkbox" name="ap_view" value="1" />AP</label></div>
-											<div class="checkbox"><label></label><input  type="checkbox" name="pla_mu_view" value="1" />PLA-MU</label></div>
-											<div class="checkbox"><label></label><input  type="checkbox" name="tofel_view" value="1" />TOFEL</label></div>
-											<div class="checkbox"><label></label><input  type="checkbox" name="clep_view" value="1" />CLEP</label></div>
-											<div class="checkbox"><label></label><input  type="checkbox" name="base_view" value="1" />BASE</label></div>
+											<div class="checkbox"><label><input  type="checkbox" name="ap_view" value="1" />AP</label></div>
+											<div class="checkbox"><label><input  type="checkbox" name="pla_mu_view" value="1" />PLA-MU</label></div>
+											<div class="checkbox"><label><input  type="checkbox" name="tofel_view" value="1" />TOFEL</label></div>
+											<div class="checkbox"><label><input  type="checkbox" name="clep_view" value="1" />CLEP</label></div>
+											<div class="checkbox"><label><input  type="checkbox" name="base_view" value="1" />BASE</label></div>
 										</div>
 									</div>
 								</div>
@@ -290,7 +290,7 @@
 							</div>
 							<div id="collapseThree" class="panel-collapse collapse">
 								<div class="panel-body">
-									<div class="panelBodyContainer">
+									<div id="cashiersAccess" class="panelBodyContainer">
 										<table class="panelBodyTable">
 											<tr>
 												<th class="col1">Role</th>
@@ -325,7 +325,7 @@
 							</div>
 							<div id="collapseFour" class="panel-collapse collapse">
 								<div class="panel-body">
-									<div class="panelBodyContainer">
+									<div id="financialAidAccess" class="panelBodyContainer">
 										<table class="panelBodyTable">
 											<tr>
 												<th class="col1">Role</th>
@@ -360,7 +360,7 @@
 							</div>
 							<div id="collapseFive" class="panel-collapse collapse">
 								<div class="panel-body">
-									<div class="panelBodyContainer">
+									<div id="reservedAccess" class="panelBodyContainer">
 										<table class="panelBodyTable">
 											<tr>
 												<th class="col1">Role</th>
@@ -415,7 +415,7 @@
 				<div class="absoluteContainer">
 					<div>
 						<div class="form-group">
-							<input class="form-control" type="submit" value="Review & Submit">
+							<input class="form-control btn-success" type="submit" value="Review & Submit">
 						</div>
 					</div>
 				</div>
@@ -424,5 +424,52 @@
     </div>
 </div>
 </div>
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+	<div class="modal-dialog modal-lg">
+
+		<!-- Modal content-->
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">Please review your request before submitting.</h4>
+			</div>
+			<div id="formReview" class="modal-body">
+				<div>
+					<h1 id="employeeNameReview"></h1>
+					<h5>Employee ID</h5><p id="empIDReview"></p>
+					<h5>PawPrint/SSO</h5><p id="pawprintReview"></p>
+					<h5>Job Title</h5><p id="titleReview"></p>
+					<h5>Phone Number</h5><p id="phone_numberReview"></p>
+					<h5>Campus Address</h5><p id="campus_addressReview"></p>
+				</div>
+				<div id="reviewBoxes">
+					<h5>Student Records Access</h5>
+					<div id="studentRecordsAccessReview">
+					</div>
+					<h5>Admissions Access</h5>
+					<div id="admissionAccessReview">
+					</div>
+					<h5>Student Financials (Cashiers) Access</h5>
+					<div id="cashiersAccessReview">
+					</div>
+					<h5>Financial Aid Access</h5>
+					<div id="financialAidAccessReview">
+					</div>
+					<h5>Reserved Access</h5>
+					<div id="reservedAccessReview">
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default btn-success" data-dismiss="modal">Submit</button>
+				<button type="button" class="btn btn-default btn-danger" data-dismiss="modal">Cancel</button>
+			</div>
+		</div>
+
+	</div>
+</div>
+
 </body>
 </html>

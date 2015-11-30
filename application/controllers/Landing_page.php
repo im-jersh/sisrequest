@@ -143,6 +143,8 @@ class Landing_page extends CI_Controller {
 
     public function validateForm() {
 
+        // todo: validate ALL address fields
+
         // Set the rules for the form field
         $this->form_validation->set_rules('title', 'Job Title', 'trim|required');
         $this->form_validation->set_rules('phone_number', 'Phone Number', 'required|exact_length[14]|trim');
