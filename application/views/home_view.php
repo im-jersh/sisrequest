@@ -10,6 +10,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script src="<?php echo base_url();?>/assets/javascripts/landing_page.js"></script>
+	<script src="<?php echo base_url();?>/assets/javascripts/submitForm.js"></script>
     <link rel="stylesheet" href="<?php echo base_url();?>/assets/stylesheets/styleSearch.css" type="text/css">
     <script src="<?php echo base_url();?>/assets/javascripts/search.js"></script>
 </head>
@@ -65,7 +66,7 @@
 
 		<div id="marquee-employee-info" class="column-right">
 			<!-- The form for the employee -->
-			<form name="requestForEmployee" id="SISrequestForm" role="form" action="review_request" method="post">
+			<?php echo form_open('landing_page/validateForm', array('name'=>'requestForEmployee', 'id'=>'SISrequestForm', 'role'=>'form')); ?>
 				<div id="formContainer">
 
 					<h1 id="employeeName">Employee</h1>
@@ -73,24 +74,24 @@
 					<div id="generalInfoHeader" class="formHeader">
 						<h4>General Information</h4>
 					</div>
-					<div id="generalIntoSection">
+					<div id="generalInfoSection">
 						<div class="singleRowTwoColumn topSection">
 							<div class="inner-col-left"><h5>Employee ID</h5><p id="empID"></p></div>
 							<div class="inner-col-right"><h5>PawPrint/SSO</h5><p id="pawprint"></p></div>
 						</div>
 						<div class="singleRowTwoColumn middleSection form-group">
 							<div class="inner-col-left">
-								<h5>Job Title</h5>
+								<h5>Job Title *</h5>
 								<input type="text" id="title" name="title" placeholder="Job Title" class="form-control"/>
 							</div>
 							<div class="inner-col-right">
-								<h5>Phone Number</h5>
+								<h5>Phone Number *</h5>
 								<input type="text" id="phone_number" name="phone_number" placeholder="(555) 555-5555" class="form-control"/>
 							</div>
 						</div>
 						<div id="campusAddress" class="singleRowTwoColumn bottomSection">
 							<div id="addressContainer">
-								<h5>Campus Address</h5>
+								<h5>Campus Address *</h5>
 								<div class="inner-col-left form-group">
 									<input type="text" id="campus_address" name="campus_address" placeholder="Street" class="form-control"/>
 									<br>
@@ -408,6 +409,9 @@
 						</div>
 					</div>
 				</div>
+				<div id="formError" class="alert alert-danger text-center hide">
+
+				</div>
 				<div class="absoluteContainer">
 					<div>
 						<div class="form-group">
@@ -415,7 +419,7 @@
 						</div>
 					</div>
 				</div>
-			</form>
+			<?php echo form_close(); ?>
 		</div>
     </div>
 </div>

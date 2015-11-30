@@ -141,5 +141,25 @@ class Landing_page extends CI_Controller {
         echo json_encode($returnData);
     }
 
+    public function validateForm() {
+
+        // Set the rules for the form field
+        $this->form_validation->set_rules('title', 'Job Title', 'trim|required');
+        $this->form_validation->set_rules('phone_number', 'Phone Number', 'required|exact_length[14]|trim');
+        $this->form_validation->set_rules('campus_address', 'Campus Address', 'required|trim');
+
+
+        // Run the validation
+        if ($this->form_validation->run() == FALSE) { // Invalid form
+            echo validation_errors();
+
+        } else { // Valid form
+
+            echo 'true';
+
+        }
+
+    }
+
 }
 

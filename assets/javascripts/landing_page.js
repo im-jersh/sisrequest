@@ -8,6 +8,10 @@
 $(document).ready(function() {
     $("#data-list .outerRow").click(function() {
 
+        var formError = $("#formError");
+        formError.addClass('hide');
+        formError.empty();
+
         // Change the row's background color to show it was selected
         var row =  $(this)
 
@@ -111,6 +115,7 @@ $(document).ready(function() {
                                 break;
                         }
 
+                        // Check the checkboxes
                         $('input[name="' + checkboxName + '"]').each( function() {
                                 $(this).prop('checked', true);
                             }
