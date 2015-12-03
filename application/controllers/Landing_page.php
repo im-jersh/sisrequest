@@ -139,5 +139,51 @@ class Landing_page extends CI_Controller {
         echo json_encode($returnData);
     }
 
+    public function validateForm() {
+
+        // todo: validate ALL address fields
+
+        // Set the rules for the form field
+        $this->form_validation->set_rules('title', 'Job Title', 'trim|required');
+        $this->form_validation->set_rules('phone_number', 'Phone Number', 'required|exact_length[14]|trim');
+        $this->form_validation->set_rules('campus_address', 'Campus Address', 'required|trim');
+
+
+        // Run the validation
+        if ($this->form_validation->run() == FALSE) { // Invalid form
+            echo validation_errors();
+
+        } else { // Valid form
+
+            echo 'true';
+
+        }
+
+    }
+
+    public function submitForm() {
+
+        // Load the the model's for saving
+        $this->load->model('person_model');
+
+        // Extract the form data from the global POST
+        $serializedObject = $this->input->post('formData');
+
+        // Extract our required general info data
+        $pawprint = $serializedObject['pawprint'];
+        $genInfo = array(
+            'title' => $serializedObject['title'],
+            'phone_number' => $serializedObject['phone_number'],
+            'campus_address' => $serializedObject['campus_address']
+        );
+
+        // Save to database
+        $this->person_model->saveGeneralInfoForPerson($pawprint, $genInfo);
+
+
+        echo json_encode($serializedObject);
+
+    }
+
 }
 
