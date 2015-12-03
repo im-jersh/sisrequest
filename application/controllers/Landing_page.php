@@ -163,5 +163,29 @@ class Landing_page extends CI_Controller {
 
     }
 
+    public function submitForm() {
+
+        // Load the the model's for saving
+        $this->load->model('person_model');
+
+        // Extract the form data from the global POST
+        $serializedObject = $this->input->post('formData');
+
+        // Extract our required general info data
+        $pawprint = $serializedObject['pawprint'];
+        $genInfo = array(
+            'title' => $serializedObject['title'],
+            'phone_number' => $serializedObject['phone_number'],
+            'campus_address' => $serializedObject['campus_address']
+        );
+
+        // Save to database
+        $this->person_model->saveGeneralInfoForPerson($pawprint, $genInfo);
+
+
+        echo json_encode($serializedObject);
+
+    }
+
 }
 

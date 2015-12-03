@@ -45,6 +45,7 @@ $(document).ready(function() {
                 document.getElementById("pawprint").innerHTML = employee['pawprint'];
 
                 // These fields can be edited
+                document.querySelector('#formPawprint').value = tableRowID;
                 document.querySelector('#formRequestID').value = employee['request']['request_ID'];
                 document.querySelector('#title').value = employee['title'];
                 document.querySelector('#phone_number').value = employee['phone_number'];

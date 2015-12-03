@@ -10,8 +10,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script src="<?php echo base_url();?>/assets/javascripts/landing_page.js"></script>
+	<script src="<?php echo base_url();?>/assets/javascripts/reviewForm.js"></script>
 	<script src="<?php echo base_url();?>/assets/javascripts/submitForm.js"></script>
-    <link rel="stylesheet" href="<?php echo base_url();?>/assets/stylesheets/styleSearch.css" type="text/css">
+	<link rel="stylesheet" href="<?php echo base_url();?>/assets/stylesheets/styleSearch.css" type="text/css">
     <script src="<?php echo base_url();?>/assets/javascripts/search.js"></script>
 </head>
 <body>
@@ -70,6 +71,7 @@
 				<div id="formContainer">
 
 					<h1 id="employeeName">Employee</h1>
+					<input type="hidden" id="formPawprint" name="pawprint" value="">
 					<input type="hidden" id="formRequestID" name="request_ID" value="">
 					<div id="generalInfoHeader" class="formHeader">
 						<h4>General Information</h4>
@@ -463,7 +465,7 @@
 				</div>
 			</div>
 			<div class="modal-footer">
-				<button type="button" class="btn btn-default btn-success" data-dismiss="modal">Submit</button>
+				<button id="formSubmit" type="button" class="btn btn-default btn-success" >Submit</button>
 				<button type="button" class="btn btn-default btn-danger" data-dismiss="modal">Cancel</button>
 			</div>
 		</div>

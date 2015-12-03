@@ -18,7 +18,6 @@ class Landing_model extends CI_model
     public function _construct()
     {
         parent::__construct();
-
     }
 
     public function getEmployees($empID)
