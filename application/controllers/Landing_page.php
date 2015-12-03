@@ -79,9 +79,7 @@ class Landing_page extends CI_Controller {
 
         foreach ($this->listData as $item) {
             array_push($this->printListData,
-                '<tr onmouseover="ChangeBackgroundColor(this)" onmouseout="RestoreBackgroundColor(this)">' .
-                '<td style="color: black; padding-left: 90px; font-size: 20px;">' .
-                $item . '</td>' . '</tr>'
+                '<tr id="'. $item .'" class="outerRow">' . '<td>' . $item . '</td><td></td></tr>'
             );
         };
         // Load the page
