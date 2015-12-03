@@ -8,8 +8,10 @@
 -- PHP Version: 5.6.10
 
 
+
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
+
 
 --
 -- Database: `sisrequest`
@@ -17,11 +19,17 @@ SET time_zone = "+00:00";
 CREATE DATABASE IF NOT EXISTS sisrequest;
 USE sisrequest;
 
+--
+-- Database: `sisrequest`
+--
+
+
 -- --------------------------------------------------------
 
 --
 -- Table structure for table `admissions`
 --
+
 
 CREATE TABLE `admissions` (
   `request_ID` bigint(20) unsigned NOT NULL,
@@ -40,15 +48,66 @@ CREATE TABLE `admissions` (
   `pla_mu` tinyint(7) DEFAULT NULL,
   `tofel` tinyint(7) DEFAULT NULL,
   `clep` tinyint(7) DEFAULT NULL,
-  `base` tinyint(7) DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=111 DEFAULT CHARSET=latin1;
+  `base` tinyint(7) DEFAULT NULL,
+  UNIQUE KEY `request_ID` (`request_ID`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=150 ;
+
 
 --
 -- Dumping data for table `admissions`
 --
 
 INSERT INTO `admissions` (`request_ID`, `all_test_score_access`, `act`, `ielts`, `ged`, `sat`, `lsat`, `millers`, `gre`, `mcat`, `prax`, `gmat`, `ap`, `pla_mu`, `tofel`, `clep`, `base`) VALUES
-(100, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+(100, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(101, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+(102, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0),
+(103, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0),
+(104, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0),
+(105, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0, 1, 1, 0, 1, 1, 1),
+(106, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(107, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(108, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(109, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(110, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0),
+(111, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0),
+(112, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0),
+(113, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0),
+(114, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0),
+(115, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0),
+(116, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0),
+(117, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0),
+(118, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1),
+(119, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1),
+(120, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(121, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(122, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(123, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(124, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(125, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(126, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(127, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(128, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(129, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(130, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(131, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(132, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(133, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(134, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(135, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(136, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(137, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(138, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(139, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(140, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(141, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(142, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(143, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(144, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(145, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(146, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(147, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(148, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(149, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -56,19 +115,71 @@ INSERT INTO `admissions` (`request_ID`, `all_test_score_access`, `act`, `ielts`,
 -- Table structure for table `auth`
 --
 
-CREATE TABLE `auth` (
-  `request_ID` bigint(20) unsigned NOT NULL,
+
+CREATE TABLE IF NOT EXISTS `auth` (
+  `request_ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `employee_sig` tinyint(7) DEFAULT NULL,
   `dept_head_sig` tinyint(7) DEFAULT NULL,
-  `dean_sig` tinyint(7) DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=111 DEFAULT CHARSET=latin1;
+  `dean_sig` tinyint(7) DEFAULT NULL,
+  UNIQUE KEY `request_ID` (`request_ID`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=150 ;
+
 
 --
 -- Dumping data for table `auth`
 --
 
 INSERT INTO `auth` (`request_ID`, `employee_sig`, `dept_head_sig`, `dean_sig`) VALUES
-(100, 0, 0, 0);
+(100, 1, 1, 1),
+(101, 1, 1, 1),
+(102, 1, 1, 1),
+(103, 1, 1, 1),
+(104, 1, 1, 1),
+(105, 1, 1, 1),
+(106, 1, 1, 1),
+(107, 1, 1, 1),
+(108, 1, 1, 1),
+(109, 1, 1, 1),
+(110, 1, 1, 1),
+(111, 1, 1, 1),
+(112, 1, 1, 1),
+(113, 1, 1, 1),
+(114, 1, 1, 1),
+(115, 1, 1, 1),
+(116, 1, 1, 1),
+(117, 1, 1, 1),
+(118, 1, 1, 1),
+(119, 1, 1, 1),
+(120, 1, 1, 1),
+(121, 1, 1, 0),
+(122, 1, 0, 1),
+(123, 1, 0, 0),
+(124, 1, 1, 1),
+(125, 1, 0, 1),
+(126, 1, 1, 0),
+(127, 1, 1, 1),
+(128, 1, 1, 0),
+(129, 1, 0, 1),
+(130, 1, 0, 0),
+(131, 1, 1, 1),
+(132, 0, 1, 1),
+(133, 1, 1, 1),
+(134, 1, 1, 1),
+(135, 1, 1, 1),
+(136, 1, 1, 1),
+(137, 1, 1, 1),
+(138, 1, 1, 1),
+(139, 1, 0, 1),
+(140, 1, 1, 1),
+(141, 1, 1, 0),
+(142, 1, 1, 1),
+(143, 1, 1, 1),
+(144, 1, 1, 1),
+(145, 1, 1, 1),
+(146, 1, 1, 1),
+(147, 1, 1, 1),
+(148, 1, 1, 1),
+(149, 1, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -76,37 +187,138 @@ INSERT INTO `auth` (`request_ID`, `employee_sig`, `dept_head_sig`, `dean_sig`) V
 -- Table structure for table `cashiers`
 --
 
-CREATE TABLE `cashiers` (
-  `request_ID` bigint(20) unsigned NOT NULL,
+
+CREATE TABLE IF NOT EXISTS `cashiers` (
+  `request_ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `sf_general_inquiry` tinyint(7) DEFAULT NULL,
-  `sf_cash_group_post` tinyint(7) DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=111 DEFAULT CHARSET=latin1;
+  `sf_cash_group_post` tinyint(7) DEFAULT NULL,
+  UNIQUE KEY `request_ID` (`request_ID`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=150 ;
 
 --
 -- Dumping data for table `cashiers`
 --
 
 INSERT INTO `cashiers` (`request_ID`, `sf_general_inquiry`, `sf_cash_group_post`) VALUES
-(100, 0, 0);
+(100, 0, 2),
+(101, 0, 2),
+(102, 0, 2),
+(103, 0, 2),
+(104, 0, 2),
+(105, 0, 2),
+(106, 0, 2),
+(107, 0, 2),
+(108, 0, 2),
+(109, 0, 2),
+(110, 0, 2),
+(111, 0, 2),
+(112, 0, 2),
+(113, 0, 2),
+(114, 0, 2),
+(115, 0, 2),
+(116, 0, 2),
+(117, 0, 2),
+(118, 0, 2),
+(119, 0, 2),
+(120, 0, 2),
+(121, 0, 2),
+(122, 0, 2),
+(123, 0, 2),
+(124, 0, 2),
+(125, 0, 2),
+(126, 0, 2),
+(127, 0, 2),
+(128, 0, 2),
+(129, 0, 2),
+(130, 0, 2),
+(131, 0, 2),
+(132, 0, 2),
+(133, 0, 2),
+(134, 0, 2),
+(135, 0, 2),
+(136, 0, 2),
+(137, 0, 2),
+(138, 0, 2),
+(139, 0, 2),
+(140, 1, 2),
+(141, 1, 5),
+(142, 1, 3),
+(143, 1, 4),
+(144, 1, 5),
+(145, 1, 5),
+(146, 1, 5),
+(147, 1, 5),
+(148, 0, 2),
+(149, 0, 2);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `financialAid`
+-- Table structure for table `financialaid`
 --
 
-CREATE TABLE `financialAid` (
-  `request_ID` bigint(20) unsigned NOT NULL,
+CREATE TABLE IF NOT EXISTS `financialaid` (
+  `request_ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `fa_cash` tinyint(7) DEFAULT NULL,
-  `fa_non_financial_aid_staff` tinyint(7) DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=111 DEFAULT CHARSET=latin1;
+  `fa_non_financial_aid_staff` tinyint(7) DEFAULT NULL,
+  UNIQUE KEY `request_ID` (`request_ID`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=150 ;
 
 --
--- Dumping data for table `financialAid`
+-- Dumping data for table `financialaid`
 --
 
-INSERT INTO `financialAid` (`request_ID`, `fa_cash`, `fa_non_financial_aid_staff`) VALUES
-(100, 0, 0);
+INSERT INTO `financialaid` (`request_ID`, `fa_cash`, `fa_non_financial_aid_staff`) VALUES
+(100, 0, 0),
+(101, 0, 0),
+(102, 0, 0),
+(103, 0, 0),
+(104, 0, 0),
+(105, 0, 0),
+(106, 0, 0),
+(107, 0, 0),
+(108, 0, 0),
+(109, 0, 0),
+(110, 0, 0),
+(111, 0, 0),
+(112, 0, 0),
+(113, 0, 0),
+(114, 0, 0),
+(115, 0, 0),
+(116, 0, 0),
+(117, 0, 0),
+(118, 0, 0),
+(119, 0, 0),
+(120, 1, 0),
+(121, 1, 0),
+(122, 1, 0),
+(123, 1, 0),
+(124, 1, 0),
+(125, 1, 0),
+(126, 0, 1),
+(127, 0, 1),
+(128, 0, 1),
+(129, 0, 1),
+(130, 1, 1),
+(131, 1, 1),
+(132, 1, 1),
+(133, 1, 1),
+(134, 1, 0),
+(135, 1, 0),
+(136, 0, 1),
+(137, 0, 1),
+(138, 1, 1),
+(139, 1, 1),
+(140, 0, 0),
+(141, 0, 0),
+(142, 0, 0),
+(143, 0, 0),
+(144, 0, 0),
+(145, 0, 0),
+(146, 0, 0),
+(147, 0, 0),
+(148, 0, 0),
+(149, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -114,11 +326,12 @@ INSERT INTO `financialAid` (`request_ID`, `fa_cash`, `fa_non_financial_aid_staff
 -- Table structure for table `login`
 --
 
-CREATE TABLE `login` (
+CREATE TABLE IF NOT EXISTS `login` (
   `pawprint` varchar(6) NOT NULL DEFAULT '',
   `password` varchar(20) DEFAULT NULL,
   `admin_empID` varchar(9) DEFAULT NULL,
-  `sis_authority` tinyint(1) DEFAULT NULL
+  `sis_authority` tinyint(1) DEFAULT NULL,
+  PRIMARY KEY (`pawprint`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -141,7 +354,9 @@ INSERT INTO `login` (`pawprint`, `password`, `admin_empID`, `sis_authority`) VAL
 -- Table structure for table `person`
 --
 
-CREATE TABLE `person` (
+
+CREATE TABLE IF NOT EXISTS `person` (
+>>>>>>> dec5x8_sprint3
   `empID` varchar(9) NOT NULL DEFAULT '',
   `pawprint` varchar(6) DEFAULT NULL,
   `fName` varchar(25) DEFAULT NULL,
@@ -152,7 +367,8 @@ CREATE TABLE `person` (
   `title` varchar(35) DEFAULT NULL,
   `admin_empID` varchar(9) DEFAULT NULL,
   `ferpa_score` varchar(3) DEFAULT NULL,
-  `sis_authority` tinyint(1) DEFAULT NULL
+  `sis_authority` tinyint(1) DEFAULT NULL,
+  PRIMARY KEY (`empID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -267,8 +483,8 @@ INSERT INTO `person` (`empID`, `pawprint`, `fName`, `lName`, `phone_number`, `ca
 -- Table structure for table `records`
 --
 
-CREATE TABLE `records` (
-  `request_ID` bigint(20) unsigned NOT NULL,
+CREATE TABLE IF NOT EXISTS `records` (
+  `request_ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `basic_inquiry` tinyint(7) DEFAULT NULL,
   `advanced_inquiry` tinyint(7) DEFAULT NULL,
   `3cs` tinyint(7) DEFAULT NULL,
@@ -286,15 +502,65 @@ CREATE TABLE `records` (
   `report_manager` tinyint(7) DEFAULT NULL,
   `self_service_advisor` tinyint(7) DEFAULT NULL,
   `fiscal_advisor` tinyint(7) DEFAULT NULL,
-  `academic_advising_profile` tinyint(7) DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=111 DEFAULT CHARSET=latin1;
+  `academic_advising_profile` tinyint(7) DEFAULT NULL,
+  UNIQUE KEY `request_ID` (`request_ID`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=150 ;
 
 --
 -- Dumping data for table `records`
 --
 
 INSERT INTO `records` (`request_ID`, `basic_inquiry`, `advanced_inquiry`, `3cs`, `advisor_update`, `dept_soc_update`, `student_group_review`, `service_indicators_holds`, `view_study_list`, `registrar_enrollment`, `advisor_student_center`, `class_permission`, `class_permission_view`, `class_roster`, `block_enrollments`, `report_manager`, `self_service_advisor`, `fiscal_advisor`, `academic_advising_profile`) VALUES
-(100, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+(100, 1, 7, 4, 3, 2, 7, 0, 1, 5, 0, 2, 0, 1, 7, 1, 3, 1, 3),
+(101, 0, 6, 5, 2, 3, 4, 1, 0, 6, 1, 3, 1, 0, 6, 0, 2, 0, 2),
+(102, 1, 5, 6, 3, 2, 5, 0, 1, 4, 0, 2, 0, 1, 5, 1, 3, 1, 3),
+(103, 1, 4, 7, 3, 2, 6, 0, 1, 7, 0, 2, 0, 1, 4, 1, 3, 1, 3),
+(104, 1, 7, 4, 3, 2, 7, 0, 1, 5, 0, 2, 0, 1, 7, 1, 3, 1, 3),
+(105, 0, 6, 5, 2, 3, 4, 1, 0, 6, 1, 3, 1, 0, 6, 0, 2, 0, 2),
+(106, 1, 5, 6, 3, 2, 5, 0, 1, 4, 0, 2, 0, 1, 5, 1, 3, 1, 3),
+(107, 1, 4, 7, 3, 2, 6, 0, 1, 7, 0, 2, 0, 1, 4, 1, 3, 1, 3),
+(108, 1, 7, 4, 3, 2, 7, 0, 1, 5, 0, 2, 0, 1, 7, 1, 3, 1, 3),
+(109, 0, 6, 5, 2, 3, 4, 1, 0, 6, 1, 3, 1, 0, 6, 0, 2, 0, 2),
+(110, 1, 5, 6, 3, 2, 5, 0, 1, 4, 0, 2, 0, 1, 5, 1, 3, 1, 3),
+(111, 1, 4, 7, 3, 2, 6, 0, 1, 7, 0, 2, 0, 1, 4, 1, 3, 1, 3),
+(112, 1, 7, 4, 3, 2, 7, 0, 1, 5, 0, 2, 0, 1, 7, 1, 3, 1, 3),
+(113, 0, 6, 5, 2, 3, 4, 1, 0, 6, 1, 3, 1, 0, 6, 0, 2, 0, 2),
+(114, 1, 5, 6, 3, 2, 5, 0, 1, 4, 0, 2, 0, 1, 5, 1, 3, 1, 3),
+(115, 1, 4, 7, 3, 2, 6, 0, 1, 7, 0, 2, 0, 1, 4, 1, 3, 1, 3),
+(116, 1, 7, 4, 3, 2, 7, 0, 1, 5, 0, 2, 0, 1, 7, 1, 3, 1, 3),
+(117, 0, 6, 5, 2, 3, 4, 1, 0, 6, 1, 3, 1, 0, 6, 0, 2, 0, 2),
+(118, 1, 5, 6, 3, 2, 5, 0, 1, 4, 0, 2, 0, 1, 5, 1, 3, 1, 3),
+(119, 1, 4, 7, 3, 2, 6, 0, 1, 7, 0, 2, 0, 1, 4, 1, 3, 1, 3),
+(120, 1, 7, 4, 3, 2, 7, 0, 1, 5, 0, 2, 0, 1, 7, 1, 3, 1, 3),
+(121, 0, 6, 5, 2, 3, 4, 1, 0, 6, 1, 3, 1, 0, 6, 0, 2, 0, 2),
+(122, 1, 5, 6, 3, 2, 5, 0, 1, 4, 0, 2, 0, 1, 5, 1, 3, 1, 3),
+(123, 1, 4, 7, 3, 2, 6, 0, 1, 7, 0, 2, 0, 1, 4, 1, 3, 1, 3),
+(124, 1, 7, 4, 3, 2, 7, 0, 1, 5, 0, 2, 0, 1, 7, 1, 3, 1, 3),
+(125, 0, 6, 5, 2, 3, 4, 1, 0, 6, 1, 3, 1, 0, 6, 0, 2, 0, 2),
+(126, 1, 5, 6, 3, 2, 5, 0, 1, 4, 0, 2, 0, 1, 5, 1, 3, 1, 3),
+(127, 1, 4, 7, 3, 2, 6, 0, 1, 7, 0, 2, 0, 1, 4, 1, 3, 1, 3),
+(128, 1, 7, 4, 3, 2, 7, 0, 1, 5, 0, 2, 0, 1, 7, 1, 3, 1, 3),
+(129, 0, 6, 5, 2, 3, 4, 1, 0, 6, 1, 3, 1, 0, 6, 0, 2, 0, 2),
+(130, 1, 5, 6, 3, 2, 5, 0, 1, 4, 0, 2, 0, 1, 5, 1, 3, 1, 3),
+(131, 1, 4, 7, 3, 2, 6, 0, 1, 7, 0, 2, 0, 1, 4, 1, 3, 1, 3),
+(132, 1, 7, 4, 3, 2, 7, 0, 1, 5, 0, 2, 0, 1, 7, 1, 3, 1, 3),
+(133, 0, 6, 5, 2, 3, 4, 1, 0, 6, 1, 3, 1, 0, 6, 0, 2, 0, 2),
+(134, 1, 5, 6, 3, 2, 5, 0, 1, 4, 0, 2, 0, 1, 5, 1, 3, 1, 3),
+(135, 1, 4, 7, 3, 2, 6, 0, 1, 7, 0, 2, 0, 1, 4, 1, 3, 1, 3),
+(136, 1, 7, 4, 3, 2, 7, 0, 1, 5, 0, 2, 0, 1, 7, 1, 3, 1, 3),
+(137, 0, 6, 5, 2, 3, 4, 1, 0, 6, 1, 3, 1, 0, 6, 0, 2, 0, 2),
+(138, 1, 5, 6, 3, 2, 5, 0, 1, 4, 0, 2, 0, 1, 5, 1, 3, 1, 3),
+(139, 1, 4, 7, 3, 2, 6, 0, 1, 7, 0, 2, 0, 1, 4, 1, 3, 1, 3),
+(140, 1, 7, 4, 3, 2, 7, 0, 1, 5, 0, 2, 0, 1, 7, 1, 3, 1, 3),
+(141, 0, 6, 5, 2, 3, 4, 1, 0, 6, 1, 3, 1, 0, 6, 0, 2, 0, 2),
+(142, 1, 5, 6, 3, 2, 5, 0, 1, 4, 0, 2, 0, 1, 5, 1, 3, 1, 3),
+(143, 1, 4, 7, 3, 2, 6, 0, 1, 7, 0, 2, 0, 1, 4, 1, 3, 1, 3),
+(144, 1, 7, 4, 3, 2, 7, 0, 1, 5, 0, 2, 0, 1, 7, 1, 3, 1, 3),
+(145, 0, 6, 5, 2, 3, 4, 1, 0, 6, 1, 3, 1, 0, 6, 0, 2, 0, 2),
+(146, 1, 5, 6, 3, 2, 5, 0, 1, 4, 0, 2, 0, 1, 5, 1, 3, 1, 3),
+(147, 1, 4, 7, 3, 2, 6, 0, 1, 7, 0, 2, 0, 1, 4, 1, 3, 1, 3),
+(148, 1, 7, 4, 3, 2, 7, 0, 1, 5, 0, 2, 0, 1, 7, 1, 3, 1, 3),
+(149, 0, 6, 5, 2, 3, 4, 1, 0, 6, 1, 3, 1, 0, 6, 0, 2, 0, 2);
 
 -- --------------------------------------------------------
 
@@ -302,16 +568,20 @@ INSERT INTO `records` (`request_ID`, `basic_inquiry`, `advanced_inquiry`, `3cs`,
 -- Table structure for table `request`
 --
 
-CREATE TABLE `request` (
-  `request_ID` bigint(20) unsigned NOT NULL,
+CREATE TABLE IF NOT EXISTS `request` (
+  `request_ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `empID` varchar(20) DEFAULT NULL,
   `request_date` date DEFAULT NULL,
   `update_date` date DEFAULT NULL,
   `admin_empID` varchar(20) DEFAULT NULL,
   `request_description` varchar(500) DEFAULT NULL,
   `is_student` tinyint(1) DEFAULT NULL,
-  `status` tinyint(2) DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=200 DEFAULT CHARSET=latin1;
+  `status` tinyint(2) DEFAULT NULL,
+  PRIMARY KEY (`request_ID`),
+  UNIQUE KEY `request_ID` (`request_ID`),
+  KEY `empID` (`empID`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=200 ;
+
 
 --
 -- Dumping data for table `request`
@@ -419,12 +689,13 @@ INSERT INTO `request` (`request_ID`, `empID`, `request_date`, `update_date`, `ad
 (198, 'e87858345', '2016-07-28', '2016-03-11', 'e00000000', 'FinancialAid, Authorization, Records', 0, 1),
 (199, 'e99669839', '2015-10-31', '2016-10-10', 'e00000000', 'FinancialAid, Authorization, Records', 1, 2);
 
+
 -- --------------------------------------------------------
 
 --
 -- Stand-in structure for view `requesttypes`
 --
-CREATE TABLE `requesttypes` (
+CREATE TABLE IF NOT EXISTS `requesttypes` (
 `request_ID` bigint(20) unsigned
 ,`all_test_score_access` tinyint(7)
 ,`act` tinyint(7)
@@ -472,30 +743,79 @@ CREATE TABLE `requesttypes` (
 ,`support_staff_registrar` tinyint(7)
 ,`advance_standing_report` tinyint(7)
 );
-
 -- --------------------------------------------------------
 
 --
 -- Table structure for table `reserved`
 --
 
-CREATE TABLE `reserved` (
-  `request_ID` bigint(20) unsigned NOT NULL,
+CREATE TABLE IF NOT EXISTS `reserved` (
+  `request_ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `immunization_view` tinyint(7) DEFAULT NULL,
   `transfer_credit_admission` tinyint(7) DEFAULT NULL,
   `relationships` tinyint(7) DEFAULT NULL,
   `student_groups` tinyint(7) DEFAULT NULL,
   `accomodate_student_health` tinyint(7) DEFAULT NULL,
   `support_staff_registrar` tinyint(7) DEFAULT NULL,
-  `advance_standing_report` tinyint(7) DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=111 DEFAULT CHARSET=latin1;
+  `advance_standing_report` tinyint(7) DEFAULT NULL,
+  UNIQUE KEY `request_ID` (`request_ID`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=150 ;
 
 --
 -- Dumping data for table `reserved`
 --
 
 INSERT INTO `reserved` (`request_ID`, `immunization_view`, `transfer_credit_admission`, `relationships`, `student_groups`, `accomodate_student_health`, `support_staff_registrar`, `advance_standing_report`) VALUES
-(100, 0, 0, 0, 0, 0, 0, 0);
+(100, 2, 2, 2, 0, 0, 2, 2),
+(101, 2, 2, 2, 0, 0, 2, 2),
+(102, 2, 2, 2, 0, 0, 2, 2),
+(103, 2, 2, 2, 0, 0, 2, 2),
+(104, 2, 2, 2, 0, 0, 2, 2),
+(105, 2, 2, 2, 0, 0, 2, 2),
+(106, 2, 2, 2, 0, 0, 2, 2),
+(107, 2, 2, 2, 0, 0, 2, 2),
+(108, 2, 2, 2, 0, 0, 2, 2),
+(109, 2, 2, 2, 0, 0, 2, 2),
+(110, 2, 2, 2, 0, 0, 2, 2),
+(111, 2, 2, 2, 0, 0, 2, 2),
+(112, 2, 2, 2, 0, 0, 2, 2),
+(113, 2, 2, 2, 0, 0, 2, 2),
+(114, 2, 2, 2, 0, 0, 2, 2),
+(115, 2, 2, 2, 0, 0, 2, 2),
+(116, 2, 2, 2, 0, 0, 2, 2),
+(117, 2, 2, 2, 0, 0, 2, 2),
+(118, 2, 2, 2, 0, 0, 2, 2),
+(119, 2, 2, 2, 0, 0, 2, 2),
+(120, 2, 2, 2, 0, 0, 2, 2),
+(121, 2, 2, 2, 0, 0, 2, 2),
+(122, 2, 2, 2, 0, 0, 2, 2),
+(123, 2, 2, 2, 0, 0, 2, 2),
+(124, 2, 2, 2, 0, 0, 2, 2),
+(125, 2, 2, 2, 0, 0, 2, 2),
+(126, 2, 2, 2, 0, 0, 2, 2),
+(127, 2, 2, 2, 0, 0, 2, 2),
+(128, 2, 2, 2, 0, 0, 2, 2),
+(129, 2, 2, 2, 0, 0, 2, 2),
+(130, 2, 2, 2, 0, 0, 2, 2),
+(131, 2, 2, 2, 0, 0, 2, 2),
+(132, 2, 2, 2, 0, 0, 2, 2),
+(133, 2, 2, 2, 0, 0, 2, 2),
+(134, 2, 2, 2, 0, 0, 2, 2),
+(135, 2, 2, 2, 0, 0, 2, 2),
+(136, 2, 2, 2, 0, 0, 2, 2),
+(137, 2, 2, 2, 0, 0, 2, 2),
+(138, 2, 2, 2, 0, 0, 2, 2),
+(139, 2, 2, 2, 0, 0, 2, 2),
+(140, 2, 2, 2, 0, 0, 2, 2),
+(141, 2, 2, 2, 0, 0, 2, 2),
+(142, 2, 2, 2, 0, 0, 2, 2),
+(143, 2, 2, 2, 0, 0, 2, 2),
+(144, 2, 2, 2, 0, 0, 2, 2),
+(145, 2, 2, 2, 0, 0, 2, 2),
+(146, 2, 2, 2, 0, 0, 2, 2),
+(147, 2, 2, 2, 0, 0, 2, 2),
+(148, 2, 2, 2, 0, 0, 2, 2),
+(149, 2, 2, 2, 0, 0, 2, 2);
 
 -- --------------------------------------------------------
 
@@ -505,70 +825,6 @@ INSERT INTO `reserved` (`request_ID`, `immunization_view`, `transfer_credit_admi
 DROP TABLE IF EXISTS `requesttypes`;
 
 CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `requesttypes` AS (select `admissions`.`request_ID` AS `request_ID`,`admissions`.`all_test_score_access` AS `all_test_score_access`,`admissions`.`act` AS `act`,`admissions`.`ielts` AS `ielts`,`admissions`.`ged` AS `ged`,`admissions`.`sat` AS `sat`,`admissions`.`lsat` AS `lsat`,`admissions`.`millers` AS `millers`,`admissions`.`gre` AS `gre`,`admissions`.`mcat` AS `mcat`,`admissions`.`prax` AS `prax`,`admissions`.`gmat` AS `gmat`,`admissions`.`ap` AS `ap`,`admissions`.`pla_mu` AS `pla_mu`,`admissions`.`tofel` AS `tofel`,`admissions`.`clep` AS `clep`,`admissions`.`base` AS `base`,`cashiers`.`sf_general_inquiry` AS `sf_general_inquiry`,`cashiers`.`sf_cash_group_post` AS `sf_cash_group_post`,`financialaid`.`fa_cash` AS `fa_cash`,`financialaid`.`fa_non_financial_aid_staff` AS `fa_non_financial_aid_staff`,`records`.`basic_inquiry` AS `basic_inquiry`,`records`.`advanced_inquiry` AS `advanced_inquiry`,`records`.`3cs` AS `3cs`,`records`.`advisor_update` AS `advisor_update`,`records`.`dept_soc_update` AS `dept_soc_update`,`records`.`student_group_review` AS `student_group_review`,`records`.`service_indicators_holds` AS `service_indicators_holds`,`records`.`view_study_list` AS `view_study_list`,`records`.`registrar_enrollment` AS `registrar_enrollment`,`records`.`advisor_student_center` AS `advisor_student_center`,`records`.`class_permission` AS `class_permission`,`records`.`class_permission_view` AS `class_permission_view`,`records`.`class_roster` AS `class_roster`,`records`.`block_enrollments` AS `block_enrollments`,`records`.`report_manager` AS `report_manager`,`records`.`self_service_advisor` AS `self_service_advisor`,`records`.`fiscal_advisor` AS `fiscal_advisor`,`records`.`academic_advising_profile` AS `academic_advising_profile`,`reserved`.`immunization_view` AS `immunization_view`,`reserved`.`transfer_credit_admission` AS `transfer_credit_admission`,`reserved`.`relationships` AS `relationships`,`reserved`.`student_groups` AS `student_groups`,`reserved`.`accomodate_student_health` AS `accomodate_student_health`,`reserved`.`support_staff_registrar` AS `support_staff_registrar`,`reserved`.`advance_standing_report` AS `advance_standing_report` from (((((`admissions` join `auth` on((`admissions`.`request_ID` = `auth`.`request_ID`))) join `cashiers` on((`admissions`.`request_ID` = `cashiers`.`request_ID`))) join `financialaid` on((`admissions`.`request_ID` = `financialaid`.`request_ID`))) join `records` on((`admissions`.`request_ID` = `records`.`request_ID`))) join `reserved` on((`admissions`.`request_ID` = `reserved`.`request_ID`))));
-
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `admissions`
---
-ALTER TABLE `admissions`
-  ADD UNIQUE KEY `request_ID` (`request_ID`);
-
---
--- Indexes for table `auth`
---
-ALTER TABLE `auth`
-  ADD UNIQUE KEY `request_ID` (`request_ID`);
-
---
--- Indexes for table `cashiers`
---
-ALTER TABLE `cashiers`
-  ADD UNIQUE KEY `request_ID` (`request_ID`);
-
---
--- Indexes for table `financialAid`
---
-ALTER TABLE `financialAid`
-  ADD UNIQUE KEY `request_ID` (`request_ID`);
-
---
--- Indexes for table `login`
---
-ALTER TABLE `login`
-  ADD PRIMARY KEY (`pawprint`);
-
---
--- Indexes for table `person`
---
-ALTER TABLE `person`
-  ADD PRIMARY KEY (`empID`);
-
---
--- Indexes for table `records`
---
-ALTER TABLE `records`
-  ADD UNIQUE KEY `request_ID` (`request_ID`);
-
---
--- Indexes for table `request`
---
-ALTER TABLE `request`
-  ADD PRIMARY KEY (`request_ID`),
-  ADD UNIQUE KEY `request_ID` (`request_ID`),
-  ADD KEY `empID` (`empID`);
-
---
--- Indexes for table `reserved`
---
-ALTER TABLE `reserved`
-  ADD UNIQUE KEY `request_ID` (`request_ID`);
-
---
--- AUTO_INCREMENT for dumped tables
---
 
 --
 -- AUTO_INCREMENT for table `admissions`
@@ -650,3 +906,4 @@ ALTER TABLE `request`
 --
 ALTER TABLE `reserved`
   ADD CONSTRAINT `reserved_ibfk_1` FOREIGN KEY (`request_ID`) REFERENCES `request` (`request_ID`);
+
