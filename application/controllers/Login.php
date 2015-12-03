@@ -26,12 +26,11 @@ class Login extends CI_Controller {
         // Set validations
         $this->form_validation->set_rules("txt_pawprint", "Pawprint", "trim|required|strip_tags");
         $this->form_validation->set_rules("txt_password", "Password", "trim|required|strip_tags");
-        
+
         if ($this->session->userdata('pawprint') != null){
-                redirect('landing_page');
+            redirect('landing_page');
         }
-        
-        
+
         if ($this->form_validation->run() == FALSE) {
             // Validation failed
             $this->load->view('login_view');
@@ -43,12 +42,13 @@ class Login extends CI_Controller {
 
                 // Active user record is present
                 if ($usr_result) {
-                   /* $sessiondata = array(
-                        'pawprint' => $pawprint,
-                        'loginuser' => TRUE
-                    ); */
+                    /* $sessiondata = array(
+                         'pawprint' => $pawprint,
+                         'loginuser' => TRUE
+                     ); */
 
-                   // $this->session->set_userdata($sessiondata);
+                    // $this->session->set_userdata($sessiondata);
+
 
                     redirect("landing_page");
 

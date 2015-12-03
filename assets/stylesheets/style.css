@@ -17,9 +17,9 @@ div {
 	text-align: center;
 	font-size: 35px;
 	margin-bottom: 0px;
-	
+
 }*/
-	
+
 
 th {
 	color: white;
@@ -36,7 +36,7 @@ tr, td{
 	background-color: transparent;
 }
 
-	
+
 #site-container {
 	position: absolute;
 	height: 100%;
@@ -49,7 +49,7 @@ tr, td{
 /*#reviewHeader {
 	width: 100%;
 	height: 180px;
-	
+
 }
 
 #reviewBody {
@@ -64,7 +64,7 @@ tr, td{
 	width: 33%;
 	float: right;
 	border-left: 2px solid black;
-	
+
 }
 #leftDiv {
 	height: 65%;
@@ -82,12 +82,12 @@ tr, td{
 	width: 100%;
 	height: 20%;
 	border-bottom: 2px solid black;
-	
+
 }
-	
+
 #rightDiv  p {
 	margin-left: 5px;
-	
+
 }
 
 #rightBottom {
@@ -111,8 +111,8 @@ tr, td{
 	position: absolute;
 	top: 0;
 	z-index: 2;
-	
-	
+
+
 }
 
 table {
@@ -147,7 +147,7 @@ table {
 	background-position: 0 0;
 	height: 125px;
 	width: 125px;
-	background: url(C:/Users/derek/Documents/GitHub/sisrequest/assets/images/muClipped.png) no-repeat;
+	/*background: url(C:/Users/derek/Documents/GitHub/sisrequest/assets/images/muClipped.png) no-repeat;*/
 }
 
 #marquee-employee-data  .nav-logo {
@@ -163,17 +163,17 @@ table {
 .searchBut {
 	width: 35px;
 	height: 35px;
-	//-webkit-transition: all .4s ease;
-	//margin-top: 25px;
-	
-	
+//-webkit-transition: all .4s ease;
+//margin-top: 25px;
+
+
 }
 
 .box {
 	width: 200px;
 	height: 34px;
-	//margin-top: 25px;
-	//margin-left: 70px;
+//margin-top: 25px;
+//margin-left: 70px;
 }
 
 .menu-list	{
@@ -194,19 +194,19 @@ ul, menu, dir {
 	list-style-type: disc;
 	-webkit-margin-before: 1em;
 	-webkit-margin-after: 1em;
-    -webkit-margin-start: 0px;
-    -webkit-margin-end: 0px;
-    -webkit-padding-start: 40px;
+	-webkit-margin-start: 0px;
+	-webkit-margin-end: 0px;
+	-webkit-padding-start: 40px;
 	position absolute;
 }
 
 form {
 	margin-bottom: 5px;
-	
+
 }
 
 ol {
-	max-width: 560px; 
+	max-width: 560px;
 	width: 565px;
 	background-color: black;
 	color: white;
@@ -219,13 +219,13 @@ ol {
 
 ul li, ol li {
 	list-style: none;
-	
-	//border: 1px solid black;
+
+//border: 1px solid black;
 }
 
 ol li{
 	box-shadow: inset 0px 1px 0px #3e9cbf, 0px 1px 0px 0px #205c73, 0px 2px 0px #999;
-	//padding-left: 10px;
+//padding-left: 10px;
 }
 
 ol li .genInfo {
@@ -242,7 +242,7 @@ ol li .genInfo {
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
 	border-radius: 10px;
-	
+
 }
 .menu-list li:hover{
 	background-color: #205c73;
@@ -258,15 +258,14 @@ ol li .genInfo {
 #marquee-container .column-left {
 	float: left;
 	height: 100%;
-	width: 40%;
+	width: 35%;
 	min-width: 150px;
 	position: relative;
 }
 
 #marquee-container .column-right {
-	floath: right;
 	height: 100%;
-	width: 60%;
+	width: 65%;
 	position: relative;
 	min-width: 300px;
 }
@@ -296,7 +295,7 @@ ol li .genInfo {
 }
 
 .employeeHeader {
-	text-align: left; 
+	text-align: left;
 	position: relative;
 	width: 414px;
 	height: 35px;
@@ -305,13 +304,13 @@ ol li .genInfo {
 	z-index: 1;
 	margin-bottom: 100px;
 	font-family: ;
-	background: url(C:/Users/derek/Documents/GitHub/sisrequest/assets/images/tigerBackF.JPG) repeat;
+	/*background: url(C:/Users/derek/Documents/GitHub/sisrequest/assets/images/tigerBackF.JPG) repeat;*/
 	box-shadow: inset 0px 1px 0px black, 0px 1px 0px 0px black, 0px 2px 0px black;
-	
+
 }
 
 .employeeHeaderReview {
-	text-align: left; 
+	text-align: left;
 	position: relative;
 	width: 1200px;
 	height: 36px;
@@ -320,7 +319,7 @@ ol li .genInfo {
 	z-index: 1;
 	margin-bottom: 100px;
 	font-family: ;
-	background: url(C:/Users/derek/Documents/GitHub/sisrequest/assets/images/tigerBackF.JPG) repeat;
+	/*background: url(C:/Users/derek/Documents/GitHub/sisrequest/assets/images/tigerBackF.JPG) repeat;*/
 	box-shadow: inset 0px 1px 0px black, 0px 1px 0px 0px black, 0px 2px 0px black;
 }
 
@@ -345,8 +344,8 @@ ol li .genInfo {
 	padding-right: 30px;
 	padding-left: 30px;
 	margin: auto;
-	
-	
+
+
 }
 
 #marquee-employee-info {
@@ -381,7 +380,7 @@ ol li .genInfo {
 
 #data-list .inner-table tr td {
 	padding: 0;
- }
+}
 
 #data-list .inner-table tr {
 	height: 2em;
@@ -483,11 +482,19 @@ div#campusAddress {
 
 
 div#campusAddress div input[type="text"] {
-	margin: 0 0 1em 0;
+	width: 90%;
 }
 
 div#campusAddress div select {
-	margin: 0 0 1em 0;
+	width: 90%;
+}
+
+div.singleRowTwoColumn div input[type="text"] {
+	width: 90%
+}
+
+div#campusAddress.singleRowTwoColumn.bottomSection {
+	height: 13em;
 }
 
 div#campusAddress.inner-col-right {
@@ -523,4 +530,96 @@ div#addressContainer div {
 
 #data-list .rowHighlighted {
 	background-color: #EBD6A1;
+}
+
+#accordion a {
+	display: block;
+	height: 4em;
+}
+
+#accordion .panelRow {
+	height: 4em;
+	border-bottom: 1px solid grey;
+	margin: 0 0 0 2em;
+}
+
+.panel-body {
+	max-height: 400px;
+	overflow: scroll;
+}
+
+.panel-heading .accordion-toggle:after {
+	/* symbol for "opening" panels */
+	font-family: 'Glyphicons Halflings';  /* essential for enabling glyphicon */
+	content: "\e114";    /* adjust as needed, taken from bootstrap.css */
+	float: right;        /* adjust as needed */
+	color: grey;         /* adjust as needed */
+}
+.panel-heading .accordion-toggle.collapsed:after {
+	/* symbol for "collapsed" panels */
+	content: "\e080";    /* adjust as needed, taken from bootstrap.css */
+}
+
+div.panelBodyContainer .column-left {
+	width: 30% !important;
+	display: inline-block;
+}
+
+div.panelBodyContainer .column-right {
+	width: 30% !important;
+	min-width: 30% !important;
+	display: inline-block;
+}
+
+div.panelBodyContainer .column-middle {
+	width: 30% !important;
+	display: inline-block;
+}
+
+div.panelBodyContainer table {
+	font-family: "Helvetica Neue";
+	font-size: 8px;
+}
+
+div.panelBodyContainer table th {
+	background-color: grey;
+	font-family: "Helvetica Neue", Helvetica, "Liberation Sans", Arial, sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+}
+
+div.panelBodyContainer table tr, td {
+	font-family: "Helvetica Neue", Helvetica, "Liberation Sans", Arial, sans-serif;
+	font-size: 18px;
+	font-weight: 200;
+}
+
+div.panelBodyContainer table tr .col1 {
+	width: 20%;
+}
+
+div.panelBodyContainer table tr .col2 {
+	width: 60%;
+}
+
+div.panelBodyContainer table tr .col3, tr .col4 {
+	width: 5%;
+}
+
+div.panelBodyContainer table .col1, .col2 {
+	padding-right: 10px;
+}
+
+div.panelBodyContainer table .col3, input[type="checkbox"] {
+	text-align: center;
+	vertical-align: middle;
+}
+
+div.panelBodyContainer table .col4, input[type="checkbox"] {
+	text-align: center;
+	vertical-align: middle;
+}
+
+div.panelBodyContainer table tr {
+	line-height: 1.7em;
 }
