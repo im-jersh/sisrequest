@@ -12,8 +12,9 @@
     <script src="<?php echo base_url();?>/assets/javascripts/landing_page.js"></script>
 	<script src="<?php echo base_url();?>/assets/javascripts/reviewForm.js"></script>
 	<script src="<?php echo base_url();?>/assets/javascripts/submitForm.js"></script>
+	<script src="<?php echo base_url();?>/assets/javascripts/search.js"></script>
+	<script src="<?php echo base_url();?>/assets/javascripts/maskedinput.js" type="text/javascript"></script>
 	<link rel="stylesheet" href="<?php echo base_url();?>/assets/stylesheets/styleSearch.css" type="text/css">
-    <script src="<?php echo base_url();?>/assets/javascripts/search.js"></script>
 </head>
 <body>
 <div id="site-container">

@@ -1,11 +1,13 @@
 /**
-<<<<<<< HEAD
  * Created by Josh on 11/20/15.
-=======
- * Created by Josh on 11/17/15.
->>>>>>> 4779bf92bb40e61db83a3256bf5a45c754e24368
  */
 $(document).ready(function() {
+
+    // Set a mask on the phone number
+    $(function(){
+        $('#phone_number').mask("(999) 999-9999");
+    });
+
     $("#data-list .outerRow").click(function() {
 
         // Hide any error from a previous form review validation

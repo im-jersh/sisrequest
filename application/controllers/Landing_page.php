@@ -182,6 +182,12 @@ class Landing_page extends CI_Controller {
         // Save to database
         $this->person_model->saveGeneralInfoForPerson($pawprint, $genInfo);
 
+        // Extract the general request data
+        $requestID = $serializedObject['request_ID'];
+        $requestInfo = array(
+
+        );
+
 
         echo json_encode($serializedObject);
 
