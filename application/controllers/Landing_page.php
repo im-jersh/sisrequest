@@ -21,22 +21,6 @@ class Landing_page extends CI_Controller {
 
     public function index() {
 
-        // Check who logged in
-        if ($this->session->userdata('sis_authority') == 0) { // this user is an admin
-
-            $this->adminLoggedIn();
-
-        } else if ($this->session->userdata('sis_authority') == 1) { // this user is SIS employee
-
-            $this->sisLoggedIn();
-
-        }
-
-    }
-
-
-    public function adminLoggedIn() {
-
         // Get the employees associated with this user
         $empID = $this->session->userdata('empID');
         self::$listData['employees'] = $this->landing_model->getEmployees($empID);
@@ -48,19 +32,19 @@ class Landing_page extends CI_Controller {
         foreach (self::$listData['employees'] as $item) {
             array_push($this->printListData,
                 '<tr id="'. $item['pawprint'] .'" class="outerRow">' .
-                    '<td>' .
-                        '<table class="inner-table name-title">' .
-                            '<tr class="mainName"><td class="employeeTD">' .
-                                $item['fName'] . ' ' . $item['lName'] .
-                            '</td></tr>' .
-                            '<tr class="subTitle"><td>' .
-                                $item['title'] .
-                            '</td></tr>' .
-                        '</table>' .
-                    '</td>' .
-                    '<td>' .
-                        $item['status'] .
-                    '</td>'.
+                '<td>' .
+                '<table class="inner-table name-title">' .
+                '<tr class="mainName"><td class="employeeTD">' .
+                $item['fName'] . ' ' . $item['lName'] .
+                '</td></tr>' .
+                '<tr class="subTitle"><td>' .
+                $item['title'] .
+                '</td></tr>' .
+                '</table>' .
+                '</td>' .
+                '<td>' .
+                $item['status'] .
+                '</td>'.
                 '</tr>'
             );
         };
@@ -69,23 +53,6 @@ class Landing_page extends CI_Controller {
         $this->loadView();
     }
 
-    public function sisLoggedIn() {
-
-        // Set up the navigation menu
-        $this->navigationItem = 'Departments';
-
-        // Get all the department
-        $this->listData = $this->landing_model->getDepartments();
-
-        foreach ($this->listData as $item) {
-            array_push($this->printListData,
-                '<tr id="'. $item .'" class="outerRow">' . '<td>' . $item . '</td><td></td></tr>'
-            );
-        };
-        // Load the page
-        $this->loadView();
-
-    }
 
     public function loadView() {
 
