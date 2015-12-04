@@ -13,6 +13,7 @@ $(document).ready(function() {
             formData[this.name] = this.value;
         });
 
+
         // Post the data to the controller
         $.ajax({
             type: "POST",
@@ -20,7 +21,7 @@ $(document).ready(function() {
             data: { 'formData' : formData },
             success: function(message) {
                 //message = $.parseJSON(message);
-                console.log(message);
+                //console.log(message);
             }
         });
 

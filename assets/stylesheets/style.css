@@ -643,6 +643,40 @@ div.panelBodyContainer table tr {
 	/*bottom: 0;*/
 }
 
-#reviewBoxes input[type="checkbox"] {
+#descriptionSection {
+	margin: 1em 1em;
+	width: 85%;
+}
 
+#requestInfo {
+	height: auto !important;
+}
+
+#requestDescription {
+	width: 97%;
+	resize: vertical;
+	overflow: auto;
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+	color: #7E7E7E;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+	color: #7E7E7E;
+	opacity: 1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+	color: #7E7E7E;
+	opacity: 1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+	color: #7E7E7E;
+}
+
+#requestInfo div.checkbox {
+	margin: 1em 1em;
+}
+
+#requestInfo div.checkbox label {
+	margin: 0 2em;
 }
