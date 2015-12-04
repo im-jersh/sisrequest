@@ -184,10 +184,6 @@ class Landing_page extends CI_Controller {
         $this->request_model->saveRequestInfo($serializedObject);
 
 
-
-
-
-
         echo json_encode($serializedObject);
 
     }
