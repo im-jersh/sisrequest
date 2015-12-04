@@ -44,9 +44,12 @@
 			
 			<div style="background-color: #F1BF4E; position: fixed; z-index: 1000; width: 30.8%">
                 <div id="search-bar">
-                    <form class="search-container">
-                        <input style="padding-left: 10px;" id="search-box" type="text" class="search-box" name="q" placeholder="Search Employees"/>
-                    </form>
+                    <form class="search-container" role="form">
+						<div class="form-group has-feedback has-feedback-left">
+							<input id="search-box" type="text" class="search-box form-control" name="q" placeholder="Search Employees"/>
+							<i id="searchMag" class="form-control-feedback glyphicon glyphicon-search"></i>
+						</div>
+					</form>
                 </div>
 				<div id="listLabels">
 					<label style="text-align: left; padding-left: 50px; padding-top: 4px; color: black;">Employee</label>

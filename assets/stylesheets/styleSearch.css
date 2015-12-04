@@ -13,12 +13,10 @@
 
 
 .search-box + label .search-icon {
-    color: black;
+    color: #4D4D4D;
 }
 .search-box:hover {
-    color: white;
-    background: #c8c8c8;
-  /*  box-shadow: 0 0 0 5px #3d4752; */
+    color: #4D4D4D;
 }
 .search-box:hover + label .search-icon {
     color: white;
@@ -27,8 +25,7 @@
     border: none;
     outline: none;
     box-shadow: none;
-    margin-left: 18px;
-	margin-top: 15px;
+    margin: 3.5% 5%;
     cursor: text;
     width: 90%;
 	height: 40px;
@@ -36,6 +33,8 @@
     border-radius: 5px;
     background: #EBD6A1;
     color: black;
+    padding-left: 1em;
+    font-size: 1.5em;
 }
 
 .search-box:focus + label .search-icon {
@@ -55,5 +54,15 @@
     left: -30px;
     color: white;
     cursor: pointer;
+}
+
+#search-bar form.search-container {
+    margin-bottom: 0px !important;
+    height: 100%;
+}
+
+#searchMag {
+    margin: 3px 1.3em 0 0;
+    font-size: 1.5em;
 }
 
