@@ -41,7 +41,7 @@ class Reserved_model extends CI_Model {
     }
 
     public function createReservedForRequest($requestID, $reservedInfo){
-        echo 'CREATING A RESERVED RECORD';
+
         // Build the query to INSERT a row
         $reservedInfo['request_ID'] = $requestID;
 

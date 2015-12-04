@@ -23,7 +23,7 @@ class Records_model extends CI_Model {
         $recordsInfo = $this->request_model->createKeyValueArrayForCheckboxesInAccessType(self::$recordsFields, $serializedObject);
 
         // Save the record
-        $this->load->model('records_model');
+        $this->load->model('reserved_model');
         if ($update) {
             if (self::updateRecordsInfoForRequest($requestID, $recordsInfo)) {
                 return $this->reserved_model->saveReservedInfo($requestID, $serializedObject, $update);
