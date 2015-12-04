@@ -41,28 +41,29 @@
     </div>
     <div id="marquee-container">
         <div id="marquee-employees" class="column-left">
+			
+			<div style="background-color: #F1BF4E; position: fixed; z-index: 1000; width: 30.8%">
+                <div id="search-bar">
+                    <form class="search-container">
+                        <input style="padding-left: 10px;" id="search-box" type="text" class="search-box" name="q" placeholder="Search Employees"/>
+                    </form>
+                </div>
+				<div id="listLabels">
+					<label style="text-align: left; padding-left: 50px; padding-top: 4px; color: black;">Employee</label>
+					<label style="text-align: right; padding-left: 175px; color: black;">Status</label>
+				</div>
+			</div>
 
-            <table id="data-list">
-                <tr>
-                    <th>
-                        <div">
-                            <form class="search-container" >
-                                <input style="padding-left: 10px;" id="search-box" type="text" class="search-box" name="q" />
-                                <img class="searchBut" for="search-box" src="<?php echo base_url();?>/assets/images/Search-button.png">
-                                <label for="search-box"><span>Employee</span></label>
-                            </form>
-                        </div>
-
-                    </th>
-                    <th style="text-align: left; padding-left: 50px;"> Status </th>
-                </tr>
-                <!-- print out the generic list of data  -->
-                <?php
-                foreach ($printListData as $row) {
-                    echo $row;
-                };
-                ?>
-            </table>
+			<div id="empList" style="padding-top: 101px;">
+				<table id="data-list">
+					<!-- print out the generic list of data  -->
+					<?php
+					foreach ($printListData as $row) {
+						echo $row;
+					};
+					?>
+				</table>
+			</div>
 
         </div>
 
