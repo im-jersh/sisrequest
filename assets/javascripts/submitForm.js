@@ -21,7 +21,7 @@ $(document).ready(function() {
             data: { 'formData' : formData },
             success: function(message) {
                 //message = $.parseJSON(message);
-                console.log(message);
+                //console.log(message);
             }
         });
 

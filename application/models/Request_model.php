@@ -52,15 +52,24 @@ class Request_model extends CI_Model {
             $requestInfo['LAW'] = 0;
         }
 
-        print_r($serializedObject);
+
         // If a request ID exist, UPDATE it; otherwise, INSERT
         if ($serializedObject['request_ID'] !== 'undefined') {
             $requestID = $serializedObject['request_ID'];
-            return self::updateRequestInfoForRequest($requestID, $requestInfo);
+            if (self::updateRequestInfoForRequest($requestID, $requestInfo)) {
+               return self::saveAccessTypesForRequestID($requestID, $serializedObject);
+            } else {
+                return false;
+            }
         } else {
             $empID = $serializedObject['empID'];
-            self::createRequestForEmployee($empID, $requestInfo);
+            if (self::createRequestForEmployee($empID, $requestInfo)) {
+                return self::saveAccessTypesForRequestID(NULL, $serializedObject);
+            } else {
+                return false;
+            }
         }
+
 
     }
 
@@ -82,10 +91,82 @@ class Request_model extends CI_Model {
         $this->db->set('request_date', 'current_timestamp', FALSE);
         $this->db->set('update_date', 'current_timestamp', FALSE);
 
-        $str = $this->db->insert_string('request', $requestInfo);
-        echo($str);
+        return $this->db->insert('request', $requestInfo);
 
-        $this->db->insert('request', $requestInfo);
     }
+
+    public function saveAccessTypesForRequestID($requestID, $serializedObject) {
+
+        // If requestID is NULL, we should retrieve the request ID that was just created so that we can pass it to the access types functions for saving
+        $update = true;
+        if (!isset($requestID)) {
+            $this->db->select('request_ID');
+            $this->db->from('request');
+            $this->db->where(array('empID' => $serializedObject['empID']));
+            $query = $this->db->get();
+            $requestID = $query->result_array()[0]['request_ID'];
+
+            // Set the flag indicating we need to INSERT not UPDATE all subsequent access type records
+            $update = false;
+        }
+
+        // Make sure we have an ID now
+        if (isset($requestID)) {
+            $this->load->model('admissions_model');
+            return $this->admissions_model->saveAdmissionsInfo($requestID, $serializedObject, $update);
+        } else {
+            return false;
+        }
+    }
+
+    public function createKeyValueArrayForCheckboxesInAccessType($keys, $serializedObject) {
+
+        $arr = [];
+
+        // Iterate through the array of keys, extract the values from the form
+        foreach ($keys as $key) {
+
+            // If view and update are set
+            $value = 0;
+            if (isset($serializedObject[$key . '_view']) && isset($serializedObject[$key . '_update'])) {
+                $value = 7;
+            } else if (isset($serializedObject[$key . '_view']) && !isset($serializedObject[$key . '_update'])) { // only view was set
+                $value = 5;
+            } else if (!isset($serializedObject[$key . '_view']) && isset($serializedObject[$key . '_update'])) { // only update was set
+                $value = 6;
+            }
+
+            // Save the value
+            $arr[$key] = $value;
+
+        }
+
+        return $arr;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 }
