@@ -21,6 +21,10 @@ class Landing_page extends CI_Controller {
 
     public function index() {
 
+		if ($this->session->userdata('pawprint') == null){
+            redirect('login');
+        }
+	
         // Check who logged in
         if ($this->session->userdata('sis_authority') == 0) { // this user is an admin
 
