@@ -21,6 +21,10 @@ class Landing_page extends CI_Controller {
 
     public function index() {
 
+		if ($this->session->userdata('pawprint') == null){
+            redirect('login');
+        }
+	
         // Check who logged in
         if ($this->session->userdata('sis_authority') == 0) { // this user is an admin
 
@@ -139,6 +143,53 @@ class Landing_page extends CI_Controller {
         $returnData['employee'] = $employee;
 
         echo json_encode($returnData);
+    }
+
+    public function validateForm() {
+
+        // todo: validate ALL address fields
+
+        // Set the rules for the form field
+        $this->form_validation->set_rules('title', 'Job Title', 'trim|required');
+        $this->form_validation->set_rules('phone_number', 'Phone Number', 'required|exact_length[14]|trim');
+        $this->form_validation->set_rules('campus_address', 'Street Address', 'required|trim');
+        $this->form_validation->set_rules('campus_address_city', 'City', 'required|trim');
+        $this->form_validation->set_rules('campus_address_state', 'State', 'required');
+        $this->form_validation->set_rules('campus_address_zipcode', 'Zipcode', 'required|trim|exact_length[5]|numeric');
+        $this->form_validation->set_rules('requestDescription', 'Request Description', 'required|max_length[500]');
+        $this->form_validation->set_rules('academicCareers', 'Academic Career', 'required');
+
+
+        // Run the validation
+        if ($this->form_validation->run() == FALSE) { // Invalid form
+            echo validation_errors();
+
+        } else { // Valid form
+
+            echo 'true';
+
+        }
+
+    }
+
+    public function submitForm() {
+
+        // @todo: Fetch the records first in order to revert in case any one update fails
+
+        // Load the models for saving
+        $this->load->model('person_model');
+        $this->load->model('request_model');
+
+        // Extract the form data from the global POST
+        $serializedObject = $this->input->post('formData');
+
+        // Save to database
+        $this->person_model->saveGeneralInfo($serializedObject);
+        $this->request_model->saveRequestInfo($serializedObject);
+
+
+        echo json_encode($serializedObject);
+
     }
 
 }

@@ -544,8 +544,8 @@ div#addressContainer div {
 }
 
 .panel-body {
-	max-height: 400px;
-	overflow: scroll;
+	/*max-height: 400px;*/
+	/*overflow: scroll;*/
 }
 
 .panel-heading .accordion-toggle:after {
@@ -622,4 +622,71 @@ div.panelBodyContainer table .col4, input[type="checkbox"] {
 
 div.panelBodyContainer table tr {
 	line-height: 1.7em;
+}
+
+#formContainer {
+	position: relative;
+	width: inherit;
+	height: 100%;
+	z-index: 100;
+}
+
+.absoluteContainer {
+	/*background-color: grey;*/
+	/*position: fixed;*/
+	/*float: none;*/
+	/*width: 60%;*/
+	/*height: 10%;*/
+	/*z-index: 1000;*/
+	/*display: block;*/
+	/*right: 0;*/
+	/*bottom: 0;*/
+}
+
+#descriptionSection {
+	margin: 1em 1em;
+	width: 85%;
+}
+
+#requestInfo {
+	height: auto !important;
+}
+
+#requestDescription {
+	width: 97%;
+	resize: vertical;
+	overflow: auto;
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+	color: #7E7E7E;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+	color: #7E7E7E;
+	opacity: 1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+	color: #7E7E7E;
+	opacity: 1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+	color: #7E7E7E;
+}
+
+#requestInfo div.checkbox {
+	margin: 1em 1em;
+}
+
+#requestInfo div.checkbox label {
+	margin: 0 2em;
+}
+
+#listLabels {
+	width: 100%;
+	height: 27px;
+	box-shadow: inset 0px 1px 0px #333333, 0px 1px 0px 0px #333333, 0px 0px 0px #333333;
+}
+
+#search-bar {
+	height: 74px;
 }

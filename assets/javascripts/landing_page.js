@@ -1,15 +1,22 @@
 /**
-<<<<<<< HEAD
  * Created by Josh on 11/20/15.
-=======
- * Created by Josh on 11/17/15.
->>>>>>> 4779bf92bb40e61db83a3256bf5a45c754e24368
  */
 $(document).ready(function() {
+
+    // Set a mask on the phone number
+    $(function(){
+        $('#phone_number').mask("(999) 999-9999");
+    });
+
     $("#data-list .outerRow").click(function() {
 
+        // Hide any error from a previous form review validation
+        var formError = $("#formError");
+        formError.addClass('hide');
+        formError.empty();
+
         // Change the row's background color to show it was selected
-        var row =  $(this)
+        var row = $(this);
 
         $("#data-list .outerRow").removeClass('rowHighlighted');
         var previousSelection = row.hasClass('rowHighlighted');
@@ -38,11 +45,27 @@ $(document).ready(function() {
                 document.getElementById("employeeName").innerHTML = employee['fName'] + " " + employee['lName'];
                 document.getElementById("empID").innerHTML = employee['empID'];
                 document.getElementById("pawprint").innerHTML = employee['pawprint'];
+                document.getElementById("ferpa_score").innerHTML = employee['ferpa_score'] + '%';
 
                 // These fields can be edited
+                document.querySelector('#formPawprint').value = tableRowID;
+                document.querySelector('#empIDForm').value = employee['empID'];
+                document.querySelector('#formRequestID').value = employee['request']['request_ID'];
                 document.querySelector('#title').value = employee['title'];
                 document.querySelector('#phone_number').value = employee['phone_number'];
                 document.querySelector('#campus_address').value = employee['campus_address'];
+                document.querySelector('#campus_address_apt').value = employee['campus_address_apt'];
+                document.querySelector('#campus_address_city').value = employee['campus_address_city'];
+                document.querySelector('#campus_address_zipcode').value = employee['campus_address_zipcode'];
+                document.querySelector('#campus_address_state').value = employee['campus_address_state'];
+
+                if (typeof employee['request']['request_description'] === 'undefined') {
+                    document.querySelector('#requestDescription').value = '';
+                } else {
+                    document.querySelector('#requestDescription').value = employee['request']['request_description'];
+                }
+
+
 
                 // These fields are checkboxes for the access types
                 var accessTypes = employee['request']['types'];
@@ -58,9 +81,16 @@ $(document).ready(function() {
                     }
                 }
 
+                // Update the academic careers checkboxes
+                $.each($('#careerCheckboxes').find("input"), function(){
+                    if (employee['request'][this.id] == '1') {
+                        this.checked = true;
+                    }
+                });
 
                 // Populate the form with the selected person's request data
                 if (accessTypes['data'].length > 0) {
+
                     var data = accessTypes['data'][0]; // extract the data key/value array
 
                     // Loop through the keys and set the appropriate form values
@@ -109,6 +139,7 @@ $(document).ready(function() {
                                 break;
                         }
 
+                        // Check the checkboxes
                         $('input[name="' + checkboxName + '"]').each( function() {
                                 $(this).prop('checked', true);
                             }
