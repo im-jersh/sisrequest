@@ -48,15 +48,6 @@ CREATE TABLE `admissions` (
   `base` tinyint(7) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `admissions`
---
-
-INSERT INTO `admissions` (`request_ID`, `all_test_score_access`, `act`, `ielts`, `ged`, `sat`, `lsat`, `millers`, `gre`, `mcat`, `prax`, `gmat`, `ap`, `pla_mu`, `tofel`, `clep`, `base`) VALUES
-(100, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1),
-(203, NULL, 5, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-(205, NULL, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-
 -- --------------------------------------------------------
 
 --
@@ -70,13 +61,6 @@ CREATE TABLE `auth` (
   `dean_sig` tinyint(7) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `auth`
---
-
-INSERT INTO `auth` (`request_ID`, `employee_sig`, `dept_head_sig`, `dean_sig`) VALUES
-(100, 0, 0, 0);
-
 -- --------------------------------------------------------
 
 --
@@ -89,15 +73,6 @@ CREATE TABLE `cashiers` (
   `sf_cash_group_post` tinyint(7) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `cashiers`
---
-
-INSERT INTO `cashiers` (`request_ID`, `sf_general_inquiry`, `sf_cash_group_post`) VALUES
-(100, 1, 6),
-(203, 0, 0),
-(205, 0, 0);
-
 -- --------------------------------------------------------
 
 --
@@ -109,15 +84,6 @@ CREATE TABLE `financialAid` (
   `fa_cash` tinyint(7) DEFAULT NULL,
   `fa_non_financial_aid_staff` tinyint(7) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `financialAid`
---
-
-INSERT INTO `financialAid` (`request_ID`, `fa_cash`, `fa_non_financial_aid_staff`) VALUES
-(100, 0, 1),
-(203, 0, 0),
-(205, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -175,7 +141,7 @@ CREATE TABLE `person` (
 
 INSERT INTO `person` (`empID`, `pawprint`, `fName`, `lName`, `phone_number`, `campus_address`, `campus_address_apt`, `campus_address_city`, `campus_address_zipcode`, `campus_address_state`, `department`, `title`, `admin_empID`, `ferpa_score`) VALUES
 ('e11424344', 'dnm857', 'Sybil', 'Snyder', '(636) 538-3000', '7116 Lacus St.', '37', 'Columbia', '65203', 'Missouri', 'Admissions', 'Senior Developer', 'e00000000', '85'),
-('e11891417', 'isc539', 'Azalia', 'Gallagher', '(314) 373-7373', '205 Jesse Hall', '211', 'Columbia', '65201', 'Missouri', 'Admissions', 'Junior Software Developer', 'e00000000', '100'),
+('e11891417', 'isc539', 'Azalia', 'Gallagher', '(603) 555-5555', '207 Clark Ave.', '', 'St. Louis', '63366', 'Missouri', 'Admissions', 'Director of Operations', 'e00000000', '100'),
 ('e12371623', 'jvz147', 'Desirae', 'Nolan', '(555) 555-5555', '1 North Street', '', 'Foristell', '63348', 'Missouri', 'Financial Aid', 'Programmer Analyst', 'e00000000', '80'),
 ('e14264482', 'tps778', 'Isaiah', 'Harding', '02300 006726', 'Ap #330-5612 Nonummy St.', NULL, NULL, NULL, NULL, 'Cashiers', 'Employee', 'e00000000', '78'),
 ('e14647732', 'zgf432', 'Nola', 'Young', '(471) 967-922', 'Ap #572-5910 Molestie St.', NULL, NULL, NULL, NULL, 'Cashiers', 'Employee', 'e00000000', '78'),
@@ -247,15 +213,6 @@ CREATE TABLE `records` (
   `academic_advising_profile` tinyint(7) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `records`
---
-
-INSERT INTO `records` (`request_ID`, `basic_inquiry`, `advanced_inquiry`, `3cs`, `advisor_update`, `dept_soc_update`, `student_group_review`, `service_indicators_holds`, `view_study_list`, `registrar_enrollment`, `advisor_student_center`, `class_permission`, `class_permission_view`, `class_roster`, `block_enrollments`, `report_manager`, `self_service_advisor`, `fiscal_advisor`, `academic_advising_profile`) VALUES
-(100, 1, 7, 7, 3, 3, 1, 7, 1, 7, 1, 3, 1, 1, 7, 1, 3, 1, 3),
-(203, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-(205, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-
 -- --------------------------------------------------------
 
 --
@@ -276,113 +233,7 @@ CREATE TABLE `request` (
   `MED` int(1) unsigned NOT NULL,
   `VET_MED` int(1) unsigned NOT NULL,
   `LAW` int(1) unsigned NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=206 DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `request`
---
-
-INSERT INTO `request` (`request_ID`, `empID`, `request_date`, `update_date`, `admin_empID`, `request_description`, `is_student`, `status`, `UGRD`, `GRAD`, `MED`, `VET_MED`, `LAW`) VALUES
-(100, 'e11424344', '2015-12-04 07:11:54', '2015-12-04 07:11:54', 'e00000000', 'this is just a test', 1, 0, 0, 1, 1, 0, 0),
-(101, 'e22672237', '2016-01-06 06:00:00', '2016-04-20 05:00:00', 'e00000000', 'Admissions, Authorization, Records', 1, 2, 0, 0, 0, 0, 0),
-(102, 'e27683982', '2015-01-10 06:00:00', '2015-07-05 05:00:00', 'e00000000', 'Admissions, Authorization, Records', 1, 2, 0, 0, 0, 0, 0),
-(103, 'e35285715', '2015-06-30 05:00:00', '2015-04-19 05:00:00', 'e00000000', 'Admissions, Authorization, Records', 1, 0, 0, 0, 0, 0, 0),
-(104, 'e47589918', '2015-02-20 06:00:00', '2015-05-26 05:00:00', 'e00000000', 'Admissions, Authorization, Records', 1, 0, 0, 0, 0, 0, 0),
-(105, 'e53499865', '2015-01-07 06:00:00', '2015-03-04 06:00:00', 'e00000000', 'Admissions, Authorization, Records', 0, 2, 0, 0, 0, 0, 0),
-(106, 'e61136933', '2015-09-10 05:00:00', '2015-08-18 05:00:00', 'e00000000', 'Admissions, Authorization, Records', 1, 0, 0, 0, 0, 0, 0),
-(107, 'e69838893', '2016-03-23 05:00:00', '2015-11-11 06:00:00', 'e00000000', 'Admissions, Authorization, Records', 0, 2, 0, 0, 0, 0, 0),
-(108, 'e78691314', '2015-01-31 06:00:00', '2016-04-28 05:00:00', 'e00000000', 'Admissions, Authorization, Records', 0, 1, 0, 0, 0, 0, 0),
-(109, 'e88323177', '2016-04-29 05:00:00', '2016-10-22 05:00:00', 'e00000000', 'Admissions, Authorization, Records', 1, 0, 0, 0, 0, 0, 0),
-(111, 'e23999133', '2015-09-19 05:00:00', '2015-07-29 05:00:00', 'e00000000', 'Admissions, Authorization, Records', 1, 1, 0, 0, 0, 0, 0),
-(112, 'e28319141', '2015-08-29 05:00:00', '2016-06-28 05:00:00', 'e00000000', 'Admissions, Authorization, Records', 0, 0, 0, 0, 0, 0, 0),
-(113, 'e35469629', '2015-03-25 05:00:00', '2015-06-09 05:00:00', 'e00000000', 'Admissions, Authorization, Records', 0, 1, 0, 0, 0, 0, 0),
-(114, 'e47789812', '2015-05-28 05:00:00', '2014-12-08 06:00:00', 'e00000000', 'Admissions, Authorization, Records', 1, 2, 0, 0, 0, 0, 0),
-(115, 'e53558542', '2015-07-24 05:00:00', '2015-05-10 05:00:00', 'e00000000', 'Admissions, Authorization, Records', 0, 1, 0, 0, 0, 0, 0),
-(116, 'e62169612', '2016-03-30 05:00:00', '2015-04-22 05:00:00', 'e00000000', 'Admissions, Authorization, Records', 1, 0, 0, 0, 0, 0, 0),
-(117, 'e71327389', '2016-03-04 06:00:00', '2015-11-20 06:00:00', 'e00000000', 'Admissions, Authorization, Records', 0, 1, 0, 0, 0, 0, 0),
-(118, 'e82894949', '2015-08-29 05:00:00', '2016-06-02 05:00:00', 'e00000000', 'Admissions, Authorization, Records', 0, 2, 0, 0, 0, 0, 0),
-(119, 'e89131186', '2015-10-01 05:00:00', '2015-06-08 05:00:00', 'e00000000', 'Admissions, Authorization, Records', 0, 0, 0, 0, 0, 0, 0),
-(121, 'e24253583', '2015-01-31 06:00:00', '2016-02-16 06:00:00', 'e00000000', 'FinancialAid, Authorization, Records', 1, 2, 0, 0, 0, 0, 0),
-(122, 'e28913232', '2016-01-02 06:00:00', '2015-07-03 05:00:00', 'e00000000', 'FinancialAid, Authorization, Records', 1, 0, 0, 0, 0, 0, 0),
-(123, 'e36656496', '2016-02-24 06:00:00', '2014-12-14 06:00:00', 'e00000000', 'FinancialAid, Authorization, Records', 0, 2, 0, 0, 0, 0, 0),
-(124, 'e48157483', '2015-01-14 06:00:00', '2016-10-12 05:00:00', 'e00000000', 'FinancialAid, Authorization, Records', 0, 1, 0, 0, 0, 0, 0),
-(125, 'e54573773', '2015-02-10 06:00:00', '2016-08-15 05:00:00', 'e00000000', 'FinancialAid, Authorization, Records', 0, 2, 0, 0, 0, 0, 0),
-(126, 'e62771432', '2014-12-02 06:00:00', '2016-09-26 05:00:00', 'e00000000', 'FinancialAid, Authorization, Records', 1, 1, 0, 0, 0, 0, 0),
-(127, 'e71786584', '2015-07-06 05:00:00', '2015-04-07 05:00:00', 'e00000000', 'FinancialAid, Authorization, Records', 1, 2, 0, 0, 0, 0, 0),
-(128, 'e83431578', '2015-03-13 05:00:00', '2016-02-03 06:00:00', 'e00000000', 'FinancialAid, Authorization, Records', 1, 1, 0, 0, 0, 0, 0),
-(129, 'e89844788', '2016-01-03 06:00:00', '2015-12-04 06:00:00', 'e00000000', 'FinancialAid, Authorization, Records', 1, 2, 0, 0, 0, 0, 0),
-(130, 'e14264482', '2016-05-26 05:00:00', '2016-01-07 06:00:00', 'e00000000', 'FinancialAid, Authorization, Records', 1, 2, 0, 0, 0, 0, 0),
-(131, 'e24443949', '2015-08-27 05:00:00', '2016-03-29 05:00:00', 'e00000000', 'FinancialAid, Authorization, Records', 0, 1, 0, 0, 0, 0, 0),
-(132, 'e29372555', '2016-06-24 05:00:00', '2015-09-20 05:00:00', 'e00000000', 'FinancialAid, Authorization, Records', 0, 2, 0, 0, 0, 0, 0),
-(133, 'e36967253', '2016-02-12 06:00:00', '2016-10-11 05:00:00', 'e00000000', 'FinancialAid, Authorization, Records', 1, 1, 0, 0, 0, 0, 0),
-(134, 'e48863742', '2014-12-09 06:00:00', '2014-12-16 06:00:00', 'e00000000', 'FinancialAid, Authorization, Records', 1, 0, 0, 0, 0, 0, 0),
-(135, 'e54756887', '2015-09-19 05:00:00', '2016-03-17 05:00:00', 'e00000000', 'FinancialAid, Authorization, Records', 0, 0, 0, 0, 0, 0, 0),
-(136, 'e63528573', '2015-12-27 06:00:00', '2016-04-15 05:00:00', 'e00000000', 'FinancialAid, Authorization, Records', 1, 2, 0, 0, 0, 0, 0),
-(137, 'e73789236', '2015-03-27 05:00:00', '2015-03-07 06:00:00', 'e00000000', 'FinancialAid, Authorization, Records', 1, 2, 0, 0, 0, 0, 0),
-(138, 'e83914137', '2016-06-26 05:00:00', '2016-04-05 05:00:00', 'e00000000', 'FinancialAid, Authorization, Records', 0, 2, 0, 0, 0, 0, 0),
-(139, 'e89873622', '2015-02-18 06:00:00', '2015-10-15 05:00:00', 'e00000000', 'FinancialAid, Authorization, Records', 0, 0, 0, 0, 0, 0, 0),
-(140, 'e14647732', '2014-12-30 06:00:00', '2015-12-05 06:00:00', 'e00000000', 'Cashiers, Authorization, Records', 0, 2, 0, 0, 0, 0, 0),
-(141, 'e24444852', '2016-07-01 05:00:00', '2015-09-23 05:00:00', 'e00000000', 'Cashiers, Authorization, Records', 1, 2, 0, 0, 0, 0, 0),
-(142, 'e29374191', '2015-01-10 06:00:00', '2016-10-10 05:00:00', 'e00000000', 'Cashiers, Authorization, Records', 1, 0, 0, 0, 0, 0, 0),
-(143, 'e38339469', '2015-04-21 05:00:00', '2016-05-03 05:00:00', 'e00000000', 'Cashiers, Authorization, Records', 1, 2, 0, 0, 0, 0, 0),
-(144, 'e49348839', '2015-12-04 06:00:00', '2015-03-20 05:00:00', 'e00000000', 'Cashiers, Authorization, Records', 1, 0, 0, 0, 0, 0, 0),
-(145, 'e54767874', '2015-12-02 06:00:00', '2015-09-24 05:00:00', 'e00000000', 'Cashiers, Authorization, Records', 0, 2, 0, 0, 0, 0, 0),
-(146, 'e65663714', '2014-12-24 06:00:00', '2014-12-11 06:00:00', 'e00000000', 'Cashiers, Authorization, Records', 0, 1, 0, 0, 0, 0, 0),
-(147, 'e74215832', '2016-09-23 05:00:00', '2014-12-14 06:00:00', 'e00000000', 'Cashiers, Authorization, Records', 0, 1, 0, 0, 0, 0, 0),
-(148, 'e84551415', '2015-10-23 05:00:00', '2016-02-22 06:00:00', 'e00000000', 'Cashiers, Authorization, Records', 0, 2, 0, 0, 0, 0, 0),
-(149, 'e92377558', '2016-07-19 05:00:00', '2015-03-08 06:00:00', 'e00000000', 'Cashiers, Authorization, Records', 0, 1, 0, 0, 0, 0, 0),
-(150, 'e16359615', '2016-08-23 05:00:00', '2014-11-20 06:00:00', 'e00000000', 'Cashiers, Authorization, Records', 1, 2, 0, 0, 0, 0, 0),
-(151, 'e24599267', '2015-06-08 05:00:00', '2015-02-08 06:00:00', 'e00000000', 'Cashiers, Authorization, Records', 1, 0, 0, 0, 0, 0, 0),
-(152, 'e29422978', '2015-08-13 05:00:00', '2016-07-23 05:00:00', 'e00000000', 'Cashiers, Authorization, Records', 1, 1, 0, 0, 0, 0, 0),
-(153, 'e38354864', '2015-06-07 05:00:00', '2015-11-25 06:00:00', 'e00000000', 'Cashiers, Authorization, Records', 0, 0, 0, 0, 0, 0, 0),
-(154, 'e49477585', '2016-10-11 05:00:00', '2015-01-13 06:00:00', 'e00000000', 'Cashiers, Authorization, Records', 1, 0, 0, 0, 0, 0, 0),
-(155, 'e54999964', '2016-08-26 05:00:00', '2015-02-14 06:00:00', 'e00000000', 'Cashiers, Authorization, Records', 0, 2, 0, 0, 0, 0, 0),
-(156, 'e68867756', '2016-07-13 05:00:00', '2016-01-17 06:00:00', 'e00000000', 'Cashiers, Authorization, Records', 1, 2, 0, 0, 0, 0, 0),
-(157, 'e75277974', '2015-05-28 05:00:00', '2016-05-13 05:00:00', 'e00000000', 'Cashiers, Authorization, Records', 1, 0, 0, 0, 0, 0, 0),
-(158, 'e84694449', '2015-10-30 05:00:00', '2015-11-07 06:00:00', 'e00000000', 'Cashiers, Authorization, Records', 1, 0, 0, 0, 0, 0, 0),
-(159, 'e95315494', '2016-03-29 05:00:00', '2016-08-01 05:00:00', 'e00000000', 'Cashiers, Authorization, Records', 1, 1, 0, 0, 0, 0, 0),
-(160, 'e16376651', '2016-09-28 05:00:00', '2015-05-18 05:00:00', 'e00000000', 'Admissions, Authorization, Records', 1, 2, 0, 0, 0, 0, 0),
-(161, 'e24762298', '2016-06-18 05:00:00', '2016-09-15 05:00:00', 'e00000000', 'Admissions, Authorization, Records', 1, 1, 0, 0, 0, 0, 0),
-(162, 'e31135288', '2014-11-29 06:00:00', '2014-12-21 06:00:00', 'e00000000', 'Admissions, Authorization, Records', 0, 0, 0, 0, 0, 0, 0),
-(163, 'e38718958', '2015-09-11 05:00:00', '2016-10-30 05:00:00', 'e00000000', 'Admissions, Authorization, Records', 1, 2, 0, 0, 0, 0, 0),
-(164, 'e49792994', '2016-01-18 06:00:00', '2015-04-11 05:00:00', 'e00000000', 'Admissions, Authorization, Records', 0, 2, 0, 0, 0, 0, 0),
-(165, 'e56984254', '2015-09-13 05:00:00', '2016-03-27 05:00:00', 'e00000000', 'Admissions, Authorization, Records', 1, 2, 0, 0, 0, 0, 0),
-(166, 'e68958854', '2015-01-14 06:00:00', '2015-12-10 06:00:00', 'e00000000', 'Admissions, Authorization, Records', 1, 0, 0, 0, 0, 0, 0),
-(167, 'e76467227', '2016-09-05 05:00:00', '2015-08-04 05:00:00', 'e00000000', 'Admissions, Authorization, Records', 0, 2, 0, 0, 0, 0, 0),
-(168, 'e85565358', '2014-12-28 06:00:00', '2016-03-10 06:00:00', 'e00000000', 'Admissions, Authorization, Records', 1, 1, 0, 0, 0, 0, 0),
-(169, 'e96414612', '2016-11-09 06:00:00', '2015-11-18 06:00:00', 'e00000000', 'Admissions, Authorization, Records', 1, 2, 0, 0, 0, 0, 0),
-(170, 'e18349748', '2016-08-08 05:00:00', '2015-10-13 05:00:00', 'e00000000', 'Admissions, Authorization, Records', 0, 2, 0, 0, 0, 0, 0),
-(171, 'e25584577', '2016-09-01 05:00:00', '2016-04-01 05:00:00', 'e00000000', 'Admissions, Authorization, Records', 1, 2, 0, 0, 0, 0, 0),
-(172, 'e32813382', '2016-09-23 05:00:00', '2015-06-04 05:00:00', 'e00000000', 'Admissions, Authorization, Records', 1, 0, 0, 0, 0, 0, 0),
-(173, 'e41554242', '2015-06-17 05:00:00', '2015-07-28 05:00:00', 'e00000000', 'Admissions, Authorization, Records', 1, 0, 0, 0, 0, 0, 0),
-(174, 'e51125647', '2015-05-08 05:00:00', '2015-06-08 05:00:00', 'e00000000', 'Admissions, Authorization, Records', 0, 0, 0, 0, 0, 0, 0),
-(175, 'e57557543', '2016-04-25 05:00:00', '2015-07-22 05:00:00', 'e00000000', 'Admissions, Authorization, Records', 0, 1, 0, 0, 0, 0, 0),
-(176, 'e69163113', '2016-09-05 05:00:00', '2014-11-29 06:00:00', 'e00000000', 'Admissions, Authorization, Records', 1, 1, 0, 0, 0, 0, 0),
-(177, 'e77691254', '2016-05-03 05:00:00', '2016-08-27 05:00:00', 'e00000000', 'Admissions, Authorization, Records', 1, 2, 0, 0, 0, 0, 0),
-(178, 'e86154169', '2016-06-14 05:00:00', '2014-11-24 06:00:00', 'e00000000', 'Admissions, Authorization, Records', 0, 2, 0, 0, 0, 0, 0),
-(179, 'e97564753', '2016-01-24 06:00:00', '2015-12-25 06:00:00', 'e00000000', 'Admissions, Authorization, Records', 1, 2, 0, 0, 0, 0, 0),
-(180, 'e19241574', '2016-09-30 05:00:00', '2015-01-07 06:00:00', 'e00000000', 'FinancialAid, Authorization, Records', 1, 0, 0, 0, 0, 0, 0),
-(181, 'e26235218', '2014-12-09 06:00:00', '2015-08-15 05:00:00', 'e00000000', 'FinancialAid, Authorization, Records', 1, 1, 0, 0, 0, 0, 0),
-(182, 'e34298798', '2016-01-16 06:00:00', '2015-01-09 06:00:00', 'e00000000', 'FinancialAid, Authorization, Records', 0, 1, 0, 0, 0, 0, 0),
-(183, 'e42995534', '2016-11-15 06:00:00', '2015-05-16 05:00:00', 'e00000000', 'FinancialAid, Authorization, Records', 1, 1, 0, 0, 0, 0, 0),
-(184, 'e52714731', '2015-02-27 06:00:00', '2014-11-24 06:00:00', 'e00000000', 'FinancialAid, Authorization, Records', 0, 0, 0, 0, 0, 0, 0),
-(185, 'e57899782', '2015-02-08 06:00:00', '2016-07-12 05:00:00', 'e00000000', 'FinancialAid, Authorization, Records', 1, 2, 0, 0, 0, 0, 0),
-(186, 'e69253713', '2015-12-26 06:00:00', '2016-08-05 05:00:00', 'e00000000', 'FinancialAid, Authorization, Records', 1, 1, 0, 0, 0, 0, 0),
-(187, 'e78554488', '2015-09-11 05:00:00', '2016-03-09 06:00:00', 'e00000000', 'FinancialAid, Authorization, Records', 1, 2, 0, 0, 0, 0, 0),
-(188, 'e87339725', '2016-11-05 05:00:00', '2016-10-04 05:00:00', 'e00000000', 'FinancialAid, Authorization, Records', 0, 1, 0, 0, 0, 0, 0),
-(189, 'e98547495', '2015-01-30 06:00:00', '2015-08-17 05:00:00', 'e00000000', 'FinancialAid, Authorization, Records', 1, 1, 0, 0, 0, 0, 0),
-(190, 'e19843177', '2016-02-08 06:00:00', '2016-04-11 05:00:00', 'e00000000', 'FinancialAid, Authorization, Records', 0, 2, 0, 0, 0, 0, 0),
-(191, 'e27498586', '2016-04-09 05:00:00', '2015-02-26 06:00:00', 'e00000000', 'FinancialAid, Authorization, Records', 0, 1, 0, 0, 0, 0, 0),
-(192, 'e35252537', '2015-01-15 06:00:00', '2015-10-16 05:00:00', 'e00000000', 'FinancialAid, Authorization, Records', 1, 2, 0, 0, 0, 0, 0),
-(193, 'e46553524', '2016-09-17 05:00:00', '2016-09-05 05:00:00', 'e00000000', 'FinancialAid, Authorization, Records', 0, 2, 0, 0, 0, 0, 0),
-(194, 'e52783685', '2014-11-30 06:00:00', '2016-10-18 05:00:00', 'e00000000', 'FinancialAid, Authorization, Records', 0, 1, 0, 0, 0, 0, 0),
-(195, 'e59454213', '2016-07-10 05:00:00', '2014-12-22 06:00:00', 'e00000000', 'FinancialAid, Authorization, Records', 1, 1, 0, 0, 0, 0, 0),
-(196, 'e69441882', '2016-10-10 05:00:00', '2016-04-19 05:00:00', 'e00000000', 'FinancialAid, Authorization, Records', 1, 2, 0, 0, 0, 0, 0),
-(197, 'e78496318', '2016-01-07 06:00:00', '2015-11-30 06:00:00', 'e00000000', 'FinancialAid, Authorization, Records', 0, 2, 0, 0, 0, 0, 0),
-(198, 'e87858345', '2016-07-28 05:00:00', '2016-03-11 06:00:00', 'e00000000', 'FinancialAid, Authorization, Records', 0, 1, 0, 0, 0, 0, 0),
-(199, 'e99669839', '2015-10-31 05:00:00', '2016-10-10 05:00:00', 'e00000000', 'FinancialAid, Authorization, Records', 1, 2, 0, 0, 0, 0, 0),
-(203, 'e11891417', '2015-12-04 17:44:14', '2015-12-04 17:44:14', 'e00000000', '0qoi4uebhfqoiruhn', NULL, 0, 0, 1, 0, 0, 0),
-(205, 'e12371623', '2015-12-04 20:42:53', '2015-12-04 20:42:53', 'e00000000', 'LET THIS BE A WARNING', NULL, 0, 0, 1, 1, 0, 0);
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -455,14 +306,6 @@ CREATE TABLE `reserved` (
   `advance_standing_report` tinyint(7) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `reserved`
---
-
-INSERT INTO `reserved` (`request_ID`, `immunization_view`, `transfer_credit_admission`, `relationships`, `student_groups`, `accomodate_student_health`, `support_staff_registrar`, `advance_standing_report`) VALUES
-(100, 5, 6, 7, 2, 3, 5, 6),
-(203, 0, 0, 0, 0, 0, 0, 0);
-
 -- --------------------------------------------------------
 
 --
@@ -490,4 +333,4 @@ ALTER TABLE `request`
 -- AUTO_INCREMENT for table `request`
 --
 ALTER TABLE `request`
-  MODIFY `request_ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=206;
+  MODIFY `request_ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT;
