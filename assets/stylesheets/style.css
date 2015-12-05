@@ -334,6 +334,10 @@ ol li .genInfo {
 	z-index: 1000;
 }
 
+#empList {
+	margin-top: 1em;
+}
+
 #marquee-employee-data {
 	text-align: left;
 	background-color:#C8C8C8;
@@ -391,7 +395,7 @@ ol li .genInfo {
 	padding-top: 3% !important;
 	font-family: "Helvetica Neue";
 	font-size: 1.2em;
-	font-weight: 300;
+	font-weight: 400;
 	border-bottom: ;
 }
 
@@ -399,15 +403,15 @@ ol li .genInfo {
 	box-shadow: none;
 	font-family: "Helvetica Neue";
 	font-size: .9em;
-	font-weight: lighter;
+	font-weight: 200;
 }
 
 h1#employeeName {
 	margin: 0 auto;
 	text-align: left;
-	padding: 4px 0 4px 0.5em;
 	font-family: "Helvetica Neue";
 	font-weight: 300;
+	height: inherit;
 }
 
 .formHeader {
@@ -688,5 +692,60 @@ div.panelBodyContainer table tr {
 }
 
 #search-bar {
-	height: 74px;
+	height: 5em;
+}
+
+#fixedSearchArea {
+	background-color: #F1BF4E;
+	position: fixed;
+	z-index: 1000;
+	width: 30.8%;
+	height: 7em;
+}
+
+#listLabels div.listLabelRow {
+	height: inherit;
+}
+
+#listLabels div.listLabelRow div {
+	height: inherit;
+	display: table-cell;
+}
+
+#listLabels div.listLabelRow div label {
+	height: inherit;
+	color: black;
+	font-size: 1.3em;
+	font-weight: 400;
+}
+
+div.listLabelRow div.inner-col-left {
+	margin-left: 4px;
+}
+
+div.listLabelRow div.inner-col-right label {
+	margin-right: 3.5em;
+}
+
+.infoHeader {
+	height: 7em;
+}
+
+.infoHeader #empName {
+	height: 5em;
+	padding: 1em 0 0 1em;
+
+}
+
+#listLabels table tr td {
+	padding-left: 1em;
+}
+
+.listLabelRow .inner-col-left {
+	width: 65%;
+}
+
+.listLabelRow .inner-col-right {
+	width: 28%;
+	float: right;
 }
