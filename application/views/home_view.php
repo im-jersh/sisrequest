@@ -42,7 +42,7 @@
     <div id="marquee-container">
         <div id="marquee-employees" class="column-left">
 			
-			<div style="background-color: #F1BF4E; position: fixed; z-index: 1000; width: 30.8%">
+			<div id="fixedSearchArea" class="infoHeader">
                 <div id="search-bar">
                     <form class="search-container" role="form">
 						<div class="form-group has-feedback has-feedback-left">
@@ -52,12 +52,18 @@
 					</form>
                 </div>
 				<div id="listLabels">
-					<label style="text-align: left; padding-left: 50px; padding-top: 4px; color: black;">Employee</label>
-					<label style="text-align: right; padding-left: 175px; color: black;">Status</label>
+					<div class="listLabelRow">
+						<div class="inner-col-left">
+							<label>Employee</label>
+						</div>
+						<div class="inner-col-right">
+							<label>Status</label>
+						</div>
+					</div>
 				</div>
 			</div>
 
-			<div id="empList" style="padding-top: 101px;">
+			<div id="empList">
 				<table id="data-list">
 					<!-- print out the generic list of data  -->
 					<?php
@@ -74,13 +80,16 @@
 			<!-- The form for the employee -->
 			<?php echo form_open('landing_page/validateForm', array('name'=>'requestForEmployee', 'id'=>'SISrequestForm', 'role'=>'form')); ?>
 				<div id="formContainer">
-
-					<h1 id="employeeName">Employee</h1>
-					<input type="hidden" id="formPawprint" name="pawprint" value="">
-					<input type="hidden" id="formRequestID" name="request_ID" value="">
-					<input type="hidden" id="empIDForm" name="empID" value="">
-					<div id="generalInfoHeader" class="formHeader">
-						<h4>General Information</h4>
+					<div class="infoHeader">
+						<div id="empName">
+							<h1 id="employeeName">Employee</h1>
+						</div>
+						<input type="hidden" id="formPawprint" name="pawprint" value="">
+						<input type="hidden" id="formRequestID" name="request_ID" value="">
+						<input type="hidden" id="empIDForm" name="empID" value="">
+						<div id="generalInfoHeader" class="formHeader">
+							<h4>General Information</h4>
+						</div>
 					</div>
 					<div id="generalInfoSection">
 						<div class="singleRowTwoColumn topSection">
