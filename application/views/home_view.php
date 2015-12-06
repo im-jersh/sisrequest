@@ -41,7 +41,6 @@
     </div>
     <div id="marquee-container">
         <div id="marquee-employees" class="column-left">
-			
 			<div id="fixedSearchArea" class="infoHeader">
                 <div id="search-bar">
                     <form class="search-container" role="form">
@@ -145,7 +144,7 @@
 						<h4>Access Requests</h4>
 					</div>
 					<div class="panel-group" id="accordion">
-						<div class="panel panel-default">
+						<div class="panel">
 							<div class="panel-heading">
 								<h4 class="panel-title">
 									<a class="accordion-toggle collapsed" data-toggle="collapse" href="#collapseOne">
@@ -276,7 +275,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="panel panel-default">
+						<div class="panel">
 							<div class="panel-heading">
 								<h4 class="panel-title">
 									<a class="accordion-toggle collapsed" data-toggle="collapse" href="#collapseTwo">
@@ -312,7 +311,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="panel panel-default">
+						<div class="panel">
 							<div class="panel-heading">
 								<h4 class="panel-title">
 									<a class="accordion-toggle collapsed" data-toggle="collapse" href="#collapseThree">
@@ -347,7 +346,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="panel panel-default">
+						<div class="panel">
 							<div class="panel-heading">
 								<h4 class="panel-title">
 									<a class="accordion-toggle collapsed" data-toggle="collapse" href="#collapseFour">
@@ -382,7 +381,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="panel panel-default">
+						<div class="panel">
 							<div class="panel-heading">
 								<h4 class="panel-title">
 									<a class="accordion-toggle collapsed" data-toggle="collapse" href="#collapseFive">
