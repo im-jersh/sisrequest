@@ -28,7 +28,21 @@ class Sis_landing_page extends CI_Controller
 
         foreach (self::$listData as $item) {
             array_push($this->printListData,
-                '<tr id="'. $item .'" class="outerRow">' . '<td>' . $item . '</td><td></td></tr>'
+                '<tr id="'. $item['name'] .'" class="outerRow">' .
+                '<td>' .
+                '<table class="inner-table name-title">' .
+                '<tr class="mainName"><td class="employeeTD">' .
+                $item['name'] .
+                '</td></tr>' .
+                '<tr class="subTitle"><td>' .
+                $item['employeeCount'] . " Employees" .
+                '</td></tr>' .
+                '</table>' .
+                '</td>' .
+                '<td>' .
+                $item['pendingRequestCount'] .
+                '</td>'.
+                '</tr>'
             );
         };
         // Load the page
@@ -40,7 +54,7 @@ class Sis_landing_page extends CI_Controller
 
         $data['navigationItem'] = $this->navigationItem;
         $data['printListData'] = $this->printListData;
-        $this->load->view('home_view', $data);
+        $this->load->view('sis_home_view', $data);
 
     }
 }
