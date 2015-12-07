@@ -247,6 +247,14 @@ ol li .genInfo {
 .menu-list li:hover{
 	background-color: #205c73;
 }*/
+#login-container {
+	height: 100%;
+	width: 88%;
+	float: right;
+	position: relative;
+	margin-top: 4em;
+	margin-left: 4em;
+}
 
 #marquee-container {
 	height: 100%;
@@ -335,7 +343,7 @@ ol li .genInfo {
 }
 
 #empList {
-	margin-top: 1em;
+	margin-top: 97px;
 }
 
 #marquee-employee-data {
@@ -538,7 +546,7 @@ div#addressContainer div {
 
 #accordion a {
 	display: block;
-	height: 4em;
+	height: 3em;
 }
 
 #accordion .panelRow {
@@ -636,15 +644,7 @@ div.panelBodyContainer table tr {
 }
 
 .absoluteContainer {
-	/*background-color: grey;*/
-	/*position: fixed;*/
-	/*float: none;*/
-	/*width: 60%;*/
-	/*height: 10%;*/
-	/*z-index: 1000;*/
-	/*display: block;*/
-	/*right: 0;*/
-	/*bottom: 0;*/
+	margin: 1em 1em;
 }
 
 #descriptionSection {
@@ -748,4 +748,50 @@ div.listLabelRow div.inner-col-right label {
 .listLabelRow .inner-col-right {
 	width: 28%;
 	float: right;
+}
+
+.panel-group {
+	margin: 1em 1em !important;
+}
+
+.panel-heading {
+	padding: 0 0 !important;
+}
+
+a:focus, a:hover {
+	text-decoration: none;
+}
+
+h4.panel-title a {
+	padding: 0.9em 1.5em;
+}
+
+#employeeListContainer {
+	width: 100%;
+}
+
+.employeeRequestRow {
+	height: 5em;
+	border-bottom: 1px solid darkgrey;
+}
+
+.employeeRequestRow div.personalInfo {
+	width: 80%;
+	float: left;
+}
+
+.employeeRequestRow div.requestActionButtons {
+	width: 20%;
+	float: right;
+	height: inherit;
+}
+
+#pendingRequests, #acceptedRequests, #deniedRequests, #noRequests {
+	overflow: auto;
+	margin-left: 2em;
+}
+
+.employeeRequestRow div.requestActionButtons button{
+	float: right;
+	margin: 10%;
 }
