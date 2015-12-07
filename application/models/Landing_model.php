@@ -152,7 +152,6 @@ class Landing_model extends CI_model
             array_push($departments, $department);
         }
         //return the list of departments
-        print_r($departments);
         return $departments;
     }
 
@@ -175,6 +174,33 @@ class Landing_model extends CI_model
         return $query->num_rows();
 
 
+    }
+
+    public function getEmployeesForDepartment($department) {
+
+        $this->db->from('person');
+        $this->db->where(array('person.department' => "$department"));
+        $this->db->join('request', 'person.empID = request.empID', 'left');
+        $this->db->order_by("status", "asc");
+        $query = $this->db->get();
+
+        // re-add the person's empID in the event they don't have a request
+        $employees = [];
+        foreach ($query->result_array() as $row) {
+            $pawprint = $row['pawprint'];
+
+            $this->db->select('empID');
+            $this->db->from('person');
+            $this->db->where(array('pawprint' => "$pawprint"));
+            $query = $this->db->get();
+            $personID = $query->result_array()[0]['empID'];
+
+            $employee = $row;
+            $employee['empID'] = $personID;
+            array_push($employees, $employee);
+        }
+
+        return $employees;
     }
 
 

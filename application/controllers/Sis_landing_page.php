@@ -57,4 +57,18 @@ class Sis_landing_page extends CI_Controller
         $this->load->view('sis_home_view', $data);
 
     }
+
+    public function getRowDataForKey() {
+
+        // Extract the pawprint key
+        $department = $this->input->post('department');
+
+        // Get all the employees for the department
+        $employees = $this->landing_model->getEmployeesForDepartment($department);
+
+
+        $returnData['employees'] = $employees;
+
+        echo json_encode($returnData);
+    }
 }

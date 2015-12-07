@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <script src="<?php echo base_url();?>/assets/javascripts/landing_page.js"></script>
+    <script src="<?php echo base_url();?>/assets/javascripts/selectDepartment.js"></script>
     <script src="<?php echo base_url();?>/assets/javascripts/reviewForm.js"></script>
     <script src="<?php echo base_url();?>/assets/javascripts/submitForm.js"></script>
     <script src="<?php echo base_url();?>/assets/javascripts/search.js"></script>
@@ -76,7 +76,43 @@
         </div>
 
         <div id="marquee-employee-info" class="column-right">
+            <!-- The form for the employee -->
+            <div id="employeeListContainer">
+                <div class="infoHeader">
+                    <div id="empName">
+                        <h1 id="employeeName">Department</h1>
+                    </div>
+                    <input type="hidden" id="formPawprint" name="pawprint" value="">
+                    <input type="hidden" id="formRequestID" name="request_ID" value="">
+                    <input type="hidden" id="empIDForm" name="empID" value="">
+                    <div id="generalInfoHeader" class="formHeader">
+                        <h4>Pending Requests</h4>
+                    </div>
+                </div>
+                <div id="generalInfoSection">
+                    <div id="pendingRequests">
 
+                    </div>
+                    <div class="formHeader">
+                        <h4>Approved Requests</h4>
+                    </div>
+                    <div id="acceptedRequests">
+
+                    </div>
+                    <div class="formHeader">
+                        <h4>Denied Requests</h4>
+                    </div>
+                    <div id="deniedRequests">
+
+                    </div>
+                    <div class="formHeader">
+                        <h4>No Request Created</h4>
+                    </div>
+                    <div id="noRequests">
+
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

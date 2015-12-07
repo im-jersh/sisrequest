@@ -757,3 +757,27 @@ a:focus, a:hover {
 h4.panel-title a {
 	padding: 0.9em 1.5em;
 }
+
+#employeeListContainer {
+	width: 100%;
+}
+
+.employeeRequestRow {
+	height: 4em;
+	/*border-bottom: 1px solid darkgrey;*/
+}
+
+.employeeRequestRow div.personalInfo {
+	width: 80%;
+	float: left;
+}
+
+.employeeRequestRow div.requestActionButtons {
+	width: 20%;
+	float: right;
+}
+
+#pendingRequests, #acceptedRequests, #deniedRequests, #noRequests {
+	overflow: auto;
+	margin-left: 2em;
+}
