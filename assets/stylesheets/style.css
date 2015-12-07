@@ -334,6 +334,10 @@ ol li .genInfo {
 	z-index: 1000;
 }
 
+#empList {
+	margin-top: 1em;
+}
+
 #marquee-employee-data {
 	text-align: left;
 	background-color:#C8C8C8;
@@ -391,7 +395,7 @@ ol li .genInfo {
 	padding-top: 3% !important;
 	font-family: "Helvetica Neue";
 	font-size: 1.2em;
-	font-weight: 300;
+	font-weight: 400;
 	border-bottom: ;
 }
 
@@ -399,15 +403,15 @@ ol li .genInfo {
 	box-shadow: none;
 	font-family: "Helvetica Neue";
 	font-size: .9em;
-	font-weight: lighter;
+	font-weight: 200;
 }
 
 h1#employeeName {
 	margin: 0 auto;
 	text-align: left;
-	padding: 4px 0 4px 0.5em;
 	font-family: "Helvetica Neue";
 	font-weight: 300;
+	height: inherit;
 }
 
 .formHeader {
@@ -643,6 +647,105 @@ div.panelBodyContainer table tr {
 	/*bottom: 0;*/
 }
 
-#reviewBoxes input[type="checkbox"] {
+#descriptionSection {
+	margin: 1em 1em;
+	width: 85%;
+}
 
+#requestInfo {
+	height: auto !important;
+}
+
+#requestDescription {
+	width: 97%;
+	resize: vertical;
+	overflow: auto;
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+	color: #7E7E7E;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+	color: #7E7E7E;
+	opacity: 1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+	color: #7E7E7E;
+	opacity: 1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+	color: #7E7E7E;
+}
+
+#requestInfo div.checkbox {
+	margin: 1em 1em;
+}
+
+#requestInfo div.checkbox label {
+	margin: 0 2em;
+}
+
+#listLabels {
+	width: 100%;
+	height: 27px;
+	box-shadow: inset 0px 1px 0px #333333, 0px 1px 0px 0px #333333, 0px 0px 0px #333333;
+}
+
+#search-bar {
+	height: 5em;
+}
+
+#fixedSearchArea {
+	background-color: #F1BF4E;
+	position: fixed;
+	z-index: 1000;
+	width: 30.8%;
+	height: 7em;
+}
+
+#listLabels div.listLabelRow {
+	height: inherit;
+}
+
+#listLabels div.listLabelRow div {
+	height: inherit;
+	display: table-cell;
+}
+
+#listLabels div.listLabelRow div label {
+	height: inherit;
+	color: black;
+	font-size: 1.3em;
+	font-weight: 400;
+}
+
+div.listLabelRow div.inner-col-left {
+	margin-left: 4px;
+}
+
+div.listLabelRow div.inner-col-right label {
+	margin-right: 3.5em;
+}
+
+.infoHeader {
+	height: 7em;
+}
+
+.infoHeader #empName {
+	height: 5em;
+	padding: 1em 0 0 1em;
+
+}
+
+#listLabels table tr td {
+	padding-left: 1em;
+}
+
+.listLabelRow .inner-col-left {
+	width: 65%;
+}
+
+.listLabelRow .inner-col-right {
+	width: 28%;
+	float: right;
 }

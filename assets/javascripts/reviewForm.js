@@ -10,11 +10,27 @@ $(document).ready(function() {
         formError.addClass('hide');
         formError.empty();
 
+        // Get academic careers checkbox
+        var academicCareersCheckboxes = document.getElementById('careerCheckboxes').getElementsByTagName("input");
+        var checkboxWasChecked;
+        $.each(academicCareersCheckboxes, function() {
+            if (this.type == 'checkbox') {
+                if (this.checked == true) {
+                    checkboxWasChecked = '1';
+                }
+            }
+        });
+
         // Get all form values
         var formData = {
             title: $('#title').val(),
             phone_number: $('#phone_number').val(),
-            campus_address: $('#campus_address').val()
+            campus_address: $('#campus_address').val(),
+            campus_address_city: $('#campus_address_city').val(),
+            campus_address_zipcode: $('#campus_address_zipcode').val(),
+            campus_address_state: $('#campus_address_state').val(),
+            requestDescription: $('#requestDescription').val(),
+            academicCareers: checkboxWasChecked
         };
 
         $.ajax({
@@ -37,9 +53,26 @@ $(document).ready(function() {
                     document.getElementById("employeeNameReview").innerHTML = document.getElementById("employeeName").innerHTML;
                     document.getElementById("empIDReview").innerHTML = document.getElementById("empID").innerHTML;
                     document.getElementById("pawprintReview").innerHTML = document.getElementById("empID").innerHTML;
+                    document.getElementById("ferpaReview").innerHTML = document.getElementById("ferpa_score").innerHTML;
                     document.getElementById("titleReview").innerHTML = document.getElementById("title").value;
                     document.getElementById("phone_numberReview").innerHTML = document.getElementById("phone_number").value;
-                    document.getElementById("campus_addressReview").innerHTML = document.getElementById("campus_address").value;
+                    document.getElementById("campus_addressReview").innerHTML = document.getElementById("campus_address").value + "<br>" + document.getElementById("campus_address_apt").value + "<br>" + document.getElementById("campus_address_city").value + ", " + document.getElementById("campus_address_state").value  + " " + document.getElementById("campus_address_zipcode").value;
+                    document.getElementById("requestDescriptionReview").innerHTML = document.getElementById("requestDescription").value;
+
+                    // Add the academic careers checkboxes and remove those that are not checked
+                    $("#academicCareersReview").empty();
+                    $("#academicCareersReview").append($("#careerCheckboxes").clone());
+                    $("#academicCareersReview").find("h5").remove();
+                    $.each($("#academicCareersReview").find("input"), function() {
+                        if (this.type == 'checkbox') {
+                            if (this.checked == false) {
+                                $("#academicCareersReview label[for='" + this.id +"']").remove();
+                            } else {
+                                this.disabled = true;
+                            }
+                        }
+                    });
+
 
                     // Clear any previously appended sections and then reappend
                     $("#studentRecordsAccessReview").empty();

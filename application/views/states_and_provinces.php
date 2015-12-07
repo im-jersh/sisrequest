@@ -6,7 +6,7 @@
  * Time: 1:41 PM
  */
 ?>
-    <select id="stateSelection" class="form-control">
+    <select name="campus_address_state" id="campus_address_state" class="form-control">
         <option value="Alabama">Alabama</option>
         <option value="Alaska">Alaska</option>
         <option value="Arizona">Arizona</option>

@@ -12,8 +12,9 @@
     <script src="<?php echo base_url();?>/assets/javascripts/landing_page.js"></script>
 	<script src="<?php echo base_url();?>/assets/javascripts/reviewForm.js"></script>
 	<script src="<?php echo base_url();?>/assets/javascripts/submitForm.js"></script>
+	<script src="<?php echo base_url();?>/assets/javascripts/search.js"></script>
+	<script src="<?php echo base_url();?>/assets/javascripts/maskedinput.js" type="text/javascript"></script>
 	<link rel="stylesheet" href="<?php echo base_url();?>/assets/stylesheets/styleSearch.css" type="text/css">
-    <script src="<?php echo base_url();?>/assets/javascripts/search.js"></script>
 </head>
 <body>
 <div id="site-container">
@@ -40,28 +41,38 @@
     </div>
     <div id="marquee-container">
         <div id="marquee-employees" class="column-left">
+			
+			<div id="fixedSearchArea" class="infoHeader">
+                <div id="search-bar">
+                    <form class="search-container" role="form">
+						<div class="form-group has-feedback has-feedback-left">
+							<input id="search-box" type="text" class="search-box form-control" name="q" placeholder="Search Employees"/>
+							<i id="searchMag" class="form-control-feedback glyphicon glyphicon-search"></i>
+						</div>
+					</form>
+                </div>
+				<div id="listLabels">
+					<div class="listLabelRow">
+						<div class="inner-col-left">
+							<label>Employee</label>
+						</div>
+						<div class="inner-col-right">
+							<label>Status</label>
+						</div>
+					</div>
+				</div>
+			</div>
 
-            <table id="data-list">
-                <tr>
-                    <th>
-                        <div">
-                            <form class="search-container" >
-                                <input style="padding-left: 10px;" id="search-box" type="text" class="search-box" name="q" />
-                                <img class="searchBut" for="search-box" src="<?php echo base_url();?>/assets/images/Search-button.png">
-                                <label for="search-box"><span>Employee</span></label>
-                            </form>
-                        </div>
-
-                    </th>
-                    <th style="text-align: left; padding-left: 50px;"> Status </th>
-                </tr>
-                <!-- print out the generic list of data  -->
-                <?php
-                foreach ($printListData as $row) {
-                    echo $row;
-                };
-                ?>
-            </table>
+			<div id="empList">
+				<table id="data-list">
+					<!-- print out the generic list of data  -->
+					<?php
+					foreach ($printListData as $row) {
+						echo $row;
+					};
+					?>
+				</table>
+			</div>
 
         </div>
 
@@ -69,17 +80,22 @@
 			<!-- The form for the employee -->
 			<?php echo form_open('landing_page/validateForm', array('name'=>'requestForEmployee', 'id'=>'SISrequestForm', 'role'=>'form')); ?>
 				<div id="formContainer">
-
-					<h1 id="employeeName">Employee</h1>
-					<input type="hidden" id="formPawprint" name="pawprint" value="">
-					<input type="hidden" id="formRequestID" name="request_ID" value="">
-					<div id="generalInfoHeader" class="formHeader">
-						<h4>General Information</h4>
+					<div class="infoHeader">
+						<div id="empName">
+							<h1 id="employeeName">Employee</h1>
+						</div>
+						<input type="hidden" id="formPawprint" name="pawprint" value="">
+						<input type="hidden" id="formRequestID" name="request_ID" value="">
+						<input type="hidden" id="empIDForm" name="empID" value="">
+						<div id="generalInfoHeader" class="formHeader">
+							<h4>General Information</h4>
+						</div>
 					</div>
 					<div id="generalInfoSection">
 						<div class="singleRowTwoColumn topSection">
 							<div class="inner-col-left"><h5>Employee ID</h5><p id="empID"></p></div>
 							<div class="inner-col-right"><h5>PawPrint/SSO</h5><p id="pawprint"></p></div>
+							<div class="inner-col-right"><h5>FERPA Score</h5><p id="ferpa_score"></p></div>
 						</div>
 						<div class="singleRowTwoColumn middleSection form-group">
 							<div class="inner-col-left">
@@ -106,6 +122,20 @@
 									<br>
 									<input type="text" id="campus_address_zipcode" name="campus_address_zipcode" placeholder="Zipcode" class="form-control"/>
 								</div>
+							</div>
+						</div>
+						<div id="requestInfo" class="bottomSection singleRowSingleColumn">
+							<div id="descriptionSection" class="form-group">
+								<h5>Description *</h5>
+								<textarea id="requestDescription" class="form-control" name="descriptionTextbox" placeholder="Please describe in 500 words or less the type of access needed (i.e. view student name, address, rosters, etc.). Please be specific."></textarea>
+							</div>
+							<div id="careerCheckboxes" class="checkbox">
+								<h5>Select the academic career(s). Please check all that apply. *</h5>
+								<label for="UGRD"><input name="UGRD" type="checkbox" id="UGRD" value="1">UGRD</label>
+								<label for="GRAD"><input name="GRAD" type="checkbox" id="GRAD" value="1">GRAD</label>
+								<label for="MED"><input name="MED" type="checkbox" id="MED" value="1">MED</label>
+								<label for="VET_MED"><input name="VET_MED" type="checkbox" id="VET_MED" value="1">VET MED</label>
+								<label for="LAW"><input name="LAW" type="checkbox" id="LAW" value="1">LAW</label>
 							</div>
 						</div>
 					</div>
@@ -440,26 +470,30 @@
 			<div id="formReview" class="modal-body">
 				<div>
 					<h1 id="employeeNameReview"></h1>
-					<h5>Employee ID</h5><p id="empIDReview"></p>
-					<h5>PawPrint/SSO</h5><p id="pawprintReview"></p>
-					<h5>Job Title</h5><p id="titleReview"></p>
-					<h5>Phone Number</h5><p id="phone_numberReview"></p>
-					<h5>Campus Address</h5><p id="campus_addressReview"></p>
+					<h4>Employee ID</h4><p id="empIDReview"></p>
+					<h4>PawPrint/SSO</h4><p id="pawprintReview"></p>
+					<h4>FERPA Score</h4><p id="ferpaReview"></p>
+					<h4>Job Title</h4><p id="titleReview"></p>
+					<h4>Phone Number</h4><p id="phone_numberReview"></p>
+					<h4>Campus Address</h4><p id="campus_addressReview"></p>
+					<h4>Description</h4><p id="requestDescriptionReview"></p>
+					<h4>Academic Career(s)</h4>
+					<div id="academicCareersReview"></div>
 				</div>
 				<div id="reviewBoxes">
-					<h5>Student Records Access</h5>
+					<h4>Student Records Access</h4>
 					<div id="studentRecordsAccessReview">
 					</div>
-					<h5>Admissions Access</h5>
+					<h4>Admissions Access</h4>
 					<div id="admissionAccessReview">
 					</div>
-					<h5>Student Financials (Cashiers) Access</h5>
+					<h4>Student Financials (Cashiers) Access</h4>
 					<div id="cashiersAccessReview">
 					</div>
-					<h5>Financial Aid Access</h5>
+					<h4>Financial Aid Access</h4>
 					<div id="financialAidAccessReview">
 					</div>
-					<h5>Reserved Access</h5>
+					<h4>Reserved Access</h4>
 					<div id="reservedAccessReview">
 					</div>
 				</div>

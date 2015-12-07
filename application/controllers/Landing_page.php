@@ -21,6 +21,27 @@ class Landing_page extends CI_Controller {
 
     public function index() {
 
+
+		if ($this->session->userdata('pawprint') == null){
+            redirect('login');
+        }
+	
+        // Check who logged in
+        if ($this->session->userdata('sis_authority') == 0) { // this user is an admin
+
+            $this->adminLoggedIn();
+
+        } else if ($this->session->userdata('sis_authority') == 1) { // this user is SIS employee
+
+            $this->sisLoggedIn();
+
+        }
+
+    }
+
+
+    public function adminLoggedIn() {
+
         // Get the employees associated with this user
         $empID = $this->session->userdata('empID');
         self::$listData['employees'] = $this->landing_model->getEmployees($empID);
@@ -113,7 +134,12 @@ class Landing_page extends CI_Controller {
         // Set the rules for the form field
         $this->form_validation->set_rules('title', 'Job Title', 'trim|required');
         $this->form_validation->set_rules('phone_number', 'Phone Number', 'required|exact_length[14]|trim');
-        $this->form_validation->set_rules('campus_address', 'Campus Address', 'required|trim');
+        $this->form_validation->set_rules('campus_address', 'Street Address', 'required|trim');
+        $this->form_validation->set_rules('campus_address_city', 'City', 'required|trim');
+        $this->form_validation->set_rules('campus_address_state', 'State', 'required');
+        $this->form_validation->set_rules('campus_address_zipcode', 'Zipcode', 'required|trim|exact_length[5]|numeric');
+        $this->form_validation->set_rules('requestDescription', 'Request Description', 'required|max_length[500]');
+        $this->form_validation->set_rules('academicCareers', 'Academic Career', 'required');
 
 
         // Run the validation
@@ -130,22 +156,18 @@ class Landing_page extends CI_Controller {
 
     public function submitForm() {
 
-        // Load the the model's for saving
+        // @todo: Fetch the records first in order to revert in case any one update fails
+
+        // Load the models for saving
         $this->load->model('person_model');
+        $this->load->model('request_model');
 
         // Extract the form data from the global POST
         $serializedObject = $this->input->post('formData');
 
-        // Extract our required general info data
-        $pawprint = $serializedObject['pawprint'];
-        $genInfo = array(
-            'title' => $serializedObject['title'],
-            'phone_number' => $serializedObject['phone_number'],
-            'campus_address' => $serializedObject['campus_address']
-        );
-
         // Save to database
-        $this->person_model->saveGeneralInfoForPerson($pawprint, $genInfo);
+        $this->person_model->saveGeneralInfo($serializedObject);
+        $this->request_model->saveRequestInfo($serializedObject);
 
 
         echo json_encode($serializedObject);
