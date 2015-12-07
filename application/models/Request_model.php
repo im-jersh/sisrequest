@@ -12,6 +12,34 @@ class Request_model extends CI_Model {
         parent::__construct();
     }
 
+    public function fetchRequestWithEmpID($empID){
+
+        // Get the employee's information first
+        $this->db->where(array('empID' => $empID));
+        $query = $this->db->get('person');
+
+        $employee = $query->result_array()[0];
+
+        // Get the employee's request info
+        $this->db->where(array('empID' => $empID));
+        $query = $this->db->get('request');
+
+        $request = $query->result_array()[0];
+
+        // Get the request's affiliated request types
+        $this->db->where(array('request_ID' => $request['request_ID']));
+        $query = $this->db->get('requesttypes');
+
+        $requesttypes = $query->result_array()[0];
+
+        // Compile the person
+        $request['data'] = $requesttypes;
+        $this->load->model('landing_model');
+        $request['types'] = landing_model::$accessTypeKeys;
+        $employee['request'] = $request;
+
+        return $employee;
+    }
 
     public function saveRequestInfo($serializedObject) {
 

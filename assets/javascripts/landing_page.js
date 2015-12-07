@@ -78,12 +78,7 @@ $(document).ready(function() {
                     }
                 }
 
-                // Update the academic careers checkboxes
-                $.each($('#careerCheckboxes').find("input"), function(){
-                    if (employee['request'][this.id] == '1') {
-                        this.checked = true;
-                    }
-                });
+
 
                 // Populate the form with the selected person's request data
                 if (accessTypes['data'].length > 0) {

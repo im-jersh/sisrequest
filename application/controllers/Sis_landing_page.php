@@ -71,4 +71,47 @@ class Sis_landing_page extends CI_Controller
 
         echo json_encode($returnData);
     }
+
+    public function getRequestForEmployee() {
+
+        // Get the employee's ID from the POST data
+        $empID = $this->input->post('empID');
+
+        // Get the request info for the employee
+        $this->load->model('request_model');
+        $employeeWithRequest = $this->request_model->fetchRequestWithEmpID($empID);
+
+        echo json_encode($employeeWithRequest);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
