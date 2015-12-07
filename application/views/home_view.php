@@ -63,7 +63,7 @@
 				</div>
 			</div>
 
-<<<<<<< HEAD
+
 			<div id="empList">
 				<table id="data-list">
 					<!-- print out the generic list of data  -->
@@ -74,29 +74,6 @@
 					?>
 				</table>
 			</div>
-=======
-            <table id="data-list">
-                <tr>
-                    <th>
-                        <div>
-                            <form class="search-container" >
-                                <input style="padding-left: 10px;" id="search-box" type="text" class="search-box" name="q" />
-                                <img class="searchBut" for="search-box" src="<?php echo base_url();?>/assets/images/Search-button.png">
-                                <label for="search-box"><span>Employee</span></label>
-                            </form>
-                        </div>
-
-                    </th>
-                    <th style="text-align: left; padding-left: 50px;"> Status </th>
-                </tr>
-                <!-- print out the generic list of data  -->
-                <?php
-                foreach ($printListData as $row) {
-                    echo $row;
-                };
-                ?>
-            </table>
->>>>>>> cde9d5
 
         </div>
 
