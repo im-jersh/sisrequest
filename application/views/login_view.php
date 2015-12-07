@@ -39,7 +39,7 @@
 
         </ul>
     </div>
-    <div class="row" id="marquee-container">
+    <div class="row" id="login-container">
         <div class="col-lg-4 col-sm-4 well">
             <?php
             $attributes = array("class" => "form-horizontal", "id" => "loginform", "name" => "loginform");

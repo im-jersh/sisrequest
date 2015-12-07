@@ -23,7 +23,7 @@
 
             </div>
         </div>
-        <p"> Security Request</p>
+        <p> Security Request</p>
         <ul class="menu-list">
 
             <li>
@@ -44,7 +44,7 @@
             <table id="data-list">
                 <tr>
                     <th>
-                        <div">
+                        <div>
                             <form class="search-container" >
                                 <input style="padding-left: 10px;" id="search-box" type="text" class="search-box" name="q" />
                                 <img class="searchBut" for="search-box" src="<?php echo base_url();?>/assets/images/Search-button.png">

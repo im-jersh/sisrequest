@@ -24,9 +24,9 @@ class Sis_landing_page extends CI_Controller
         $this->navigationItem = 'Departments';
 
         // Get all the department
-        $this->listData = $this->landing_model->getDepartments();
+        self::$listData = $this->landing_model->getDepartments();
 
-        foreach ($this->listData as $item) {
+        foreach (self::$listData as $item) {
             array_push($this->printListData,
                 '<tr id="'. $item .'" class="outerRow">' . '<td>' . $item . '</td><td></td></tr>'
             );

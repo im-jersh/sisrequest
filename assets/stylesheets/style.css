@@ -247,14 +247,20 @@ ol li .genInfo {
 .menu-list li:hover{
 	background-color: #205c73;
 }*/
-
-#marquee-container {
+#login-container {
 	height: 100%;
 	width: 88%;
 	float: right;
 	position: relative;
 	margin-top: 4em;
 	margin-left: 4em;
+}
+
+#marquee-container {
+	height: 100%;
+	width: 88%;
+	float: right;
+	position: relative;
 }
 
 #marquee-container .column-left {
