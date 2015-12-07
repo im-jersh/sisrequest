@@ -253,6 +253,8 @@ ol li .genInfo {
 	width: 88%;
 	float: right;
 	position: relative;
+	margin-top: 4em;
+	margin-left: 4em;
 }
 
 #marquee-container .column-left {
