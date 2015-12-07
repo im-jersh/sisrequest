@@ -24,7 +24,7 @@
 
             </div>
         </div>
-        <p"> Security Request</p>
+        <p> Security Request</p>
         <ul class="menu-list">
 
             <li>
@@ -61,6 +61,7 @@
 					</div>
 				</div>
 			</div>
+
 
 			<div id="empList">
 				<table id="data-list">

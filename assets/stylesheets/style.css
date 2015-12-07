@@ -4,7 +4,7 @@ body{
 	font-family: Helvetica, Arial, sans-serif;
 	color: #222;
 	margin: 0;
-	font-size: 13px;
+	font-size; 13px;
 	line-height: 1.231;
 	display: block;
 }
@@ -157,6 +157,7 @@ table {
 	background-position: 0 0;
 	height: 72px;
 	width: 419px;
+	background: url(C:/Users/derek/Documents/GitHub/sisrequest/assets/images/box.jpg) no-repeat;
 }
 
 .searchBut {
@@ -196,7 +197,7 @@ ul, menu, dir {
 	-webkit-margin-start: 0px;
 	-webkit-margin-end: 0px;
 	-webkit-padding-start: 40px;
-	position: absolute;
+	position absolute;
 }
 
 form {
@@ -246,6 +247,14 @@ ol li .genInfo {
 .menu-list li:hover{
 	background-color: #205c73;
 }*/
+#login-container {
+	height: 100%;
+	width: 88%;
+	float: right;
+	position: relative;
+	margin-top: 4em;
+	margin-left: 4em;
+}
 
 #marquee-container {
 	height: 100%;
@@ -501,7 +510,7 @@ div#campusAddress.singleRowTwoColumn.bottomSection {
 }
 
 div#campusAddress.inner-col-right {
-	padding-top: 2.5em;
+	padding-top 2.5em;
 }
 
 div#campusAddress div#addressContainer {
@@ -762,8 +771,8 @@ h4.panel-title a {
 }
 
 .employeeRequestRow {
-	height: 5em;
-	border-bottom: 1px solid darkgrey;
+	height: 4em;
+	/*border-bottom: 1px solid darkgrey;*/
 }
 
 .employeeRequestRow div.personalInfo {
@@ -774,15 +783,9 @@ h4.panel-title a {
 .employeeRequestRow div.requestActionButtons {
 	width: 20%;
 	float: right;
-	height: inherit;
 }
 
 #pendingRequests, #acceptedRequests, #deniedRequests, #noRequests {
 	overflow: auto;
 	margin-left: 2em;
-}
-
-.employeeRequestRow div.requestActionButtons button {
-	float: right;
-	margin: 10%;
 }

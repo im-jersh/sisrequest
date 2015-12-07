@@ -21,6 +21,7 @@ class Landing_page extends CI_Controller {
 
     public function index() {
 
+
 		if ($this->session->userdata('pawprint') == null){
             redirect('login');
         }
