@@ -6,7 +6,14 @@
     <title>SISRequest Login</title>
     <!--link the bootstrap css file-->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="<?php echo base_url();?>/assets/stylesheets/style.css" type="text/css">
+    <link rel="stylesheet" href="<?php echo base_url();?>/assets/stylesheets/liStyle.css" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="<?php echo base_url();?>/assets/stylesheets/styleSearch.css" type="text/css">
+    <script src="<?php echo base_url();?>/assets/javascripts/search.js"></script>
     <style type="text/css">
         .colbox {
             margin-left: 0px;
@@ -16,23 +23,23 @@
 </head>
 <body>
 <div class="container">
-    <div class="row">
-        <div class="col-lg-6 col-sm-6">
-            <h1>SISREQUEST</h1>
+    <div id="menu">
+        <div>
+            <div class="nav-logo">
+            </div>
         </div>
-        <div class="col-lg-6 col-sm-6">
+        <p"> Security Request</p>
+        <ul class="menu-list">
+            <li>
+                <a href="<?php echo base_url('Login'); ?>" ><p class="nav-text active">Login</p></a>
+            </li>
+            <li>
+                <a href="<?php echo base_url('Documentation'); ?>" ><p class="nav-text"">Documentation</p></a>
+            </li>
 
-            <ul class="nav nav-pills pull-right" style="margin-top:20px">
-                <li class="active"><a href="#">Login</a></li>
-            </ul>
-
-        </div>
+        </ul>
     </div>
-</div>
-<hr/>
-
-<div class="container">
-    <div class="row">
+    <div class="row" id="login-container">
         <div class="col-lg-4 col-sm-4 well">
             <?php
             $attributes = array("class" => "form-horizontal", "id" => "loginform", "name" => "loginform");
@@ -74,7 +81,7 @@
             <?php echo $this->session->flashdata('msg'); ?>
         </div>
     </div>
-</div>
+<</div>
 
 <!--load jQuery library-->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>

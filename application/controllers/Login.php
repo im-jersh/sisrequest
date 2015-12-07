@@ -48,9 +48,15 @@ class Login extends CI_Controller {
                      ); */
 
                     // $this->session->set_userdata($sessiondata);
+                    if ($this->session->userdata('sis_authority') == 0) { // this user is an admin
 
+                        redirect('landing_page');
 
-                    redirect("landing_page");
+                    } else if ($this->session->userdata('sis_authority') == 1) { // this user is SIS employee
+
+                        redirect('Sis_landing_page');
+
+                    }
 
                 } else {
                     $this->session->set_flashdata('msg', '<div class="alert alert-danger text-center">Invalid username and password.</div>');
