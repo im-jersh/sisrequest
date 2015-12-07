@@ -771,8 +771,8 @@ h4.panel-title a {
 }
 
 .employeeRequestRow {
-	height: 4em;
-	/*border-bottom: 1px solid darkgrey;*/
+	height: 5em;
+	border-bottom: 1px solid darkgrey;
 }
 
 .employeeRequestRow div.personalInfo {
@@ -783,9 +783,15 @@ h4.panel-title a {
 .employeeRequestRow div.requestActionButtons {
 	width: 20%;
 	float: right;
+	height: inherit;
 }
 
 #pendingRequests, #acceptedRequests, #deniedRequests, #noRequests {
 	overflow: auto;
 	margin-left: 2em;
+}
+
+.employeeRequestRow div.requestActionButtons button{
+	float: right;
+	margin: 10%;
 }

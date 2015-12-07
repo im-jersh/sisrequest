@@ -45,16 +45,16 @@ $(document).ready(function() {
 
                     switch (this['status']) {
                         case '0':
-                            $("#pendingRequests").append('<div class="employeeRequestRow" id="'+ this['empID'] +'"><div class="personalInfo"><h4>'+ this['fName'] + ' ' + this['lName'] + '</h4><p class="empTitle">'+ this['title'] +'</p></div><div class="requestActionButtons"><button type="button" class="btn btn-default btn-default viewRequestButton" >Review</button></div></div>');
+                            $("#pendingRequests").append('<div class="employeeRequestRow"><div class="personalInfo"><h4>'+ this['fName'] + ' ' + this['lName'] + '</h4><p class="empTitle">'+ this['title'] +'</p></div><div class="requestActionButtons"><button type="button" class="btn btn-default btn-default viewRequestButton"  id="'+ this['empID'] +'">Review</button></div></div>');
                             break;
                         case '1':
-                            $("#acceptedRequests").append('<div class="employeeRequestRow" id="'+ this['empID'] +'"><div class="personalInfo"><h4>'+ this['fName'] + ' ' + this['lName'] + '</h4><p class="empTitle">'+ this['title'] +'</p></div><div class="requestActionButtons"><button type="button" class="btn btn-default btn-default viewRequestButton" >Review</button></div></div>');
+                            $("#acceptedRequests").append('<div class="employeeRequestRow"><div class="personalInfo"><h4>'+ this['fName'] + ' ' + this['lName'] + '</h4><p class="empTitle">'+ this['title'] +'</p></div><div class="requestActionButtons"><button type="button" class="btn btn-default btn-default viewRequestButton"  id="'+ this['empID'] +'">Review</button></div></div>');
                             break;
                         case '2':
-                            $("#deniedRequests").append('<div class="employeeRequestRow" id="'+ this['empID'] +'"><div class="personalInfo"><h4>'+ this['fName'] + ' ' + this['lName'] + '</h4><p class="empTitle">'+ this['title'] +'</p></div><div class="requestActionButtons"><button type="button" class="btn btn-default btn-default viewRequestButton" >Review</button></div></div>');
+                            $("#deniedRequests").append('<div class="employeeRequestRow"><div class="personalInfo"><h4>'+ this['fName'] + ' ' + this['lName'] + '</h4><p class="empTitle">'+ this['title'] +'</p></div><div class="requestActionButtons"><button type="button" class="btn btn-default btn-default viewRequestButton"  id="'+ this['empID'] +'">Review</button></div></div>');
                             break;
                         default:
-                            $("#noRequests").append('<div class="employeeRequestRow" id="'+ this['empID'] +'"><div class="personalInfo"><h4>'+ this['fName'] + ' ' + this['lName'] + '</h4><p class="empTitle">'+ this['title'] +'</p></div><div class="requestActionButtons"><button type="button" class="btn btn-default btn-default viewRequestButton" >Review</button></div></div>');
+                            $("#noRequests").append('<div class="employeeRequestRow"><div class="personalInfo"><h4>'+ this['fName'] + ' ' + this['lName'] + '</h4><p class="empTitle">'+ this['title'] +'</p></div><div class="requestActionButtons"><button type="button" class="btn btn-default btn-default viewRequestButton"  id="'+ this['empID'] +'">Review</button></div></div>');
                             break;
                     }
 
