@@ -499,11 +499,30 @@
 				</div>
 			</div>
 			<div class="modal-footer">
-				<button id="formSubmit" type="button" class="btn btn-default btn-success" >Submit</button>
+				<button id="formSubmit" type="button" class="btn btn-default btn-success"  data-dismiss="modal">Submit</button>
 				<button type="button" class="btn btn-default btn-danger" data-dismiss="modal">Cancel</button>
 			</div>
 		</div>
 
+	</div>
+</div>
+
+
+<div id="messageModal" class="modal fade" role="dialog">
+	<div class="modal-dialog modal-sm">
+		<!-- Modal content-->
+		<div class="modal-content">
+			<div id="modalMessageHeader" class="modal-header">
+
+			</div>
+			<div id="modalMessageContent">
+
+			</div>
+			<div id="modalMessageFooter" class="modal-footer">
+				<button id="formSubmit" type="button" class="btn btn-default btn-primary" data-dismiss="modal">OK</button>
+				<button type="button" class="btn btn-default btn-default" data-dismiss="modal">Cancel</button>
+			</div>
+		</div>
 	</div>
 </div>
 
