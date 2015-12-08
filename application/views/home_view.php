@@ -21,27 +21,26 @@
     <div id="menu">
         <div>
             <div class="nav-logo">
-
+				<img src="<?php echo base_url('/assets/images/MU_Logo.png') ?>" >
             </div>
         </div>
-        <p"> Security Request</p>
+        <h4> Security Request</h4>
         <ul class="menu-list">
 
             <li>
                 <a href="<?php echo base_url('Landing_page'); ?>"><p class="nav-text active"><?php echo $navigationItem; ?></p></a>
             </li>
             <li>
-                <a href="<?php echo base_url('Documentation'); ?>" ><p class="nav-text"">Documentation</p></a>
+                <a href="<?php echo base_url('Documentation'); ?>" ><p class="nav-text""><span class="glyphicon glyphicon-list-alt"></span> Documentation</p></a>
             </li>
             <li>
-                <a href="<?php echo base_url('Logout'); ?>" ><p class="nav-text"">Logout</p></a>
+                <a href="<?php echo base_url('Logout'); ?>" ><p class="nav-text""><span class="glyphicon glyphicon-log-out"></span> Logout</p></a>
             </li>
 
         </ul>
     </div>
     <div id="marquee-container">
         <div id="marquee-employees" class="column-left">
-			
 			<div id="fixedSearchArea" class="infoHeader">
                 <div id="search-bar">
                     <form class="search-container" role="form">
@@ -62,6 +61,7 @@
 					</div>
 				</div>
 			</div>
+
 
 			<div id="empList">
 				<table id="data-list">
@@ -145,7 +145,7 @@
 						<h4>Access Requests</h4>
 					</div>
 					<div class="panel-group" id="accordion">
-						<div class="panel panel-default">
+						<div class="panel">
 							<div class="panel-heading">
 								<h4 class="panel-title">
 									<a class="accordion-toggle collapsed" data-toggle="collapse" href="#collapseOne">
@@ -276,7 +276,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="panel panel-default">
+						<div class="panel">
 							<div class="panel-heading">
 								<h4 class="panel-title">
 									<a class="accordion-toggle collapsed" data-toggle="collapse" href="#collapseTwo">
@@ -312,7 +312,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="panel panel-default">
+						<div class="panel">
 							<div class="panel-heading">
 								<h4 class="panel-title">
 									<a class="accordion-toggle collapsed" data-toggle="collapse" href="#collapseThree">
@@ -347,7 +347,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="panel panel-default">
+						<div class="panel">
 							<div class="panel-heading">
 								<h4 class="panel-title">
 									<a class="accordion-toggle collapsed" data-toggle="collapse" href="#collapseFour">
@@ -382,7 +382,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="panel panel-default">
+						<div class="panel">
 							<div class="panel-heading">
 								<h4 class="panel-title">
 									<a class="accordion-toggle collapsed" data-toggle="collapse" href="#collapseFive">
@@ -441,11 +441,12 @@
 						</div>
 					</div>
 				</div>
-				<div id="formError" class="alert alert-danger text-center hide">
 
-				</div>
 				<div class="absoluteContainer">
 					<div>
+						<div id="formError" class="alert alert-danger text-center hide">
+
+						</div>
 						<div class="form-group">
 							<input class="form-control btn-success" type="submit" value="Review & Submit">
 						</div>
@@ -470,40 +471,84 @@
 			<div id="formReview" class="modal-body">
 				<div>
 					<h1 id="employeeNameReview"></h1>
-					<h4>Employee ID</h4><p id="empIDReview"></p>
-					<h4>PawPrint/SSO</h4><p id="pawprintReview"></p>
-					<h4>FERPA Score</h4><p id="ferpaReview"></p>
-					<h4>Job Title</h4><p id="titleReview"></p>
-					<h4>Phone Number</h4><p id="phone_numberReview"></p>
-					<h4>Campus Address</h4><p id="campus_addressReview"></p>
-					<h4>Description</h4><p id="requestDescriptionReview"></p>
-					<h4>Academic Career(s)</h4>
-					<div id="academicCareersReview"></div>
+
+					<div class="singleRowTwoColumn topSection">
+						<div class="inner-col-left"><h4>Employee ID</h4><p id="empIDReview"></p></div>
+						<div class="inner-col-right"><h4>PawPrint/SSO</h4><p id="pawprintReview"></p></div>
+						<div class="inner-col-right"><h4>FERPA Score</h4><p id="ferpaReview"></p></div>
+					</div>
+
+					<div class="singleRowTwoColumn topSection">
+						<div class="inner-col-left"><h4>Job Title</h4><p id="titleReview"></p></div>
+						<div class="inner-col-right"><h4>Phone Number</h4><p id="phone_numberReview"></p></div>
+						<div class="inner-col-right"><h4>Campus Address</h4><p id="campus_addressReview"></p></div>
+					</div>
+
+					<div class="singleRowTwoColumn topSection">
+						<h4>Description</h4><p id="requestDescriptionReview"></p>
+					</div>
+
+					<div class="singleRowTwoColumn topSection">
+						<h4>Academic Career(s)</h4>
+						<div id="academicCareersReview">
+
+						</div>
+					</div>
+
 				</div>
 				<div id="reviewBoxes">
-					<h4>Student Records Access</h4>
-					<div id="studentRecordsAccessReview">
+					<div>
+						<h4>Student Records Access</h4>
+						<div id="studentRecordsAccessReview">
+						</div>
 					</div>
-					<h4>Admissions Access</h4>
-					<div id="admissionAccessReview">
+					<div>
+						<h4>Admissions Access</h4>
+						<div id="admissionAccessReview">
+						</div>
 					</div>
-					<h4>Student Financials (Cashiers) Access</h4>
-					<div id="cashiersAccessReview">
+					<div>
+						<h4>Student Financials (Cashiers) Access</h4>
+						<div id="cashiersAccessReview">
+						</div>
 					</div>
-					<h4>Financial Aid Access</h4>
-					<div id="financialAidAccessReview">
+					<div>
+						<h4>Financial Aid Access</h4>
+						<div id="financialAidAccessReview">
+						</div>
 					</div>
-					<h4>Reserved Access</h4>
-					<div id="reservedAccessReview">
+					<div>
+						<h4>Reserved Access</h4>
+						<div id="reservedAccessReview">
+						</div>
 					</div>
 				</div>
 			</div>
 			<div class="modal-footer">
-				<button id="formSubmit" type="button" class="btn btn-default btn-success" >Submit</button>
-				<button type="button" class="btn btn-default btn-danger" data-dismiss="modal">Cancel</button>
+				<button id="formSubmit" type="button" class="btn btn-success"  data-dismiss="modal">Submit</button>
+				<button type="button" class="btn btn-default btn-default" data-dismiss="modal">Cancel</button>
 			</div>
 		</div>
 
+	</div>
+</div>
+
+
+<div id="messageModal" class="modal fade" role="dialog">
+	<div class="modal-dialog modal-sm">
+		<!-- Modal content-->
+		<div class="modal-content">
+			<div id="modalMessageHeader" class="modal-header">
+
+			</div>
+			<div id="modalMessageContent">
+
+			</div>
+			<div id="modalMessageFooter" class="modal-footer">
+				<button id="formSubmit" type="button" class="btn btn-default btn-primary" data-dismiss="modal">OK</button>
+				<button type="button" class="btn btn-default btn-default" data-dismiss="modal">Cancel</button>
+			</div>
+		</div>
 	</div>
 </div>
 

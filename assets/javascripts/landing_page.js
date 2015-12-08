@@ -32,9 +32,6 @@ $(document).ready(function() {
             dataType: "json",
             data: { 'pawprint' : tableRowID },
             success: function(returnData) {
-                //ret_val = $.parseJSON(ret_val);
-                //Information returned from controller to append to view
-                //$("<div/>").append($("<h3/>", {text: ret_val['id']}));
 
                 console.log(returnData);
                 var employee = returnData['employee'];
