@@ -37,7 +37,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 //
 //5. in local/database.php, make sure to include username "root" and password is blank
 
-$config['base_url'] = 'http://localhost:8888/sisrequest';
+$config['base_url'] = 'http://localhost:80/sisrequest';
 /*
 |--------------------------------------------------------------------------
 | Index File
@@ -48,7 +48,7 @@ $config['base_url'] = 'http://localhost:8888/sisrequest';
 | variable so that it is blank.
 |
 */
-$config['index_page'] = 'index.php';
+$config['index_page'] = '';
 
 /*
 |--------------------------------------------------------------------------
