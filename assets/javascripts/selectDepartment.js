@@ -3,6 +3,22 @@
  */
 $(document).ready(function() {
 
+    if ($('#pendingRequests').children().length == 0) {
+        $('#pendingRequests').append('<div class="employeeRequestRow"><div class="personalInfo"><h4>No Requests</h4></div></div>');
+    }
+
+    if ($('#acceptedRequests').children().length == 0) {
+        $('#acceptedRequests').append('<div class="employeeRequestRow"><div class="personalInfo"><h4>No Requests</h4></div></div>');
+    }
+
+    if ($('#deniedRequests').children().length == 0) {
+        $('#deniedRequests').append('<div class="employeeRequestRow"><div class="personalInfo"><h4>No Requests</h4></div></div>');
+    }
+
+    if ($('#noRequests').children().length == 0) {
+        $('#noRequests').append('<div class="employeeRequestRow"><div class="personalInfo"><h4>No Requests</h4></div></div>');
+    }
+
     $("#data-list .outerRow").click(function() {
 
         // Hide any error from a previous form review validation
@@ -59,6 +75,22 @@ $(document).ready(function() {
                     }
 
                 });
+
+                if ($('#pendingRequests').children().length == 0) {
+                    $('#pendingRequests').append('<div class="employeeRequestRow"><div class="personalInfo"><h4>No Requests</h4></div></div>');
+                }
+
+                if ($('#acceptedRequests').children().length == 0) {
+                    $('#acceptedRequests').append('<div class="employeeRequestRow"><div class="personalInfo"><h4>No Requests</h4></div></div>');
+                }
+
+                if ($('#deniedRequests').children().length == 0) {
+                    $('#deniedRequests').append('<div class="employeeRequestRow"><div class="personalInfo"><h4>No Requests</h4></div></div>');
+                }
+
+                if ($('#noRequests').children().length == 0) {
+                    $('#noRequests').append('<div class="employeeRequestRow"><div class="personalInfo"><h4>No Requests</h4></div></div>');
+                }
 
 
             }

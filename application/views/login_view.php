@@ -26,15 +26,17 @@
     <div id="menu">
         <div>
             <div class="nav-logo">
+                <img src="<?php echo base_url('/assets/images/MU_Logo.png') ?>" >
             </div>
         </div>
-        <p"> Security Request</p>
+        <h4> Security Request</h4>
         <ul class="menu-list">
+
             <li>
-                <a href="<?php echo base_url('Login'); ?>" ><p class="nav-text active">Login</p></a>
+                <a href="<?php echo base_url('Login'); ?>" ><p class="nav-text active"><span class="glyphicon glyphicon-log-in"></span> Login</p></a>
             </li>
             <li>
-                <a href="<?php echo base_url('Documentation'); ?>" ><p class="nav-text"">Documentation</p></a>
+                <a href="<?php echo base_url('Documentation'); ?>" ><p class="nav-text""><span class="glyphicon glyphicon-list-alt"></span> Documentation</p></a>
             </li>
 
         </ul>

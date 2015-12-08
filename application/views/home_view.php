@@ -21,20 +21,20 @@
     <div id="menu">
         <div>
             <div class="nav-logo">
-
+				<img src="<?php echo base_url('/assets/images/MU_Logo.png') ?>" >
             </div>
         </div>
-        <p> Security Request</p>
+        <h4> Security Request</h4>
         <ul class="menu-list">
 
             <li>
                 <a href="<?php echo base_url('Landing_page'); ?>"><p class="nav-text active"><?php echo $navigationItem; ?></p></a>
             </li>
             <li>
-                <a href="<?php echo base_url('Documentation'); ?>" ><p class="nav-text"">Documentation</p></a>
+                <a href="<?php echo base_url('Documentation'); ?>" ><p class="nav-text""><span class="glyphicon glyphicon-list-alt"></span> Documentation</p></a>
             </li>
             <li>
-                <a href="<?php echo base_url('Logout'); ?>" ><p class="nav-text"">Logout</p></a>
+                <a href="<?php echo base_url('Logout'); ?>" ><p class="nav-text""><span class="glyphicon glyphicon-log-out"></span> Logout</p></a>
             </li>
 
         </ul>
@@ -525,8 +525,8 @@
 				</div>
 			</div>
 			<div class="modal-footer">
-				<button id="formSubmit" type="button" class="btn btn-default btn-success"  data-dismiss="modal">Submit</button>
-				<button type="button" class="btn btn-default btn-danger" data-dismiss="modal">Cancel</button>
+				<button id="formSubmit" type="button" class="btn btn-success"  data-dismiss="modal">Submit</button>
+				<button type="button" class="btn btn-default btn-default" data-dismiss="modal">Cancel</button>
 			</div>
 		</div>
 

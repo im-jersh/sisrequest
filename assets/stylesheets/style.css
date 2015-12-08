@@ -141,13 +141,28 @@ table {
 }
 
 #menu .nav-logo	{
-	margin: 45px auto;
-	text-indent: -9999px;
-	pointer-events: none;
-	background-position: 0 0;
-	height: 125px;
-	width: 125px;
-	/*background: url(C:/Users/derek/Documents/GitHub/sisrequest/assets/images/muClipped.png) no-repeat;*/
+	height: 80%;
+	width: auto;
+	margin: 1em 0;
+}
+
+#menu .nav-logo img	{
+	height: 4em;
+	width: auto;
+}
+
+#menu h4 {
+	color: lightgrey;
+	margin: 1em 1em;
+}
+
+#menu .glyphicon {
+	margin-right: 1em;
+}
+
+#menu p {
+	/*text-align: left;*/
+	/*margin-left: 1.5em !important;*/
 }
 
 #marquee-employee-data  .nav-logo {
