@@ -90,5 +90,31 @@ class Sis_landing_page extends CI_Controller
         echo json_encode($employee);
     }
 
+    public function approveRequestWithID() {
+
+        // get the request ID
+        $requestID = $this->input->post('requestID');
+
+        // Update the request
+        $this->load->model('request_model');
+        $message = $this->request_model->approveRequestWithID($requestID);
+
+        echo $message;
+
+    }
+
+    public function denyRequestWithID() {
+
+        // get the request ID
+        $requestID = $this->input->post('requestID');
+
+        // Update the request
+        $this->load->model('request_model');
+        $message = $this->request_model->denyRequestWithID($requestID);
+
+        echo $message;
+
+    }
+
 
 }

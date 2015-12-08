@@ -12,7 +12,7 @@
     <script src="<?php echo base_url();?>/assets/javascripts/selectDepartment.js"></script>
     <script src="<?php echo base_url();?>/assets/javascripts/reviewRequest.js"></script>
     <script src="<?php echo base_url();?>/assets/javascripts/search.js"></script>
-    <script src="<?php echo base_url();?>/assets/javascripts/approveRequest.js"></script>
+    <script src="<?php echo base_url();?>/assets/javascripts/updateRequestStatus.js"></script>
     <link rel="stylesheet" href="<?php echo base_url();?>/assets/stylesheets/styleSearch.css" type="text/css">
 </head>
 <body>
@@ -539,8 +539,8 @@
                 </div>
             </div>
             <div class="modal-footer">
-                <button id="approveRequest" type="button" class="btn btn-default btn-success" >APPROVE</button>
-                <button id="denyRequest" type="button" class="btn btn-default btn-danger" >DENY</button>
+                <button id="approveRequest" type="button" class="btn btn-default btn-success" data-dismiss="modal">APPROVE</button>
+                <button id="denyRequest" type="button" class="btn btn-default btn-danger" data-dismiss="modal">DENY</button>
                 <button id="printRequest" type="button" class="btn btn-default btn-primary" >PRINT</button>
                 <button id="closeModal" type="button" class="btn btn-default btn-default" data-dismiss="modal">CLOSE</button>
             </div>

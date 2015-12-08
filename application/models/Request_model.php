@@ -169,7 +169,32 @@ class Request_model extends CI_Model {
         return $request;
     }
 
+    public function approveRequestWithID($requestID) {
 
+        $updateInfo = array(
+            'status' => 1
+        );
+
+        $this->db->where('request_ID', $requestID);
+        $this->db->set('update_date', 'current_timestamp', FALSE);
+
+        return $this->db->update('request', $updateInfo);
+
+    }
+
+    public function denyRequestWithID($requestID) {
+
+        $updateInfo = array(
+            'status' => 2
+        );
+
+        $this->db->where('request_ID', $requestID);
+        $this->db->set('update_date', 'current_timestamp', FALSE);
+
+        return $this->db->update('request', $updateInfo);
+
+
+    }
 
 
 
