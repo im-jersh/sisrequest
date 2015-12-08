@@ -35,4 +35,18 @@ $(document).ready(function(){
 
     });
 
+    // PRINT the request
+    $("#printRequest").click(function(){
+        var empID = $('#empIDForm').val();
+
+        $.ajax({
+            type: "POST",
+            url: window.location.href + '/printRequestWithID',
+            data: {'empID' : empID},
+            success: function(message) {
+                console.log("PRINTING!!!");
+            }
+        });
+    });
+
 });
