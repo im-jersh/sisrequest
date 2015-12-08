@@ -118,6 +118,33 @@ $(document).ready(function() {
                             }
                         }
 
+                        // remove the tr if it is still hidden
+                        $('#reviewBoxes table tr').each(function(){
+                            if ($(this).css('display') == 'none') {
+                                $(this).remove();
+                            }
+                        });
+
+                        // remove the whole table if it it is only showing the column headers
+                        $('#reviewBoxes table tbody').each(function(){
+                            if ($(this).children('tr').length < 2) {
+                                $(this).parent().parent().parent().parent().hide();
+                            }
+                        });
+
+                        // handle the case of admission checkboxes
+                        var shouldHide = true;
+                        $("#admissionAccessReview input").each(function(){
+                            if ($(this).checked){
+                                shouldHide = $(this).checked;
+                            }
+                        });
+
+                        if (shouldHide) {
+                            $('#admissionAccessReview').parent().hide();
+                        }
+
+
 
                     } else { // Invalid form
                         console.log(validation);

@@ -807,3 +807,7 @@ h4.panel-title a {
 #formReview h4 {
 	border-bottom: 1px solid darkgrey;
 }
+
+#reviewBoxes > div {
+	margin-top: 3em;
+}

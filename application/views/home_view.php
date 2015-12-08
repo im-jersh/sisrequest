@@ -497,20 +497,30 @@
 
 				</div>
 				<div id="reviewBoxes">
-					<h4>Student Records Access</h4>
-					<div id="studentRecordsAccessReview">
+					<div>
+						<h4>Student Records Access</h4>
+						<div id="studentRecordsAccessReview">
+						</div>
 					</div>
-					<h4>Admissions Access</h4>
-					<div id="admissionAccessReview">
+					<div>
+						<h4>Admissions Access</h4>
+						<div id="admissionAccessReview">
+						</div>
 					</div>
-					<h4>Student Financials (Cashiers) Access</h4>
-					<div id="cashiersAccessReview">
+					<div>
+						<h4>Student Financials (Cashiers) Access</h4>
+						<div id="cashiersAccessReview">
+						</div>
 					</div>
-					<h4>Financial Aid Access</h4>
-					<div id="financialAidAccessReview">
+					<div>
+						<h4>Financial Aid Access</h4>
+						<div id="financialAidAccessReview">
+						</div>
 					</div>
-					<h4>Reserved Access</h4>
-					<div id="reservedAccessReview">
+					<div>
+						<h4>Reserved Access</h4>
+						<div id="reservedAccessReview">
+						</div>
 					</div>
 				</div>
 			</div>
