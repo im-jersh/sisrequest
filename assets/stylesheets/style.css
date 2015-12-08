@@ -795,3 +795,15 @@ h4.panel-title a {
 	float: right;
 	margin: 10%;
 }
+
+#formReview div.singleRowTwoColumn {
+	border-bottom: none;
+	clear: both;
+	display: inline-block;
+	height: auto;
+	width: 93%
+}
+
+#formReview h4 {
+	border-bottom: 1px solid darkgrey;
+}

@@ -471,15 +471,30 @@
 			<div id="formReview" class="modal-body">
 				<div>
 					<h1 id="employeeNameReview"></h1>
-					<h4>Employee ID</h4><p id="empIDReview"></p>
-					<h4>PawPrint/SSO</h4><p id="pawprintReview"></p>
-					<h4>FERPA Score</h4><p id="ferpaReview"></p>
-					<h4>Job Title</h4><p id="titleReview"></p>
-					<h4>Phone Number</h4><p id="phone_numberReview"></p>
-					<h4>Campus Address</h4><p id="campus_addressReview"></p>
-					<h4>Description</h4><p id="requestDescriptionReview"></p>
-					<h4>Academic Career(s)</h4>
-					<div id="academicCareersReview"></div>
+
+					<div class="singleRowTwoColumn topSection">
+						<div class="inner-col-left"><h4>Employee ID</h4><p id="empIDReview"></p></div>
+						<div class="inner-col-right"><h4>PawPrint/SSO</h4><p id="pawprintReview"></p></div>
+						<div class="inner-col-right"><h4>FERPA Score</h4><p id="ferpaReview"></p></div>
+					</div>
+
+					<div class="singleRowTwoColumn topSection">
+						<div class="inner-col-left"><h4>Job Title</h4><p id="titleReview"></p></div>
+						<div class="inner-col-right"><h4>Phone Number</h4><p id="phone_numberReview"></p></div>
+						<div class="inner-col-right"><h4>Campus Address</h4><p id="campus_addressReview"></p></div>
+					</div>
+
+					<div class="singleRowTwoColumn topSection">
+						<h4>Description</h4><p id="requestDescriptionReview"></p>
+					</div>
+
+					<div class="singleRowTwoColumn topSection">
+						<h4>Academic Career(s)</h4>
+						<div id="academicCareersReview">
+
+						</div>
+					</div>
+
 				</div>
 				<div id="reviewBoxes">
 					<h4>Student Records Access</h4>
