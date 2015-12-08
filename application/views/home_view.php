@@ -21,7 +21,7 @@
     <div id="menu">
         <div>
             <div class="nav-logo">
-				<img src="<?php echo base_url('/assets/images/MU_Logo.png') ?>" >
+				<img src="../assets/images/MU_Logo.png" >
             </div>
         </div>
         <h4> Security Request</h4>
