@@ -185,6 +185,7 @@ INSERT INTO `person` (`empID`, `pawprint`, `fName`, `lName`, `phone_number`, `ca
 ('e48157483', 'hcr647', 'TaShya', 'Marks', '(834) 767-062', 'P.O. Box 620, 1573 Lectus Rd.', NULL, NULL, NULL, NULL, 'Financial Aid', 'Employee', 'e00000000', '92'),
 ('e48863742', 'acs563', 'Martina', 'Sargent', '(902) 637-072', '2878 Vel, Rd.', NULL, NULL, NULL, NULL, 'Cashiers', 'Employee', 'e00000000', '95');
 
+
 -- --------------------------------------------------------
 
 --
