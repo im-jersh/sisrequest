@@ -441,11 +441,12 @@
 						</div>
 					</div>
 				</div>
-				<div id="formError" class="alert alert-danger text-center hide">
 
-				</div>
 				<div class="absoluteContainer">
 					<div>
+						<div id="formError" class="alert alert-danger text-center hide">
+
+						</div>
 						<div class="form-group">
 							<input class="form-control btn-success" type="submit" value="Review & Submit">
 						</div>
