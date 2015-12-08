@@ -81,7 +81,7 @@
             <?php echo $this->session->flashdata('msg'); ?>
         </div>
     </div>
-<</div>
+</div>
 
 <!--load jQuery library-->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
