@@ -145,24 +145,56 @@ class Request_model extends CI_Model {
     }
 
 
+    public function fetchRequestWithEmpID($empID) {
+
+        // get the request info
+        $this->db->where(array('empID' => "$empID"));
+        $query = $this->db->get('request');
+
+        $request = $query->result_array()[0];
+
+        $request_ID = $request['request_ID'];
+
+        // get the access types for the request
+        $this->db->where(array('request_ID' => "$request_ID"));
+        $query = $this->db->get('requesttypes');
 
 
+        $this->load->model('landing_model');
+        $request['types'] = array(
+            'keys' => landing_model::$accessTypeKeys,
+            'data' => $query->result_array()
+        );
+
+        return $request;
+    }
+
+    public function approveRequestWithID($requestID) {
+
+        $updateInfo = array(
+            'status' => 1
+        );
+
+        $this->db->where('request_ID', $requestID);
+        $this->db->set('update_date', 'current_timestamp', FALSE);
+
+        return $this->db->update('request', $updateInfo);
+
+    }
+
+    public function denyRequestWithID($requestID) {
+
+        $updateInfo = array(
+            'status' => 2
+        );
+
+        $this->db->where('request_ID', $requestID);
+        $this->db->set('update_date', 'current_timestamp', FALSE);
+
+        return $this->db->update('request', $updateInfo);
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    }
 
 
 

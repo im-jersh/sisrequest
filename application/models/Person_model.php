@@ -37,5 +37,14 @@ class Person_model extends CI_Model {
 
     }
 
+    public function fetchEmployeeWithID($empID) {
+
+        $this->db->where(array('empID' => "$empID"));
+        $query = $this->db->get('person');
+
+        return $query->result_array()[0];
+
+    }
+
 
 }

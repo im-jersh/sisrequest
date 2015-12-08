@@ -142,10 +142,65 @@ class Landing_model extends CI_model
         $departments = array();
         foreach ($query->result() as $row)
         {
-            array_push($departments, $row->department);
+            // Get the number of employees and pending requests for the department
+            $department = array(
+                'name' => $row->department,
+                'employeeCount' => self::getEmployeeCountForDepartment($row->department),
+                'pendingRequestCount' => self::getPendingRequestCountForDepartment($row->department)
+            );
+
+            array_push($departments, $department);
         }
         //return the list of departments
         return $departments;
+    }
+
+    public function getEmployeeCountForDepartment($department) {
+        $this->db->where(array('department' => "$department"));
+        $query = $this->db->get('person');
+
+        return $query->num_rows();
+    }
+
+    public function getPendingRequestCountForDepartment($department) {
+
+        // We need to join the person table with the request table
+        $this->db->from('person');
+        $this->db->where(array('person.department' => "$department"));
+        $this->db->join('request', 'person.empID = request.empID', 'left');
+        $this->db->where(array('status' => 0));
+        $query = $this->db->get();
+
+        return $query->num_rows();
+
+
+    }
+
+    public function getEmployeesForDepartment($department) {
+
+        $this->db->from('person');
+        $this->db->where(array('person.department' => "$department"));
+        $this->db->join('request', 'person.empID = request.empID', 'left');
+        $this->db->order_by("status", "asc");
+        $query = $this->db->get();
+
+        // re-add the person's empID in the event they don't have a request
+        $employees = [];
+        foreach ($query->result_array() as $row) {
+            $pawprint = $row['pawprint'];
+
+            $this->db->select('empID');
+            $this->db->from('person');
+            $this->db->where(array('pawprint' => "$pawprint"));
+            $query = $this->db->get();
+            $personID = $query->result_array()[0]['empID'];
+
+            $employee = $row;
+            $employee['empID'] = $personID;
+            array_push($employees, $employee);
+        }
+
+        return $employees;
     }
 
 

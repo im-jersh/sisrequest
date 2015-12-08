@@ -21,6 +21,7 @@ class Landing_page extends CI_Controller {
 
     public function index() {
 
+
 		if ($this->session->userdata('pawprint') == null){
             redirect('login');
         }
@@ -52,19 +53,19 @@ class Landing_page extends CI_Controller {
         foreach (self::$listData['employees'] as $item) {
             array_push($this->printListData,
                 '<tr id="'. $item['pawprint'] .'" class="outerRow">' .
-                    '<td>' .
-                        '<table class="inner-table name-title">' .
-                            '<tr class="mainName"><td class="employeeTD">' .
-                                $item['fName'] . ' ' . $item['lName'] .
-                            '</td></tr>' .
-                            '<tr class="subTitle"><td>' .
-                                $item['title'] .
-                            '</td></tr>' .
-                        '</table>' .
-                    '</td>' .
-                    '<td>' .
-                        $item['status'] .
-                    '</td>'.
+                '<td>' .
+                '<table class="inner-table name-title">' .
+                '<tr class="mainName"><td class="employeeTD">' .
+                $item['fName'] . ' ' . $item['lName'] .
+                '</td></tr>' .
+                '<tr class="subTitle"><td>' .
+                $item['title'] .
+                '</td></tr>' .
+                '</table>' .
+                '</td>' .
+                '<td>' .
+                $item['status'] .
+                '</td>'.
                 '</tr>'
             );
         };
@@ -73,25 +74,6 @@ class Landing_page extends CI_Controller {
         $this->loadView();
     }
 
-    public function sisLoggedIn() {
-
-        // Set up the navigation menu
-        $this->navigationItem = 'Departments';
-
-        // Get all the department
-        $this->listData = $this->landing_model->getDepartments();
-
-        foreach ($this->listData as $item) {
-            array_push($this->printListData,
-                '<tr onmouseover="ChangeBackgroundColor(this)" onmouseout="RestoreBackgroundColor(this)">' .
-                '<td style="color: black; padding-left: 90px; font-size: 20px;">' .
-                $item . '</td>' . '</tr>'
-            );
-        };
-        // Load the page
-        $this->loadView();
-
-    }
 
     public function loadView() {
 
