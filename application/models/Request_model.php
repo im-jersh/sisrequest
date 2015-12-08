@@ -145,22 +145,29 @@ class Request_model extends CI_Model {
     }
 
 
+    public function fetchRequestWithEmpID($empID) {
+
+        // get the request info
+        $this->db->where(array('empID' => "$empID"));
+        $query = $this->db->get('request');
+
+        $request = $query->result_array()[0];
+
+        $request_ID = $request['request_ID'];
+
+        // get the access types for the request
+        $this->db->where(array('request_ID' => "$request_ID"));
+        $query = $this->db->get('requesttypes');
 
 
+        $this->load->model('landing_model');
+        $request['types'] = array(
+            'keys' => landing_model::$accessTypeKeys,
+            'data' => $query->result_array()
+        );
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+        return $request;
+    }
 
 
 

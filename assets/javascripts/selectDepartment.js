@@ -27,7 +27,7 @@ $(document).ready(function() {
 
 
         var tableRowID = row.attr('id');
-        document.getElementById("employeeName").innerHTML = row.attr('id');
+        document.getElementById("departmentName").innerHTML = row.attr('id');
 
         $.ajax({
             type: "POST",
@@ -54,7 +54,7 @@ $(document).ready(function() {
                             $("#deniedRequests").append('<div class="employeeRequestRow"><div class="personalInfo"><h4>'+ this['fName'] + ' ' + this['lName'] + '</h4><p class="empTitle">'+ this['title'] +'</p></div><div class="requestActionButtons"><button type="button" class="btn btn-default btn-default viewRequestButton"  id="'+ this['empID'] +'">Review</button></div></div>');
                             break;
                         default:
-                            $("#noRequests").append('<div class="employeeRequestRow"><div class="personalInfo"><h4>'+ this['fName'] + ' ' + this['lName'] + '</h4><p class="empTitle">'+ this['title'] +'</p></div><div class="requestActionButtons"><button type="button" class="btn btn-default btn-default viewRequestButton"  id="'+ this['empID'] +'">Review</button></div></div>');
+                            $("#noRequests").append('<div class="employeeRequestRow"><div class="personalInfo"><h4>'+ this['fName'] + ' ' + this['lName'] + '</h4><p class="empTitle">'+ this['title'] +'</p></div><div class="requestActionButtons"></div></div>');
                             break;
                     }
 

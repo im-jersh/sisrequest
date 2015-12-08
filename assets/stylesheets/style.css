@@ -414,7 +414,7 @@ ol li .genInfo {
 	font-weight: 200;
 }
 
-h1#employeeName {
+h1#employeeName, h1#departmentName {
 	margin: 0 auto;
 	text-align: left;
 	font-family: "Helvetica Neue";
